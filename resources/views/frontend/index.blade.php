@@ -54,6 +54,7 @@
 						<li class="nav-item"><a class="nav-link" href="#pricing" data-click="scroll-to-target">PRICING</a></li>
 						<li class="nav-item"><a class="nav-link" href="#contact" data-click="scroll-to-target">CONTACT</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('admin_index')}}" {{--target="_blank"--}}>ADMIN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://67.55.27.243:8081/color-admin/template_html/index.html" target="_blank">ALL PAGES</a></li>
 					</ul>
 				</div>
 				<!-- end navbar-collapse -->
