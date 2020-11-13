@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\Caregivers\CaregiversController;
 
 /*
@@ -15,10 +16,12 @@ use App\Http\Controllers\Caregivers\CaregiversController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('index');
+
+Route::get('/', [FrontEndController::class, 'index'])->name('frontend_index');
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/', [CaregiversController::class, 'index'])->name('caregivers_index');
+    Route::get('/', [CaregiversController::class, 'index'])->name('admin_index');
 });
