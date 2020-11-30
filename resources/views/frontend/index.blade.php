@@ -1,869 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Color Admin | One Page Parallax Front End Theme</title>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta content="" name="description" />
-	<meta content="" name="author" />
-	
-	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-	<link href="{{asset('frontend/template/assets/css/one-page-parallax/app.min.css')}}" rel="stylesheet" />
-	<!-- ================== END BASE CSS STYLE ================== -->
-</head>
-<body data-spy="scroll" data-target="#header" data-offset="51">
-	<!-- begin #page-container -->
-	<div id="page-container" class="fade">
-		<!-- begin #header -->
-		<div id="header" class="header navbar navbar-transparent navbar-fixed-top navbar-expand-lg">
-			<!-- begin container -->
+@extends('layouts.frontend.main')
+
+@section('title') {{ $title ?? '' }} @stop
+
+@section('css')
+    @parent
+
+@stop
+
+@section('content')
+
+	<div role="main" class="main">
+		<section class="section section-height-4 bg-light position-relative border-0 m-0" id="about">
+			<div class="custom-section-halfbar-bg d-none d-md-block appear-animation" data-appear-animation="customFadeInRightShorter" data-appear-animation-delay="500"></div>
 			<div class="container">
-				<!-- begin navbar-brand -->
-				<a href="index.html" class="navbar-brand">
-					<span class="brand-logo"></span>
-					<span class="brand-text">
-						<span class="text-primary">Color</span> Admin
-					</span>
-				</a>
-				<!-- end navbar-brand -->
-				<!-- begin navbar-toggle -->
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<!-- end navbar-header -->
-				<!-- begin navbar-collapse -->
-				<div class="collapse navbar-collapse" id="header-navbar">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item dropdown">
-							<a class="nav-link active" href="#home" data-click="scroll-to-target" data-scroll-target="#home">HOME <b class="caret"></b></a>
-							<div class="dropdown-menu dropdown-menu-left animated fadeInDown">
-								<a class="dropdown-item" href="index.html">Page with Transparent Header</a>
-								<a class="dropdown-item" href="index_inverse_header.html">Page with Inverse Header</a>
-								<a class="dropdown-item" href="index_default_header.html">Page with White Header</a>
-								<a class="dropdown-item" href="extra_element.html">Extra Element</a>
+				<div class="row align-items-center">
+					<div class="col-md-6 mb-5 mb-md-0">
+						<div class="pr-0">
+							<div class="overflow-hidden mb-2">
+								<h2 class="word-rotator letters type font-weight-bold line-height-4 text-8 mb-0 appear-animation" data-appear-animation="maskUp">
+									<span class="custom-primary-font">Enjoy the best taste of our </span> 
+									<span class="word-rotator-words waiting">
+										<b class="is-visible custom-primary-font">coffee</b>
+										<b class="custom-primary-font">desserts</b>
+										<b class="custom-primary-font">tea</b>
+									</span>
+								</h2>
 							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="#about" data-click="scroll-to-target">ABOUT</a></li>
-						<li class="nav-item"><a class="nav-link" href="#team" data-click="scroll-to-target">TEAM</a></li>
-						<li class="nav-item"><a class="nav-link" href="#service" data-click="scroll-to-target">SERVICES</a></li>
-						<li class="nav-item"><a class="nav-link" href="#work" data-click="scroll-to-target">WORK</a></li>
-						<li class="nav-item"><a class="nav-link" href="#client" data-click="scroll-to-target">CLIENT</a></li>
-						<li class="nav-item"><a class="nav-link" href="#pricing" data-click="scroll-to-target">PRICING</a></li>
-						<li class="nav-item"><a class="nav-link" href="#contact" data-click="scroll-to-target">CONTACT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('admin_index')}}" {{--target="_blank"--}}>ADMIN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://67.55.27.243:8081/color-admin/template_html/index.html" target="_blank">ALL PAGES</a></li>
-					</ul>
+							<div class="divider divider-primary divider-small">
+								<hr class="w-25 text-left custom-h-1 appear-animation" data-appear-animation="dividerProgress25" data-appear-animation-delay="200">
+							</div>
+							<p class="text-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. </p>
+							<div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+								<p class="opacity-8 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+
+							<div class="collapse" id="aboutViewMore">
+								<p class="opacity-8 mb-0 pb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum lacinia eros quis blandit. Integer id lectus sem. Nulla facilisi. Cras porttitor ac libero vitae fermentum. Ut tincidunt iaculis libero, et sagittis quam gravida in. Maecenas nec fringilla erat, hendrerit rutrum massa. Mauris dapibus ex a nisi imperdiet, eu suscipit ligula malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+								<div class="row py-4">
+									<div class="col-6">
+										<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-2.jpg')}}" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-2.jpg')}}" alt="Project Image">
+										</a>
+									</div>
+									<div class="col-6">
+										<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-3.jpg')}}" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-3.jpg')}}" alt="Project Image">
+										</a>
+									</div>
+								</div>
+
+								<p class="opacity-8 mb-4">Maecenas eleifend augue in tincidunt congue. Integer dapibus sit amet odio nec tempor. Nullam luctus metus vitae tellus consectetur euismod. Proin consectetur ante vitae vehicula sodales. In pellentesque, nunc quis euismod ultrices, metus mauris consectetur urna, vitae molestie purus erat quis mi. Praesent vel metus mi. Ut sagittis interdum ante, quis posuere eros porta in. Donec auctor ut mi id maximus.</p>
+							</div>
+
+							<a data-toggle="collapse" href="#aboutViewMore" role="button" aria-expanded="false" aria-controls="aboutViewMore" class="btn btn-primary btn-outline font-weight-bold border-width-4 btn-px-4 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" data-toggle-text-click="VIEW MORE..." data-toggle-text-click-alt="VIEW LESS...">VIEW MORE...</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="{{asset('porto/templates/img/demos/coffee/others/others-1.jpg')}}" class="img-fluid rounded appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="700" alt="" />
+					</div>
 				</div>
-				<!-- end navbar-collapse -->
 			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #header -->
-		
-		<!-- begin #home -->
-		<div id="home" class="content has-bg home">
-			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url({{asset('frontend/template/assets/img/bg/bg-home.jpg')}});" 
-				data-paroller="true" 
-				data-paroller-factor="0.5"
-				data-paroller-factor-xs="0.25">
+		</section>
+
+		<section class="section section-parallax section-height-4 overlay overlay-show border-0 m-0 appear-animation" data-appear-animation="fadeIn" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '135%'}" data-image-src="{{asset('porto/templates/img/demos/coffee/backgrounds/background-1.jpg')}}" id="reservations">
+			<div class="container container">
+				<div class="row align-items-center">
+					<div class="col-md-6 custom-column-bg text-center py-5 mb-5 mb-md-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+						<div class="overflow-hidden mb-3">
+							<h2 class="text-color-light font-weight-bold text-9 negative-ls-1 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Reservations</h2>
+						</div>
+						<div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+							<p class="font-weight-light text-color-light text-3 opacity-7 px-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. </p>
+						</div>
+						<a href="tel:+0123456789" class="font-weight-bold text-color-primary text-4 ls-0 d-block mb-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="650">CALL US: 1-800-1234-5678</a>
+					</div>
+					<div class="col-md-6 text-center">
+						<div class="row justify-content-center">
+							<div class="col-md-6 col-lg-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500">
+								<h2 class="text-color-light font-weight-bold text-7 negative-ls-05 mb-3">MON - FRI</h2>
+								<p class="font-weight-light text-color-light opacity-7 mb-0"><span class="d-block">10:00 AM</span> TO <span class="d-block">8:00 PM</span></p>
+							</div>
+							<div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="700">
+								<h2 class="text-color-light font-weight-bold text-7 negative-ls-05 mb-3">SAT - SUN</h2>
+								<p class="font-weight-light text-color-light opacity-7 mb-0"><span class="d-block">10:00 AM</span> TO <span class="d-block">8:00 PM</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- end content-bg -->
-			<!-- begin container -->
-			<div class="container home-content">
-				<h1>Welcome to Color Admin</h1>
-				<h3>Multipurpose One Page Theme</h3>
-				<p>
-					We have created a multi-purpose theme that take the form of One-Page or Multi-Page Version.<br />
-					Use our <a href="#">theme panel</a> to select your favorite theme color.
-				</p>
-				<a href="#" class="btn btn-theme btn-primary">Explore More</a> <a href="#" class="btn btn-theme btn-outline-white">Purchase Now</a><br />
-				<br />
-				or <a href="#">subscribe</a> newsletter
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #home -->
-		
-		<!-- begin #about -->
-		<div id="about" class="content" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="fadeInDown">
-				<h2 class="content-title">About Us</h2>
-				<p class="content-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-					sed bibendum turpis luctus eget
-				</p>
-				<!-- begin row -->
+		</section>
+
+		<section class="section section-height-4 parallax border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '100%'}" data-image-src="{{asset('porto/templates/img/demos/coffee/backgrounds/background-2.jpg')}}" id="menu">
+			<div class="container">
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-9 col-lg-6 text-center">
+						<div class="overflow-hidden mb-3">
+							<h2 class="text-color-dark font-weight-bold text-9 mb-0 appear-animation" data-appear-animation="maskUp">Our Menu</h2>
+						</div>
+						<div class="divider divider-primary divider-small">
+							<hr class="mx-auto w-25 custom-h-1 appear-animation" data-appear-animation="dividerProgress25" data-appear-animation-delay="200">
+						</div>
+						<p class="text-4 line-height-9 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
+					</div>
+				</div>
+				<div class="row pb-4 mb-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+					<div class="col-md-6">
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Coffee</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 2</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Iced Coff</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 3</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Hot Chocolate</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 4</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Iced Tea</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 3</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Hot Tea</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 3</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Soda</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 2</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Juice</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 2</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Milk</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 2</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Chocolate Milk</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 2</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Pancakes</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 20</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Eggs Porto</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 3</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+						<div class="custom-menu-item">
+							<div class="custom-menu-item-details">
+								<div class="custom-menu-item-title"><h3 class="text-transform-none font-weight-semibold text-4 mb-0">Smashed Avocado</h3></div>
+								<div class="custom-menu-item-line mx-3 mb-2 opacity-4"></div>
+								<div class="custom-menu-item-price"><strong class="custom-tertiary-font text-color-dark"><span class="custom-tertiary-font">$</span> 5</strong></div>
+							</div>
+							<div class="custom-menu-item-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="row">
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<!-- begin about -->
-						<div class="about">
-							<h3 class="mb-3">Our Story</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-								Vestibulum posuere augue eget ante porttitor fringilla. 
-								Aliquam laoreet, sem eu dapibus congue, velit justo ullamcorper urna, 
-								non rutrum dolor risus non sapien. Vivamus vel tincidunt quam. 
-								Donec ultrices nisl ipsum, sed elementum ex dictum nec. 
-							</p>
-							<p>
-								In non libero at orci rutrum viverra at ac felis. 
-								Curabitur a efficitur libero, eu finibus quam. 
-								Pellentesque pretium ante vitae est molestie, ut faucibus tortor commodo. 
-								Donec gravida, eros ac pretium cursus, est erat dapibus quam, 
-								sit amet dapibus nisl magna sit amet orci. 
-							</p>
-						</div>
-						<!-- end about -->
+					<div class="col text-center">
+						<a href="#locations" data-hash data-hash-offset="92" class="btn btn-primary btn-outline font-weight-bold border-width-4 btn-px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter">WHERE WE ARE</a>
 					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<h3 class="mb-3">Our Philosophy</h3>
-						<!-- begin about-author -->
-						<div class="about-author">
-							<div class="quote">
-								<i class="fa fa-quote-left"></i>
-								<h3>We work harder,<br /><span>to let our user keep simple</span></h3>
-								<i class="fa fa-quote-right"></i>
-							</div>
-							<div class="author">
-								<div class="image">
-									<img src="{{asset('frontend/template/assets/img/user/user-1.jpg')}}" alt="Sean Ngu" />
-								</div>
-								<div class="info">
-									Sean Ngu
-									<small>Front End Developer</small>
-								</div>
-							</div>
-						</div>
-						<!-- end about-author -->
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<h3 class="mb-3">Our Experience</h3>
-						<!-- begin skills -->
-						<div class="skills">
-							<div class="skills-name">Front End</div>
-							<div class="progress mb-3">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 95%">
-									<span class="progress-number">95%</span>
-								</div>
-							</div>
-							<div class="skills-name">Programming</div>
-							<div class="progress mb-3">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 90%">
-									<span class="progress-number">90%</span>
-								</div>
-							</div>
-							<div class="skills-name">Database Design</div>
-							<div class="progress mb-3">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 85%">
-									<span class="progress-number">85%</span>
-								</div>
-							</div>
-							<div class="skills-name">Wordpress</div>
-							<div class="progress mb-3">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 80%">
-									<span class="progress-number">80%</span>
-								</div>
-							</div>
-						</div>
-						<!-- end skills -->
-					</div>
-					<!-- end col-4 -->
 				</div>
-				<!-- end row -->
 			</div>
-			<!-- end container -->
+		</section>
+
+		<div class="container-fluid px-0">
+			<div class="row">
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-2.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-2.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-3.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-3.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-4.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-4.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-5.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-5.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-6.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-6.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 px-0">
+					<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="{{asset('porto/templates/img/demos/coffee/others/others-7.jpg')}}" data-plugin-options="{'type':'image'}">
+						<img class="img-fluid rounded-0" src="{{asset('porto/templates/img/demos/coffee/others/others-7.jpg')}}" alt="Project Image">
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-- end #about -->
-		
-		<!-- begin #milestone -->
-		<div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
-			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url({{asset('frontend/template/assets/img/bg/bg-milestone.jpg')}})"
-				data-paroller="true" 
-				data-paroller-factor="0.5"
-				data-paroller-factor-md="0.01"
-				data-paroller-factor-xs="0.01"></div>
-			<!-- end content-bg -->
-			<!-- begin container -->
+
+		<section class="section section-height-4 bg-light border-0 m-0" id="news">
 			<div class="container">
-				<!-- begin row -->
+				<div class="row justify-content-center mb-4">
+					<div class="col-md-9 col-lg-6 text-center">
+						<div class="overflow-hidden mb-3">
+							<h2 class="text-color-dark font-weight-bold text-9 mb-0 appear-animation" data-appear-animation="maskUp">News & Events</h2>
+						</div>
+						<div class="divider divider-primary divider-small">
+							<hr class="mx-auto w-25 custom-h-1 appear-animation" data-appear-animation="dividerProgress25" data-appear-animation-delay="200">
+						</div>
+						<p class="text-4 line-height-9 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
+					</div>
+				</div>
+				
+				<div class="card-columns">
+					<div class="card custom-bg-color-1 border-0">
+						<div class="card-body px-5">
+							<h3 class="font-weight-bold text-transform-none line-height-4 text-5 negative-ls-1 pr-5 pb-1 mt-2 mb-2">
+								<a href="demo-coffee-blog-post.html" class="text-color-dark text-decoration-none custom-primary-font">Amazing Things Are Coming</a>
+							</h3>
+							<span class="d-block font-weight-semibold text-color-dark line-height-4 text-2 mb-2"><i class="far fa-clock text-color-primary mr-1"></i> May 17, 2020</span>
+							<p class="font-weight-light text-2 mb-3">Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+							<div class="d-flex align-items-center mb-4">
+								<img src="{{asset('porto/templates/img/avatars/avatar.jpg')}}" width="20" class="img-fluid rounded-circle mr-2" alt="" />
+								<span class="font-weight-semibold text-color-dark text-2">by John Doe</span>
+							</div>
+						</div>
+					</div>							
+					<div class="card custom-bg-color-1 border-0">
+						<div class="card-body px-5">
+							<h3 class="font-weight-bold text-transform-none line-height-4 text-5 negative-ls-1 pr-5 pb-1 mt-2 mb-2">
+								<a href="demo-coffee-blog-post.html" class="text-color-dark text-decoration-none custom-primary-font">Enjoy your Coffee Week</a>
+							</h3>
+							<span class="d-block font-weight-semibold text-color-dark line-height-4 text-2 mb-2"><i class="far fa-clock text-color-primary mr-1"></i> May 17, 2020</span>
+							<p class="font-weight-light text-2 mb-3">Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+							<div class="d-flex align-items-center mb-4">
+								<img src="{{asset('porto/templates/img/avatars/avatar.jpg')}}" width="20" class="img-fluid rounded-circle mr-2" alt="" />
+								<span class="font-weight-semibold text-color-dark text-2">by John Doe</span>
+							</div>
+						</div>
+					</div>
+					<div class="card custom-bg-color-1 border-0">
+						<div class="card-body px-5">
+							<h3 class="font-weight-bold text-transform-none line-height-4 text-5 negative-ls-1 pr-5 pb-1 mt-2 mb-2">
+								<a href="demo-coffee-blog-post.html" class="text-color-dark text-decoration-none custom-primary-font">Free Pancakes Day</a>
+							</h3>
+							<span class="d-block font-weight-semibold text-color-dark line-height-4 text-2 mb-2"><i class="far fa-clock text-color-primary mr-1"></i> May 17, 2020</span>
+							<p class="font-weight-light text-2 mb-3">Phasellus blandit massa enim. Nullam id varius nunc. Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+							<div class="d-flex align-items-center mb-4">
+								<img src="{{asset('porto/templates/img/avatars/avatar.jpg')}}" width="20" class="img-fluid rounded-circle mr-2" alt="" />
+								<span class="font-weight-semibold text-color-dark text-2">by John Doe</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="row">
-					<!-- begin col-3 -->
-					<div class="col-lg-3 milestone-col">
-						<div class="milestone">
-							<div class="number" data-animation="true" data-animation-type="number" data-final-number="1292">1,292</div>
-							<div class="title">Themes & Template</div>
-						</div>
+					<div class="col text-center pt-5">
+						<a href="demo-coffee-blog.html" class="btn btn-primary btn-outline font-weight-bold border-width-4 btn-px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter">VIEW MORE</a>
 					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 milestone-col">
-						<div class="milestone">
-							<div class="number" data-animation="true" data-animation-type="number" data-final-number="9039">9,039</div>
-							<div class="title">Registered Members</div>
-						</div>
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 milestone-col">
-						<div class="milestone">
-							<div class="number" data-animation="true" data-animation-type="number" data-final-number="89291">89,291</div>
-							<div class="title">Items Sold</div>
-						</div>
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 milestone-col">
-						<div class="milestone">
-							<div class="number" data-animation="true" data-animation-type="number" data-final-number="129">129</div>
-							<div class="title">Theme Authors</div>
-						</div>
-					</div>
-					<!-- end col-3 -->
 				</div>
-				<!-- end row -->
 			</div>
-			<!-- end container -->
+		</section>
+
+		<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+		<div id="locations">
+			<div id="googlemaps" class="google-map m-0 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300" style="height:600px;"></div>
 		</div>
-		<!-- end #milestone -->
-		
-		<!-- begin #team -->
-		<div id="team" class="content" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container">
-				<h2 class="content-title">Our Team</h2>
-				<p class="content-desc">
-					Phasellus suscipit nisi hendrerit metus pharetra dignissim. Nullam nunc ante, viverra quis<br /> 
-					ex non, porttitor iaculis nisi.
-				</p>
-				<!-- begin row -->
-				<div class="row">
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<!-- begin team -->
-						<div class="team">
-							<div class="image" data-animation="true" data-animation-type="flipInX">
-								<img src="{{asset('frontend/template/assets/img/user/user-1.jpg')}}" alt="Ryan Teller" />
-							</div>
-							<div class="info">
-								<h3 class="name">Ryan Teller</h3>
-								<div class="title text-primary">FOUNDER</div>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-								<div class="social">
-									<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-						<!-- end team -->
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<!-- begin team -->
-						<div class="team">
-							<div class="image" data-animation="true" data-animation-type="flipInX">
-								<img src="{{asset('frontend/template/assets/img/user/user-2.jpg')}}" alt="Jonny Cash" />
-							</div>
-							<div class="info">
-								<h3 class="name">Johnny Cash</h3>
-								<div class="title text-primary">WEB DEVELOPER</div>
-								<p>Donec quam felis, ultricies nec, pellentesque eu sem. Nulla consequat massa vierra quis enim.</p>
-								<div class="social">
-									<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-						<!-- end team -->
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4">
-						<!-- begin team -->
-						<div class="team">
-							<div class="image" data-animation="true" data-animation-type="flipInX">
-								<img src="{{asset('frontend/template/assets/img/user/user-3.jpg')}}" alt="Mia Donovan" />
-							</div>
-							<div class="info">
-								<h3 class="name">Mia Donovan</h3>
-								<div class="title text-primary">WEB DESIGNER</div>
-								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean ligula imperdiet. </p>
-								<div class="social">
-									<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-									<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-						<!-- end team -->
-					</div>
-					<!-- end col-4 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #team -->
-		
-		<!-- begin #quote -->
-		<div id="quote" class="content bg-black-darker has-bg" data-scrollview="true">
-			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url({{asset('frontend/template/assets/img/bg/bg-quote.jpg')}})"
-				data-paroller-factor="0.5"
-				data-paroller-factor-md="0.01"
-				data-paroller-factor-xs="0.01">
-			</div>
-			<!-- end content-bg -->
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="fadeInLeft">
-				<!-- begin row -->
-				<div class="row">
-					<!-- begin col-12 -->
-					<div class="col-lg-12 quote">
-						<i class="fa fa-quote-left"></i> Passion leads to design, design leads to performance, <br />
-						performance leads to <span class="text-primary">success</span>!  
-						<i class="fa fa-quote-right"></i>
-						<small>Sean Themes, Developer Teams in Malaysia</small>
-					</div>
-					<!-- end col-12 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #quote -->
-		
-		<!-- beign #service -->
-		<div id="service" class="content" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container">
-				<h2 class="content-title">Our Services</h2>
-				<p class="content-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-					sed bibendum turpis luctus eget
-				</p>
-				<!-- begin row -->
-				<div class="row">
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-cog"></i></div>
-							<div class="info">
-								<h4 class="title">Easy to Customize</h4>
-								<p class="desc">Duis in lorem placerat, iaculis nisi vitae, ultrices tortor. Vestibulum molestie ipsum nulla. Maecenas nec hendrerit eros, sit amet maximus leo.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-paint-brush"></i></div>
-							<div class="info">
-								<h4 class="title">Clean & Careful Design</h4>
-								<p class="desc">Etiam nulla turpis, gravida et orci ac, viverra commodo ipsum. Donec nec mauris faucibus, congue nisi sit amet, lobortis arcu.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-file"></i></div>
-							<div class="info">
-								<h4 class="title">Well Documented</h4>
-								<p class="desc">Ut vel laoreet tortor. Donec venenatis ex velit, eget bibendum purus accumsan cursus. Curabitur pulvinar iaculis diam.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-code"></i></div>
-							<div class="info">
-								<h4 class="title">Re-usable Code</h4>
-								<p class="desc">Aenean et elementum dui. Aenean massa enim, suscipit ut molestie quis, pretium sed orci. Ut faucibus egestas mattis.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-shopping-cart"></i></div>
-							<div class="info">
-								<h4 class="title">Online Shop</h4>
-								<p class="desc">Quisque gravida metus in sollicitudin feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-					<!-- begin col-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="service">
-							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-heart"></i></div>
-							<div class="info">
-								<h4 class="title">Free Support</h4>
-								<p class="desc">Integer consectetur, massa id mattis tincidunt, sapien erat malesuada turpis, nec vehicula lacus felis nec libero. Fusce non lorem nisl.</p>
-							</div>
-						</div>
-					</div>
-					<!-- end col-4 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #about -->
-		
-		<!-- beign #action-box -->
-		<div id="action-box" class="content has-bg" data-scrollview="true">
-			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url({{asset('frontend/template/assets/img/bg/bg-action.jpg')}})"
-				data-paroller-factor="0.5"
-				data-paroller-factor-md="0.01"
-				data-paroller-factor-xs="0.01">
-			</div>
-			<!-- end content-bg -->
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="fadeInRight">
-				<!-- begin row -->
-				<div class="row action-box">
-					<!-- begin col-9 -->
-					<div class="col-lg-9">
-						<div class="icon-large text-primary">
-							<i class="fa fa-binoculars"></i>
-						</div>
-						<h3>CHECK OUT OUR ADMIN THEME!</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus magna eu lacinia eleifend.
-						</p>
-					</div>
-					<!-- end col-9 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3">
-						<a href="#" class="btn btn-outline-white btn-theme btn-block">Live Preview</a>
-					</div>
-					<!-- end col-3 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #action-box -->
-		
-		<!-- begin #work -->
-		<div id="work" class="content" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="fadeInDown">
-				<h2 class="content-title">Our Latest Work</h2>
-				<p class="content-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-					sed bibendum turpis luctus eget
-				</p>
-				<!-- begin row -->
-				<div class="row row-space-10">
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-1.jpg')}}" alt="Work 1" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Aliquam molestie</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-2.jpg')}}" alt="Work 2" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Quisque at pulvinar lacus</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-3.jpg')}}" alt="Work 3" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Vestibulum et erat ornare</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-4.jpg')}}" alt="Work 4" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Sed vitae mollis magna</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-5.jpg')}}" alt="Work 5" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Suspendisse at mattis odio</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-6.jpg')}}" alt="Work 6" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Aliquam vitae commodo diam</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-7.jpg')}}" alt="Work 7" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Phasellus eu vehicula lorem</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-					<!-- begin col-3 -->
-					<div class="col-lg-3 col-md-4">
-						<!-- begin work -->
-						<div class="work">
-							<div class="image">
-								<a href="#"><img src="{{asset('frontend/template/assets/img/work/work-img-8.jpg')}}" alt="Work 8" /></a>
-							</div>
-							<div class="desc">
-								<span class="desc-title">Morbi bibendum pellentesque</span>
-								<span class="desc-text">Lorem ipsum dolor sit amet</span>
-							</div>
-						</div>
-						<!-- end work -->
-					</div>
-					<!-- end col-3 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #work -->
-		
-		<!-- begin #client -->
-		<div id="client" class="content has-bg bg-green" data-scrollview="true">
-			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url({{asset('frontend/template/assets/img/bg/bg-client.jpg')}})"
-				data-paroller-factor="0.5"
-				data-paroller-factor-md="0.01"
-				data-paroller-factor-xs="0.01">
-			</div>
-			<!-- end content-bg -->
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="fadeInUp">
-				<h2 class="content-title">Our Client Testimonials</h2>
-				<!-- begin carousel -->
-				<div class="carousel testimonials slide" data-ride="carousel" id="testimonials">
-					<!-- begin carousel-inner -->
-					<div class="carousel-inner text-center">
-						<!-- begin item -->
-						<div class="carousel-item active">
-							<blockquote>
-								<i class="fa fa-quote-left"></i>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra, nulla ut interdum fringilla,<br />
-								urna massa cursus lectus, eget rutrum lectus neque non ex.
-								<i class="fa fa-quote-right"></i>
-							</blockquote>
-							<div class="name"> — <span class="text-primary">Mark Doe</span>, Designer</div>
-						</div>
-						<!-- end item -->
-						<!-- begin item -->
-						<div class="carousel-item">
-							<blockquote>
-								<i class="fa fa-quote-left"></i>
-								Donec cursus ligula at ante vulputate laoreet. Nulla egestas sit amet lorem non bibendum.<br />
-								Nulla eget risus velit. Pellentesque tincidunt velit vitae tincidunt finibus.
-								<i class="fa fa-quote-right"></i>
-							</blockquote>
-							<div class="name"> — <span class="text-primary">Joe Smith</span>, Developer</div>
-						</div>
-						<!-- end item -->
-						<!-- begin item -->
-						<div class="carousel-item">
-							<blockquote>
-								<i class="fa fa-quote-left"></i>
-								Sed tincidunt quis est sed ultrices. Sed feugiat auctor ipsum, sit amet accumsan elit vestibulum<br />
-								fringilla. In sollicitudin ac ligula eget vestibulum.
-								<i class="fa fa-quote-right"></i>
-							</blockquote>
-							<div class="name"> — <span class="text-primary">Linda Adams</span>, Programmer</div>
-						</div>
-						<!-- end item -->
-					</div>
-					<!-- end carousel-inner -->
-					<!-- begin carousel-indicators -->
-					<ol class="carousel-indicators m-b-0">
-						<li data-target="#testimonials" data-slide-to="0" class="active"></li>
-						<li data-target="#testimonials" data-slide-to="1" class=""></li>
-						<li data-target="#testimonials" data-slide-to="2" class=""></li>
-					</ol>
-					<!-- end carousel-indicators -->
-				</div>
-				<!-- end carousel -->
-			</div>
-			<!-- end containter -->
-		</div>
-		<!-- end #client -->
-		
-		<!-- begin #pricing -->
-		<div id="pricing" class="content" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container">
-				<h2 class="content-title">Our Price</h2>
-				<p class="content-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-					sed bibendum turpis luctus eget
-				</p>
-				<!-- begin pricing-table -->
-				<ul class="pricing-table pricing-col-4">
-					<li data-animation="true" data-animation-type="fadeInUp">
-						<div class="pricing-container">
-							<h3>Starter</h3>
-							<div class="price">
-								<div class="price-figure">
-									<span class="price-number">FREE</span>
-								</div>
-							</div>
-							<ul class="features">
-								<li>1GB Storage</li>
-								<li>2 Clients</li>
-								<li>5 Active Projects</li>
-								<li>5 Colors</li>
-								<li>Free Goodies</li>
-								<li>24/7 Email support</li>
-							</ul>
-							<div class="footer">
-								<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-							</div>
-						</div>
-					</li>
-					<li data-animation="true" data-animation-type="fadeInUp">
-						<div class="pricing-container">
-							<h3>Basic</h3>
-							<div class="price">
-								<div class="price-figure">
-									<span class="price-number">$9.99</span>
-									<span class="price-tenure">per month</span>
-								</div>
-							</div>
-							<ul class="features">
-								<li>2GB Storage</li>
-								<li>5 Clients</li>
-								<li>10 Active Projects</li>
-								<li>10 Colors</li>
-								<li>Free Goodies</li>
-								<li>24/7 Email support</li>
-							</ul>
-							<div class="footer">
-								<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-							</div>
-						</div>
-					</li>
-					<li class="highlight" data-animation="true" data-animation-type="fadeInUp">
-						<div class="pricing-container">
-							<h3>Premium</h3>
-							<div class="price">
-								<div class="price-figure">
-									<span class="price-number">$19.99</span>
-									<span class="price-tenure">per month</span>
-								</div>
-							</div>
-							<ul class="features">
-								<li>5GB Storage</li>
-								<li>10 Clients</li>
-								<li>20 Active Projects</li>
-								<li>20 Colors</li>
-								<li>Free Goodies</li>
-								<li>24/7 Email support</li>
-							</ul>
-							<div class="footer">
-								<a href="#" class="btn btn-primary btn-theme btn-block">Buy Now</a>
-							</div>
-						</div>
-					</li>
-					<li data-animation="true" data-animation-type="fadeInUp">
-						<div class="pricing-container">
-							<h3>Lifetime</h3>
-							<div class="price">
-								<div class="price-figure">
-									<span class="price-number">$999</span>
-								</div>
-							</div>
-							<ul class="features">
-								<li>Unlimited Storage</li>
-								<li>Unlimited Clients</li>
-								<li>Unlimited Projects</li>
-								<li>Unlimited Colors</li>
-								<li>Free Goodies</li>
-								<li>24/7 Email support</li>
-							</ul>
-							<div class="footer">
-								<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #pricing -->
-		
-		<!-- begin #contact -->
-		<div id="contact" class="content bg-silver-lighter" data-scrollview="true">
-			<!-- begin container -->
-			<div class="container">
-				<h2 class="content-title">Contact Us</h2>
-				<p class="content-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-					sed bibendum turpis luctus eget
-				</p>
-				<!-- begin row -->
-				<div class="row">
-					<!-- begin col-6 -->
-					<div class="col-lg-6" data-animation="true" data-animation-type="fadeInLeft">
-						<h3>If you have a project you would like to discuss, get in touch with us.</h3>
-						<p>
-							Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
-						</p>
-						<p>
-							<strong>SeanTheme Studio, Inc</strong><br />
-							795 Folsom Ave, Suite 600<br />
-							San Francisco, CA 94107<br />
-							P: (123) 456-7890<br />
-						</p>
-						<p>
-							<span class="phone">+11 (0) 123 456 78</span><br />
-							<a href="mailto:hello@emailaddress.com" class="text-primary">seanthemes@support.com</a>
-						</p>
-					</div>
-					<!-- end col-6 -->
-					<!-- begin col-6 -->
-					<div class="col-lg-6 form-col" data-animation="true" data-animation-type="fadeInRight">
-						<form class="form-horizontal">
-							<div class="form-group row m-b-15">
-								<label class="col-form-label col-lg-3 text-lg-right">Name <span class="text-primary">*</span></label>
-								<div class="col-lg-9">
-									<input type="text" class="form-control" />
-								</div>
-							</div>
-							<div class="form-group row m-b-15">
-								<label class="col-form-label col-lg-3 text-lg-right">Email <span class="text-primary">*</span></label>
-								<div class="col-lg-9">
-									<input type="text" class="form-control" />
-								</div>
-							</div>
-							<div class="form-group row m-b-15">
-								<label class="col-form-label col-lg-3 text-lg-right">Message <span class="text-primary">*</span></label>
-								<div class="col-lg-9">
-									<textarea class="form-control" rows="10"></textarea>
-								</div>
-							</div>
-							<div class="form-group row m-b-15">
-								<label class="col-form-label col-lg-3 text-lg-right"></label>
-								<div class="col-lg-9 text-left">
-									<button type="submit" class="btn btn-theme btn-primary btn-block">Send Message</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<!-- end col-6 -->
-				</div>
-				<!-- end row -->
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end #contact -->
-		
-		<!-- begin #footer -->
-		<div id="footer" class="footer">
-			<div class="container">
-				<div class="footer-brand">
-					<div class="footer-brand-logo"></div>
-					Color Admin
-				</div>
-				<p>
-					&copy; Copyright Color Admin 2019 <br />
-					An admin & front end theme with serious impact. Created by <a href="#">SeanTheme</a>
-				</p>
-				<p class="social-list">
-					<a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
-					<a href="#"><i class="fab fa-instagram fa-fw"></i></a>
-					<a href="#"><i class="fab fa-twitter fa-fw"></i></a>
-					<a href="#"><i class="fab fa-google-plus-g fa-fw"></i></a>
-					<a href="#"><i class="fab fa-dribbble fa-fw"></i></a>
-				</p>
-			</div>
-		</div>
-		<!-- end #footer -->
-	</div>
-	<!-- end #page-container -->
-	
-	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{asset('frontend/template/assets/js/one-page-parallax/app.min.js')}}"></script>
-	<!-- ================== END BASE JS ================== -->
-</body>
-</html>
+
+	</div> 
+
+@stop
+
+@section('js')
+    @parent
+
+@stop

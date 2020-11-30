@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\FrontEnd\PagesController;
 use App\Http\Controllers\Caregivers\CaregiversController;
 
 /*
@@ -20,8 +20,10 @@ use App\Http\Controllers\Caregivers\CaregiversController;
 //     return view('welcome');
 // })->name('index');
 
-Route::get('/', [FrontEndController::class, 'index'])->name('frontend_index');
+//Route::get('/', [FrontEndController::class, 'index'])->name('frontend_index');
 
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [CaregiversController::class, 'index'])->name('admin_index');
 });
+
+Route::get('/', [PagesController::class, 'index'])->name('frontend_index');
