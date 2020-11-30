@@ -80,82 +80,81 @@ time,
 mark,
 audio,
 video {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
 }
 
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
 }
 
 button {
-  background: none;
-  color: inherit;
-  outline: 0;
+    background: none;
+    color: inherit;
+    outline: 0;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: '';
+    content: none;
 }
 
 q {
-  display: inline;
-  font-style: italic;
+    display: inline;
+    font-style: italic
 }
 
 q:before {
-  content: '"';
-  font-style: normal;
+    content: '"';
+    font-style: normal;
 }
 
 q:after {
-  content: '"';
-  font-style: normal;
+    content: '"';
+    font-style: normal;
 }
 
 textarea,
-input[type=text],
-input[type=button],
-input[type=submit],
-input[type=reset],
-input[type=search],
-input[type=password] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-radius: 0;
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="search"],
+input[type="password"] {
+    appearance: none;
+    border-radius: 0;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
 html {
-  width: 100%;
+    // font-size: 10px;
+    width: 100%;
+    // height: 100%;
 }
-

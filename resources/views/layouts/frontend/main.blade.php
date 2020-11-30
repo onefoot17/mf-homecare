@@ -46,6 +46,7 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="{{asset('porto/templates/css/custom.css')}}">
 
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="{{asset('css/frontend.css')}}">
 
 		<!-- Head Libs -->
@@ -54,7 +55,7 @@
 	</head>
 	<body data-target="#header" data-spy="scroll" data-offset="100">
 
-		<div class="body">
+		<div class="body mf__{{ Request::segment( 2 ) }} mf__{{ Request::segment( 3 ) }}">
 			
 
 <div class="owl-carousel-wrapper" style="height: 100vh;">
