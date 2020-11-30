@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>MF Homecare | @yield('title')</title>	
+		<title>MF Homecare | @yield('title')</title>
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -45,6 +45,8 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="{{asset('porto/templates/css/custom.css')}}">
+
+		<link rel="stylesheet" href="{{asset('css/frontend.css')}}">
 
 		<!-- Head Libs -->
 		<script src="{{asset('porto/templates/vendor/modernizr/modernizr.min.js')}}"></script>
