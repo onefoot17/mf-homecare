@@ -156,6 +156,297 @@ table {
 
 body,
 html {
+  font-size: 10px;
   width: 100%;
+}
+
+h1 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+h2 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+h3 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+h4 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+h5 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+h6 {
+  line-height: 1;
+  color: #4d5877;
+  font-family: Jomolhari, serif;
+}
+
+p {
+  line-height: 1.3em;
+  font-size: 1.6rem;
+}
+
+.mf__separator {
+  background-color: #793B52;
+  display: inline-block;
+  margin: 0 auto 1rem;
+  width: 10%;
+  height: 4px;
+}
+
+.mf__nav {
+  align-items: center;
+  padding: 1rem;
+}
+
+.mf__nav-item {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #ffffff !important;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: Jomolhari, serif;
+  font-weight: 700;
+}
+
+.mf__nav-item:hover {
+  background-color: #4d5877 !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.mf__nav-item:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.sticky-header-active .mf__nav-item:hover {
+  color: #ffffff !important;
+}
+
+.sticky-header-active .mf__nav-item {
+  color: #4d5877 !important;
+}
+
+.mf__logo-con {
+  max-width: 350px;
+  width: 350px !important;
+}
+
+.mf__logo {
+  overflow: hidden;
+  position: relative;
+  background: url("/frontend/template/assets/img/MF-Homecare-Logo-white.png") no-repeat center center;
+  background-size: contain;
+  display: block;
+  max-width: 350px;
+  width: 350px;
+}
+
+.mf__logo:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 18.25%;
+}
+
+.mf__logo :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sticky-header-active .mf__logo {
+  background-image: url("/frontend/template/assets/img/MF-Homecare-Logo.png");
+}
+
+.mf__homepage-video:before {
+  opacity: 0.4 !important;
+}
+
+.mf__homepage-video__heading-1 {
+  font-size: 4.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 899px) {
+  .mf__homepage-video__heading-1 {
+    font-size: 2.4rem;
+  }
+}
+
+.mf__homepage-video__heading-2 {
+  font-size: 6.1rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 899px) {
+  .mf__homepage-video__heading-2 {
+    font-size: 3.2rem;
+  }
+}
+
+.mf__homepage-video__heading-3 {
+  background-color: #4d5877 !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 4px;
+  color: #ffffff !important;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: Jomolhari, serif;
+  font-weight: 700;
+}
+
+.mf__homepage-video__heading-3:hover {
+  background-color: #ffffff !important;
+  border-color: #4d5877 !important;
+  color: #4d5877 !important;
+}
+
+.mf__homepage-video__heading-3:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.mf__features__h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mf__features__p {
+  margin-bottom: 1rem;
+}
+
+.mf__features__row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 599px) {
+  .mf__features__row {
+    flex-wrap: wrap;
+  }
+}
+
+.mf__features__row > * {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 599px) {
+  .mf__features__row > * {
+    flex-basis: 100%;
+  }
+}
+
+.mf__features__row:last-child {
+  margin-bottom: 0;
+}
+
+.mf__features__row > * {
+  flex-basis: 25%;
+}
+
+@media (max-width: 899px) {
+  .mf__features__row > * {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .mf__features__row > * {
+    flex-basis: 100%;
+  }
+}
+
+.mf__features__row__column--first {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.mf__features__h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.mf__feature {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .mf__feature {
+    flex-wrap: wrap;
+  }
+}
+
+.mf__feature > * {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 599px) {
+  .mf__feature > * {
+    flex-basis: 100%;
+  }
+}
+
+.mf__feature__icon-con {
+  margin-bottom: 2rem;
+  max-width: 48px;
+}
+
+.mf__feature__icon {
+  display: block;
+  width: 100%;
+}
+
+.mf__feature__heading {
+  color: #4d5877;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.mf__feature__copy {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+html .header-body {
+  background-color: transparent !important;
+}
+
+html.sticky-header-active .header-body {
+  background-color: #ffffff !important;
+}
+
+html #header .header-container {
+  padding: 0.5rem 1rem;
 }
 
