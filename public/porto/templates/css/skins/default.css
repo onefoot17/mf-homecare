@@ -3936,7 +3936,7 @@ html[dir="rtl"] #header .tip-light:before {
 		color: #0088CC;
 	}
 
-	#header .header-nav-main nav > ul:not(:hover) > li > a.active {
+	/* #header .header-nav-main nav > ul:not(:hover) > li > a.active {
 		background-color: #0088CC;
 		color: #FFF;
 	}
@@ -3960,7 +3960,7 @@ html[dir="rtl"] #header .tip-light:before {
 
 	#header .header-nav.header-nav-links nav > ul:not(:hover) > li > a.active {
 		color: #0088CC;
-	}
+	} */
 
 	#header .header-nav.header-nav-links.header-nav-links-vertical-slide nav ul li.dropdown .dropdown-menu::-webkit-scrollbar-thumb {
 		background: #0088CC !important;

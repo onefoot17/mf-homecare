@@ -3,6 +3,218 @@
 @import '_variables';
 @import '_mixins';
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include line-height(
+        $line-height: 1
+    );
+
+    color: var(--purple);
+    font-family: $font-family-jomolhari;
+}
+
+p {
+    @include line-height;
+
+    font-size: 1.6rem;
+}
+
 .#{$mf} {
+    &#{$es}separator {
+        background-color: var(--maroon);
+        display: inline-block;
+        margin: 0 auto $margin;
+        width: 10%;
+        height: 4px;
+    }
+
+    &#{$es}nav {
+        align-items: center;
+        padding: $padding;
+
+        &-item {
+            @include button-styles(
+                $color: var(--white) !important
+            );
+            @include button-hover(
+                $background-color: var(--purple) !important,
+                $border-color: var(--white) !important,
+                $color: var(--white) !important,
+            );
+
+            font-family: $font-family-jomolhari;
+            font-weight: 700;
+
+            &:hover {
+                @include transition;
+
+                text-decoration: none;
+
+                .sticky-header-active & {
+                    color: var(--white) !important;
+                }
+            }
+
+            .sticky-header-active & {
+                color: var(--purple) !important;
+            }
+        }
+    }
+
+    &#{$es}logo-con {
+        max-width: 350px;
+        width: 350px !important;
+    }
     
+    &#{$es}logo {
+        @include ratio( logo );
+        
+        background: url( '/frontend/template/assets/img/MF-Homecare-Logo-white.png' ) no-repeat center center;
+        background-size: contain;
+        display: block;
+        max-width: 350px;
+        width: 350px;
+
+        .sticky-header-active & {
+            background-image: url( '/frontend/template/assets/img/MF-Homecare-Logo.png' );
+        }
+    }
+
+    &#{$es}homepage-video {
+        &:before {
+            opacity: .4 !important;
+        }
+
+        &#{$es}heading-1 {
+            font-size: 4.2rem;
+            margin-bottom: $margin*2;
+            
+            @include for-tablet-landscape-down {
+                font-size: 2.4rem;
+            }
+        }
+
+        &#{$es}heading-2 {
+            font-size: 6.1rem;
+            margin-bottom: $margin*2;
+            
+            @include for-tablet-landscape-down {
+                font-size: 3.2rem;
+            }
+        }
+
+        &#{$es}heading-3 {
+            @include button-styles(
+                $background-color: var(--purple) !important,
+                $border-color: var(--white) !important,
+                $color: var(--white) !important
+            );
+            @include button-hover(
+                $background-color: var(--white) !important,
+                $border-color: var(--purple) !important,
+                $color: var(--purple) !important,
+            );
+
+            font-family: $font-family-jomolhari;
+            font-weight: 700;
+
+            &:hover {
+                @include transition;
+
+                text-decoration: none;
+            }
+        }
+    }
+
+    &#{$es}features {
+        &#{$es}h1 {
+            font-size: 3rem;
+            margin-bottom: $margin;
+        }
+
+        &#{$es}p {
+            margin-bottom: $margin;
+        }
+
+        &#{$es}row {
+            @include display-flex;
+
+            margin-bottom: $margin*4;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            > * {
+                flex-basis: 25%;
+                
+                @include for-tablet-landscape-down{
+                    flex-basis: 50%;
+                }
+                
+                @include for-phone-only{
+                    flex-basis: 100%;
+                }
+            }
+
+            &#{$es}column--first {
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+
+        &#{$es}h2 {
+            font-size: 2.3rem;
+            margin-bottom: $margin;
+        }
+    }
+
+    &#{$es}feature {
+        @include display-flex(
+            $justify-content: center
+        );
+
+        flex-direction: column;
+        padding: $padding;
+        text-align: center;
+
+        &#{$es}icon-con {
+            margin-bottom: $margin*2;
+            max-width: 48px;
+        }
+        
+        &#{$es}icon {
+            display: block;
+            width: 100%;
+        }
+        
+        &#{$es}heading {
+            color: $purple;
+            font-size: 2.4rem;
+            margin-bottom: $margin*2;
+        }
+        
+        &#{$es}copy {
+            font-family: $font-family-roboto;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+html {
+    .header-body {
+        background-color: transparent !important;
+    }
+        
+    &.sticky-header-active .header-body {
+        background-color: $white !important;
+    }
+
+    #header .header-container {
+        padding: $padding/2 $padding;
+    }
 }
