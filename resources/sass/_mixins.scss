@@ -31,9 +31,9 @@
 }
 
 // Buttons
-@mixin button-styles( $background-color: transparent, $border-color: transparent, $color: var(--white), $font-size: 2rem, $padding: $padding/2 $padding, $text-decoration: none ) {
+@mixin button-styles( $background-color: transparent, /*$border-color: transparent,*/ $color: var(--white), $font-size: 2rem, $padding: $padding/2 $padding, $text-decoration: none ) {
     background-color: $background-color;
-    border: 2px solid $border-color;
+    // border: 2px solid $border-color;
     border-radius: 4px;
     color: $color;
     font-size: $font-size;
@@ -41,24 +41,24 @@
     text-decoration: $text-decoration;
 }
 
-@mixin button-hover( $button: button, $background-color: var(--purple), $border-color: $background-color, $color: var(--black), $text-decoration: none ) {
+@mixin button-hover( $button: button, $background-color: var(--purple), /*$border-color: $background-color,*/ $color: var(--black), $text-decoration: none ) {
     @if $button == button {
         &:hover {
             background-color: $background-color;
-            border-color: $border-color;
+            // border-color: $border-color;
             color: $color;
             text-decoration: $text-decoration;
         }
     } @else if $button == outside_link {
         &:hover button {
             background-color: $background-color;
-            border-color: $border-color;
+            // border-color: $border-color;
             color: $color;
         }
     } @else if $button == inside_link {
         &:hover {
             background-color: $background-color;
-            border-color: $border-color;
+            // border-color: $border-color;
         
             a {
                 color: $color;
@@ -143,6 +143,6 @@
 
 //Color
 @mixin background-color-rgba( $color-hex, $color-opacity ) {
-    background-color: $color-hex;
-    background-color: rgba( $color-hex, $color-opacity );
+    background-color: rgb( $color-hex ) !important;
+    background-color: rgba( $color-hex, $color-opacity ) !important;
 }

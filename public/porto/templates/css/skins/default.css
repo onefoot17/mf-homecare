@@ -338,10 +338,10 @@ html .bg-color-hover-before-quaternary:before:hover {
 	background-color: #383f48 !important;
 }
 
-html .bg-color-dark,
+/* html .bg-color-dark,
 html .bg-dark {
 	background-color: #212529 !important;
-}
+} */
 
 html .bg-color-hover-dark:hover,
 html .bg-hover-dark:hover {

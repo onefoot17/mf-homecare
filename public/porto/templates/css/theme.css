@@ -6228,8 +6228,8 @@ html.dark .text-muted {
 }
 
 #footer a:not(.btn):not(.no-footer-css):hover {
-	text-decoration: none;
-	color: #FFF;
+	/* text-decoration: none; */
+	/* color: #FFF; */
 }
 
 #footer a:not(.btn):not(.no-footer-css):focus, #footer a:not(.btn):not(.no-footer-css):active {
