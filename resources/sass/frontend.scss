@@ -15,6 +15,7 @@ h6 {
 
     color: var(--purple);
     font-family: $font-family-jomolhari;
+    font-weight: 700;
     text-transform: initial;
 }
 
@@ -23,6 +24,20 @@ p {
 
     color: $black;
     font-size: 1.6rem;
+}
+
+html {
+    .header-body {
+        @include background-color-rgba( var(--white--rgb), 0.8 );
+    }
+    
+    &.sticky-header-active .header-body {
+        @include background-color-rgba( var(--purple--rgb), 0.8 );
+    }
+
+    #header .header-container {
+        padding: $padding/2 $padding;
+    }
 }
 
 .#{$mf} {
@@ -34,8 +49,12 @@ p {
         background-color: var(--maroon);
         display: inline-block;
         margin: 0 auto $margin;
-        width: 10%;
+        width: 15%;
         height: 4px;
+        
+        &#{$ms}small {
+            width: 5%;
+        }
     }
 
     &#{$es}nav {
@@ -44,11 +63,11 @@ p {
 
         &-item {
             @include button-styles(
-                $color: var(--white) !important
+                $color: var(--purple) !important
             );
             @include button-hover(
-                $background-color: var(--purple) !important,
-                $border-color: var(--white) !important,
+                $background-color: rgba( var(--purple--rgb), .9 ) !important,
+                // $border-color: var(--white) !important,
                 $color: var(--white) !important,
             );
 
@@ -61,12 +80,13 @@ p {
                 text-decoration: none;
 
                 .sticky-header-active & {
-                    color: var(--white) !important;
+                    background-color: rgba( var(--white--rgb), .7 ) !important;
+                    color: var(--purple) !important;
                 }
             }
 
             .sticky-header-active & {
-                color: var(--purple) !important;
+                color: var(--white) !important;
             }
         }
     }
@@ -79,14 +99,14 @@ p {
     &#{$es}logo {
         @include ratio( logo );
         
-        background: url( '/frontend/template/assets/img/MF-Homecare-Logo-white.png' ) no-repeat center center;
+        background: url( '/frontend/template/assets/img/MF-Homecare-Logo.png' ) no-repeat center center;
         background-size: contain;
         display: block;
         max-width: 350px;
         width: 350px;
 
         .sticky-header-active & {
-            background-image: url( '/frontend/template/assets/img/MF-Homecare-Logo.png' );
+            background-image: url( '/frontend/template/assets/img/MF-Homecare-Logo-white.png' );
         }
     }
 
@@ -106,7 +126,7 @@ p {
 
         &#{$es}heading-2 {
             font-size: 6.1rem;
-            margin-bottom: $margin*2;
+            margin-bottom: $margin*4;
             
             @include for-tablet-landscape-down {
                 font-size: 3.2rem;
@@ -115,13 +135,14 @@ p {
 
         &#{$es}heading-3 {
             @include button-styles(
-                $background-color: var(--purple) !important,
-                $border-color: var(--white) !important,
-                $color: var(--white) !important
+                $background-color: rgba( var(--purple--rgb), .9 ) !important,
+                // $border-color: var(--white) !important,
+                $color: var(--white) !important,
+                $padding: $padding*2
             );
             @include button-hover(
                 $background-color: var(--white) !important,
-                $border-color: var(--purple) !important,
+                // $border-color: var(--purple) !important,
                 $color: var(--purple) !important,
             );
 
@@ -139,16 +160,19 @@ p {
     &#{$es}features {
         &#{$es}h1 {
             font-size: 3rem;
-            margin-bottom: $margin;
+            margin-bottom: $margin*2;
             text-align: center;
         }
 
         &#{$es}p {
-            margin-bottom: $margin;
+            margin-bottom: $margin*2;
         }
 
         &#{$es}row {
-            @include display-flex;
+            @include display-flex(
+                $align-items: flex-start,
+                $justify-content: flex-start
+            );
 
             margin-bottom: $margin*4;
             
@@ -156,7 +180,8 @@ p {
                 margin-bottom: 0;
             }
             
-            > * {
+            &#{$es}column {
+                align-self: stretch;
                 flex-basis: 25%;
                 
                 @include for-tablet-landscape-down{
@@ -170,6 +195,7 @@ p {
 
             &#{$es}column--first {
                 flex-basis: 100%;
+                margin-bottom: $margin;
                 text-align: center;
             }
         }
@@ -178,41 +204,80 @@ p {
             font-size: 2.3rem;
             margin-bottom: $margin;
         }
-    }
 
-    &#{$es}feature {
-        @include display-flex(
-            $justify-content: center
-        );
-
-        flex-direction: column;
-        padding: $padding;
-        text-align: center;
-
-        &#{$es}icon-con {
+        &#{$ms}benefits {
+            background-color: var(--cream);
             margin-bottom: $margin*2;
-            max-width: 48px;
+            padding-top: $padding*2;
+            padding-bottom: $padding*2;
         }
         
-        &#{$es}icon {
-            display: block;
-            width: 100%;
+        &#{$ms}services {
+            padding-bottom: $padding*2;
         }
-        
-        &#{$es}heading {
-            color: $purple;
-            font-size: 2.4rem;
-            margin-bottom: $margin*2;
-        }
-        
-        &#{$es}copy {
-            font-family: $font-family-roboto;
-            font-size: 1.6rem;
+
+        &#{$es}feature {
+            @include display-flex(
+                $align-items: flex-start,
+                $justify-content: center
+            );
+
+            height: 100%;
+            padding: $padding;
+            text-align: center;
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+
+            > * {
+                flex-basis: 100%;
+            }
+
+            &#{$es}icon-con {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-bottom: $margin*2;
+                max-width: 48px;
+                max-height: 48px;
+                width: 48px;
+                height: 48px;
+            }
+            
+            &#{$es}icon {
+                display: block;
+                width: 100%;
+            }
+
+            &#{$es}info {
+                height: 100%;
+            }
+            
+            &#{$es}heading {
+                @include line-height(
+                    $line-height: 1.6
+                );
+
+                color: $purple;
+                font-size: 2.2rem;
+            }
+
+            &#{$es}heading + &#{$es}copy {
+                margin-top: $margin*2;
+            }
+
+            &#{$es}copy {
+                font-family: $font-family-roboto;
+                font-size: 1.6rem;
+            }
         }
     }
 
     &#{$es}video {
         background-color: var(--cream);
+        padding-top: $padding*2;
+        padding-bottom: $padding*2;
 
         &#{$es}video {
             display: block;
@@ -224,16 +289,25 @@ p {
     &#{$es}register__buttons {
         background-color: var(--purple);
         color: var(--white);
+        padding-top: $padding*2;
+        padding-bottom: $padding*2;
 
         &#{$es}inner {
-            display: flex;
+            @include display-flex(
+                $align-items: flex-start,
+                $justify-content: flex-start
+            );
+        }
             
-            > * {
-                display: flex;
-                flex-basis: 50%;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: $padding;
+        &#{$es}col {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            height: 100%;
+            padding-right: $padding;
+
+            &:last-child {
+                padding-right: 0;
             }
         }
 
@@ -242,7 +316,14 @@ p {
             margin-bottom: $margin*2;
         }
 
-        p {
+        &#{$es}info {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: center;
+        }
+
+        &#{$es}p {
             color: var(--white);
             margin-bottom: $margin*2;
         }
@@ -254,12 +335,14 @@ p {
                 $font-size: 1.8rem
             );
             @include button-hover(
-                $background-color: var(--purple),
-                $border-color: var(--white),
+                $background-color: var(--black),
+                // $border-color: var(--white),
                 $color: var(--white)
             );
             @include transition;
 
+            align-self: flex-end;
+            display: inline-block;
             font-family: $font-family-jomolhari;
             font-weight: 700;
         }
@@ -280,61 +363,68 @@ p {
             @include display-flex(
                 $align-items: flex-start
             );
-
-            > * {
-                display: flex;
-                flex-basis: 25%;
-                justify-content: center;
-                padding-right: $padding*2;
-                
-                @include for-tablet-landscape-down{
-                    flex-basis: 50%;
-                }
-                
-                @include for-phone-only{
-                    flex-basis: 100%;
-                }
-
-                &:first-child {
-                    justify-content: flex-start;
-                }
-                
-                &:last-child {
-                    justify-content: flex-end;
-                    padding-right: 0;
-                }
-            }
         }
 
-        li {
-            margin-bottom: $margin*2;
+        &#{$es}col {
+            display: flex;
+            flex-basis: 25%;
+            justify-content: center;
+            padding-right: $padding*2;
+            
+            @include for-tablet-landscape-down{
+                flex-basis: 50%;
+            }
+            
+            @include for-phone-only{
+                flex-basis: 100%;
+            }
 
+            &:first-child {
+                justify-content: flex-start;
+            }
+            
             &:last-child {
-                margin-bottom: 0;
+                justify-content: flex-end;
                 padding-right: 0;
             }
-
-            .mf__app-icons {
-                width: 100%;
             
-                &-con {
-                    display: block;
-                    max-width: 160px;
+            &#{$es}inner {
+                &#{$es}li {
+                    margin-bottom: $margin*2;
+                    
+                    &:last-child {
+                        margin-bottom: 0;
+                        padding-right: 0;
+                    }
+                    
+                    .mf__app-icons {
+                        width: 100%;
+                        
+                        &-con {
+                            display: block;
+                            max-width: 160px;
+                        }
+                    }
+                }
+                
+                &#{$es}heading {
+                    color: $white;
+                    font-size: 2.2rem;
+                }
+                
+                &#{$es}p {
+                    color: $white;
+                }
+                
+                &#{$es}link {
+                    color: $white;
+
+                    &:hover {
+                        color: $white;
+                        text-decoration: underline;
+                    }
                 }
             }
-        }
-
-        h4 {
-            color: $white;
-            font-size: 2.2rem;
-        }
-
-        p {
-            color: $white;
-        }
-
-        a {
-            color: $white;
         }
 
         &#{$es}socials {
@@ -361,19 +451,5 @@ p {
                 font-size: 3rem;
             }
         }
-    }
-}
-
-html {
-    .header-body {
-        background-color: transparent !important;
-    }
-        
-    &.sticky-header-active .header-body {
-        background-color: $white !important;
-    }
-
-    #header .header-container {
-        padding: $padding/2 $padding;
     }
 }

@@ -38,11 +38,13 @@ $footer: 'footer' !default;
 }
 
 :root {
-    --black: #{ map-get( $vars, $black ) };
+    --black: #{ $black };
     --purple: #{ $purple };
+    --purple--rgb: #{ hex-to-rgb( $purple ) };
 	--maroon: #{ $maroon };
 	--red: #{ $red };
 	--cream: #{ $cream };
+    --white--rgb: #{ hex-to-rgb( $white ) };
     --white: #{ $white };
     --margin: #{ $margin };
     --padding: #{ $padding };

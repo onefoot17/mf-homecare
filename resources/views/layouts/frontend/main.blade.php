@@ -131,287 +131,255 @@
 					</div>
 				</section>
 
-				<div class="mf__features container" id="main">
-					<div class="row text-center pt-5 pb-4 mt-5 mb-4">
-						<div class="col-md-10 mx-md-auto">
-							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Client Benefits</h1>
+				<div class="mf__features mf__features--benefits" id="main">
+					<div class="container">
+						<div class="row text-center">
+							<div class="col-md-10 mx-md-auto">
+								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Client Benefits</h1>
 
-							<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Service</p>
-
-							<div class="mf__separator"></div>
-						</div>
-					</div>
-
-					<div class="mf__features__row">
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Choice-V2.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Choice</h4>
-									
-									<p class="mf__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
-								</div>
+								<div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 							</div>
 						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Control-V2.png' ) }}" />
-								</div>
+						<div class="mf__features__row">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Choice-V2.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Control</h4>
-									
-									<p class="mf__feature__copy">We give you the tools and technology that make it easy to coordinate your homecare from scheduling to payment.</p>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Lower-Cost-V2.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Lower Costs</h4>
-									
-									<p class="mf__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Choice</h4>
+										
+										<p class="mf__features__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Consistency-V2.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Control-V2.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Consistency</h4>
-									
-									<p class="mf__feature__copy">Like the Caregiver you’ve chosen? Book them again and again to build a bond with someone who knows your needs and routines.</p>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Control</h4>
+										
+										<p class="mf__features__feature__copy">We give you the tools and technology that make it easy to coordinate your homecare from scheduling to payment.</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="mf__features__row">
-						<div class="appear-animation" data-appear-animation="fadeInUpShorter">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Quality-V5-Separate.png' ) }}" />
-								</div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Quality</h4>
-									
-									<p class="mf__feature__copy">Good care is about more than just qualifications. Our system lets us register Caregivers based on personality, values, experience, and compassion.</p>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Lower-Cost-V2.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Lower Costs</h4>
+										
+										<p class="mf__features__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Live-In-Homecare-V4.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Consistency-V2.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Live-In Homecare</h4>
-									
-									<p class="mf__feature__copy">Live-in care can be a cost-effective alternative to a seniors’ residence that preserves independence and a familiar home.</p>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Consistency</h4>
+										
+										<p class="mf__features__feature__copy">Like the Caregiver you’ve chosen? Book them again and again to build a bond with someone who knows your needs and routines.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/24-Hour-Live-In-Care-V3.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Quality-V5-Separate.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Overnight Care</h4>
-									
-									<p class="mf__feature__copy">Sleep securely with the knowledge that a Caregiver is close at hand in the home.</p>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Quality</h4>
+										
+										<p class="mf__features__feature__copy">Good care is about more than just qualifications. Our system lets us register Caregivers based on personality, values, experience, and compassion.</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/Tracking-&-Location-App.png' ) }}" />
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Live-In-Homecare-V4.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Live-In Homecare</h4>
+										
+										<p class="mf__features__feature__copy">Live-in care can be a cost-effective alternative to a seniors’ residence that preserves independence and a familiar home.</p>
+									</div>
 								</div>
+							</div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Location Tracking</h4>
-									
-									<p class="mf__feature__copy">Our app helps you keep track of your loved ones during their appointment with the Caregiver.</p>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/24-Hour-Live-In-Care-V3.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Overnight Care</h4>
+										
+										<p class="mf__features__feature__copy">Sleep securely with the knowledge that a Caregiver is close at hand in the home.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Tracking-&-Location-App.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Location Tracking</h4>
+										
+										<p class="mf__features__feature__copy">Our app helps you keep track of your loved ones during their appointment with the Caregiver.</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="row text-center">
-						<div class="col-md-10 mx-md-auto">
-							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver and Companion Services</h1>
+				<div class="mf__features mf__features--services">
+					<div class="container">
+						<div class="row text-center">
+							<div class="col-md-10 mx-md-auto">
+								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver and Companion Services</h1>
 
-							<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Our system connects you both with specialized Caregivers and with Companions, depending on your needs.</p>
+								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Our system connects you both with specialized Caregivers and with Companions, depending on your needs.</p>
 
-							<div class="mf__separator"></div>
-						</div>
-					</div>
-
-					<div class="mf__features__row">
-						<div class="mf__features__row__column mf__features__row__column--first">
-							<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver Services</h2>
-
-							<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Only Caregivers who submit the required qualification documents can provide these services.</p>
+								<div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+							</div>
 						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/sampoo.png' ) }}" />
+						<div class="mf__features__row">
+							<div class="mf__features__row__column mf__features__row__column--first">
+								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver Services</h2>
+
+								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Only Caregivers who submit the required qualification documents can provide these services.</p>
+
+								<div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+							</div>
+
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/sampoo.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Bathing and Personal Grooming</h4>
+									</div>
 								</div>
+							</div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Bathing and Personal Grooming</h4>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/bathtub.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Bathroom and Continence Care</h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/yoga.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Exercise and Mobility</h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/pills.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Medication Reminder</h4>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInUpShorter">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/bathtub.png' ) }}" />
-								</div>
+						<div class="mf__features__row">
+							<div class="mf__features__row__column mf__features__row__column--first">
+								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Companion Services</h2>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Bathroom and Continence Care</h4>
+								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you provide these services, you will be classified as a Companion.</p>
+
+								<div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+							</div>
+
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/eat.png' ) }}')"></div>
+
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Feeding</h4>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/yoga.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/lunch.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Exercise and Mobility</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Helping with Meal Preparation</h4>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/pills.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/washing.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Medication Reminder</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Light Housework</h4>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="mf__features__row">
-						<div class="mf__features__row__column mf__features__row__column--first">
-							<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Companion Services</h2>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/walk.png' ) }}')"></div>
 
-							<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you provide these services, you will be classified as a Companion.</p>
-						</div>
-
-						<div class="appear-animation" data-appear-animation="fadeInUpShorter">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/eat.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Feeding</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Going out for Walks</h4>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/lunch.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/walking.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Helping with Meal Preparation</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Running Errands</h4>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/washing.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/car.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Light Housework</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Trip to appointments or other outings by car</h4>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/walk.png' ) }}" />
-								</div>
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+								<div class="mf__features__feature">
+									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/volunteer.png' ) }}')"></div>
 
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Going out for Walks</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/walking.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Running Errands</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/car.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Trip to appointments or other outings by car</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-							<div class="mf__feature">
-								<div class="mf__feature__icon-con">
-									<img class="mf__feature__icon" src="{{ asset( 'frontend/template/assets/img/icons/volunteer.png' ) }}" />
-								</div>
-
-								<div class="mf__feature__info">
-									<h4 class="mf__feature__heading">Someone to spend time with and Emotional Support</h4>
+									<div class="mf__features__feature__info">
+										<h4 class="mf__features__feature__heading">Someone to spend time with and Emotional Support</h4>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -419,11 +387,11 @@
 				</div>
 
 				<section class="mf__video appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-					<div class="row text-center pt-5 pb-4 mt-5">
-						<div class="col-md-10 mx-md-auto">
+					<div class="row text-center">
+						<div class="container mx-md-auto">
 							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Watch our Video</h1>
 						
-							<div class="mf__separator"></div>
+							<div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
 							<video class="mf__video__video" src="{{ asset( 'frontend/template/assets/video/MF-Homecare-homepage-video.mp4' ) }}" controls poster="{{ asset( 'frontend/template/assets/video/MF-Homecare-homepage-video.jpg' ) }}"></video>
 						</div>
@@ -431,22 +399,26 @@
 				</section>
 
 				<section class="mf__register__buttons appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-					<div class="row text-center pt-5 pb-4">
-						<div class="mf__register__buttons__inner col-md-10 mx-md-auto">
+					<div class="row text-center">
+						<div class="mf__register__buttons__inner container mx-md-auto">
 							<section class="mf__register__buttons__col">
 								<h3 class="mf__heading-3">Register As A Caregiver</h3>
 							
-								<p>Complete our background check process and submit any qualification documents to ensure that your profile is available when clients start searching!</p>
-							
-								<a class="mf__register__buttons__button" href="#">Register As A Caregiver</a>
+								<div class="mf__register__buttons__info">
+									<p class="mf__register__buttons__p">Complete our background check process and submit any qualification documents to ensure that your profile is available when clients start searching!</p>
+								
+									<a class="mf__register__buttons__button" href="#">Register As A Caregiver</a>
+								</div>
 							</section>
 
 							<section class="mf__register__buttons__col">
 								<h3 class="mf__heading-3">Register As A Client</h3>
 								
-								<p>Sign up as part of our soft launch process to let us know what kind of care you’re looking for!</p>
-								
-								<a class="mf__register__buttons__button" href="#">Register As A Client</a>
+								<div class="mf__register__buttons__info">
+									<p class="mf__register__buttons__p">Sign up as part of our soft launch process to let us know what kind of care you’re looking for!</p>
+									
+									<a class="mf__register__buttons__button" href="#">Register As A Client</a>
+								</div>
 							</section>
 						</div>
 					</div>
@@ -454,85 +426,85 @@
 			</div>
 
 			<footer id="footer" class="mf__footer mt-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
-				<div class="row pt-5 pb-4">
-					<div class="mf__footer__inner col-md-10 mx-md-auto">
-						<div>
-							<ul class="">
-								<li>
-									<h4>MF Homecare</h4>
+				<div class="row">
+					<div class="mf__footer__inner container mx-md-auto">
+						<div class="mf__footer__col">
+							<ul class="mf__footer__col__inner">
+								<li class="mf__footer__col__inner__li">
+									<h4 class="mf__footer__col__inner__heading">MF Homecare</h4>
 								</li>
 
-								<li>
-									<p>
-										<a href="#">How We Work</a>
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">How We Work</a>
 									</p>
 								</li>
 
-								<li>
-									<p>
-										<a href="#">Register as a Caregiver</a>
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Register as a Caregiver</a>
 									</p>
 								</li>
 
-								<li>
-									<p>
-										<a href="#">Register as a Client</a>
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Register as a Client</a>
 									</p>
 								</li>
 
-								<li>
-									<p>
-										<a href="#">Contact Us</a>
-									</p>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<ul class="">
-								<li>
-									<h4>Information</h4>
-								</li>
-
-								<li>
-									<p>
-										<a href="#">Identity & Background Check</a>
-									</p>
-								</li>
-
-								<li>
-									<p>
-										<a href="#">Cancellation Policy</a>
-									</p>
-								</li>
-
-								<li>
-									<p>
-										<a href="#">Terms & Conditions</a>
-									</p>
-								</li>
-
-								<li>
-									<p>
-										<a href="#">Privacy Policy</a>
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Contact Us</a>
 									</p>
 								</li>
 							</ul>
 						</div>
 
-						<div>
-							<ul class="">
-								<li>
-									<h4>Coming Soon</h4>
+						<div class="mf__footer__col">
+							<ul class="mf__footer__col__inner">
+								<li class="mf__footer__col__inner__li">
+									<h4 class="mf__footer__col__inner__heading">Information</h4>
 								</li>
 
-								<li>
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Identity & Background Check</a>
+									</p>
+								</li>
+
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Cancellation Policy</a>
+									</p>
+								</li>
+
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Terms & Conditions</a>
+									</p>
+								</li>
+
+								<li class="mf__footer__col__inner__li">
+									<p class="mf__footer__col__inner__p">
+										<a class="mf__footer__col__inner__link" href="#">Privacy Policy</a>
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="mf__footer__col">
+							<ul class="mf__footer__col__inner">
+								<li class="mf__footer__col__inner__li">
+									<h4 class="mf__footer__col__inner__heading">Coming Soon</h4>
+								</li>
+
+								<li class="mf__footer__col__inner__li">
 									<a class="mf__app-icons-con" href="">
 										<img class="mf__app-icons" src="{{ asset( 'frontend/template/assets/img/Available-on-the-App-Store.png' ) }}" />
 									</a>
 								</li>
 									
-								<li>
+								<li class="mf__footer__col__inner__li">
 									<a class="mf__app-icons-con" href="">
 										<img class="mf__app-icons" src="{{ asset( 'frontend/template/assets/img/Get-it-on-Google-Play.png' ) }}" />
 									</a>
@@ -540,26 +512,26 @@
 							</ul>
 						</div>
 
-						<div>
-							<ul class="mf__footer__socials">
+						<div class="mf__footer__col">
+							<ul class="mf__footer__col__inner mf__footer__socials">
 								<li class="mf__footer__socials__social mf__footer__socials__social--first">
-									<h4>Socials</h4>
+									<h4 class="mf__footer__col__inner__heading">Socials</h4>
 								</li>
 
 								<li class="mf__footer__socials__social">
-									<a href="#">
+									<a class="mf__footer__col__inner__link" href="#">
 										<i class="fab fa-facebook"></i>
 									</a>
 								</li>
 
 								<li class="mf__footer__socials__social">
-									<a href="#">
+									<a class="mf__footer__col__inner__link" href="#">
 										<i class="fab fa-instagram"></i>
 									</a>
 								</li>
 
 								<li class="mf__footer__socials__social">
-									<a href="#">
+									<a class="mf__footer__col__inner__link" href="#">
 										<i class="fab fa-youtube"></i>
 									</a>
 								</li>
