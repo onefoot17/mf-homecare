@@ -418,172 +418,152 @@
 					</div>
 				</div>
 
-				<section class="section bg-dark border-0 m-0">
-					<div class="container">
-						<div class="row my-5">
-							<div class="col-lg-6 pr-5">
-								<h2 class="text-color-light font-weight-normal text-6 mb-2 pb-1"><strong class="font-weight-extra-bold">Who</strong> We Are</h2>
-								<p class="lead text-color-light opacity-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enikklam id valorem ipsum dolor sit amet, consectetur adipiscing.</p>
-								<p class="text-color-light opacity-6">Phasellus blandit massa enim. Nullam id varius elit. blandit massa enim d varius blandit massa enimariusi d varius elit.</p>
-								<a href="#" class="font-weight-semibold text-decoration-none learn-more text-2">VIEW MORE <i class="fas fa-chevron-right ml-2"></i></a>
-							</div>
-							<div class="col-lg-6">
-								<div class="progress-bars mt-5">
-									<div class="progress-label">
-										<span>HTML/CSS</span>
-									</div>
-									<div class="progress progress-dark mb-2">
-										<div class="progress-bar progress-bar-primary" data-appear-progress-animation="100%">
-											<span class="progress-bar-tooltip">100%</span>
-										</div>
-									</div>
-									<div class="progress-label">
-										<span>Design</span>
-									</div>
-									<div class="progress progress-dark mb-2">
-										<div class="progress-bar progress-bar-primary" data-appear-progress-animation="85%" data-appear-animation-delay="300">
-											<span class="progress-bar-tooltip">85%</span>
-										</div>
-									</div>
-									<div class="progress-label">
-										<span>WordPress</span>
-									</div>
-									<div class="progress progress-dark mb-2">
-										<div class="progress-bar progress-bar-primary" data-appear-progress-animation="75%" data-appear-animation-delay="600">
-											<span class="progress-bar-tooltip">75%</span>
-										</div>
-									</div>
-									<div class="progress-label">
-										<span>Photoshop</span>
-									</div>
-									<div class="progress progress-dark mb-2">
-										<div class="progress-bar progress-bar-primary" data-appear-progress-animation="85%" data-appear-animation-delay="900">
-											<span class="progress-bar-tooltip">85%</span>
-										</div>
-									</div>
-								</div>
-							</div>
+				<section class="mf__video appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+					<div class="row text-center pt-5 pb-4 mt-5">
+						<div class="col-md-10 mx-md-auto">
+							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Watch our Video</h1>
+						
+							<div class="mf__separator"></div>
+
+							<video class="mf__video__video" src="{{ asset( 'frontend/template/assets/video/MF-Homecare-homepage-video.mp4' ) }}" controls poster="{{ asset( 'frontend/template/assets/video/MF-Homecare-homepage-video.jpg' ) }}"></video>
 						</div>
 					</div>
 				</section>
 
-				<div class="container appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-					<div class="row py-5 my-5">
-						<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
-							<div class="owl-carousel owl-theme nav-style-1 nav-center-images-only stage-margin mb-0" data-plugin-options="{'responsive': {'576': {'items': 1}, '768': {'items': 1}, '992': {'items': 2}, '1200': {'items': 2}}, 'margin': 25, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
-								<div>
-									<img class="img-fluid rounded-0 mb-4" src="{{asset('porto/templates/img/team/team-1.jpg')}}" alt="" />
-									<h3 class="font-weight-bold text-color-dark text-4 mb-0">John Doe</h3>
-									<p class="text-2 mb-0">CEO</p>
-								</div>
-								<div>
-									<img class="img-fluid rounded-0 mb-4" src="{{asset('porto/templates/img/team/team-2.jpg')}}" alt="" />
-									<h3 class="font-weight-bold text-color-dark text-4 mb-0">Jessica Doe</h3>
-									<p class="text-2 mb-0">CEO</p>
-								</div>
-								<div>
-									<img class="img-fluid rounded-0 mb-4" src="{{asset('porto/templates/img/team/team-3.jpg')}}" alt="" />
-									<h3 class="font-weight-bold text-color-dark text-4 mb-0">Chris Doe</h3>
-									<p class="text-2 mb-0">DEVELOPER</p>
-								</div>
-								<div>
-									<img class="img-fluid rounded-0 mb-4" src="{{asset('porto/templates/img/team/team-4.jpg')}}" alt="" />
-									<h3 class="font-weight-bold text-color-dark text-4 mb-0">Julie Doe</h3>
-									<p class="text-2 mb-0">SEO ANALYST</p>
-								</div>
-								<div>
-									<img class="img-fluid rounded-0 mb-4" src="{{asset('porto/templates/img/team/team-5.jpg')}}" alt="" />
-									<h3 class="font-weight-bold text-color-dark text-4 mb-0">Robert Doe</h3>
-									<p class="text-2 mb-0">DESIGNER</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 order-1 order-md-2 text-center text-md-left mb-5 mb-md-0">
-							<h2 class="text-color-dark font-weight-normal text-6 mb-2 pb-1">Meet <strong class="font-weight-extra-bold">Our Team</strong></h2>
-							<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit massa enim. Nullam id varius nunc.</p>
-							<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget.</p>
-							<a href="page-team.html" class="btn btn-dark font-weight-semibold rounded-0 px-5 btn-py-2 text-2">LEARN MORE</a>
-						</div>
-					</div>
-				</div>
+				<section class="mf__register__buttons appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+					<div class="row text-center pt-5 pb-4">
+						<div class="mf__register__buttons__inner col-md-10 mx-md-auto">
+							<section class="mf__register__buttons__col">
+								<h3 class="mf__heading-3">Register As A Caregiver</h3>
+							
+								<p>Complete our background check process and submit any qualification documents to ensure that your profile is available when clients start searching!</p>
+							
+								<a class="mf__register__buttons__button" href="#">Register As A Caregiver</a>
+							</section>
 
-				<section class="section section-height-3 bg-light border border-bottom-0 m-0">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="owl-carousel owl-theme mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 1}, '768': {'items': 5}, '992': {'items': 7}, '1200': {'items': 7}}, 'autoplay': true, 'autoplayTimeout': 3000, 'dots': false}">
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-1.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-2.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-3.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-4.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-5.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-6.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-4.png')}}" alt="">
-									</div>
-									<div>
-										<img class="img-fluid opacity-2" src="{{asset('porto/templates/img/logos/logo-2.png')}}" alt="">
-									</div>
-								</div>
-							</div>
+							<section class="mf__register__buttons__col">
+								<h3 class="mf__heading-3">Register As A Client</h3>
+								
+								<p>Sign up as part of our soft launch process to let us know what kind of care you’re looking for!</p>
+								
+								<a class="mf__register__buttons__button" href="#">Register As A Client</a>
+							</section>
 						</div>
 					</div>
 				</section>
-				
 			</div>
 
-			<footer id="footer" class="mt-0">
-				<div class="container">
-					<div class="footer-ribbon">
-						<span>Get in Touch</span>
-					</div>
-					<div class="row py-5 my-4">
-						<div class="col-md-6 mb-4 mb-lg-0">
-							<a href="index.html" class="logo pr-0 pr-lg-3">
-								<img alt="Porto Website Template" src="{{asset('porto/templates/img/logo-footer.png')}}" class="opacity-7 bottom-4" height="33">
-							</a>
-							<p class="mt-2 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna. Phasellus semper scelerisque purus, et semper nisl lacinia sit amet. Praesent venenatis turpis vitae purus semper...</p>
-							<p class="mb-0"><a href="#" class="btn-flat btn-xs text-color-light"><strong class="text-2">VIEW MORE</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
+			<footer id="footer" class="mf__footer mt-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+				<div class="row pt-5 pb-4">
+					<div class="mf__footer__inner col-md-10 mx-md-auto">
+						<div>
+							<ul class="">
+								<li>
+									<h4>MF Homecare</h4>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">How We Work</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Register as a Caregiver</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Register as a Client</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Contact Us</a>
+									</p>
+								</li>
+							</ul>
 						</div>
-						<div class="col-md-6">
-							<h5 class="text-3 mb-3">CONTACT US</h5>
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="list list-icons list-icons-lg">
-										<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
-										<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p></li>
-										<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<ul class="list list-icons list-icons-sm">
-										<li><i class="fas fa-angle-right"></i><a href="page-faq.html" class="link-hover-style-1 ml-1"> FAQ's</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="sitemap.html" class="link-hover-style-1 ml-1"> Sitemap</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="contact-us.html" class="link-hover-style-1 ml-1"> Contact Us</a></li>
-									</ul>
-								</div>
-							</div>
+
+						<div>
+							<ul class="">
+								<li>
+									<h4>Information</h4>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Identity & Background Check</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Cancellation Policy</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Terms & Conditions</a>
+									</p>
+								</li>
+
+								<li>
+									<p>
+										<a href="#">Privacy Policy</a>
+									</p>
+								</li>
+							</ul>
 						</div>
-					</div>
-				</div>
-				<div class="footer-copyright footer-copyright-style-2">
-					<div class="container py-2">
-						<div class="row py-4">
-							<div class="col d-flex align-items-center justify-content-center">
-								<p>© Copyright 2020. All Rights Reserved.</p>
-							</div>
+
+						<div>
+							<ul class="">
+								<li>
+									<h4>Coming Soon</h4>
+								</li>
+
+								<li>
+									<a class="mf__app-icons-con" href="">
+										<img class="mf__app-icons" src="{{ asset( 'frontend/template/assets/img/Available-on-the-App-Store.png' ) }}" />
+									</a>
+								</li>
+									
+								<li>
+									<a class="mf__app-icons-con" href="">
+										<img class="mf__app-icons" src="{{ asset( 'frontend/template/assets/img/Get-it-on-Google-Play.png' ) }}" />
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<ul class="mf__footer__socials">
+								<li class="mf__footer__socials__social mf__footer__socials__social--first">
+									<h4>Socials</h4>
+								</li>
+
+								<li class="mf__footer__socials__social">
+									<a href="#">
+										<i class="fab fa-facebook"></i>
+									</a>
+								</li>
+
+								<li class="mf__footer__socials__social">
+									<a href="#">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+
+								<li class="mf__footer__socials__social">
+									<a href="#">
+										<i class="fab fa-youtube"></i>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
