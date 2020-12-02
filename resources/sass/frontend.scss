@@ -15,15 +15,21 @@ h6 {
 
     color: var(--purple);
     font-family: $font-family-jomolhari;
+    text-transform: initial;
 }
 
 p {
     @include line-height;
 
+    color: $black;
     font-size: 1.6rem;
 }
 
 .#{$mf} {
+    &#{$es}heading-3 {
+        font-size: 3rem;
+    }
+
     &#{$es}separator {
         background-color: var(--maroon);
         display: inline-block;
@@ -134,6 +140,7 @@ p {
         &#{$es}h1 {
             font-size: 3rem;
             margin-bottom: $margin;
+            text-align: center;
         }
 
         &#{$es}p {
@@ -201,6 +208,158 @@ p {
         &#{$es}copy {
             font-family: $font-family-roboto;
             font-size: 1.6rem;
+        }
+    }
+
+    &#{$es}video {
+        background-color: var(--cream);
+
+        &#{$es}video {
+            display: block;
+            margin: 0 auto;
+            max-width: 60%;
+        }
+    }
+
+    &#{$es}register__buttons {
+        background-color: var(--purple);
+        color: var(--white);
+
+        &#{$es}inner {
+            display: flex;
+            
+            > * {
+                display: flex;
+                flex-basis: 50%;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: $padding;
+            }
+        }
+
+        .mf__heading-3 {
+            color: var(--white);
+            margin-bottom: $margin*2;
+        }
+
+        p {
+            color: var(--white);
+            margin-bottom: $margin*2;
+        }
+
+        &#{$es}button {
+            @include button-styles(
+                $background-color: var(--white),
+                $color: var(--purple),
+                $font-size: 1.8rem
+            );
+            @include button-hover(
+                $background-color: var(--purple),
+                $border-color: var(--white),
+                $color: var(--white)
+            );
+            @include transition;
+
+            font-family: $font-family-jomolhari;
+            font-weight: 700;
+        }
+    }
+
+    &#{$es}footer {
+        background: url( '/frontend/template/assets/img/bg2s.jpg' ) no-repeat center center;
+        background-size: cover;
+        padding: $padding*10 0 !important;
+
+        // > .row {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+        // }
+
+        &#{$es}inner {
+            @include display-flex(
+                $align-items: flex-start
+            );
+
+            > * {
+                display: flex;
+                flex-basis: 25%;
+                justify-content: center;
+                padding-right: $padding*2;
+                
+                @include for-tablet-landscape-down{
+                    flex-basis: 50%;
+                }
+                
+                @include for-phone-only{
+                    flex-basis: 100%;
+                }
+
+                &:first-child {
+                    justify-content: flex-start;
+                }
+                
+                &:last-child {
+                    justify-content: flex-end;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        li {
+            margin-bottom: $margin*2;
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-right: 0;
+            }
+
+            .mf__app-icons {
+                width: 100%;
+            
+                &-con {
+                    display: block;
+                    max-width: 160px;
+                }
+            }
+        }
+
+        h4 {
+            color: $white;
+            font-size: 2.2rem;
+        }
+
+        p {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+        }
+
+        &#{$es}socials {
+            display: flex;
+            flex-wrap: wrap;
+
+            &#{$es}social {
+                margin-bottom: 0 !important;
+                padding-right: $padding;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+            &#{$es}social--first {
+                flex-basis: 100%;
+                margin-bottom: $margin*2 !important;
+                padding-right: 0;
+            }
+
+            i {
+                color: $white;
+                font-size: 3rem;
+            }
         }
     }
 }
