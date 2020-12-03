@@ -40,6 +40,7 @@ p {
     #{$header} {
         .header-body {
             @include background-color-rgba( var(--white--rgb), 0.8 );
+            @include transition;
         }
 
         .header-container {
