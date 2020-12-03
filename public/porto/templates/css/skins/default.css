@@ -3914,10 +3914,10 @@ html[dir="rtl"] #header .tip-light:before {
 		color: #0088CC;
 	}
 
-	#header .header-nav-main nav > ul > li.open > a,
+	/* #header .header-nav-main nav > ul > li.open > a,
 	#header .header-nav-main nav > ul > li:hover > a {
 		background: #0088CC;
-	}
+	} */
 
 	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
 		border-top-color: #0088CC;
@@ -4526,9 +4526,9 @@ html[dir="rtl"] #header .tip-light:before {
 		background: #0088CC;
 	}
 
-	#header .header-nav-main.header-nav-main-mobile-dark nav > ul > li > a.active {
+	/* #header .header-nav-main.header-nav-main-mobile-dark nav > ul > li > a.active {
 		background: #0088CC;
-	}
+	} */
 
 	#header .header-nav-main.header-nav-main-mobile-dark nav > ul > li > a.active:focus,
 	#header .header-nav-main.header-nav-main-mobile-dark nav > ul > li > a.active:hover {
