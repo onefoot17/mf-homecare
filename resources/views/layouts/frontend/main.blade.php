@@ -135,7 +135,7 @@
 					<div class="container">
 						<div class="row text-center">
 							<div class="col-md-10 mx-md-auto">
-								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Client Benefits</h1>
+								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Client Benefits</h1>
 
 								<div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 							</div>
@@ -191,7 +191,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Quality-V5-Separate.png' ) }}')"></div>
 
@@ -246,7 +246,7 @@
 					<div class="container">
 						<div class="row text-center">
 							<div class="col-md-10 mx-md-auto">
-								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver and Companion Services</h1>
+								<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Caregiver and Companion Services</h1>
 
 								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Our system connects you both with specialized Caregivers and with Companions, depending on your needs.</p>
 
@@ -256,7 +256,7 @@
 
 						<div class="mf__features__row">
 							<div class="mf__features__row__column mf__features__row__column--first">
-								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Caregiver Services</h2>
+								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Caregiver Services</h2>
 
 								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Only Caregivers who submit the required qualification documents can provide these services.</p>
 
@@ -273,7 +273,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/bathtub.png' ) }}')"></div>
 
@@ -306,14 +306,14 @@
 
 						<div class="mf__features__row">
 							<div class="mf__features__row__column mf__features__row__column--first">
-								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Companion Services</h2>
+								<h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Companion Services</h2>
 
 								<p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you provide these services, you will be classified as a Companion.</p>
 
 								<div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/eat.png' ) }}')"></div>
 
@@ -389,7 +389,7 @@
 				<section class="mf__video appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 					<div class="row text-center">
 						<div class="container mx-md-auto">
-							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Watch our Video</h1>
+							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Watch our Video</h1>
 						
 							<div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
