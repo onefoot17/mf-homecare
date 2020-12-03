@@ -31,10 +31,10 @@
 }
 
 // Buttons
-@mixin button-styles( $background-color: transparent, /*$border-color: transparent,*/ $color: var(--white), $font-size: 2rem, $padding: $padding/2 $padding, $text-decoration: none ) {
+@mixin button-styles( $background-color: transparent, /*$border-color: transparent,*/ $border-radius: 50px, $color: var(--white), $font-size: 2rem, $padding: $padding/2 $padding*2, $text-decoration: none ) {
     background-color: $background-color;
     // border: 2px solid $border-color;
-    border-radius: 4px;
+    border-radius: $border-radius;
     color: $color;
     font-size: $font-size;
     padding: $padding;

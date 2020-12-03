@@ -126,6 +126,7 @@ html {
 
         &#{$es}heading-2 {
             font-size: 6.1rem;
+            font-weight: 100;
             margin-bottom: $margin*4;
             
             @include for-tablet-landscape-down {
@@ -138,7 +139,7 @@ html {
                 $background-color: rgba( var(--purple--rgb), .9 ) !important,
                 // $border-color: var(--white) !important,
                 $color: var(--white) !important,
-                $padding: $padding*2
+                $padding: $padding $padding*2,
             );
             @include button-hover(
                 $background-color: var(--white) !important,
@@ -147,6 +148,7 @@ html {
             );
 
             font-family: $font-family-jomolhari;
+            font-size: 1.8rem;
             font-weight: 700;
 
             &:hover {
