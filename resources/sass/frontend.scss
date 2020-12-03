@@ -34,7 +34,7 @@ p {
 
 #{$html} {    
     &.sticky-header-active #header .header-body {
-        @include background-color-rgba( var(--purple--rgb), 0.8 );
+        @include background-color-rgba( var(--black--rgb), 0.7 );
     }
 
     #{$header} {
@@ -269,7 +269,7 @@ p {
         }
 
         &#{$es}h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: $margin;
         }
 
@@ -328,7 +328,7 @@ p {
                 );
 
                 color: $purple;
-                font-size: 2.4rem;
+                font-size: 2.0rem;
             }
 
             &#{$es}heading + &#{$es}copy {
@@ -353,7 +353,7 @@ p {
     }
 
     &#{$es}register__buttons {
-        background-color: var(--purple);
+        background-color: var(--black);
         color: var(--white);
 
         &#{$es}inner {
