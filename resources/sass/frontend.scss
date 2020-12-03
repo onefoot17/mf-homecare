@@ -40,6 +40,11 @@ html {
     }
 }
 
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .#{$mf} {
     &#{$es}heading-3 {
         font-size: 3rem;
@@ -306,7 +311,7 @@ html {
             flex-direction: column;
             flex-basis: 50%;
             height: 100%;
-            padding-right: $padding;
+            padding-right: $padding*2;
 
             &:last-child {
                 padding-right: 0;
@@ -353,7 +358,7 @@ html {
     &#{$es}footer {
         background: url( '/frontend/template/assets/img/bg2s.jpg' ) no-repeat center center;
         background-size: cover;
-        padding: $padding*10 0 !important;
+        padding: $padding*6 0 !important;
 
         // > .row {
             // display: flex;
@@ -369,9 +374,10 @@ html {
 
         &#{$es}col {
             display: flex;
-            flex-basis: 25%;
-            justify-content: center;
+            // flex-basis: 25%;
+            padding: $padding*4;
             padding-right: $padding*2;
+            padding-left: 0;
             
             @include for-tablet-landscape-down{
                 flex-basis: 50%;
@@ -379,14 +385,17 @@ html {
             
             @include for-phone-only{
                 flex-basis: 100%;
+                justify-content: center;
+                padding-right: 0;
+                text-align: center;
             }
 
             &:first-child {
-                justify-content: flex-start;
+                // justify-content: flex-start;
             }
             
             &:last-child {
-                justify-content: flex-end;
+                // justify-content: flex-end;
                 padding-right: 0;
             }
             
@@ -430,8 +439,8 @@ html {
         }
 
         &#{$es}socials {
-            display: flex;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-wrap: wrap;
 
             &#{$es}social {
                 margin-bottom: 0 !important;
@@ -443,9 +452,14 @@ html {
             }
 
             &#{$es}social--first {
-                flex-basis: 100%;
+                display: block;
+                // flex-basis: 100%;
                 margin-bottom: $margin*2 !important;
                 padding-right: 0;
+            }
+
+            & :not(&#{$es}social--first) {
+                display: inline-block;
             }
 
             i {

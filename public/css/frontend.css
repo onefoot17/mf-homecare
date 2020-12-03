@@ -229,6 +229,11 @@ html #header .header-container {
   padding: 0.5rem 1rem;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .mf__heading-3 {
   font-size: 3rem;
 }
@@ -558,7 +563,7 @@ html #header .header-container {
   flex-direction: column;
   flex-basis: 50%;
   height: 100%;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .mf__register__buttons__col:last-child {
@@ -605,7 +610,7 @@ html #header .header-container {
 .mf__footer {
   background: url("/frontend/template/assets/img/bg2s.jpg") no-repeat center center;
   background-size: cover;
-  padding: 10rem 0 !important;
+  padding: 6rem 0 !important;
 }
 
 .mf__footer__inner {
@@ -633,9 +638,9 @@ html #header .header-container {
 
 .mf__footer__col {
   display: flex;
-  flex-basis: 25%;
-  justify-content: center;
+  padding: 4rem;
   padding-right: 2rem;
+  padding-left: 0;
 }
 
 @media (max-width: 899px) {
@@ -647,15 +652,13 @@ html #header .header-container {
 @media (max-width: 599px) {
   .mf__footer__col {
     flex-basis: 100%;
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
   }
 }
 
-.mf__footer__col:first-child {
-  justify-content: flex-start;
-}
-
 .mf__footer__col:last-child {
-  justify-content: flex-end;
   padding-right: 0;
 }
 
@@ -695,11 +698,6 @@ html #header .header-container {
   text-decoration: underline;
 }
 
-.mf__footer__socials {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .mf__footer__socials__social {
   margin-bottom: 0 !important;
   padding-right: 1rem;
@@ -710,9 +708,13 @@ html #header .header-container {
 }
 
 .mf__footer__socials__social--first {
-  flex-basis: 100%;
+  display: block;
   margin-bottom: 2rem !important;
   padding-right: 0;
+}
+
+.mf__footer__socials :not(.mf__footer__socials__social--first) {
+  display: inline-block;
 }
 
 .mf__footer__socials i {
