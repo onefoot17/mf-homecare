@@ -1,4 +1,10 @@
 // Media Queries
+@mixin for-desktop-375-down {
+    @media (max-width: 375px) { @content; }
+}
+@mixin for-desktop-375-up {
+    @media (min-width: 376px) { @content; }
+}
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
 }

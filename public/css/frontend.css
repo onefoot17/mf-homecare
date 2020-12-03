@@ -161,6 +161,10 @@ html {
   width: 100%;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 h1 {
   line-height: 1;
   color: #4d5877;
@@ -226,12 +230,28 @@ html.sticky-header-active .header-body {
 }
 
 html #header .header-container {
+  height: auto !important;
   padding: 0.5rem 1rem;
 }
 
 .row {
   margin-right: 0;
   margin-left: 0;
+}
+
+.mf {
+  /* &__logo-con {
+      max-width: 350px;
+      width: 350px !important;
+  } */
+  /* &__logo {
+      width: 100%;
+  } */
+}
+
+.mf__section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .mf__heading-3 {
@@ -252,6 +272,7 @@ html #header .header-container {
 
 .mf__nav {
   align-items: center;
+  justify-content: flex-end;
   padding: 1rem;
 }
 
@@ -264,6 +285,11 @@ html #header .header-container {
   text-decoration: none;
   font-family: Jomolhari, serif;
   font-weight: 700;
+}
+
+.mf__nav-item-con {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .mf__nav-item:hover {
@@ -286,29 +312,24 @@ html #header .header-container {
   color: #ffffff !important;
 }
 
-.mf__logo-con {
-  max-width: 350px;
-  width: 350px !important;
-}
-
-.mf__logo {
+.mf__logo-inner {
   overflow: hidden;
   position: relative;
+  transition: all 200ms ease-in-out;
   background: url("/frontend/template/assets/img/MF-Homecare-Logo.png") no-repeat center center;
   background-size: contain;
   display: block;
-  max-width: 350px;
   width: 350px;
 }
 
-.mf__logo:before {
+.mf__logo-inner:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 18.25%;
 }
 
-.mf__logo :first-child {
+.mf__logo-inner :first-child {
   position: absolute;
   top: 0;
   left: 0;
@@ -316,7 +337,19 @@ html #header .header-container {
   bottom: 0;
 }
 
-.sticky-header-active .mf__logo {
+@media (max-width: 599px) {
+  .mf__logo-inner {
+    width: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mf__logo-inner {
+    width: 225px;
+  }
+}
+
+.sticky-header-active .mf__logo-inner {
   background-image: url("/frontend/template/assets/img/MF-Homecare-Logo-white.png");
 }
 
@@ -439,12 +472,6 @@ html #header .header-container {
 .mf__features--benefits {
   background-color: #F7F2EF;
   margin-bottom: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.mf__features--services {
-  padding-bottom: 2rem;
 }
 
 .mf__features__feature {
@@ -518,8 +545,6 @@ html #header .header-container {
 
 .mf__video {
   background-color: #F7F2EF;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .mf__video__video {
@@ -531,8 +556,6 @@ html #header .header-container {
 .mf__register__buttons {
   background-color: #4d5877;
   color: #ffffff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .mf__register__buttons__inner {
@@ -568,9 +591,20 @@ html #header .header-container {
 
 .mf__register__buttons__col:last-child {
   padding-right: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 899px) {
+  .mf__register__buttons__col {
+    flex-basis: 100%;
+    height: auto;
+    padding-right: 0;
+    padding-bottom: 4rem;
+  }
 }
 
 .mf__register__buttons .mf__heading-3 {
+  line-height: 1.3em;
   color: #ffffff;
   margin-bottom: 2rem;
 }

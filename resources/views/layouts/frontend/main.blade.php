@@ -75,8 +75,8 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="mf__logo-con header-logo">
-										<a class="mf__logo mf__logo--desktop" href="index.html">
-											<!-- <img class="" alt="MF Homecare Logo" src="{{ asset( 'frontend/template/assets/img/MF-Homecare-Logo-white.png' ) }}"> -->
+										<a class="mf__logo-inner mf__logo-inner--desktop" href="index.html">
+											<!-- <img class="mf__logo" alt="MF Homecare Logo" src="{{ asset( 'frontend/template/assets/img/MF-Homecare-Logo-white.png' ) }}"> -->
 										</a>
 									</div>
 								</div>
@@ -87,13 +87,13 @@
 										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
 											<nav class="collapse">
 												<ul class="mf__nav nav nav-pills" id="mainNav">
-													<li class="">
+													<li class="mf__nav-item-con">
 														<a class="mf__nav-item active" href="index.html">How We Work</a>
 													</li>
-													<li class="">
+													<li class="mf__nav-item-con">
 														<a class="mf__nav-item" href="elements.html">Register as a Caregiver</a>
 													</li>
-													<li class="">
+													<li class="mf__nav-item-con">
 														<a class="mf__nav-item" href="#">Register as a Client</a>
 													</li>
 												</ul>
@@ -115,7 +115,7 @@
 					<div class="container position-relative z-index-3 h-100">
 						<div class="row align-items-center h-100">
 							<div class="col">
-								<div class="d-flex flex-column align-items-center justify-content-center h-100">
+								<div class="d-flex flex-column align-items-center justify-content-center h-100 text-center">
 									<h1 class="mf__homepage-video__heading-1 position-relative text-color-light font-weight-medium px-4 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-plugin-options="{'minWindowWidth': 0}">Managing Family Homecare</h1>
 
 									<h2 class="mf__homepage-video__heading-2 text-color-light appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}">Affordable and Convenient</h2>
@@ -131,7 +131,7 @@
 					</div>
 				</section>
 
-				<div class="mf__features mf__features--benefits" id="main">
+				<div class="mf__section mf__features mf__features--benefits" id="main">
 					<div class="container">
 						<div class="row text-center">
 							<div class="col-md-10 mx-md-auto">
@@ -242,7 +242,7 @@
 					</div>
 				</div>
 
-				<div class="mf__features mf__features--services">
+				<div class="mf__section mf__features mf__features--services">
 					<div class="container">
 						<div class="row text-center">
 							<div class="col-md-10 mx-md-auto">
@@ -386,7 +386,7 @@
 					</div>
 				</div>
 
-				<section class="mf__video appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+				<section class="mf__section mf__video appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 					<div class="row text-center">
 						<div class="container mx-md-auto">
 							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Watch our Video</h1>
@@ -398,7 +398,7 @@
 					</div>
 				</section>
 
-				<section class="mf__register__buttons appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+				<section class="mf__section mf__register__buttons appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 					<div class="row text-center">
 						<div class="mf__register__buttons__inner container mx-md-auto">
 							<section class="mf__register__buttons__col">
