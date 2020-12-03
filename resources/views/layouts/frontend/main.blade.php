@@ -116,7 +116,7 @@
 						<div class="row align-items-center h-100">
 							<div class="col">
 								<div class="d-flex flex-column align-items-center justify-content-center h-100">
-									<h1 class="mf__homepage-video__heading-1 position-relative text-color-light font-weight-medium px-4 appear-animation" data-appear-animation="fadeInDownShorterPlus" data-plugin-options="{'minWindowWidth': 0}">Managing Family Homecare</h1>
+									<h1 class="mf__homepage-video__heading-1 position-relative text-color-light font-weight-medium px-4 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-plugin-options="{'minWindowWidth': 0}">Managing Family Homecare</h1>
 
 									<h2 class="mf__homepage-video__heading-2 text-color-light appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}">Affordable and Convenient</h2>
 
@@ -142,7 +142,7 @@
 						</div>
 
 						<div class="mf__features__row">
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Choice-V2.png' ) }}')"></div>
 
@@ -154,7 +154,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Control-V2.png' ) }}')"></div>
 
@@ -167,7 +167,7 @@
 							</div>
 
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Lower-Cost-V2.png' ) }}')"></div>
 
@@ -179,7 +179,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Consistency-V2.png' ) }}')"></div>
 
@@ -203,7 +203,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Live-In-Homecare-V4.png' ) }}')"></div>
 
@@ -215,7 +215,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/24-Hour-Live-In-Care-V3.png' ) }}')"></div>
 
@@ -227,7 +227,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/Tracking-&-Location-App.png' ) }}')"></div>
 
@@ -263,7 +263,7 @@
 								<div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/sampoo.png' ) }}')"></div>
 
@@ -283,7 +283,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/yoga.png' ) }}')"></div>
 
@@ -293,7 +293,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/pills.png' ) }}')"></div>
 
@@ -323,7 +323,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/lunch.png' ) }}')"></div>
 
@@ -333,7 +333,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/washing.png' ) }}')"></div>
 
@@ -343,7 +343,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/walk.png' ) }}')"></div>
 
@@ -353,7 +353,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/walking.png' ) }}')"></div>
 
@@ -363,7 +363,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/car.png' ) }}')"></div>
 
@@ -373,7 +373,7 @@
 								</div>
 							</div>
 
-							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+							<div class="mf__features__row__column appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 								<div class="mf__features__feature">
 									<div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'frontend/template/assets/img/icons/volunteer.png' ) }}')"></div>
 
@@ -386,7 +386,7 @@
 					</div>
 				</div>
 
-				<section class="mf__video appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+				<section class="mf__video appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 					<div class="row text-center">
 						<div class="container mx-md-auto">
 							<h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter">Watch our Video</h1>
@@ -398,7 +398,7 @@
 					</div>
 				</section>
 
-				<section class="mf__register__buttons appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+				<section class="mf__register__buttons appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 					<div class="row text-center">
 						<div class="mf__register__buttons__inner container mx-md-auto">
 							<section class="mf__register__buttons__col">
@@ -425,7 +425,7 @@
 				</section>
 			</div>
 
-			<footer id="footer" class="mf__footer mt-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+			<footer id="footer" class="mf__footer mt-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 				<div class="row">
 					<div class="mf__footer__inner container mx-md-auto">
 						<div class="mf__footer__col">
