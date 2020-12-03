@@ -88,7 +88,7 @@
 											<nav class="collapse">
 												<ul class="mf__nav nav nav-pills" id="mainNav">
 													<li class="mf__nav-item-con">
-														<a class="mf__nav-item active" href="index.html">How We Work</a>
+														<a class="mf__nav-item" href="index.html">How We Work</a>
 													</li>
 													<li class="mf__nav-item-con">
 														<a class="mf__nav-item" href="elements.html">Register as a Caregiver</a>

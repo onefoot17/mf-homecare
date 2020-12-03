@@ -1305,9 +1305,9 @@ html:not(.sticky-header-active) #header.header-transparent-dark-bottom-border-1 
 		overflow: hidden;
 	}
 
-	html #header.header-transparent .header-body.bg-dark .header-nav-main:before, html #header.header-transparent .header-body.bg-color-dark .header-nav-main:before {
+	/* html #header.header-transparent .header-body.bg-dark .header-nav-main:before, html #header.header-transparent .header-body.bg-color-dark .header-nav-main:before {
 		background-color: #212529;
-	}
+	} */
 
 	html #header.header-transparent .header-nav-main:before {
 		width: calc(100% - 30px);
@@ -1418,10 +1418,10 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		background-color: transparent;
 	}
 
-	#header .header-nav-main nav > ul > li.open > a, #header .header-nav-main nav > ul > li:hover > a {
+	/* #header .header-nav-main nav > ul > li.open > a, #header .header-nav-main nav > ul > li:hover > a {
 		background: #CCC;
 		color: #FFF;
-	}
+	} */
 
 	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
 		top: -10000px;
@@ -3193,7 +3193,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		left: 50%;
 		width: 100vw;
 		height: 100%;
-		background: #FFF;
+		/* background: #FFF; */
 		z-index: -1;
 		transform: translateX(-50%);
 	}
@@ -3220,22 +3220,22 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 	}
 
 	#header .header-nav-main nav > ul {
-		padding-top: 15px;
-		padding-bottom: 15px;
+		/* padding-top: 15px; */
+		/* padding-bottom: 15px; */
 		flex-direction: column;
 	}
 
 	#header .header-nav-main nav > ul li {
-		border-bottom: 1px solid #e8e8e8;
+		/* border-bottom: 1px solid #e8e8e8; */
 		clear: both;
 		display: block;
 		float: none;
 		margin: 0;
-		padding: 0;
+		/* padding: 0; */
 		position: relative;
 	}
 
-	#header .header-nav-main nav > ul li a {
+	/* #header .header-nav-main nav > ul li a {
 		font-size: 13px;
 		font-style: normal;
 		line-height: 20px;
@@ -3243,7 +3243,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		margin: 1px 0;
 		border-radius: 4px;
 		text-align: left;
-	}
+	} */
 
 	#header .header-nav-main nav > ul li a .fa-caret-down {
 		line-height: 35px;
@@ -3345,22 +3345,22 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		border-bottom: 0;
 	}
 
-	#header .header-nav-main nav > ul > li > a {
+	/* #header .header-nav-main nav > ul > li > a {
 		text-transform: uppercase;
 		font-weight: 700;
 		margin-top: 1px;
 		margin-bottom: 1px;
 		color: #CCC;
-	}
+	} */
 
-	#header .header-nav-main nav > ul > li > a:active {
+	/* #header .header-nav-main nav > ul > li > a:active {
 		color: #CCC;
-	}
+	} */
 
-	#header .header-nav-main nav > ul > li > a.active {
+	/* #header .header-nav-main nav > ul > li > a.active {
 		color: #FFF !important;
 		background: #CCC;
-	}
+	} */
 
 	#header .header-nav-main nav > ul > li > a.active:focus, #header .header-nav-main nav > ul > li > a.active:hover {
 		color: #FFF;
@@ -3375,9 +3375,9 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		display: none !important;
 	}
 
-	#header .header-nav-main.header-nav-main-square nav > ul > li a {
+	/* #header .header-nav-main.header-nav-main-square nav > ul > li a {
 		border-radius: 0 !important;
-	}
+	} */
 
 	#header .header-nav-main.header-nav-main-slide .wrapper-items-cloned {
 		display: none;
@@ -3421,9 +3421,9 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 
 /* Header Nav Main Mobile Dark */
 @media (max-width: 991px) {
-	#header .header-nav-main.header-nav-main-mobile-dark:before {
+	/* #header .header-nav-main.header-nav-main-mobile-dark:before {
 		background-color: #212529;
-	}
+	} */
 
 	#header .header-nav-main.header-nav-main-mobile-dark nav > ul > li > a {
 		color: #dedede;
@@ -3441,17 +3441,17 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		color: #FFF;
 	}
 
-	#header .header-nav-main.header-nav-main-mobile-dark nav > ul li {
+	/* #header .header-nav-main.header-nav-main-mobile-dark nav > ul li {
 		border-bottom: 1px solid #3e3e3e;
-	}
+	} */
 
 	#header .header-nav-main.header-nav-main-mobile-dark nav > ul li:last-child {
 		border-bottom: 0;
 	}
 
-	#header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:hover, #header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:focus, #header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:active {
+	/* #header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:hover, #header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:focus, #header .header-nav-main.header-nav-main-mobile-dark nav > ul li a:active {
 		background-color: #2b2b2b;
-	}
+	} */
 
 	#header .header-nav-main.header-nav-main-mobile-dark nav > ul li.dropdown-mega .dropdown-mega-sub-title {
 		color: #eaeaea;
@@ -3561,9 +3561,9 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 		border-bottom-color: #3e3e3e;
 	}
 
-	html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:hover, html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:focus, html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:active {
+	/* html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:hover, html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:focus, html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links .header-nav-main.header-nav-main-mobile-dark nav > ul li a:active {
 		background-color: #2b2b2b;
-	}
+	} */
 
 	html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links nav > ul > li > a, html.side-header-hamburguer-sidebar #header.side-header .header-nav.header-nav-links nav > ul > li:hover > a {
 		position: relative;

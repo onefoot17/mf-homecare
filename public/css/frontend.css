@@ -166,49 +166,49 @@ html {
 }
 
 h1 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
 
 h2 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
 
 h3 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
 
 h4 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
 
 h5 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
 
 h6 {
-  line-height: 1;
+  line-height: 1.3;
   color: #4d5877;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
   text-transform: initial;
 }
@@ -219,18 +219,34 @@ p {
   font-size: 1.6rem;
 }
 
-html .header-body {
-  background-color: rgb(255, 255, 255) !important;
-  background-color: rgba(255, 255, 255, 0.8) !important;
-}
-
-html.sticky-header-active .header-body {
+html.sticky-header-active #header .header-body {
   background-color: rgb(77, 88, 119) !important;
   background-color: rgba(77, 88, 119, 0.8) !important;
 }
 
+html #header .header-body {
+  background-color: rgb(255, 255, 255) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
 html #header .header-container {
   height: auto !important;
+  padding: 1rem 1rem;
+}
+
+html #header .header-logo {
+  margin: 0;
+}
+
+html #header .header-nav {
+  min-height: initial !important;
+  padding: 0;
+}
+
+html #header .header-btn-collapse-nav {
+  line-height: 0.95;
+  background: #4d5877;
+  font-size: 2.5rem;
   padding: 0.5rem 1rem;
 }
 
@@ -273,7 +289,6 @@ html #header .header-container {
 .mf__nav {
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
 }
 
 .mf__nav-item {
@@ -283,7 +298,8 @@ html #header .header-container {
   font-size: 2rem;
   padding: 0.5rem 2rem;
   text-decoration: none;
-  font-family: Jomolhari, serif;
+  display: block;
+  font-family: Jomolhari;
   font-weight: 700;
 }
 
@@ -304,11 +320,16 @@ html #header .header-container {
 }
 
 .sticky-header-active .mf__nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
   color: #4d5877 !important;
 }
 
 .sticky-header-active .mf__nav-item {
+  color: #ffffff !important;
+}
+
+.mf__nav-item.active {
+  background-color: #4d5877 !important;
   color: #ffffff !important;
 }
 
@@ -350,7 +371,7 @@ html #header .header-container {
 }
 
 .sticky-header-active .mf__logo-inner {
-  background-image: url("/frontend/template/assets/img/MF-Homecare-Logo-white.png");
+  background-image: url("/frontend/template/assets/img/MF-Homecare-Logo-white.png?hgfghj");
 }
 
 .mf__homepage-video:before {
@@ -387,7 +408,7 @@ html #header .header-container {
   font-size: 2rem;
   padding: 1rem 2rem;
   text-decoration: none;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -465,7 +486,7 @@ html #header .header-container {
 }
 
 .mf__features__h2 {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
@@ -531,7 +552,8 @@ html #header .header-container {
 .mf__features__feature__heading {
   line-height: 1.6;
   color: #4d5877;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 .mf__features__feature__heading + .mf__features__feature__copy {
@@ -631,7 +653,7 @@ html #header .header-container {
   transition: all 200ms ease-in-out;
   align-self: flex-end;
   display: inline-block;
-  font-family: Jomolhari, serif;
+  font-family: Jomolhari;
   font-weight: 700;
 }
 

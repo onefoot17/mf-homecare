@@ -21,7 +21,7 @@ $padding: 1rem !default;
 $es: '__' !default; // Element separator
 $ms: '--' !default; // Modifier separator
 $html:  'html' !default;
-$header: 'header' !default;
+$header: '#header' !default;
 $nav: 'nav' !default;
 $section: 'section' !default;
 $mf: 'mf' !default;
@@ -52,5 +52,5 @@ $footer: 'footer' !default;
 
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
-$font-family-jomolhari: Jomolhari, serif !default;
+$font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;

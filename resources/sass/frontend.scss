@@ -14,7 +14,7 @@ h4,
 h5,
 h6 {
     @include line-height(
-        $line-height: 1
+        $line-height: 1.3
     );
 
     color: var(--purple);
@@ -30,18 +30,43 @@ p {
     font-size: 1.6rem;
 }
 
-html {
-    .header-body {
-        @include background-color-rgba( var(--white--rgb), 0.8 );
-    }
-    
-    &.sticky-header-active .header-body {
+#{$html} {    
+    &.sticky-header-active #header .header-body {
         @include background-color-rgba( var(--purple--rgb), 0.8 );
     }
 
-    #header .header-container {
-        height: auto !important;
-        padding: $padding/2 $padding;
+    #{$header} {
+        .header-body {
+            @include background-color-rgba( var(--white--rgb), 0.8 );
+        }
+
+        .header-container {
+            height: auto !important;
+            padding: $padding $padding;
+        }
+
+        .header-logo {
+            margin: 0;
+        }
+
+        .header-nav {
+            min-height: initial !important;
+            padding: 0;
+        }
+
+        // .header-nav-main {
+        //     @include background-color-rgba( var(--white--rgb), 0.8 );
+        // }
+
+        .header-btn-collapse-nav {
+            @include line-height(
+                $line-height: .95
+            );
+
+            background: var(--purple);
+            font-size: 2.5rem;
+            padding: $padding/2 $padding;
+        }
     }
 }
 
@@ -75,7 +100,7 @@ html {
     &#{$es}nav {
         align-items: center;
         justify-content: flex-end;
-        padding: $padding;
+        // padding: $padding;
 
         &-item {
             &-con {
@@ -92,6 +117,7 @@ html {
                 $color: var(--white) !important,
             );
 
+            display: block;
             font-family: $font-family-jomolhari;
             font-weight: 700;
 
@@ -101,12 +127,17 @@ html {
                 text-decoration: none;
 
                 .sticky-header-active & {
-                    background-color: rgba( var(--white--rgb), .7 ) !important;
+                    background-color: rgba( var(--white--rgb), .8 ) !important;
                     color: var(--purple) !important;
                 }
             }
 
             .sticky-header-active & {
+                color: var(--white) !important;
+            }
+
+            &.active {
+                background-color: var(--purple) !important;
                 color: var(--white) !important;
             }
         }
@@ -135,7 +166,7 @@ html {
         }
 
         .sticky-header-active & {
-            background-image: url( '/frontend/template/assets/img/MF-Homecare-Logo-white.png' );
+            background-image: url( '/frontend/template/assets/img/MF-Homecare-Logo-white.png?hgfghj' );
         }
     }
 
@@ -236,7 +267,7 @@ html {
         }
 
         &#{$es}h2 {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
             margin-bottom: $margin;
         }
 
@@ -291,7 +322,8 @@ html {
                 );
 
                 color: $purple;
-                font-size: 2.2rem;
+                font-size: 2.4rem;
+                font-weight: 600;
             }
 
             &#{$es}heading + &#{$es}copy {
