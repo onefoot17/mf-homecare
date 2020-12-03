@@ -122,7 +122,7 @@
 
 									<!-- <p class="text-4 text-color-light font-weight-light opacity-7 mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 2000, 'minWindowWidth': 0}">Get Started - Register as a Caregiver</p> -->
 
-									<a href="#" class="mf__homepage-video__heading-3" role="button">Get Started - Register as a Caregiver!</a>
+									<!-- <a href="#" class="mf__homepage-video__heading-3" role="button">Get Started - Register as a Caregiver!</a> -->
 								</div>
 							</div>
 						</div>
