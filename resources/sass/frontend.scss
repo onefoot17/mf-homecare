@@ -5,6 +5,8 @@
 
 * {
     font-family: $font-family-roboto;
+    -webkit-font-smoothing: subpixel-antialiased !important; 
+    text-rendering: optimizeLegibility !important;
 }
 
 h1,
@@ -288,6 +290,10 @@ p {
             padding: $padding;
             text-align: center;
 
+            @include for-phone-only {
+                padding-left: 0;
+            }
+
             &:last-of-type {
                 padding-right: 0;
             }
@@ -323,7 +329,6 @@ p {
 
                 color: $purple;
                 font-size: 2.4rem;
-                font-weight: 600;
             }
 
             &#{$es}heading + &#{$es}copy {
