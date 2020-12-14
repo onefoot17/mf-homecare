@@ -17,8 +17,9 @@ mix.sass( 'resources/sass/frontend.scss', 'public/css' )
         }, */
         postCss: [
             require( 'postcss-css-variables' ) ()
-        ]
+        ],
+        processCssUrls: false
     })
     .sourceMaps();
 
-mix.browserSync( 'http://192.168.10.10/' );
+mix.browserSync( process.env.APP_URL );
