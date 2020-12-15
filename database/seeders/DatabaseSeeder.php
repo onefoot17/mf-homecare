@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use App\Models\User;
+use Hash;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +16,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $felipe = new User();
+        $felipe->name = 'Felipe Pastana';
+        $felipe->email = 'felipe@vcompinc.com';
+        $felipe->password = Hash::make('12345678');
+        $felipe->save();
+
+        $vio = new User();
+        $vio->name = 'Vio Ivanescu';
+        $vio->email = 'vio@vcompinc.com';
+        $vio->password = Hash::make('12345678');
+        $vio->save();
+
+        $earl = new User();
+        $earl->name = 'Earl Misquitta';
+        $earl->email = 'earl@vcompinc.com';
+        $earl->password = Hash::make('12345678');
+        $earl->save();
+
     }
 }
