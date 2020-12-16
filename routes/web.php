@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 
-use App\Http\Controllers\FrontEnd\PagesController;
-use App\Http\Controllers\Caregivers\CaregiversController;
+use App\Http\Controllers\Website\IndexController;
 
 
 /*
@@ -31,7 +30,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [CaregiversController::class, 'index'])->name('admin_index');
 });
 
-Route::get('/', [PagesController::class, 'index'])->name('frontend_index');
+Route::get('/', [IndexController::class, 'index'])->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
