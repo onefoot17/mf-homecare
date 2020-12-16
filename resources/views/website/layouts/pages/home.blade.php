@@ -12,9 +12,10 @@
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		{{-- Favicon --}}
+        <link rel="shortcut icon" href="{{ asset( 'assets/images/favicon.ico' ) }}">
+
+		<link rel="apple-touch-icon" href="{{ asset( 'assets/images/favicon.ico' ) }}">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -72,7 +73,7 @@
 				<div class="mf__header-body header-body border-top-0 bg-dark box-shadow-none">
 					<div class="header-container container">
 						<div class="header-row">
-							<div class="header-column">
+							<div class="header-column header-column-logo">
 								<div class="header-row">
 									<div class="mf__logo-con header-logo">
 										<a class="mf__logo-inner mf__logo-inner--desktop" href="index.html">
@@ -80,8 +81,9 @@
 										</a>
 									</div>
 								</div>
-							</div>
-							<div class="header-column justify-content-end">
+                            </div>
+
+							<div class="header-column justify-content-center header-column-nav">
 								<div class="header-row">
 									<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
 										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
@@ -105,6 +107,27 @@
 									</div>
 								</div>
 							</div>
+
+                            <div class="header-column justify-content-end header-column-log-in-out">
+                                <div class="header-row">
+                                    @auth
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <a href="javascript:void(0);" class="btn btn-info navbar-btn" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                <i class="fe-log-out"></i>
+
+                                                <span class="nav-link-log-in-out-text">{{ __( 'Logout' ) }}</span>
+                                            </a>
+                                        </form>
+                                    @else
+                                        <a href="{{ route( 'login' ) }}" class="btn btn-info navbar-btn">
+                                            <i class="fe-log-in"></i>
+
+                                            <span class="nav-link-log-in-out-text">Login</span>
+                                        </a>
+                                    @endauth
+                                </div>
+                            </div>
 						</div>
 					</div>
 				</div>
