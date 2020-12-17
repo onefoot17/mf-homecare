@@ -9,6 +9,10 @@
                                 <img alt="MF Homecare Logo" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" />
                             </a>
                         </div>
+
+                        {{-- <div class="mf__logo-con header-logo">
+                            <a class="mf__logo-inner mf__logo-inner--desktop" href="index.html"></a>
+                        </div> --}}
                     </div>
                 </div>
 

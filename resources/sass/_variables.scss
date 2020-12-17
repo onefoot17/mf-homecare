@@ -3,6 +3,7 @@ $black: #000000 !default;
 $purple: #4d5877 !default;
 $maroon: #793B52 !default;
 $red: #c60202 !default;
+$red-light: #f1556c !default;
 $cream: #F7F2EF !default;
 $white: #ffffff !default;
 
@@ -21,6 +22,7 @@ $padding: 1rem !default;
 $es: '__' !default; // Element separator
 $ms: '--' !default; // Modifier separator
 $html:  'html' !default;
+$body: 'body' !default;
 $header: '#header' !default;
 $nav: 'nav' !default;
 $section: 'section' !default;
@@ -55,3 +57,38 @@ $footer: 'footer' !default;
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
 $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
+$font-size: 1.6rem !default;
+
+// Buttons
+$button-color: $white !default;
+$button-color-dark: $button-color !default;
+$button-hover-color: $white !default;
+$button-bg-color-danger: $red !default;
+$button-bg-color-danger-dark: $red !default;
+$button-bg-color-info: $purple !default;
+$button-bg-color-info-dark: $maroon !default;
+$button-bg-color-primary: $purple !default;
+$button-bg-color-primary-dark: $maroon !default;
+$button-color-primary-dark: $black !default;
+$button-bg-color-success: $purple !default;
+$button-bg-color-success-dark: $maroon !default;
+$button-color-success-dark: $black !default;
+$button-bg-hover-color: $black !default;
+$button-bg-hover-color-dark: $black !default;
+
+// Navigation
+$nav-link-color: inherit !default;
+$nav-link-hover-color: inherit !default;
+$nav-link-active-color: $nav-link-hover-color !default;
+$nav-sticky-link-color: $black inherit !default;
+$nav-sticky-link-hover-color: inherit !default;
+
+// Forms
+$form-error-color: $red-light !default;
+$form-error-border-color: $form-error-color !default;
+
+// Slider
+$slider-button-bg-color: $black !default;
+
+// Footer
+$footer-bg-color: $black !default;

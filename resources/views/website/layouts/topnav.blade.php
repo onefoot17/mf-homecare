@@ -1,15 +1,15 @@
 <div class="header-column justify-content-center header-column-nav">
     <div class="header-row">
-        <div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
+        <div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1 justify-content-center">
             <div class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
                 <nav class="collapse">
-                    <ul class="mf__nav nav nav-pills" id="mainNav">
-                        <li class="dropdown">
-                            <a data-hash class="dropdown-item dropdown-toggle active" href="#home">
-                                Home
-                            </a>
+                    <ul class="mf__nav nav nav-pills justify-content-center" id="mainNav">
+                        @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
+                            <li class="dropdown mf__nav-item-con">
+                                <a data-hash class="mf__nav-item dropdown-item dropdown-toggle active" href="#home">
+                                    Home
+                                </a>
 
-                            @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="{{ route('admin_home', [ Request::segment( 1 ) ] ) }}" class="dropdown-item" data-hash data-hash-offset="68">
