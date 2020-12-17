@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-10 mx-md-auto">
-                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Client Benefits</h1>
+                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.client_benefits')</h1>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -28,9 +28,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Choice-V2.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Choice</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.choice')</h4>
 
-                                <p class="mf__features__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.choice')</p>
                             </div>
                         </div>
                     </div>
@@ -40,9 +40,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Control-V2.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Control</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.control')</h4>
 
-                                <p class="mf__features__feature__copy">We give you the tools and technology that make it easy to coordinate your homecare from scheduling to payment.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.control')</p>
                             </div>
                         </div>
                     </div>
@@ -53,9 +53,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Lower-Cost-V2.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Lower Costs</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.lower_costs')</h4>
 
-                                <p class="mf__features__feature__copy">Our system matches you with the nearest possible Caregivers who can provide the care you need.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.lower_costs')</p>
                             </div>
                         </div>
                     </div>
@@ -65,9 +65,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Consistency-V2.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Consistency</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.consistency')</h4>
 
-                                <p class="mf__features__feature__copy">Like the Caregiver you’ve chosen? Book them again and again to build a bond with someone who knows your needs and routines.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.consistency')</p>
                             </div>
                         </div>
                     </div>
@@ -77,9 +77,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Quality-V5-Separate.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Quality</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.quality')</h4>
 
-                                <p class="mf__features__feature__copy">Good care is about more than just qualifications. Our system lets us register Caregivers based on personality, values, experience, and compassion.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.quality')</p>
                             </div>
                         </div>
                     </div>
@@ -89,9 +89,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Live-In-Homecare-V4.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Live-In Homecare</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.live_in_home')</h4>
 
-                                <p class="mf__features__feature__copy">Live-in care can be a cost-effective alternative to a seniors’ residence that preserves independence and a familiar home.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.live_in_homecare')</p>
                             </div>
                         </div>
                     </div>
@@ -101,9 +101,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/24-Hour-Live-In-Care-V3.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Overnight Care</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.overnight_care')</h4>
 
-                                <p class="mf__features__feature__copy">Sleep securely with the knowledge that a Caregiver is close at hand in the home.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.overnight_care')</p>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/Tracking-&-Location-App.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Location Tracking</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.location_tracking')</h4>
 
-                                <p class="mf__features__feature__copy">Our app helps you keep track of your loved ones during their appointment with the Caregiver.</p>
+                                <p class="mf__features__feature__copy">@lang('texts.location_tracking')</p>
                             </div>
                         </div>
                     </div>
@@ -127,9 +127,9 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-10 mx-md-auto">
-                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Caregiver and Companion Services</h1>
+                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.caregiver_and_companion_services')</h1>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Our system connects you both with specialized Caregivers and with Companions, depending on your needs.</p>
+                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_and_companion_services')</p>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -137,9 +137,9 @@
 
                 <div class="mf__features__row">
                     <div class="mf__features__row__column mf__features__row__column--first">
-                        <h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Caregiver Services</h2>
+                        <h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.caregiver_services')</h2>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Only Caregivers who submit the required qualification documents can provide these services.</p>
+                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_and_companion_services')</p>
 
                         <div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -149,7 +149,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/sampoo.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Bathing and Personal Grooming</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.bathing_and_personal_grooming')</h4>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/bathtub.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Bathroom and Continence Care</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.bathroom_and_continence_care')</h4>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/yoga.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Exercise and Mobility</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.exercise_and_mobility')</h4>
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/pills.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Medication Reminder</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.medication_reminder')</h4>
                             </div>
                         </div>
                     </div>
@@ -187,9 +187,9 @@
 
                 <div class="mf__features__row">
                     <div class="mf__features__row__column mf__features__row__column--first">
-                        <h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Companion Services</h2>
+                        <h2 class="mf__features__h2 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.companion_services')</h2>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you provide these services, you will be classified as a Companion.</p>
+                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.companion_services')</p>
 
                         <div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -199,7 +199,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/eat.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Feeding</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.feeding')</h4>
                             </div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/lunch.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Helping with Meal Preparation</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.helping_with_meal_preparation')</h4>
                             </div>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/washing.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Light Housework</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.light_housework')</h4>
                             </div>
                         </div>
                     </div>
@@ -229,7 +229,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/walk.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Going out for Walks</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.going_out_for_walks')</h4>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/walking.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Running Errands</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.running_errands')</h4>
                             </div>
                         </div>
                     </div>
@@ -249,7 +249,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/car.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Trip to appointments or other outings by car</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.trip_to_appointments_or_other_outings_by_car')</h4>
                             </div>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                             <div class="mf__features__feature__icon-con" style="background-image: url('{{ asset( 'website/assets/images/icons/volunteer.png' ) }}')"></div>
 
                             <div class="mf__features__feature__info">
-                                <h4 class="mf__features__feature__heading">Someone to spend time with and Emotional Support</h4>
+                                <h4 class="mf__features__feature__heading">@lang('titles.Someone_to_spend_time')</h4>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
         <section class="mf__section mf__video appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="row text-center">
                 <div class="container mx-md-auto">
-                    <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Watch our Video</h1>
+                    <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.watch_our_video')</h1>
 
                     <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
@@ -283,22 +283,22 @@
             <div class="row text-center">
                 <div class="mf__register__buttons__inner container mx-md-auto">
                     <section class="mf__register__buttons__col">
-                        <h3 class="mf__heading-3">Register As A Caregiver</h3>
+                        <h3 class="mf__heading-3">@lang('titles.register_as_a_caregiver')</h3>
 
                         <div class="mf__register__buttons__info">
-                            <p class="mf__register__buttons__p">Complete our background check process and submit any qualification documents to ensure that your profile is available when clients start searching!</p>
+                            <p class="mf__register__buttons__p">@lang('texts.register_as_a_caregiver')</p>
 
-                            <a class="mf__register__buttons__button" href="#">Register As A Caregiver</a>
+                            <a class="mf__register__buttons__button" href="#">@lang('titles.register_as_a_caregiver')</a>
                         </div>
                     </section>
 
                     <section class="mf__register__buttons__col">
-                        <h3 class="mf__heading-3">Register As A Client</h3>
+                        <h3 class="mf__heading-3">@lang('titles.register_as_a_client')</h3>
 
                         <div class="mf__register__buttons__info">
-                            <p class="mf__register__buttons__p">Sign up as part of our soft launch process to let us know what kind of care you’re looking for!</p>
+                            <p class="mf__register__buttons__p">@lang('texts.register_as_a_client')</p>
 
-                            <a class="mf__register__buttons__button" href="#">Register As A Client</a>
+                            <a class="mf__register__buttons__button" href="#">@lang('titles.register_as_a_client')</a>
                         </div>
                     </section>
                 </div>
