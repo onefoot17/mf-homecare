@@ -26,7 +26,7 @@ class LoginController extends Controller
         if(Auth::attempt($credentials, $request->remember_me)){
 
             // Authentication passed...
-            return redirect()->intended(route('admin_home', [Auth::User()->settings->language]));
+            return redirect()->intended(route('index', [Auth::User()->settings->language]));
 
         } else {
 

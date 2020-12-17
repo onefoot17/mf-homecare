@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use App\Models\User;
+use App\Models\Setting;
+
 use Hash;
 
 class DatabaseSeeder extends Seeder
@@ -22,11 +24,17 @@ class DatabaseSeeder extends Seeder
         $felipe->password = Hash::make('12345678');
         $felipe->save();
 
+        $setting = new Setting([]);
+        $felipe->settings()->save($setting);
+
         $vio = new User();
         $vio->name = 'Vio Ivanescu';
         $vio->email = 'vio@vcompinc.com';
         $vio->password = Hash::make('12345678');
         $vio->save();
+
+        $setting = new Setting([]);
+        $vio->settings()->save($setting);
 
         $earl = new User();
         $earl->name = 'Earl Misquitta';
@@ -34,5 +42,7 @@ class DatabaseSeeder extends Seeder
         $earl->password = Hash::make('12345678');
         $earl->save();
 
+        $setting = new Setting([]);
+        $earl->settings()->save($setting);
     }
 }

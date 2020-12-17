@@ -12,7 +12,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="{{ route('admin_home', [ Request::segment( 1 ) ] ) }}" class="dropdown-item" data-hash data-hash-offset="68">
+                                        <a href="{{ route('index', [ Request::segment( 1 ) ] ) }}" class="dropdown-item" data-hash data-hash-offset="68">
                                             <i class="fas fa-home mr-1"></i> @lang( 'Admin' )
                                         </a>
                                     </li>
