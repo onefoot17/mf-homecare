@@ -1,0 +1,58 @@
+// Forms
+input::placeholder {
+    .ra__dark & {
+        color: rgba( var(--white--rgb), .5 ) !important;
+    }
+}
+
+input:focus {
+    .ra__dark & {
+        color: $white !important;
+    }
+}
+
+.input-group-text {
+    font-size: inherit !important;
+
+    .ra__dark & {
+        background-color: $cream;
+        color: $white;
+    }
+}
+
+.form {
+    /* &-row {
+        margin-bottom: $margin*2;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    } */
+
+    &-group {
+        margin-bottom: $margin*2;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &-control {
+        font-size: inherit !important;
+
+        .ra__dark & {
+            background-color: $cream;
+            color: $white;
+        }
+    }
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: $form-error-border-color;
+}
+
+.invalid-feedback {
+    color: $form-error-color;
+    font-size: 1.6rem;
+}

@@ -1,36 +1,9 @@
 // Intialization
-@import '_reset';
-@import '_variables';
-@import '_mixins';
-
-* {
-    font-family: $font-family-roboto;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    text-rendering: optimizeLegibility !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @include line-height(
-        $line-height: 1.3
-    );
-
-    color: var(--black);
-    font-family: $font-family-jomolhari;
-    font-weight: 700;
-    text-transform: initial;
-}
-
-p {
-    @include line-height;
-
-    color: $black;
-    font-size: 1.6rem;
-}
+@import '_init';
+@import '../views/website/assets/sass/_init';
+@import '_forms';
+@import '_buttons';
+@import '_alerts';
 
 #{$html} {
     /* &.sticky-header-active #header .header-body {
@@ -38,7 +11,7 @@ p {
     } */
 
     #{$header} {
-        .header-body {
+        /* .header-body {
             @include background-color-rgba( var(--black--rgb), 0.8 );
             // @include transition;
         }
@@ -55,27 +28,107 @@ p {
         .header-nav {
             min-height: initial !important;
             padding: 0;
-        }
+        } */
 
         /* .header-nav-main {
             @include background-color-rgba( var(--white--rgb), 0.8 );
         } */
 
-        .header-btn-collapse-nav {
-            @include line-height(
-                $line-height: .95
-            );
+        // .header-btn-collapse-nav {
+        //     @include line-height(
+        //         $line-height: .95
+        //     );
 
-            background: var(--black);
-            font-size: 2.5rem;
-            padding: $padding/2 $padding;
-        }
+        //     background: var(--black);
+        //     font-size: 2.5rem;
+        //     padding: $padding/2 $padding;
+        // }
     }
 }
 
 .row {
     margin-right: 0;
     margin-left: 0;
+}
+
+.header-logo {
+    max-width: 300px;
+
+    img {
+        // display: block;
+        width: 100%;
+    }
+}
+
+html .header-body,
+html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-transparent) .header-body {
+    background-color: rgba( $black, 0.8 ) !important;
+    // @include transition;
+}
+
+#header {
+    .header-nav {
+        &.header-nav-links {
+            nav {
+                > ul {
+                    > li > a {
+                        font-family: $font-family-jomolhari;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        text-transform: initial;
+
+                        i {
+                            margin-right: $margin/2 !important;
+                        }
+                    }
+
+                    li:hover > a {
+                        color: $nav-link-hover-color;
+                    }
+
+                    &:not( :hover ) > li > a.active {
+                        color: $nav-link-active-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-btn-collapse-nav {
+        background: $purple;
+    }
+}
+
+@include for-992-down {
+    .header-column {
+        &-logo {
+            justify-content: center;
+            order: 2;
+        }
+
+        &-nav {
+            justify-content: flex-start;
+            order: 1;
+
+            .header-row {
+                justify-content: flex-start !important;
+            }
+
+            .header-btn-collapse-nav {
+                margin-left: 0 !important;
+            }
+        }
+
+        &-log-in-out {
+            order: 3;
+        }
+    }
+}
+
+@include for-992-down {
+    .nav-link-log-in-out-text {
+        display: none;
+    }
 }
 
 .#{$mf} {
@@ -100,78 +153,78 @@ p {
         }
     }
 
-    &#{$es}nav {
-        align-items: center;
-        justify-content: flex-end;
-        // padding: $padding;
+    // &#{$es}nav {
+    //     align-items: center;
+    //     justify-content: flex-end;
+    //     // padding: $padding;
 
-        &-item {
-            &-con {
-                padding-top: $padding;
-                padding-bottom: $padding;
-            }
+    //     &-item {
+    //         &-con {
+    //             padding-top: $padding;
+    //             padding-bottom: $padding;
+    //         }
 
-            @include button-styles(
-                $color: var(--white) !important
-            );
-            @include button-hover(
-                $background-color: rgba( var(--white--rgb), .9 ) !important,
-                // $border-color: var(--white) !important,
-                $color: var(--black) !important,
-            );
+    //         @include button-styles(
+    //             $color: var(--white) !important
+    //         );
+    //         @include button-hover(
+    //             $background-color: rgba( var(--white--rgb), .9 ) !important,
+    //             // $border-color: var(--white) !important,
+    //             $color: var(--black) !important,
+    //         );
 
-            display: block;
-            font-family: $font-family-jomolhari;
-            font-weight: 700;
+    //         display: block;
+    //         font-family: $font-family-jomolhari;
+    //         font-weight: 700;
 
-            &:hover {
-                @include transition;
+    //         &:hover {
+    //             @include transition;
 
-                text-decoration: none;
+    //             text-decoration: none;
 
-                /* .sticky-header-active & {
-                    background-color: rgba( var(--white--rgb), .8 ) !important;
-                    color: var(--black) !important;
-                } */
-            }
+    //             /* .sticky-header-active & {
+    //                 background-color: rgba( var(--white--rgb), .8 ) !important;
+    //                 color: var(--black) !important;
+    //             } */
+    //         }
 
-            /* .sticky-header-active & {
-                color: var(--white) !important;
-            } */
+    //         /* .sticky-header-active & {
+    //             color: var(--white) !important;
+    //         } */
 
-            &.active {
-                background-color: var(--black) !important;
-                color: var(--white) !important;
-            }
-        }
-    }
+    //         &.active {
+    //             background-color: var(--black) !important;
+    //             color: var(--white) !important;
+    //         }
+    //     }
+    // }
 
     /* &#{$es}logo-con {
         max-width: 350px;
         width: 350px !important;
     } */
 
-    &#{$es}logo-inner {
-        @include ratio( logo );
-        @include transition;
+    // &#{$es}logo-inner {
+    //     @include ratio( logo );
+    //     @include transition;
 
-        background: url( '/website/assets/images/MF-Homecare-Logo-white.png' ) no-repeat center center;
-        background-size: contain;
-        display: block;
-        width: 350px;
+    //     background: url( '/assets/images/MF-Homecare-Logo-white.png' ) no-repeat center center;
+    //     background-size: contain;
+    //     display: block;
+    //     width: 350px;
 
-        @include for-phone-only {
-            width: 300px;
-        }
+    //     @include for-phone-only {
+    //         width: 300px;
+    //     }
 
-        @include for-desktop-375-down {
-            width: 225px;
-        }
+    //     @include for-375-down {
+    //         width: 225px;
+    //     }
 
-        /* .sticky-header-active & {
-            background-image: url( '/website/assets/images/MF-Homecare-Logo-white.png?hgfghj' );
-        } */
-    }
+    //     /* .sticky-header-active & {
+    //         background-image: url( '/assets/images/MF-Homecare-Logo-white.png?hgfghj' );
+    //     } */
+    // }
 
     /* &#{$es}logo {
         width: 100%;
