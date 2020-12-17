@@ -31,7 +31,7 @@
                         </li>
 
                         <li class="mf__nav-item-con">
-                            <a class="mf__nav-item" href="elements.html">Register as a Caregiver</a>
+                            <a class="mf__nav-item" href="{{route('caregiver_registration_phase_1', [Request::segment(1)])}}">Register as a Caregiver</a>
                         </li>
 
                         <li class="mf__nav-item-con">

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\Website\IndexController;
+use App\Http\Controllers\Website\CaregiverController;
 
 
 /*
@@ -39,6 +40,12 @@ Route::group(['prefix' => '{language}'], function(){
     App::setLocale(Request::segment(1));
 
     Route::get('/', [IndexController::class, 'index'])->name('home');
+
+    Route::group(['prefix' => 'caregiver'], function(){
+        Route::get('/registration_phase_1', [CaregiverController::class, 'registrationPhase1'])->name('caregiver_registration_phase_1');
+        Route::post('/registration_phase_1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
+    });
+
 
     // Route::group(['prefix' => 'admin'], function(){
 
