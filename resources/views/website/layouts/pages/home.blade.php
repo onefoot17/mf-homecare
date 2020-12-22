@@ -2,13 +2,8 @@
 
 @extends( 'website.layouts.main' )
 
-@section( 'css' )
-    @parent
-@stop
-
 @section( 'content' )
     <div role="main" class="main">
-
         {{-- Slider --}}
         @include( 'website/layouts/components/slider' )
 
@@ -305,9 +300,4 @@
             </div>
         </section>
     </div>
-
-    @include( 'website.layouts.footernav' )
-@stop
-
-@section( 'footer-scripts' )
 @stop

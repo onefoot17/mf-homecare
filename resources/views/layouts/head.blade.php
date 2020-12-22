@@ -23,6 +23,8 @@
 
         {{-- Fonts --}}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+        {{-- Poppins --}}
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800%7CPlayfair+Display&display=swap" rel="stylesheet" type="text/css">
         {{-- Jomolhari --}}
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
