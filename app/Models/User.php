@@ -58,4 +58,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token, request()->email));
+    }
+
+    public function settings()
+    {
+        return $this->hasOne('App\Models\Setting', 'user_id');
+    }
 }

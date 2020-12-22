@@ -9,25 +9,25 @@
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">How We Work</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.how_we_work')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Register as a Caregiver</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.register_as_a_caregiver')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Register as a Client</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.register_as_a_client')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Contact Us</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.contact_us')</a>
                         </p>
                     </li>
                 </ul>
@@ -36,30 +36,30 @@
             <div class="mf__footer__col">
                 <ul class="mf__footer__col__inner">
                     <li class="mf__footer__col__inner__li">
-                        <h4 class="mf__footer__col__inner__heading">Information</h4>
+                        <h4 class="mf__footer__col__inner__heading">@lang('titles.information')</h4>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Identity & Background Check</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.identity_background_check')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Cancellation Policy</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.cancellation_policy')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Terms & Conditions</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.terms_conditions')</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">Privacy Policy</a>
+                            <a class="mf__footer__col__inner__link" href="#">@lang('titles.privacy_policy')</a>
                         </p>
                     </li>
                 </ul>
@@ -68,7 +68,7 @@
             <div class="mf__footer__col">
                 <ul class="mf__footer__col__inner">
                     <li class="mf__footer__col__inner__li">
-                        <h4 class="mf__footer__col__inner__heading">Coming Soon</h4>
+                        <h4 class="mf__footer__col__inner__heading">@lang('titles.coming_soon')</h4>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
@@ -88,7 +88,7 @@
             <div class="mf__footer__col">
                 <ul class="mf__footer__col__inner mf__footer__socials">
                     <li class="mf__footer__socials__social mf__footer__socials__social--first">
-                        <h4 class="mf__footer__col__inner__heading">Socials</h4>
+                        <h4 class="mf__footer__col__inner__heading">@lang('titles.socials')</h4>
                     </li>
 
                     <li class="mf__footer__socials__social">
