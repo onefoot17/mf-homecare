@@ -1,14 +1,12 @@
-<div class="header-column justify-content-center header-column-nav">
-    <div class="header-row">
-        <div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1 justify-content-center">
-            <div class="header-nav-main header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
+<div class="header-column header-column-nav justify-content-center align-items-end">
+    <div class="header-nav justify-content-lg-center p-0">
+        <div class="header-nav header-nav-links header-nav-light-text">
+            <div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-3 header-nav-main-sub-effect-1 header-nav-main-mobile-dark">
                 <nav class="collapse">
-                    <ul class="mf__nav nav nav-pills justify-content-center" id="mainNav">
+                    <ul class="nav nav-pills flex-column flex-lg-row" id="mainNav">
                         @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
-                            <li class="dropdown mf__nav-item-con">
-                                <a data-hash class="mf__nav-item dropdown-item dropdown-toggle active" href="#home">
-                                    Home
-                                </a>
+                            <li class="dropdown order-1">
+                                <a class="dropdown-item" data-hash data-hash-offset="92" href="#home">Home</a>
 
                                 <ul class="dropdown-menu">
                                     <li>
@@ -23,19 +21,27 @@
                                         </a>
                                     </li>
                                 </ul>
-                            @endif
+                            </li>
+                        @endif
+
+                        <li class="dropdown order-2">
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#reservations">Register as a Caregiver</a>
                         </li>
 
-                        <li class="mf__nav-item-con">
-                            <a class="mf__nav-item" href="index.html">How We Work</a>
+                        <li class="dropdown order-3 flex-shrink-0">
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#menu">Register as a Client</a>
                         </li>
 
-                        <li class="mf__nav-item-con">
-                            <a class="mf__nav-item" href="elements.html">Register as a Caregiver</a>
+                        <li class="dropdown order-5">
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#about">How We Work</a>
                         </li>
 
-                        <li class="mf__nav-item-con">
-                            <a class="mf__nav-item" href="#">Register as a Client</a>
+                        <li class="align-items-center d-none d-lg-flex order-4 px-5 mx-2">
+                            <span class="header-logo">
+                                <a href="{{ route( 'index', [ Request::segment( 1 ) ] ) }}" class="w-100 text-center">
+                                    <img class="" alt="MF Homecare Logo" width="150" height="31" data-sticky-width="150" data-sticky-height="31" data-sticky-top="0" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}">
+                                </a>
+                            </span>
                         </li>
                     </ul>
                 </nav>
@@ -47,6 +53,8 @@
         </div>
     </div>
 </div>
+
+<div class="header-column justify-content-end d-none d-lg-flex"></div>
 
 <div class="header-column justify-content-end header-column-log-in-out">
     <div class="header-row">
