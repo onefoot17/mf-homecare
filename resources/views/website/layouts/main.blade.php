@@ -1,9 +1,6 @@
 {{-- Website Theme CSS --}}
 @section( 'css' )
     @include( 'website.layouts.styles' )
-
-    {{-- Theme Custom CSS --}}
-    <link rel="stylesheet" href="{{ asset( 'website/porto/css/custom.css' ) }}">
 @stop
 
 {{-- Website Our CSS --}}
@@ -17,7 +14,7 @@
 @stop
 
 {{-- Common Header --}}
-@include( 'layouts.header' )
+@include( 'layouts.head' )
 
 {{-- Website Header --}}
 @include( 'website.layouts.header' )
@@ -27,6 +24,9 @@
 
 {{-- Content --}}
 @yield( 'content' )
+
+{{-- Website Footer Nav --}}
+@include( 'website.layouts.footernav' )
 
 {{-- Website Footer Scripts --}}
 @include( 'website.layouts.footerscripts' )

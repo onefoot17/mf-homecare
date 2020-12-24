@@ -1,137 +1,251 @@
 // Intialization
-@import '_init';
 @import '../views/website/assets/sass/_init';
+@import '_init';
 @import '_forms';
 @import '_buttons';
 @import '_alerts';
-
-#{$html} {
-    /* &.sticky-header-active #header .header-body {
-        @include background-color-rgba( var(--black--rgb), 0.7 );
-    } */
-
-    #{$header} {
-        /* .header-body {
-            @include background-color-rgba( var(--black--rgb), 0.8 );
-            // @include transition;
-        }
-
-        .header-container {
-            height: auto !important;
-            padding: $padding $padding;
-        }
-
-        .header-logo {
-            margin: 0;
-        }
-
-        .header-nav {
-            min-height: initial !important;
-            padding: 0;
-        } */
-
-        /* .header-nav-main {
-            @include background-color-rgba( var(--white--rgb), 0.8 );
-        } */
-
-        // .header-btn-collapse-nav {
-        //     @include line-height(
-        //         $line-height: .95
-        //     );
-
-        //     background: var(--black);
-        //     font-size: 2.5rem;
-        //     padding: $padding/2 $padding;
-        // }
-    }
-}
+@import '_nav';
 
 .row {
     margin-right: 0;
     margin-left: 0;
 }
 
-.header-logo {
-    max-width: 300px;
-
-    img {
-        // display: block;
-        width: 100%;
+html {
+    &:not(.sticky-header-active) #header.header-transparent:not(.header-semi-transparent) .header-body {
+        background: rgba( $black, 0.8 ) !important;
     }
-}
 
-html .header-body,
-html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-transparent) .header-body {
-    background-color: rgba( $black, 0.8 ) !important;
-    // @include transition;
-}
+    #header {
+        .header {
+            &-body {
+                background: rgba( $black, 0.8 ) !important;
+            }
 
-#header {
-    .header-nav {
-        &.header-nav-links {
-            nav {
-                > ul {
-                    > li > a {
-                        font-family: $font-family-jomolhari;
-                        font-size: 2rem;
-                        font-weight: 700;
-                        text-transform: initial;
+            &-container.container {
+                max-width: 1140px !important;
+            }
 
-                        i {
-                            margin-right: $margin/2 !important;
+            &-row-log-in-out {
+                flex-basis: 100%;
+                padding-top: $padding/2;
+                padding-bottom: $padding/2;
+            }
+
+            &-column-nav {
+                flex-grow: 1;
+                flex-shrink: 1;
+
+                @include for-992-down {
+                    flex-grow: 0;
+                }
+            }
+
+            &-nav {
+                &-links {
+                    justify-content: center;
+
+                    .header-nav-main {
+                        width: 100%;
+                    }
+
+                    nav {
+                        width: 100%;
+
+                        > ul {
+                            width: 100%;
+
+                            > li {
+                                @include for-992-up {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex: 1;
+                                    margin-left: 0;
+
+                                    &:first-child {
+                                        justify-content: flex-start;
+                                    }
+
+                                    &:last-child {
+                                        justify-content: flex-end;
+                                    }
+                                }
+
+                                a {
+                                    font-family: $font-family-jomolhari;
+                                    font-size: 1.7rem;
+                                    font-weight: 700;
+                                    text-transform: initial;
+                                    width: auto;
+
+                                    &:not(.btn) {
+                                        padding-right: $padding/2 !important;
+                                        padding-left: $padding/2 !important;
+                                    }
+
+                                    i {
+                                        margin-right: $margin/2 !important;
+                                    }
+                                }
+
+                                .dropdown-menu {
+                                    top: 70px !important;
+                                }
+                            }
+
+                            li:hover > a {
+                                color: $nav-link-hover-color !important;
+                            }
+
+                            &:not( :hover ) > li > a.active {
+                                color: $nav-link-active-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-btn-collapse-nav {
+                background: $purple;
+            }
+
+            &-column {
+                @include for-992-down {
+                    &-logo {
+                        justify-content: center;
+                        order: 2;
+                    }
+
+                    &-nav {
+                        justify-content: flex-start;
+                        order: 1;
+
+                        .header-row {
+                            justify-content: flex-start !important;
+                        }
+
+                        .header-btn-collapse-nav {
+                            margin-left: 0 !important;
                         }
                     }
 
-                    li:hover > a {
-                        color: $nav-link-hover-color;
-                    }
+                    &-log-in-out {
+                        flex-grow: 0 !important;
+                        order: 3;
 
-                    &:not( :hover ) > li > a.active {
-                        color: $nav-link-active-color;
+                        &-text {
+                            display: none;
+                        }
+                    }
+                }
+
+                @include for-992-up {
+                    &-log-in-out {
+                        display: none;
                     }
                 }
             }
         }
     }
+}
 
-    .header-btn-collapse-nav {
-        background: $purple;
+html.sticky-header-active .header-logo {
+    display: block;
+    /* min-width: 360px;
+    min-height: 73px; */
+
+    a.header-logo-inner {
+        display: block;
+        padding-right: $padding;
+        padding-left: $padding;
+
+        @include for-992-down {
+            padding-right: $padding*4;
+            padding-left: $padding*4;
+        }
+
+        @include for-992-up {
+            min-width: 300px;
+            min-height: 60px;
+            /* position: absolute;
+            top: 30px; */
+        }
+    }
+
+    img {
+        top: initial !important;
+        // width: 300px;
+        width: 100%;
     }
 }
 
-@include for-992-down {
-    .header-column {
-        &-logo {
-            justify-content: center;
-            order: 2;
-        }
-
-        &-nav {
-            justify-content: flex-start;
-            order: 1;
-
-            .header-row {
-                justify-content: flex-start !important;
-            }
-
-            .header-btn-collapse-nav {
-                margin-left: 0 !important;
-            }
-        }
-
-        &-log-in-out {
-            order: 3;
-        }
+@keyframes logoAnimatedConFadeInOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: -200px;
+        opacity: 0;
     }
 }
 
-@include for-992-down {
-    .nav-link-log-in-out-text {
-        display: none;
+@keyframes logoAnimatedFadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo-animated {
+    animation: logoAnimatedFadeInOut 1 ease-out forwards;
+    opacity: 0;
+    position: absolute;
+
+    &-con {
+        animation: logoAnimatedConFadeInOut 1 ease-out forwards;
+        animation-delay: 6s;
+        animation-duration: 1s;
+        height: 83px;
+        position: relative;
+        width: calc( ( ( 84px * .85 ) + 6px ) + ( 310px * .85 ) );
+    }
+
+    &-bird {
+        animation-delay: 1s;
+        animation-duration: 6s;
+        left: 0;
+        width: calc( 84px * .85 ) !important;
+    }
+
+    &-mf {
+        animation-delay: 3s;
+        animation-duration: 4s;
+        left: calc( ( 84px * .85 ) + 6px );
+        top: 4px;
+        width: calc( 310px * .85 ) !important;
+    }
+
+    &-managing {
+        animation-delay: 4s;
+        animation-duration: 2s;
+        top: calc( 38px + 4px + 6px );
+        left: calc( ( 84px * .85 ) + 6px );
+        width: calc( 304px * .85 ) !important;
     }
 }
 
 .#{$mf} {
+// Slider
+    &#{$es}slider h3 {
+        color: $white;
+    }
+
     &#{$es}section {
         padding-top: $padding*4;
         padding-bottom: $padding*4;
@@ -153,129 +267,9 @@ html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-tran
         }
     }
 
-    // &#{$es}nav {
-    //     align-items: center;
-    //     justify-content: flex-end;
-    //     // padding: $padding;
-
-    //     &-item {
-    //         &-con {
-    //             padding-top: $padding;
-    //             padding-bottom: $padding;
-    //         }
-
-    //         @include button-styles(
-    //             $color: var(--white) !important
-    //         );
-    //         @include button-hover(
-    //             $background-color: rgba( var(--white--rgb), .9 ) !important,
-    //             // $border-color: var(--white) !important,
-    //             $color: var(--black) !important,
-    //         );
-
-    //         display: block;
-    //         font-family: $font-family-jomolhari;
-    //         font-weight: 700;
-
-    //         &:hover {
-    //             @include transition;
-
-    //             text-decoration: none;
-
-    //             /* .sticky-header-active & {
-    //                 background-color: rgba( var(--white--rgb), .8 ) !important;
-    //                 color: var(--black) !important;
-    //             } */
-    //         }
-
-    //         /* .sticky-header-active & {
-    //             color: var(--white) !important;
-    //         } */
-
-    //         &.active {
-    //             background-color: var(--black) !important;
-    //             color: var(--white) !important;
-    //         }
-    //     }
-    // }
-
-    /* &#{$es}logo-con {
-        max-width: 350px;
-        width: 350px !important;
-    } */
-
-    // &#{$es}logo-inner {
-    //     @include ratio( logo );
-    //     @include transition;
-
-    //     background: url( '/assets/images/MF-Homecare-Logo-white.png' ) no-repeat center center;
-    //     background-size: contain;
-    //     display: block;
-    //     width: 350px;
-
-    //     @include for-phone-only {
-    //         width: 300px;
-    //     }
-
-    //     @include for-375-down {
-    //         width: 225px;
-    //     }
-
-    //     /* .sticky-header-active & {
-    //         background-image: url( '/assets/images/MF-Homecare-Logo-white.png?hgfghj' );
-    //     } */
-    // }
-
-    /* &#{$es}logo {
-        width: 100%;
-    } */
-
     &#{$es}homepage-video {
         &:before {
-            opacity: .4 !important;
-        }
-
-        &#{$es}heading-1 {
-            font-size: 4.2rem;
-            margin-bottom: $margin*2;
-
-            @include for-tablet-landscape-down {
-                font-size: 2.4rem;
-            }
-        }
-
-        &#{$es}heading-2 {
-            font-size: 6.1rem;
-            font-weight: 100;
-            margin-bottom: $margin*4;
-
-            @include for-tablet-landscape-down {
-                font-size: 3.2rem;
-            }
-        }
-
-        &#{$es}heading-3 {
-            @include button-styles(
-                $background-color: rgba( var(--black--rgb), .9 ) !important,
-                // $border-color: var(--white) !important,
-                $color: var(--white) !important,
-                $padding: $padding $padding*2,
-            );
-            @include button-hover(
-                $background-color: var(--white) !important,
-                // $border-color: var(--black) !important,
-                $color: var(--black) !important,
-            );
-
-            font-family: $font-family-jomolhari;
-            font-size: 1.8rem;
-            font-weight: 700;
-
-            &:hover {
-                @include transition;
-
-                text-decoration: none;
-            }
+            opacity: .6 !important;
         }
     }
 
@@ -402,7 +396,11 @@ html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-tran
         &#{$es}video {
             display: block;
             margin: 0 auto;
-            max-width: 60%;
+            max-width: 100%;
+
+            @include for-992-up {
+                max-width: 60%;
+            }
         }
     }
 
@@ -457,29 +455,22 @@ html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-tran
         }
 
         &#{$es}button {
-            @include button-styles(
-                $background-color: var(--white),
-                $color: var(--black),
-                $font-size: 1.8rem
-            );
-            @include button-hover(
-                $background-color: rgba( var(--white--rgb), .5 ),
-                // $border-color: var(--white),
-                // $color: var(--black)
-            );
-            @include transition;
-
             align-self: flex-end;
+            background-color: $white !important;
             display: inline-block;
             font-family: $font-family-jomolhari;
+            $font-size: 1.8rem;
             font-weight: 700;
         }
     }
 
     &#{$es}footer {
-        background: url( '/website/assets/images/bg2s.jpg' ) no-repeat center center;
-        background-size: cover;
-        padding: $padding*6 0 !important;
+        &#footer {
+            background: url( '/website/assets/images/bg2s.jpg' ) no-repeat center center;
+            background-size: cover;
+            border: none;
+            padding: $padding*6 0 !important;
+        }
 
         // > .row {
             // display: flex;
@@ -549,11 +540,11 @@ html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-tran
                 }
 
                 &#{$es}link {
-                    color: $white;
+                    color: $white !important;
 
                     &:hover {
-                        color: $white;
-                        text-decoration: underline;
+                        color: $white !important;
+                        text-decoration: underline !important;
                     }
                 }
             }

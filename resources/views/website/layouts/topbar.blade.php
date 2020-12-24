@@ -1,23 +1,31 @@
-<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-    <div class="mf__header-body header-body border-top-0 bg-dark box-shadow-none">
-        <div class="header-container container">
-            <div class="header-row">
-                <div class="header-column header-column-logo">
-                    <div class="header-row">
-                        <div class="header-logo">
-                            <a href="index.html">
-                                <img alt="MF Homecare Logo" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" />
-                            </a>
-                        </div>
+<header id="header" class="header-narrow header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAtElement': '#header', 'stickySetTop': '0', 'stickyChangeLogo': false}">
+	<div class="header-body border-0 box-shadow-none bg-dark">
+		<div class="header-container container">
+			<div class="header-row">
+				<div class="header-column header-column-logo d-lg-none">
+					<div class="header-row">
+						<div class="header-logo">
+							<a class="header-logo-inner" href="index.html">
+                                {{-- <img class="top-4" alt="MF Homecare Logo" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" /> --}}
 
-                        {{-- <div class="mf__logo-con header-logo">
-                            <a class="mf__logo-inner mf__logo-inner--desktop" href="index.html"></a>
-                        </div> --}}
-                    </div>
+                                {{-- <img class="top-4" alt="MF Homecare Logo" width="82" height="17" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" /> --}}
+
+                                <img
+                                    alt="MF Homecare Logo"
+                                    src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}"
+                                    class="appear-animation animated fadeInUp appear-animation-visible"
+                                    data-appear-animation="fadeInUp"
+                                    data-appear-animation-delay="7000"
+                                    data-appear-animation-duration="2s"
+                                    style="animation-duration: 2s; animation-delay: 7000ms;"
+                                />
+							</a>
+						</div>
+					</div>
                 </div>
 
                 @include( 'website.layouts.topnav' )
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </header>

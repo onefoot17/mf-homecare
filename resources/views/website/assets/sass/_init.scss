@@ -1,7 +1,21 @@
 // Theme Settings
+
+// Intialization
+@import '_variables';
+@import '_mixins';
+
 // Navigation
 $nav-link-color: $white;
-$nav-link-hover-color: $purple;
+$nav-link-hover-color: $red-light;
 $nav-link-active-color: $nav-link-hover-color;
 $nav-sticky-link-color: $black;
 $nav-sticky-link-hover-color: $purple;
+
+// Buttons
+$button-bg-color: $black !important;
+$button-color: $white !important;
+$button-bg-hover-color: $red !important;
+// Info
+$button-bg-color-info: $white !important;
+$button-color-info: $black !important;
+$button-hover-color-info: $white !important;
