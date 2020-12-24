@@ -42,8 +42,8 @@ Route::group(['prefix' => '{language}'], function(){
     Route::get('/', [IndexController::class, 'index'])->name('home');
 
     Route::group(['prefix' => 'caregiver'], function(){
-        Route::get('/registration_phase_1', [CaregiverController::class, 'registrationPhase1'])->name('caregiver_registration_phase_1');
-        Route::post('/registration_phase_1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
+        Route::get('/registration-phase-1', [CaregiverController::class, 'registrationPhase1'])->name('caregiver_registration_phase_1');
+        Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
     });
 
 

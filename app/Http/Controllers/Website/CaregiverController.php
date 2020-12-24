@@ -21,6 +21,7 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request)
     {
+        
         return back()->with('message-success');
     }
 }

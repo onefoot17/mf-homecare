@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $felipe = new User();
-        $felipe->name = 'Felipe Pastana';
+        $felipe->first_name = 'Felipe';
+        $felipe->last_name = 'Pastana';
         $felipe->email = 'felipe@vcompinc.com';
         $felipe->password = Hash::make('12345678');
         $felipe->save();
@@ -28,7 +29,8 @@ class DatabaseSeeder extends Seeder
         $felipe->settings()->save($setting);
 
         $vio = new User();
-        $vio->name = 'Vio Ivanescu';
+        $vio->first_name = 'Vio';
+        $vio->last_name = 'Ivanescu';
         $vio->email = 'vio@vcompinc.com';
         $vio->password = Hash::make('12345678');
         $vio->save();
@@ -37,7 +39,8 @@ class DatabaseSeeder extends Seeder
         $vio->settings()->save($setting);
 
         $earl = new User();
-        $earl->name = 'Earl Misquitta';
+        $earl->first_name = 'Earl';
+        $earl->last_name = 'Misquitta';
         $earl->email = 'earl@vcompinc.com';
         $earl->password = Hash::make('12345678');
         $earl->save();
