@@ -39,6 +39,10 @@ return [
     'terms_conditions' => 'Terms & Conditions',
     'privacy_policy' => 'Privacy Policy',
     'coming_soon' => 'Coming Soon',
-    'socials' => 'Socials'
+    'socials' => 'Socials',
+
+    //Registration Phase 1
+
+    'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions'
 
 ];
