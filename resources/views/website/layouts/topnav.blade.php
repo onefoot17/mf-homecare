@@ -4,43 +4,17 @@
             <div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-3 header-nav-main-sub-effect-1 header-nav-main-mobile-dark">
                 <nav class="collapse">
                     <ul class="nav nav-pills flex-column flex-lg-row" id="mainNav">
-                        @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
-                            <li class="dropdown order-1">
-                                <a class="dropdown-item" data-hash data-hash-offset="92" href="#home">Home</a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('index', [ Request::segment( 1 ) ] ) }}" class="dropdown-item" data-hash data-hash-offset="68">
-                                            <i class="fas fa-home mr-1"></i> @lang( 'Admin' )
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" data-hash data-hash-offset="68" href="{{ env( 'APP_URL' ) }}website/porto/index.html" target="_blank">
-                                            <i class="fas fa-asterisk"></i> @lang( 'Default Template' )
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-
-                        <li class="dropdown order-2">
+                        <li class="dropdown order-1">
                             <a class="dropdown-item" data-hash data-hash-offset="92" href="#reservations">Register as a Caregiver</a>
                         </li>
 
-                        <li class="dropdown order-3 flex-shrink-0">
+                        <li class="dropdown order-2 flex-shrink-0">
                             <a class="dropdown-item" data-hash data-hash-offset="92" href="#menu">Register as a Client</a>
                         </li>
 
-                        <li class="dropdown order-5">
-                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#about">How We Work</a>
-                        </li>
-
-                        <li class="align-items-center d-none d-lg-flex order-4">
+                        <li class="align-items-center d-none d-lg-flex order-3">
                             <span class="header-logo">
                                 <a href="{{ route( 'index', [ Request::segment( 1 ) ] ) }}" class="header-logo-inner w-100 text-center">
-                                    {{-- <img class="" alt="MF Homecare Logo" width="150" height="31" data-sticky-width="150" data-sticky-height="31" data-sticky-top="0" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" /> --}}
-
                                     <img
                                         alt="MF Homecare Logo"
                                         width="150"
@@ -59,23 +33,41 @@
                             </span>
                         </li>
 
-                        <li class="dropdown order-6">
-                            <button>
-                                @auth
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <a href="javascript:void(0);" class="btn navbar-btn" onclick="event.preventDefault(); this.closest('form').submit();">
-                                            <i class="fe-log-out"></i>
+                        <li class="dropdown order-4">
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#about">How We Work</a>
+                        </li>
 
-                                            {{ __( 'Logout' ) }}
+                        <li class="dropdown order-5">
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="{{ route('admin_home', [ Request::segment( 1 ) ] ) }}">
+                                <i class="fas fa-home mr-1"></i> @lang( 'Admin' )
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
+                                    <li>
+                                        <a class="dropdown-item" data-hash data-hash-offset="68" href="{{ env( 'APP_URL' ) }}website/porto/index.html" target="_blank">
+                                            <i class="fas fa-asterisk"></i> @lang( 'Default Template' )
                                         </a>
-                                    </form>
-                                @else
-                                    <a href="{{ route( 'login' ) }}" class="btn navbar-btn">
-                                        <i class="fe-log-in"></i> Login
-                                    </a>
-                                @endauth
-                            </button>
+                                    </li>
+                                @endif
+
+                                <li class="dropdown-log-in-out">
+                                    @auth
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <a href="javascript:void(0);" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                <i class="fe-log-out"></i>
+
+                                                {{ __( 'Logout' ) }}
+                                            </a>
+                                        </form>
+                                    @else
+                                        <a href="{{ route( 'login' ) }}" class="dropdown-item">
+                                            <i class="fe-log-in"></i> Login
+                                        </a>
+                                    @endauth
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
