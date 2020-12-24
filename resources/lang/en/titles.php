@@ -18,7 +18,7 @@ return [
     'bathroom_and_continence_care' => 'Bathroom and Continence Care',
     'exercise_and_mobility' => 'Exercise and Mobility',
     'medication_reminder' => 'Medication Reminder',
-    'companion_services' => 'companion_services',
+    'companion_services' => 'Companion Services',
     'feeding' => 'Feeding',
     'helping_with_meal_preparation' => 'Helping with Meal Preparation',
     'light_housework' => 'Light Housework',

@@ -161,6 +161,22 @@ html {
   width: 100%;
 }
 
+/* // Buttons
+$button-color: $white !default;
+$button-color-dark: $button-color !default;
+$button-hover-color: $white !default;
+$button-bg-color-danger: $red !default;
+$button-bg-color-danger-dark: $red !default;
+$button-bg-color-info: $purple !default;
+$button-bg-color-info-dark: $maroon !default;
+$button-bg-color-primary: $purple !default;
+$button-bg-color-primary-dark: $maroon !default;
+$button-color-primary-dark: $black !default;
+$button-bg-color-success: $purple !default;
+$button-bg-color-success-dark: $maroon !default;
+$button-color-success-dark: $black !default;
+$button-bg-hover-color: $black !default;
+$button-bg-hover-color-dark: $black !default; */
 * {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased !important;
@@ -341,10 +357,13 @@ a:hover {
   font-size: 1.6rem;
 }
 
-html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swal2-styled.swal2-confirm {
-  border-radius: 0.25rem;
+.btn, .swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #4d5877;
+  border-radius: 50px;
+  color: #ffffff;
   font-size: 1.6rem;
-  padding: 0.5rem 2rem;
+  line-height: 1;
+  padding: 0.6666666667rem 1rem;
   /* // .ra__settings {
       &-outline-success {
           border-color: $purple;
@@ -352,8 +371,8 @@ html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swa
           width: auto !important;
 
           .ra__dark & {
-              border-color: $green;
-              color: $green;
+              border-color: $maroon;
+              color: $maroon;
           }
 
           &:hover {
@@ -362,8 +381,8 @@ html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swa
               color: $white;
 
               .ra__dark & {
-                  background-color: $green;
-                  border-color: $green;
+                  background-color: $maroon;
+                  border-color: $maroon;
                   color: $black;
               }
           }
@@ -383,7 +402,7 @@ html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swa
               color: $purple;
 
               .ra__dark & {
-                  color: $green;
+                  color: $maroon;
               }
           }
 
@@ -396,8 +415,8 @@ html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swa
               color: $white;
 
               .ra__dark & {
-                  background-color: $green;
-                  border-color: $green;
+                  background-color: $maroon;
+                  border-color: $maroon;
                   color: $black;
               }
           }
@@ -415,50 +434,79 @@ html .btn, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swa
       }
   // } */
 }
-html .btn-success, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swal2-styled.swal2-confirm, html .btn-primary, html .btn-danger, html .btn-info {
+.btn-success, .swal2-popup .swal2-styled.swal2-confirm, .btn-primary, .btn-danger, .btn-info {
   border: none;
   box-shadow: none;
   color: #ffffff;
   width: auto !important;
 }
-html .btn-success:hover, html .swal2-popup .swal2-styled.swal2-confirm:hover, .swal2-popup html .swal2-styled.swal2-confirm:hover, html .btn-primary:hover, html .btn-danger:hover, html .btn-info:hover {
-  background-color: #000000;
-}
-.ra__dark html .btn-success, .ra__dark html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup .ra__dark html .swal2-styled.swal2-confirm, .ra__dark html .btn-primary, .ra__dark html .btn-danger, .ra__dark html .btn-info {
-  color: #ffffff;
-}
-.ra__dark html .btn-success:hover, .ra__dark html .swal2-popup .swal2-styled.swal2-confirm:hover, .swal2-popup .ra__dark html .swal2-styled.swal2-confirm:hover, .ra__dark html .btn-primary:hover, .ra__dark html .btn-danger:hover, .ra__dark html .btn-info:hover {
+.btn-success:hover, .swal2-popup .swal2-styled.swal2-confirm:hover, .btn-primary:hover, .btn-danger:hover, .btn-info:hover {
   background-color: #000000;
   color: #ffffff;
 }
-html .btn:hover, html .swal2-popup .swal2-styled.swal2-confirm:hover, .swal2-popup html .swal2-styled.swal2-confirm:hover {
+.ra__dark .btn-success, .ra__dark .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup .ra__dark .swal2-styled.swal2-confirm, .ra__dark .btn-primary, .ra__dark .btn-danger, .ra__dark .btn-info {
+  background-color: #4d5877;
+  color: #ffffff;
+}
+.ra__dark .btn-success:hover, .ra__dark .swal2-popup .swal2-styled.swal2-confirm:hover, .swal2-popup .ra__dark .swal2-styled.swal2-confirm:hover, .ra__dark .btn-primary:hover, .ra__dark .btn-danger:hover, .ra__dark .btn-info:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.btn:hover, .swal2-popup .swal2-styled.swal2-confirm:hover {
   background-color: #000000;
 }
-html .btn-success, html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup html .swal2-styled.swal2-confirm {
+.btn-success, .swal2-popup .swal2-styled.swal2-confirm {
   background-color: #4d5877;
 }
-.ra__dark html .btn-success, .ra__dark html .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup .ra__dark html .swal2-styled.swal2-confirm {
+.btn-success:hover, .swal2-popup .swal2-styled.swal2-confirm:hover {
+  background-color: #000000;
+}
+.ra__dark .btn-success, .ra__dark .swal2-popup .swal2-styled.swal2-confirm, .swal2-popup .ra__dark .swal2-styled.swal2-confirm {
   background-color: #793B52;
   color: #000000;
 }
-html .btn-primary {
+.ra__dark .btn-success:hover, .ra__dark .swal2-popup .swal2-styled.swal2-confirm:hover, .swal2-popup .ra__dark .swal2-styled.swal2-confirm:hover {
+  background-color: #000000;
+}
+.btn-primary {
   background-color: #4d5877;
 }
-.ra__dark html .btn-primary {
+.btn-primary:hover {
+  background-color: #000000;
+}
+.ra__dark .btn-primary {
   background-color: #793B52;
   color: #000000;
 }
-html .btn-danger {
+.ra__dark .btn-primary:hover {
+  background-color: #000000;
+}
+.btn-danger {
   background-color: #c60202;
 }
-.ra__dark html .btn-danger {
+.btn-danger:hover {
+  background-color: #000000;
+}
+.ra__dark .btn-danger {
   background-color: #c60202;
 }
-html .btn-info {
+.ra__dark .btn-danger:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.btn-info {
   background-color: #4d5877;
+  color: #ffffff;
 }
-.ra__dark html .btn-info {
+.btn-info:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.ra__dark .btn-info {
   background-color: #793B52;
+}
+.ra__dark .btn-info:hover {
+  background-color: #000000;
 }
 
 .swal2-popup {

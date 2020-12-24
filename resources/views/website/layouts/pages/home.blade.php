@@ -269,7 +269,7 @@
 
                     <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                    <video class="mf__video__video" src="{{ asset( 'website/assets/video/MF-Homecare-homepage-video.mp4' ) }}" controls poster="{{ asset( 'website/assets/video/MF-Homecare-homepage-video.jpg' ) }}"></video>
+                    <video class="mf__video__video" src="{{ asset( 'website/assets/video/MF-Homecare-homepage-video-90secs.mp4' ) }}" controls poster="{{ asset( 'website/assets/video/MF-Homecare-homepage-video.jpg' ) }}"></video>
                 </div>
             </div>
         </section>
@@ -283,7 +283,7 @@
                         <div class="mf__register__buttons__info">
                             <p class="mf__register__buttons__p">@lang('texts.register_as_a_caregiver')</p>
 
-                            <a class="mf__register__buttons__button" href="#">@lang('titles.register_as_a_caregiver')</a>
+                            <a class="mf__register__buttons__button btn btn-info" href="#">@lang('titles.register_as_a_caregiver')</a>
                         </div>
                     </section>
 
@@ -293,7 +293,7 @@
                         <div class="mf__register__buttons__info">
                             <p class="mf__register__buttons__p">@lang('texts.register_as_a_client')</p>
 
-                            <a class="mf__register__buttons__button" href="#">@lang('titles.register_as_a_client')</a>
+                            <a class="mf__register__buttons__button btn btn-info" href="#">@lang('titles.register_as_a_client')</a>
                         </div>
                     </section>
                 </div>
