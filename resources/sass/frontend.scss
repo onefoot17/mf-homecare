@@ -4,6 +4,7 @@
 @import '_forms';
 @import '_buttons';
 @import '_alerts';
+@import '_nav';
 
 .row {
     margin-right: 0;
@@ -55,14 +56,20 @@ html {
                             width: 100%;
 
                             > li {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                flex: 1;
-                                margin-left: 0;
+                                @include for-992-up {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex: 1;
+                                    margin-left: 0;
 
-                                &:first-child {
-                                    justify-content: flex-start;
+                                    &:first-child {
+                                        justify-content: flex-start;
+                                    }
+
+                                    &:last-child {
+                                        justify-content: flex-end;
+                                    }
                                 }
 
                                 a {
@@ -82,8 +89,8 @@ html {
                                     }
                                 }
 
-                                &:last-child {
-                                    justify-content: flex-end;
+                                .dropdown-menu {
+                                    top: 70px !important;
                                 }
                             }
 

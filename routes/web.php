@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 
+use App\Http\Controllers\Admin\Users\MyProfileController;
+use App\Http\Controllers\Admin\Users\SettingsController;
+use App\Http\Controllers\Admin\Users\UsersController;
+
 use App\Http\Controllers\Website\IndexController;
 use App\Http\Controllers\Website\CaregiverController;
 
@@ -46,31 +50,30 @@ Route::group(['prefix' => '{language}'], function(){
         Route::post('/registration_phase_1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
     });
 
+    Route::group(['prefix' => 'admin'], function(){
 
-    // Route::group(['prefix' => 'admin'], function(){
+        Route::get('/', function () {
+            return view('admin.layouts.pages.index');
+        })->name('admin_home')->middleware('auth');
 
-    //     Route::get('/', function () {
-    //         return view('admin.layouts.pages.index');
-    //     })->name('admin_home')->middleware('auth');
+        Route::group(['prefix' => 'my-profile'], function(){
+            Route::get('/', [MyProfileController::class, 'edit'])->name('my_profile_edit');
+            Route::put('/edit', [MyProfileController::class, 'update'])->name('my_profile_update');
+        });
 
-    //     Route::group(['prefix' => 'my-profile'], function(){
-    //         Route::get('/', [MyProfileController::class, 'edit'])->name('my_profile_edit');
-    //         Route::put('/edit', [MyProfileController::class, 'update'])->name('my_profile_update');
-    //     });
+        Route::group(['prefix' => 'settings'], function(){
+            Route::get('/', [SettingsController::class, 'edit'])->name('settings_edit');
+            Route::put('/edit/{id}', [SettingsController::class, 'update'])->name('settings_update');
+        });
 
-    //     Route::group(['prefix' => 'settings'], function(){
-    //         Route::get('/', [SettingsController::class, 'edit'])->name('settings_edit');
-    //         Route::put('/edit/{id}', [SettingsController::class, 'update'])->name('settings_update');
-    //     });
-
-    //     Route::group(['prefix' => 'users'], function(){
-    //         Route::get('/', [UsersController::class, 'index'])->name('admin_users_index');
-    //         Route::post('/store', [UsersController::class, 'store'])->name('admin_users_store');
-    //         Route::get('/edit/{id}', [UsersController::class, 'edit'])->name('admin_users_edit');
-    //         Route::put('/update/{id}', [UsersController::class, 'update'])->name('admin_users_update');
-    //         Route::delete('/destroy/{id}', [UsersController::class, 'destroy'])->name('admin_users_destroy');
-    //     });
-    // });
+        Route::group(['prefix' => 'users'], function(){
+            Route::get('/', [UsersController::class, 'index'])->name('admin_users_index');
+            Route::post('/store', [UsersController::class, 'store'])->name('admin_users_store');
+            Route::get('/edit/{id}', [UsersController::class, 'edit'])->name('admin_users_edit');
+            Route::put('/update/{id}', [UsersController::class, 'update'])->name('admin_users_update');
+            Route::delete('/destroy/{id}', [UsersController::class, 'destroy'])->name('admin_users_destroy');
+        });
+    });
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
