@@ -36,12 +36,46 @@
                             <a class="dropdown-item" data-hash data-hash-offset="92" href="#about">How We Work</a>
                         </li>
 
-                        <li class="align-items-center d-none d-lg-flex order-4 px-5 mx-2">
+                        <li class="align-items-center d-none d-lg-flex order-4">
                             <span class="header-logo">
-                                <a href="{{ route( 'index', [ Request::segment( 1 ) ] ) }}" class="w-100 text-center">
-                                    <img class="" alt="MF Homecare Logo" width="150" height="31" data-sticky-width="150" data-sticky-height="31" data-sticky-top="0" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}">
+                                <a href="{{ route( 'index', [ Request::segment( 1 ) ] ) }}" class="header-logo-inner w-100 text-center">
+                                    {{-- <img class="" alt="MF Homecare Logo" width="150" height="31" data-sticky-width="150" data-sticky-height="31" data-sticky-top="0" src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}" /> --}}
+
+                                    <img
+                                        alt="MF Homecare Logo"
+                                        width="150"
+                                        height="31"
+                                        data-sticky-width="150"
+                                        data-sticky-height="31"
+                                        data-sticky-top="0"
+                                        src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}"
+                                        class="appear-animation animated fadeInUp appear-animation-visible"
+                                        data-appear-animation="fadeInUp"
+                                        data-appear-animation-delay="7000"
+                                        data-appear-animation-duration="2s"
+                                        style="animation-duration: 2s; animation-delay: 7000ms;"
+                                    />
                                 </a>
                             </span>
+                        </li>
+
+                        <li class="dropdown order-6">
+                            <button>
+                                @auth
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="javascript:void(0);" class="btn navbar-btn" onclick="event.preventDefault(); this.closest('form').submit();">
+                                            <i class="fe-log-out"></i>
+
+                                            {{ __( 'Logout' ) }}
+                                        </a>
+                                    </form>
+                                @else
+                                    <a href="{{ route( 'login' ) }}" class="btn navbar-btn">
+                                        <i class="fe-log-in"></i> Login
+                                    </a>
+                                @endauth
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -54,24 +88,24 @@
     </div>
 </div>
 
-<div class="header-column justify-content-end d-none d-lg-flex"></div>
+{{-- <div class="header-column justify-content-end d-none d-lg-flex"></div> --}}
 
 <div class="header-column justify-content-end header-column-log-in-out">
     <div class="header-row">
         @auth
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <a href="javascript:void(0);" class="btn btn-info navbar-btn" onclick="event.preventDefault(); this.closest('form').submit();">
+                <a href="javascript:void(0);" class="btn navbar-btn" onclick="event.preventDefault(); this.closest('form').submit();">
                     <i class="fe-log-out"></i>
 
-                    <span class="nav-link-log-in-out-text">{{ __( 'Logout' ) }}</span>
+                    <span class="header-column-log-in-out-text">{{ __( 'Logout' ) }}</span>
                 </a>
             </form>
         @else
-            <a href="{{ route( 'login' ) }}" class="btn btn-info navbar-btn">
+            <a href="{{ route( 'login' ) }}" class="btn navbar-btn">
                 <i class="fe-log-in"></i>
 
-                <span class="nav-link-log-in-out-text">Login</span>
+                <span class="header-column-log-in-out-text">Login</span>
             </a>
         @endauth
     </div>

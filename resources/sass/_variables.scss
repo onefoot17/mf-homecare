@@ -23,7 +23,7 @@ $es: '__' !default; // Element separator
 $ms: '--' !default; // Modifier separator
 $html:  'html' !default;
 $body: 'body' !default;
-$header: '#header' !default;
+$header: 'header' !default;
 $nav: 'nav' !default;
 $section: 'section' !default;
 $mf: 'mf' !default;
@@ -53,13 +53,20 @@ $footer: 'footer' !default;
     --padding: #{ $padding };
 }
 
+//General
+$bg-color: transparent !default;
+$color: transparent !default;
+
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
 $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
 $font-size: 1.6rem !default;
+$body-font-size: 1.6rem !default;
+$h2-font-size: 2rem !default;
+$h4-font-size: 1.8rem !default;
 
-// Buttons
+/* // Buttons
 $button-color: $white !default;
 $button-color-dark: $button-color !default;
 $button-hover-color: $white !default;
@@ -74,7 +81,46 @@ $button-bg-color-success: $purple !default;
 $button-bg-color-success-dark: $maroon !default;
 $button-color-success-dark: $black !default;
 $button-bg-hover-color: $black !default;
+$button-bg-hover-color-dark: $black !default; */
+
+// Buttons
+$button-color: $white !default;
+$button-color-dark: $button-color !default;
+$button-hover-color: $white !default;
+$button-bg-color: $purple !default;
+$button-bg-hover-color: $black !default;
+$button-bg-color-dark: $purple !default;
 $button-bg-hover-color-dark: $black !default;
+// Danger
+$button-color-danger: $white !default;
+$button-bg-color-danger: $red !default;
+$button-bg-hover-color-danger: $button-bg-hover-color !default;
+$button-bg-color-danger-dark: $red !default;
+$button-bg-hover-color-danger-dark: $button-bg-hover-color-dark !default;
+$button-hover-color-danger-dark: $white !default;
+// Info
+$button-color-info: $white !default;
+$button-hover-color-info: $white !default;
+$button-bg-color-info: $purple !default;
+$button-bg-hover-color-info: $button-bg-hover-color !default;
+$button-bg-color-info-dark: $maroon !default;
+$button-bg-hover-color-info-dark: $button-bg-hover-color-dark !default;
+// Primary
+$button-color-primary-dark: $black !default;
+$button-bg-color-primary: $purple !default;
+$button-bg-hover-color-primary: $button-bg-hover-color !default;
+$button-bg-color-primary-dark: $maroon !default;
+$button-bg-hover-color-primary-dark: $button-bg-hover-color-dark !default;
+// Success
+$button-color-success-dark: $black !default;
+$button-bg-color-success: $purple !default;
+$button-bg-hover-color-success: $button-bg-hover-color !default;
+$button-bg-color-success-dark: $maroon !default;
+$button-bg-hover-color-success-dark: $button-bg-hover-color-dark !default;
+
+
+
+
 
 // Navigation
 $nav-link-color: inherit !default;
