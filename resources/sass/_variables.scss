@@ -56,6 +56,7 @@ $footer: 'footer' !default;
 //General
 $bg-color: transparent !default;
 $color: transparent !default;
+$border-radius: 8px;
 
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
@@ -63,7 +64,9 @@ $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
 $font-size: 1.6rem !default;
 $body-font-size: 1.6rem !default;
-$h2-font-size: 2rem !default;
+$h1-font-size: 3rem !default;
+$h2-font-size: 2.4rem !default;
+$h3-font-size: 3rem !default;
 $h4-font-size: 1.8rem !default;
 
 /* // Buttons
@@ -117,10 +120,6 @@ $button-bg-color-success: $purple !default;
 $button-bg-hover-color-success: $button-bg-hover-color !default;
 $button-bg-color-success-dark: $maroon !default;
 $button-bg-hover-color-success-dark: $button-bg-hover-color-dark !default;
-
-
-
-
 
 // Navigation
 $nav-link-color: inherit !default;

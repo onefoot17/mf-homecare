@@ -38,11 +38,28 @@
                         </li>
 
                         <li class="dropdown order-5">
-                            <a class="dropdown-item" data-hash data-hash-offset="92" href="{{ route('admin_home', [ Request::segment( 1 ) ] ) }}">
-                                <i class="fas fa-home mr-1"></i> @lang( 'Admin' )
-                            </a>
+                            @auth
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a href="javascript:void(0);" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class="fe-log-out"></i>
+
+                                        {{ __( 'Logout' ) }}
+                                    </a>
+                                </form>
+                            @else
+                                <a href="{{ route( 'login' ) }}" class="dropdown-item">
+                                    <i class="fe-log-in"></i> Login
+                                </a>
+                            @endauth
 
                             <ul class="dropdown-menu">
+                                <li class="dropdown-log-in-out">
+                                    <a class="dropdown-item" data-hash data-hash-offset="92" href="{{ route('admin_home', [ Request::segment( 1 ) ] ) }}">
+                                        <i class="fas fa-home mr-1"></i> @lang( 'Admin' )
+                                    </a>
+                                </li>
+
                                 @if ( Auth::check() && preg_match( '/vcompinc.com/', Auth::user()->email ) )
                                     <li>
                                         <a class="dropdown-item" data-hash data-hash-offset="68" href="{{ env( 'APP_URL' ) }}website/porto/index.html" target="_blank">
@@ -50,23 +67,6 @@
                                         </a>
                                     </li>
                                 @endif
-
-                                <li class="dropdown-log-in-out">
-                                    @auth
-                                        <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <a href="javascript:void(0);" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                <i class="fe-log-out"></i>
-
-                                                {{ __( 'Logout' ) }}
-                                            </a>
-                                        </form>
-                                    @else
-                                        <a href="{{ route( 'login' ) }}" class="dropdown-item">
-                                            <i class="fe-log-in"></i> Login
-                                        </a>
-                                    @endauth
-                                </li>
                             </ul>
                         </li>
                     </ul>

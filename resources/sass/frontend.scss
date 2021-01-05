@@ -22,10 +22,6 @@ html {
                 background: rgba( $black, 0.8 ) !important;
             }
 
-            &-container.container {
-                max-width: 1140px !important;
-            }
-
             &-row-log-in-out {
                 flex-basis: 100%;
                 padding-top: $padding/2;
@@ -86,6 +82,15 @@ html {
 
                                     i {
                                         margin-right: $margin/2 !important;
+                                    }
+                                }
+
+                                .dropdown-item {
+                                    color: $nav-link-color;
+
+                                    &:hover {
+                                        background: none;
+                                        color: $nav-link-hover-color;
                                     }
                                 }
 
@@ -241,7 +246,7 @@ html.sticky-header-active .header-logo {
 }
 
 .#{$mf} {
-// Slider
+    // Slider
     &#{$es}slider h3 {
         color: $white;
     }
@@ -251,19 +256,15 @@ html.sticky-header-active .header-logo {
         padding-bottom: $padding*4;
     }
 
-    &#{$es}heading-3 {
-        font-size: 3rem;
-    }
-
     &#{$es}separator {
-        background-color: var(--maroon);
-        display: inline-block;
+        background-color: var(--cream);
+        // display: inline-block;
         margin: 0 auto $margin;
-        width: 15%;
-        height: 4px;
+        width: 30%;
+        height: 1px;
 
         &#{$ms}small {
-            width: 5%;
+            width: 10%;
         }
     }
 
@@ -274,22 +275,29 @@ html.sticky-header-active .header-logo {
     }
 
     &#{$es}features {
-        &#{$es}h1 {
-            font-size: 3rem;
+        h1 {
+            color: $cream;
             margin-bottom: $margin*2;
             text-align: center;
         }
 
-        &#{$es}p {
+        h2 {
+            color: $cream;
+            margin-bottom: $margin;
+        }
+
+        p {
+            color: $cream;
             margin-bottom: $margin*2;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &#{$es}row {
-            @include display-flex(
-                $align-items: flex-start,
-                $justify-content: flex-start
-            );
-
+            align-items: flex-start;
+            justify-content: flex-start;
             margin-bottom: $margin*4;
 
             &:last-child {
@@ -298,53 +306,47 @@ html.sticky-header-active .header-logo {
 
             &#{$es}column {
                 align-self: stretch;
-                flex-basis: 25%;
+                background-color: rgba( $black, 0.1 );
+                border-radius: $border-radius;
+                flex-basis: calc( ( 100% / 4 ) - ( #{ $margin }*2 ) );
+                margin: $margin;
 
                 @include for-tablet-landscape-down{
-                    flex-basis: 50%;
+                    flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
                 }
 
                 @include for-phone-only{
                     flex-basis: 100%;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+
+                &--first {
+                    background: none;
+                    flex-basis: 100%;
+                    margin-bottom: $margin;
+                    text-align: center;
                 }
             }
-
-            &#{$es}column--first {
-                flex-basis: 100%;
-                margin-bottom: $margin;
-                text-align: center;
-            }
         }
-
-        &#{$es}h2 {
-            font-size: 2.4rem;
-            margin-bottom: $margin;
-        }
-
-        &#{$ms}benefits {
-            background-color: var(--cream);
-            margin-bottom: $margin*2;
-        }
-
-        &#{$ms}services {}
 
         &#{$es}feature {
             @include display-flex(
-                $align-items: flex-start,
+                $align-items: center,
                 $justify-content: center
             );
 
-            height: 100%;
-            padding: $padding;
+            // height: 100%;
+            padding: $padding $padding;
             text-align: center;
 
-            @include for-phone-only {
+            /* @include for-phone-only {
                 padding-left: 0;
-            }
+            } */
 
-            &:last-of-type {
+            /* &:last-of-type {
                 padding-right: 0;
-            }
+            } */
 
             > * {
                 flex-basis: 100%;
@@ -354,7 +356,7 @@ html.sticky-header-active .header-logo {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                margin-bottom: $margin*2;
+                margin-bottom: $margin;
                 max-width: 48px;
                 max-height: 48px;
                 width: 48px;
@@ -366,26 +368,45 @@ html.sticky-header-active .header-logo {
                 width: 100%;
             }
 
-            &#{$es}info {
+            /* &#{$es}info {
                 height: 100%;
-            }
+            } */
 
-            &#{$es}heading {
-                @include line-height(
-                    $line-height: 1.6
-                );
-
-                color: $black;
+            h4 {
+                color: $cream;
                 font-size: 2.0rem;
+                line-height: 1.6;
             }
 
-            &#{$es}heading + &#{$es}copy {
-                margin-top: $margin*2;
+            h4 + p {
+                margin-top: $margin;
             }
 
-            &#{$es}copy {
+            p {
                 font-family: $font-family-roboto;
                 font-size: 1.6rem;
+                line-height: 1.5;
+            }
+        }
+
+        &#{$ms}benefits {
+            background-color: var(--maroon);
+            // margin-bottom: $margin*2;
+        }
+
+        &#{$ms}services {
+            background-color: var(--purple);
+
+            div.mf__features__row {
+                background-color: rgba( $black, 0.1 );
+                border-radius: $border-radius;
+                padding-right: $padding;
+                padding-bottom: $padding;
+                padding-left: $padding;
+
+                &:first-of-type {
+                    margin-top: $margin;
+                }
             }
         }
     }
@@ -416,29 +437,32 @@ html.sticky-header-active .header-logo {
         }
 
         &#{$es}col {
+            background-color: rgba( $white, 0.1 );
+            border-radius: $border-radius;
             display: flex;
             flex-direction: column;
-            flex-basis: 50%;
+            flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
             height: 100%;
-            padding-right: $padding*2;
+            margin: $margin;
+            padding: $padding*2;
 
-            &:last-child {
+            /* &:last-child {
                 padding-right: 0;
                 padding-bottom: 0;
-            }
+            } */
 
             @include for-tablet-landscape-down {
                 flex-basis: 100%;
                 height: auto;
-                padding-right: 0;
-                padding-bottom: $padding*4;
+                // padding-right: 0;
+                // padding-bottom: $padding*4;
             }
         }
 
-        .mf__heading-3 {
-            @include line-height;
-
+        h3 {
             color: var(--white);
+            font-size: 3rem;
+            line-height: 1;
             margin-bottom: $margin*2;
         }
 
@@ -461,6 +485,7 @@ html.sticky-header-active .header-logo {
             font-family: $font-family-jomolhari;
             $font-size: 1.8rem;
             font-weight: 700;
+            line-height: 1.5;
         }
     }
 
