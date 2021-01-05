@@ -30,7 +30,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
 		{{-- Roboto --}}
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        {{-- Freight Text Pro --}}
+        <link rel="stylesheet" href="https://use.typekit.net/qcs6kcb.css">
 
         {{-- App CSS --}}
 		<link href="{{ asset( 'assets/css/bootstrap.min.css' ) }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />

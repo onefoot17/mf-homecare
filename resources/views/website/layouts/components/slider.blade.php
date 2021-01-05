@@ -34,11 +34,11 @@
 
                         <div class="d-flex flex-column align-items-center justify-content-center h-100">
                             <div class="overflow-hidden mb-2">
-                                <h3 class="position-relative text-5 line-height-5 font-weight-normal ls-0 px-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="8000" data-plugin-options="{'minWindowWidth': 0}">Managing Family Homecare</h3>
+                                <h3 class="position-relative text-6 line-height-5 font-weight-normal ls-0 px-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="8000" data-plugin-options="{'minWindowWidth': 0}">Managing Family Homecare</h3>
                             </div>
 
                             <div class="overflow-hidden mb-2">
-                                <h2 class="text-color-light font-weight-extra-bold text-13 line-height-1 line-height-sm-3 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="8500" data-plugin-options="{'minWindowWidth': 0}">Affordable and Convenient</h2>
+                                <h2 class="text-color-light text-13 line-height-1 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="8500" data-plugin-options="{'minWindowWidth': 0}">Affordable and Convenient</h2>
                             </div>
                         </div>
                     </div>
