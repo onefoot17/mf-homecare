@@ -195,8 +195,8 @@ $button-bg-hover-color: $black !default;
 $button-bg-hover-color-dark: $black !default; */
 * {
   font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased !important;
-  text-rendering: optimizeLegibility !important;
+  /* -webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering: optimizeLegibility !important; */
 }
 
 body * {
@@ -210,7 +210,7 @@ img {
 .h1 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -218,7 +218,7 @@ img {
 .h2 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -226,7 +226,7 @@ img {
 .h3 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -234,7 +234,7 @@ img {
 .h4 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -242,7 +242,7 @@ img {
 .h5 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -250,7 +250,7 @@ img {
 .h6 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -258,7 +258,7 @@ img {
 h1 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -266,7 +266,7 @@ h1 {
 h2 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -274,7 +274,7 @@ h2 {
 h3 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -282,7 +282,7 @@ h3 {
 h4 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -290,7 +290,7 @@ h4 {
 h5 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -298,7 +298,7 @@ h5 {
 h6 {
   line-height: 1.3;
   color: #000000;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
   font-weight: 700;
   text-transform: initial;
 }
@@ -626,8 +626,8 @@ html #header .header-nav-links nav > ul {
   }
 }
 html #header .header-nav-links nav > ul > li a {
-  font-family: Jomolhari;
-  font-size: 1.7rem;
+  font-family: "freight-text-pro";
+  font-size: 2rem;
   font-weight: 700;
   text-transform: initial;
   width: auto;
@@ -918,8 +918,8 @@ html.sticky-header-active .header-logo img {
 }
 .mf__features__feature h4 {
   color: #F7F2EF;
-  font-size: 2rem;
-  line-height: 1.6;
+  font-size: 2.3rem;
+  line-height: 1.3;
 }
 .mf__features__feature h4 + p {
   margin-top: 1rem;
@@ -1021,7 +1021,8 @@ html.sticky-header-active .header-logo img {
   align-self: flex-end;
   background-color: #ffffff !important;
   display: inline-block;
-  font-family: Jomolhari;
+  font-family: "freight-text-pro";
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.5;
 }
