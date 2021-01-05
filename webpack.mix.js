@@ -22,7 +22,8 @@ mix.sass( 'resources/sass/admin.scss', 'public/admin/assets/css', {
         }, */
         postCss: [
             require( 'postcss-css-variables' ) ()
-        ]
+        ],
+        processCssUrls: false,
     })
     .sourceMaps();
 

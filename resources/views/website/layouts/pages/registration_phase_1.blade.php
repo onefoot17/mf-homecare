@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-10 mx-md-auto">
-                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Become One of Our Trusted Caregivers or Companions</h1>
+                        <h1 class="mf__features__h1 word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.Become_Caregivers')</h1>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
@@ -68,16 +68,21 @@
                         <div class="overflow-hidden mb-1">
                             <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">* is required field</strong></h2>
                         </div>
-                        <form action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}">
+                        <form action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>First Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="firstName" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto py-2 @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" value="" />
+                                    @error('first_name', 'storeUser')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Last Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="lastName" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="last_name" value="" required />
                                 </div>
                             </div>
                             <div class="form-row">
@@ -87,7 +92,12 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Postal Code <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="postalCode" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="postal_code" value="" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn btn-success">@lang('Submit')</button>
                                 </div>
                             </div>
                         </form>
