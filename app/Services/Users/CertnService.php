@@ -32,10 +32,9 @@ class CertnService implements CertnServiceInterface
 
     public function backgroundCheck(Response $authentication)
     {
-        $auth = $authentication->json();
-
         if($authentication->status == 200){
-
+            $auth = $authentication->json();
+            
         }
     }
 
