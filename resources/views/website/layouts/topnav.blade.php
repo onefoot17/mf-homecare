@@ -5,7 +5,7 @@
                 <nav class="collapse">
                     <ul class="nav nav-pills flex-column flex-lg-row" id="mainNav">
                         <li class="dropdown order-1">
-                            <a class="dropdown-item" data-hash data-hash-offset="92" href="#reservations">Register as a Caregiver</a>
+                            <a class="dropdown-item" data-hash data-hash-offset="92" href="{{route('caregiver_registration_phase_1', Request::segment(1))}}">Register as a Caregiver</a>
                         </li>
 
                         <li class="dropdown order-2 flex-shrink-0">

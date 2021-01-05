@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
         $felipe->last_name = 'Pastana';
         $felipe->email = 'felipe@vcompinc.com';
         $felipe->password = Hash::make('12345678');
+        $felipe->postal_code = 'L5N0K9';
+        $felipe->type = 1;
         $felipe->save();
 
         $setting = new Setting([]);
@@ -33,6 +35,8 @@ class DatabaseSeeder extends Seeder
         $vio->last_name = 'Ivanescu';
         $vio->email = 'vio@vcompinc.com';
         $vio->password = Hash::make('12345678');
+        $vio->postal_code = 'A1B2C3';
+        $vio->type = 1;
         $vio->save();
 
         $setting = new Setting([]);
@@ -43,6 +47,8 @@ class DatabaseSeeder extends Seeder
         $earl->last_name = 'Misquitta';
         $earl->email = 'earl@vcompinc.com';
         $earl->password = Hash::make('12345678');
+        $earl->postal_code = 'D4E5F6';
+        $earl->type = 1;
         $earl->save();
 
         $setting = new Setting([]);

@@ -23,13 +23,16 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService)
     {
-
         $result = $userService->storeUser($request);
 
         if($result instanceof \Illuminate\Support\MessageBag){
             return back()->withInput()->withErrors($result, 'storeUser');
         } else {
-            return back()->with('message-success', __('User stored succefully!'));
+            return redirect()->route('caregiver_validation', [
+                'language' => request()->segment(1), 
+                'user_id' => $result,
+                'request' => json_encode($request->toArray())
+                ]);
         }
     }
 }
