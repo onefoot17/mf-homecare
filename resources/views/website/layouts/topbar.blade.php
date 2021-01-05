@@ -1,6 +1,6 @@
 <header id="header" class="header-narrow header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAtElement': '#header', 'stickySetTop': '0', 'stickyChangeLogo': false}">
 	<div class="header-body border-0 box-shadow-none bg-dark">
-		<div class="header-container container">
+		<div class="header-container container-xl">
 			<div class="header-row">
 				<div class="header-column header-column-logo d-lg-none">
 					<div class="header-row">

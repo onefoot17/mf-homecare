@@ -41,6 +41,16 @@ h6 {
     text-transform: initial;
 }
 
+h1,
+h1.header-title {
+    font-size: $h1-font-size;
+}
+
+h2,
+h2.header-title {
+    font-size: $h2-font-size;
+}
+
 p {
     @include line-height;
 
