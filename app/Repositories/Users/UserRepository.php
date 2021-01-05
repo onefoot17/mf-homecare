@@ -19,6 +19,7 @@ class UserRepository implements UserRepositoryInterface {
         $store->email = $request->email;
         $store->password = Hash::make($request->password);
         $store->postal_code = $request->postal_code;
+        $store->type = $request->type;
         $store->save();
 
         return $store;

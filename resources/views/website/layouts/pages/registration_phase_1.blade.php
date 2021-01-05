@@ -73,26 +73,41 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>First Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2 @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" value="" />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" value="{{old('first_name')}}" />
                                     @error('first_name', 'storeUser')
-                                        <div class="invalid-feedback">
+                                        <div style='color: red'>
                                             {{$message}}
                                         </div>
                                     @enderror
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Last Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="last_name" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" value="{{old('last_name')}}" required />
+                                    @error('last_name', 'storeUser  ')
+                                    <div style='color: red'>
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Your Email <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="email" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('email', 'storeUser') is-invalid @enderror" name="email" value="{{old('email')}}" required />
+                                    @error('email', 'storeUser')
+                                        <div style='color: red'>
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Postal Code <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto py-2" name="postal_code" value="" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" value="{{old('postal_code')}}" required />
+                                    @error('postal_code', 'storeUser')
+                                        <div style='color: red'>
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">

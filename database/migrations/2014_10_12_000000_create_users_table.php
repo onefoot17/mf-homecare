@@ -25,7 +25,8 @@ class CreateUsersTable extends Migration
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
             $table->bigInteger('phone_number')->nullable();
-            $table->bigInteger('postal_code')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->integer('type');
         });
     }
 

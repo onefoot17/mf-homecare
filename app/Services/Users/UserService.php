@@ -9,6 +9,8 @@ use App\Services\Users\Contracts\UserServiceInterface;
 use App\Repositories\Users\Contracts\UserRepositoryInterface;
 use App\Repositories\Users\Contracts\SettingRepositoryInterface;
 
+use Str;
+
 class UserService implements UserServiceInterface
 {
     public function __construct(
@@ -78,7 +80,7 @@ class UserService implements UserServiceInterface
         return $update;
     }
 
-    // Users Screen
+    // Caregivers
 
     public function getAllUsers()
     {
@@ -93,9 +95,11 @@ class UserService implements UserServiceInterface
             'first_name' => 'required|min:3',
             'last_name' => 'required|min:3',
             'email' => 'email:rfc,dns||unique:App\Models\User',
-            'password' => 'required|string|min:8|confirmed',
-            'postal_code' => 'min:10'
+            'postal_code' => 'min:6'
         ]);
+
+        $request->password = Str::random(8);
+        $request->type = 1;
 
         if($validator->fails()){
             $insert = $validator->errors();
