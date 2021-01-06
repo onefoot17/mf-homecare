@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Services\Users\Contracts\UserServiceInterface;
+use App\Services\Users\Contracts\CertnServiceInterface;
 
 class CaregiverController extends Controller
 {
@@ -21,18 +22,22 @@ class CaregiverController extends Controller
         return view('website.layouts.pages.registration_phase_1');
     }
 
-    public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService)
+    public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService)
     {
         $result = $userService->storeUser($request);
 
         if($result instanceof \Illuminate\Support\MessageBag){
             return back()->withInput()->withErrors($result, 'storeUser');
         } else {
-            return redirect()->route('caregiver_validation', [
-                'language' => request()->segment(1), 
-                'user_id' => $result,
-                'request' => json_encode($request->toArray())
-                ]);
+
+            $auth_response = $certnService->Authenticate();
+            $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
+
+            $update_user = $userService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
+
+            return redirect()->route('thank_you_phase_1', [
+                'language' => request()->segment(1)
+            ]);
         }
     }
 }

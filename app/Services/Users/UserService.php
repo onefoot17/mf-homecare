@@ -95,7 +95,29 @@ class UserService implements UserServiceInterface
             'first_name' => 'required|min:3',
             'last_name' => 'required|min:3',
             'email' => 'email:rfc,dns||unique:App\Models\User',
-            'postal_code' => 'min:6'
+            'postal_code' => [
+                'min:6',
+                function($attribute, $value, $fail){
+                    $postal_code = $value;
+    
+                    $postal_code_1 = $postal_code[0];
+                    $postal_code_2 = $postal_code[1];
+
+                    if($postal_code_1 == 'M'){
+                        $allowed = true;
+                    } else if($postal_code_1 == 'L' and ($postal_code_2 == 4 or $postal_code_2 == 5 or $postal_code_2 == 6 or $postal_code_2 == 7)) {
+                        $allowed = true;
+                    } else if($postal_code_1 == 'V' and ($postal_code_2 == 3 or $postal_code_2 == 4 or $postal_code_2 == 5 or $postal_code_2 == 6 or $postal_code_2 == 7)) {
+                        $allowed = true;
+                    } else {
+                        $allowed = false;
+                    }
+
+                    if($allowed === false){
+                        $fail('Your area is not supported at this time. Please check back soon!');
+                    }
+                }
+            ]
         ]);
 
         $request->password = Str::random(8);
@@ -113,5 +135,10 @@ class UserService implements UserServiceInterface
     public function destroyUser($id)
     {
         $this->UserRepositoryInterface->destroy($id);
+    }
+
+    public function updateCertnApplicantId($id, $certn_applicant_id)
+    {
+        $this->UserRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
     }
 }

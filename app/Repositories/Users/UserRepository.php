@@ -81,4 +81,14 @@ class UserRepository implements UserRepositoryInterface {
 
         return $query;
     }
+
+    public function updateCertnApplicantId($id, $certn_applicant_id)
+    {
+        $update = User::where('id', $id)
+        ->update([
+            'certn_applicant_id' => $certn_applicant_id
+        ]);
+
+        return $update;
+    }
 }
