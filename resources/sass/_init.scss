@@ -1,12 +1,13 @@
 // Intialization
 @import '_reset';
+@import '_fonts';
 @import '_variables';
 @import '_mixins';
 
 * {
     font-family: $font-family-roboto;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    text-rendering: optimizeLegibility !important;
+    /* -webkit-font-smoothing: subpixel-antialiased !important;
+    text-rendering: optimizeLegibility !important; */
 }
 
 #{$body} {
@@ -36,7 +37,7 @@ h6 {
     );
 
     color: var(--black);
-    font-family: $font-family-jomolhari;
+    font-family: $font-family-headings;
     font-weight: 700;
     text-transform: initial;
 }

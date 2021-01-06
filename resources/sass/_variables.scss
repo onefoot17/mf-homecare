@@ -60,8 +60,10 @@ $border-radius: 8px;
 
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
+$font-family-freight: 'freight-text-pro' !default;
 $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
+$font-family-headings: $font-family-freight !default;
 $font-size: 1.6rem !default;
 $body-font-size: 1.6rem !default;
 $h1-font-size: 3rem !default;
