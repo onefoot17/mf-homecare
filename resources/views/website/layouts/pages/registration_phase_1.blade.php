@@ -4,6 +4,7 @@
 
 @section( 'css' )
     @parent
+    <script src="https://js.stripe.com/v3/"></script>
 @stop
 
 @section( 'content' )
@@ -73,7 +74,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>First Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" value="{{old('first_name')}}" />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" />
                                     @error('first_name', 'storeUser')
                                         <div style='color: red'>
                                             {{$message}}
@@ -82,7 +83,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Last Name <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" value="{{old('last_name')}}" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
                                     <div style='color: red'>
                                             {{$message}}
@@ -93,7 +94,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Your Email <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('email', 'storeUser') is-invalid @enderror" name="email" value="{{old('email')}}" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
                                     @error('email', 'storeUser')
                                         <div style='color: red'>
                                             {{$message}}
@@ -102,7 +103,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Postal Code <span class="text-color-danger">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" value="{{old('postal_code')}}" required />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
                                     @error('postal_code', 'storeUser')
                                         <div style='color: red'>
                                             {{$message}}
@@ -110,11 +111,22 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-row">
+                            {{-- <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <button type="submit" class="btn btn-success">@lang('Submit')</button>
+                                    <button type="submit" class="btn btn-success">@lang('Submit and Pay')</button>
                                 </div>
+                            </div> --}}
+                        </form>
+                        <br>
+                        <form id="payment-form">
+                            <div id="card-element">
+                              <!-- Elements will create input elements here -->
                             </div>
+                          
+                            <button id="submit" class="btn btn-success">@lang('Submit and Pay')</button>
+
+                            <!-- We'll put the error messages in this element -->
+                            <div id="card-errors" style="color: red" role="alert"></div>
                         </form>
 
 
@@ -129,4 +141,89 @@
 @stop
 
 @section( 'footer-scripts' )
+
+    <script>
+
+        // Set your publishable key: remember to change this to your live publishable key in production
+        // See your keys here: https://dashboard.stripe.com/account/apikeys
+        var stripe = Stripe("{{env('STRIPE_PUBLISHABLE_KEY')}}");
+        
+        var clientSecret = "{{$intent->client_secret}}";
+
+        // Set up Stripe.js and Elements to use in checkout form
+        var elements = stripe.elements();
+        var style = {
+            base: {
+                color: "#32325d",
+            }
+        };
+
+        var card = elements.create("card", { 
+            style: style,
+            hidePostalCode: true
+        });
+        card.mount("#card-element");
+
+        card.on('change', ({error}) => {
+            let displayError = document.getElementById('card-errors');
+            if (error) {
+                displayError.textContent = error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        var form = document.getElementById('payment-form');
+        var submit_button = document.getElementById('submit');
+
+        form.addEventListener('submit', function(ev) {
+            ev.preventDefault();
+
+            var first_name = document.getElementById('first_name').value;
+            var last_name = document.getElementById('last_name').value;
+            var email = document.getElementById('email').value;
+            var postal_code = document.getElementById('postal_code').value;
+
+            submit_button.disabled = true; 
+
+            stripe.confirmCardPayment(clientSecret, {                
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: first_name + ' ' + last_name,
+                        email: email,
+                        address: {
+                            postal_code: postal_code
+                        }
+                    }
+                }
+            }).then(function(result) {
+                if (result.error) {
+
+                    submit_button.disabled = false;
+
+                    var displayError = document.getElementById('card-errors');
+                    displayError.textContent = result.error.message
+
+                    // Show error to your customer (e.g., insufficient funds)
+                    //console.log(result.error.message);
+                } else {
+                    // The payment has been processed!
+                    if (result.paymentIntent.status === 'succeeded') {
+
+                        var displayMessage = document.getElementById('card-errors');
+                        displayMessage.textContent = 'Success!';
+                        
+                        // Show a success message to your customer
+                        // There's a risk of the customer closing the window before callback
+                        // execution. Set up a webhook or plugin to listen for the
+                        // payment_intent.succeeded event that handles any business critical
+                        // post-payment actions.
+                    }
+                }
+            });
+        });
+
+    </script>
+
 @stop

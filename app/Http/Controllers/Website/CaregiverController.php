@@ -19,7 +19,15 @@ class CaregiverController extends Controller
 
     public function registrationPhase1()
     {
-        return view('website.layouts.pages.registration_phase_1');
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
+
+        $intent = \Stripe\PaymentIntent::create([
+            'amount' => 2500,
+            'currency' => 'cad',
+            'payment_method_types' => ['card']
+        ]);
+
+        return view('website.layouts.pages.registration_phase_1', compact('intent'));
     }
 
     public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService)
@@ -39,5 +47,10 @@ class CaregiverController extends Controller
                 'language' => request()->segment(1)
             ]);
         }
+    }
+
+    public function stripePaymentPhase1(Request $request)
+    {
+        return json_encode($request->toArray());
     }
 }

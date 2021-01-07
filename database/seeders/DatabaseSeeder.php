@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $felipe->password = Hash::make('12345678');
         $felipe->postal_code = 'L5N0K9';
         $felipe->type = 1;
+        $felipe->status = 0;
         $felipe->save();
 
         $setting = new Setting([]);
@@ -37,6 +38,7 @@ class DatabaseSeeder extends Seeder
         $vio->password = Hash::make('12345678');
         $vio->postal_code = 'A1B2C3';
         $vio->type = 1;
+        $vio->status = 0;
         $vio->save();
 
         $setting = new Setting([]);
@@ -49,6 +51,7 @@ class DatabaseSeeder extends Seeder
         $earl->password = Hash::make('12345678');
         $earl->postal_code = 'D4E5F6';
         $earl->type = 1;
+        $earl->status = 0;
         $earl->save();
 
         $setting = new Setting([]);
