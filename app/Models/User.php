@@ -68,4 +68,9 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Setting', 'user_id');
     }
+
+    public function caregiver()
+    {
+        return $this->hasOne(App\Models\Caregiver\Caregiver::class);
+    }
 }

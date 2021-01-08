@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Services\Users\Contracts\UserServiceInterface;
 use App\Services\Users\Contracts\CertnServiceInterface;
+use App\Services\Caregivers\Contracts\CaregiverServiceInterface;
 
 class CaregiverController extends Controller
 {
@@ -30,7 +31,7 @@ class CaregiverController extends Controller
         return view('website.layouts.pages.registration_phase_1', compact('intent'));
     }
 
-    public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService)
+    public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
     {
         $result = $userService->storeUser($request);
 
@@ -41,12 +42,34 @@ class CaregiverController extends Controller
             $auth_response = $certnService->Authenticate();
             $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
 
-            $update_user = $userService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
+            $update_user = $caregiverService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
 
             return redirect()->route('thank_you_phase_1', [
                 'language' => request()->segment(1)
             ]);
         }
+    }
+
+    public function storeRegistrationPhase1Ajax(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
+    {
+        $result = $userService->storeUserAjax($request);
+
+        if($result instanceof \Illuminate\Support\MessageBag){
+            return $result;
+        } else {
+
+            $auth_response = $certnService->Authenticate();
+            $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
+
+            $update_user = $caregiverService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
+
+            return true;
+        }
+    }
+
+    public function updateRegistrationPhase1StripeIdAjax(Request $request)
+    {
+        
     }
 
     public function stripePaymentPhase1(Request $request)

@@ -20,6 +20,7 @@ class UserRepository implements UserRepositoryInterface {
         $store->password = Hash::make($request->password);
         $store->postal_code = $request->postal_code;
         $store->type = $request->type;
+        $store->status = $request->status;
         $store->save();
 
         return $store;
@@ -41,6 +42,14 @@ class UserRepository implements UserRepositoryInterface {
         } else {
             $query->masked_phone_number = null;
         }
+
+        return $query;
+    }
+
+    public function showByEmail($email)
+    {
+        $query = User::where('email', $email)
+        ->first();
 
         return $query;
     }
@@ -80,15 +89,5 @@ class UserRepository implements UserRepositoryInterface {
         $query = User::orderBy('id')->get();
 
         return $query;
-    }
-
-    public function updateCertnApplicantId($id, $certn_applicant_id)
-    {
-        $update = User::where('id', $id)
-        ->update([
-            'certn_applicant_id' => $certn_applicant_id
-        ]);
-
-        return $update;
     }
 }

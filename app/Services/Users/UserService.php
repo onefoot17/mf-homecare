@@ -120,25 +120,44 @@ class UserService implements UserServiceInterface
             ]
         ]);
 
-        $request->password = Str::random(8);
-        $request->type = 1;
-
         if($validator->fails()){
             $insert = $validator->errors();
         } else {
+            $request = $this->addDefaultParamsToUsers($request);
+
             $insert = $this->UserRepositoryInterface->store($request);
         }
 
         return $insert;
     }
 
+    public function storeUserAjax($request)
+    {
+        $request = $this->addDefaultParamsToUsers($request);
+
+        $user = $this->UserRepositoryInterface->showByEmail($request->email);
+
+        if(empty($user)){
+            $result = $this->UserRepositoryInterface->store($request);
+        } else {
+            $result = $user;
+        }
+
+        return $result;
+
+    }
+
+    public function addDefaultParamsToUsers($request)
+    {
+        $request->password = Str::random(8);
+        $request->type = 1;
+        $request->status = (isset($request->status))?$request->status:0;
+
+        return $request;
+    }
+
     public function destroyUser($id)
     {
         $this->UserRepositoryInterface->destroy($id);
-    }
-
-    public function updateCertnApplicantId($id, $certn_applicant_id)
-    {
-        $this->UserRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
     }
 }

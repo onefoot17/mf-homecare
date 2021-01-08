@@ -50,6 +50,7 @@ Route::group(['prefix' => '{language}'], function(){
     Route::group(['prefix' => 'caregiver'], function(){
         Route::get('/registration-phase-1', [CaregiverController::class, 'registrationPhase1'])->name('caregiver_registration_phase_1');
         Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
+        Route::post('/registration-phase-1-ajax', [CaregiverController::class, 'storeRegistrationPhase1Ajax'])->name('caregiver_registration_phase_1_post_ajax');
         Route::post('/stripe-payment-phase-1', [CaregiverController::class, 'stripePaymentPhase1'])->name('stripe_payment_phase_1');
     });
 

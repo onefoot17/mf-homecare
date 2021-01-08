@@ -184,6 +184,16 @@
             var email = document.getElementById('email').value;
             var postal_code = document.getElementById('postal_code').value;
 
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200){
+                    //document.getElementById('card-errors').innerHTML = this.responseText;
+                }
+            }
+            xhttp.open('POST', "{{route('caregiver_registration_phase_1_post_ajax', [Request::segment(1)])}}", true)
+            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+            xhttp.send('_token={{ csrf_token() }}'+'&first_name='+first_name+'&last_name='+last_name+'&email='+email+'&postal_code='+postal_code);
+
             submit_button.disabled = true; 
 
             stripe.confirmCardPayment(clientSecret, {                
@@ -198,6 +208,9 @@
                     }
                 }
             }).then(function(result) {
+
+                console.log(result)
+
                 if (result.error) {
 
                     submit_button.disabled = false;
@@ -213,6 +226,16 @@
 
                         var displayMessage = document.getElementById('card-errors');
                         displayMessage.textContent = 'Success!';
+
+                                // var xhttp = new XMLHttpRequest();
+                                // xhttp.onreadystatechange = function() {
+                                //     if(this.readyState == 4 && this.status == 200){
+                                //         //document.getElementById('card-errors').innerHTML = this.responseText;
+                                //     }
+                                // }
+                                // xhttp.open('POST', "{{route('caregiver_registration_phase_1_post_ajax', [Request::segment(1)])}}", true)
+                                // xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+                                // xhttp.send('_token={{ csrf_token() }}'+'&first_name='+first_name+'&last_name='+last_name+'&email='+email+'&postal_code='+postal_code);
                         
                         // Show a success message to your customer
                         // There's a risk of the customer closing the window before callback
