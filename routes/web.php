@@ -42,7 +42,7 @@ Route::get('/', function () {
 Route::get('/forgot-password', [LoginController::class, 'forgotPassword'])->name('password.request');
 
 Route::group(['prefix' => 'certn'], function(){
-    Route::get('webhook', [CallbacksController::class, 'CertnWebhook'])->name('certn_webhook');
+    Route::post('webhook', [CallbacksController::class, 'CertnWebhook'])->name('certn_webhook');
 });
 
 Route::group(['prefix' => '{language}'], function(){
