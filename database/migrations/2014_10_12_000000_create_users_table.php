@@ -26,7 +26,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->bigInteger('phone_number')->nullable();
             $table->string('postal_code')->nullable();
-            $table->string('certn_applicant_id')->nullable();
             $table->integer('type');
             $table->integer('status'); // 0=NP; 1=P1,NC; 2=P1,C; 3=P1,CF; 4=P1,C,P2; 5=P1,CP2;
         });

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\Users;
+namespace App\Services\Caregivers;
 
 use Illuminate\Support\Facades\Validator;
 
-use App\Services\Users\Contracts\UserServiceInterface;
+use App\Services\Caregivers\Contracts\CaregiverServiceInterface;
 
 use App\Repositories\Caregivers\Contracts\CaregiverRepositoryInterface;
 
@@ -13,38 +13,40 @@ use Str;
 class CaregiverService implements CaregiverServiceInterface
 {
     public function __construct(
-        UserRepositoryInterface $UserRepositoryInterface
+        CaregiverRepositoryInterface $CaregiverRepositoryInterface
     )
     {
-        $this->UserRepositoryInterface = $UserRepositoryInterface;
+        $this->CaregiverRepositoryInterface = $CaregiverRepositoryInterface;
     }
     
     // Caregivers
 
-    public function getAllUsers()
+    public function getAllCaregivers()
     {
-        $query = $this->UserRepositoryInterface->getAll();
+        $query = $this->CaregiverRepositoryInterface->getAll();
 
         return $query;
     }
 
-    public function storeUser($request)
+    public function storeCaregiver(\App\Models\User $user)
+    {
+        $insert = $this->CaregiverRepositoryInterface->store($user);
+
+        return $insert;
+    }
+
+    public function storeCaregiverAjax(\App\Models\User $user)
     {
         
     }
 
-    public function storeUserAjax($request)
-    {
-        
-    }
-
-    public function destroyUser($id)
+    public function destroyCaregiver($id)
     {
         
     }
 
     public function updateCertnApplicantId($id, $certn_applicant_id)
     {
-        $this->UserRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
+        $this->CaregiverRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
     }
 }

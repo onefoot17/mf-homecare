@@ -9,7 +9,7 @@ class Caregiver extends Model
 {
     use HasFactory;
 
-    private $table = 'caregivers.caregivers';
+    protected $table = 'caregivers.caregivers';
 
     public function user()
     {

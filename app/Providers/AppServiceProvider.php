@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
          */
         $this->app->bind('App\Repositories\Users\Contracts\UserRepositoryInterface', 'App\Repositories\Users\UserRepository');
         $this->app->bind('App\Repositories\Users\Contracts\SettingRepositoryInterface', 'App\Repositories\Users\SettingRepository');
+        $this->app->bind('App\Repositories\Caregivers\Contracts\CaregiverRepositoryInterface', 'App\Repositories\Caregivers\CaregiverRepository');
     }
 
     /**

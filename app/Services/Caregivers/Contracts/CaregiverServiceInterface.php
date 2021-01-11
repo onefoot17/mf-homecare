@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services\Users\Contracts;
+namespace App\Services\Caregivers\Contracts;
 
 interface CaregiverServiceInterface 
 {
     // Caregivers
-    public function getAllUsers();
-    public function storeUser($request);
-    public function storeUserAjax($request);
-    public function destroyUser($id);
+    public function getAllCaregivers();
+    public function storeCaregiver(\App\Models\User $user);
+    public function storeCaregiverAjax(\App\Models\User $user);
+    public function destroyCaregiver($id);
     public function updateCertnApplicantId($id, $certn_applicant_id);
 }

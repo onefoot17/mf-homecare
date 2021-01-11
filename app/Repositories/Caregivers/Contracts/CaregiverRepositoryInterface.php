@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories\Users\Contracts;
+namespace App\Repositories\Caregivers\Contracts;
 
-interface UserRepositoryInterface
+interface CaregiverRepositoryInterface
 {
-    public function store($request);
+    public function store(\App\Models\User $user);
     public function show($id);
     public function update($request, $id);
     public function destroy($id);

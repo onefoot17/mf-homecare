@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Users;
+namespace App\Repositories\Caregivers;
 
-use App\Repositories\Users\Contracts\UserRepositoryInterface;
+use App\Repositories\Caregivers\Contracts\CaregiverRepositoryInterface;
 
 use App\Models\Caregivers\Caregiver;
 
@@ -11,9 +11,13 @@ use Hash;
 
 class CaregiverRepository implements CaregiverRepositoryInterface {
 
-    public function store($request)
+    public function store(\App\Models\User $user)
     {
+        $caregiver = new Caregiver();
+        $caregiver->user_id = $user->id;
+        $caregiver->save();
 
+        return $caregiver;
     }
 
     public function show($id)
@@ -45,7 +49,7 @@ class CaregiverRepository implements CaregiverRepositoryInterface {
     {
         $update = Caregiver::where('id', $id)
         ->update([
-            'stripe_tax_client_secret' => $certn_applicant_id
+            'certn_applicant_id' => $certn_applicant_id
         ]);
 
         return $update;

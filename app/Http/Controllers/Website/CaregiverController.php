@@ -20,13 +20,17 @@ class CaregiverController extends Controller
 
     public function registrationPhase1()
     {
-        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
+        $intent = null;
 
-        $intent = \Stripe\PaymentIntent::create([
-            'amount' => 2500,
-            'currency' => 'cad',
-            'payment_method_types' => ['card']
-        ]);
+        if(env('DOWN_PAYMENT') === true)
+        {
+            \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
+            $intent = \Stripe\PaymentIntent::create([
+                'amount' => 2500,
+                'currency' => 'cad',
+                'payment_method_types' => ['card']
+            ]);
+        }
 
         return view('website.layouts.pages.registration_phase_1', compact('intent'));
     }
@@ -42,7 +46,8 @@ class CaregiverController extends Controller
             $auth_response = $certnService->Authenticate();
             $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
 
-            $update_user = $caregiverService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
+            $caregiver = $caregiverService->storeCaregiver($result);
+            $update_user = $caregiverService->updateCertnApplicantId($caregiver->id, $certn_applicant->json()['applicant']['id']);
 
             return redirect()->route('thank_you_phase_1', [
                 'language' => request()->segment(1)
@@ -50,21 +55,23 @@ class CaregiverController extends Controller
         }
     }
 
-    public function storeRegistrationPhase1Ajax(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
+    public function storeRegistrationPhase1Ajax(Request $request, UserServiceInterface $userService)
     {
         $result = $userService->storeUserAjax($request);
 
-        if($result instanceof \Illuminate\Support\MessageBag){
-            return $result;
+        if($result->status > 0){
+            return 'false';
         } else {
-
-            $auth_response = $certnService->Authenticate();
-            $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
-
-            $update_user = $caregiverService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
-
-            return true;
+            return 'true';
         }
+    }
+
+    public function storeCertnAjax(CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
+    {
+        $auth_response = $certnService->Authenticate();
+        $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
+
+        $update_user = $caregiverService->updateCertnApplicantId($result->id, $certn_applicant->json()['applicant']['id']);
     }
 
     public function updateRegistrationPhase1StripeIdAjax(Request $request)
