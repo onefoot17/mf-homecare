@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 use App\Services\Users\Contracts\UserServiceInterface;
 use App\Services\Users\Contracts\CertnServiceInterface;
 use App\Services\Caregivers\Contracts\CaregiverServiceInterface;
+
+use App\Mail\Caregiver\RegistrationPhase1;
 
 class CaregiverController extends Controller
 {
@@ -50,6 +53,8 @@ class CaregiverController extends Controller
 
             $caregiver = $caregiverService->storeCaregiver($result);
             $update_user = $caregiverService->updateCertnApplicantId($caregiver->id, $certn_applicant->json()['applicant']['id']);
+
+            Mail::to($result->email)->send(new RegistrationPhase1($result));
 
             return redirect()->route('thank_you_phase_1', [
                 'language' => request()->segment(1)
