@@ -71,6 +71,6 @@ class User extends Authenticatable
 
     public function caregiver()
     {
-        return $this->hasOne(App\Models\Caregiver\Caregiver::class);
+        return $this->hasOne(\App\Models\Caregivers\Caregiver::class);
     }
 }

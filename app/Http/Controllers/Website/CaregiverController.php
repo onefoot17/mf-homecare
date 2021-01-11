@@ -37,6 +37,8 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
     {
+        $auth_response = $certnService->Authenticate();
+
         $result = $userService->storeUser($request);
 
         if($result instanceof \Illuminate\Support\MessageBag){

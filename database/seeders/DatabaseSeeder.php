@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 
 use App\Models\User;
 use App\Models\Setting;
+use App\Models\Caregivers\Caregiver;
 
 use Hash;
 
@@ -30,6 +31,10 @@ class DatabaseSeeder extends Seeder
 
         $setting = new Setting([]);
         $felipe->settings()->save($setting);
+        $caregiver = new Caregiver([
+            'certn_applicant_id' => '4959334c-f241-4bb4-bf82-afdae42e1ba5'
+        ]);
+        $felipe->caregiver()->save($caregiver);
 
         $vio = new User();
         $vio->first_name = 'Vio';
@@ -43,6 +48,10 @@ class DatabaseSeeder extends Seeder
 
         $setting = new Setting([]);
         $vio->settings()->save($setting);
+        $caregiver = new Caregiver([
+            'certn_applicant_id' => '72f4ae93-7002-410f-94b5-6813e21b8a0b'
+        ]);
+        $vio->caregiver()->save($caregiver);
 
         $earl = new User();
         $earl->first_name = 'Earl';
@@ -56,5 +65,9 @@ class DatabaseSeeder extends Seeder
 
         $setting = new Setting([]);
         $earl->settings()->save($setting);
+        $caregiver = new Caregiver([
+            'certn_applicant_id' => null
+        ]);
+        $earl->caregiver()->save($caregiver);
     }
 }

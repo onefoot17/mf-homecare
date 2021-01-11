@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\Users\UsersController;
 use App\Http\Controllers\Website\IndexController;
 use App\Http\Controllers\Website\CaregiverController;
 use App\Http\Controllers\Website\MessagesController;
-use App\Http\Controllers\Website\CertnController;
+use App\Http\Controllers\Website\CallbacksController;
 
 
 /*
@@ -40,6 +40,10 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/forgot-password', [LoginController::class, 'forgotPassword'])->name('password.request');
+
+Route::group(['prefix' => 'certn'], function(){
+    Route::get('webhook', [CallbacksController::class, 'CertnWebhook'])->name('certn_webhook');
+});
 
 Route::group(['prefix' => '{language}'], function(){
 

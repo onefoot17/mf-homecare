@@ -3,6 +3,7 @@
 namespace App\Services\Users;
 
 use App\Services\Users\Contracts\CertnServiceInterface;
+use App\Repositories\Callbacks\Contracts\CertnRepositoryInterface;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
@@ -11,9 +12,11 @@ use App\Models\User;
 
 class CertnService implements CertnServiceInterface
 {
-    public function __construct()
+    public function __construct(
+        CertnRepositoryInterface $CertnRepositoryInterface
+    )
     {
-
+        $this->CertnRepositoryInterface = $CertnRepositoryInterface;
     }
 
     public function Authenticate()
@@ -59,7 +62,16 @@ class CertnService implements CertnServiceInterface
             ]);
 
             return $response;
-        }
+        } 
+
+        return 'Auth status different from 200';
+    }
+
+    public function storeCallbacksLocalDatabase($request)
+    {
+        $store = $this->CertnRepositoryInterface->store(json_encode($request->toArray()));
+
+        return $store;
     }
 
 }

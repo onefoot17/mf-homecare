@@ -19,9 +19,9 @@ class CreateCaregiversUsersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('user_id')->index();
-            $table->string('certn_applicant_id')->nullable();
-            $table->string('stripe_tax_client_secret_id')->nullable();
-            $table->string('stripe_connected_account_id')->nullable();
+            $table->string('certn_applicant_id')->unique()->nullable();
+            $table->string('stripe_tax_client_secret_id')->unique()->nullable();
+            $table->string('stripe_connected_account_id')->unique()->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
