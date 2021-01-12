@@ -32,7 +32,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         {{-- Freight Text Pro --}}
-        <link rel="stylesheet" href="https://use.typekit.net/qcs6kcb.css">
+        {{-- <link rel="stylesheet" href="https://use.typekit.net/qcs6kcb.css"> --}}
+        {{-- Alegreya --}}
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         {{-- App CSS --}}
 		<link href="{{ asset( 'assets/css/bootstrap.min.css' ) }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
