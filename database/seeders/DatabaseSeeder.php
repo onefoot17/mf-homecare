@@ -29,8 +29,6 @@ class DatabaseSeeder extends Seeder
         $felipe->status = 0;
         $felipe->save();
 
-        $setting = new Setting([]);
-        $felipe->settings()->save($setting);
         $caregiver = new Caregiver([
             'certn_applicant_id' => '4959334c-f241-4bb4-bf82-afdae42e1ba5'
         ]);
@@ -46,8 +44,6 @@ class DatabaseSeeder extends Seeder
         $vio->status = 0;
         $vio->save();
 
-        $setting = new Setting([]);
-        $vio->settings()->save($setting);
         $caregiver = new Caregiver([
             'certn_applicant_id' => '72f4ae93-7002-410f-94b5-6813e21b8a0b'
         ]);
@@ -63,8 +59,6 @@ class DatabaseSeeder extends Seeder
         $earl->status = 0;
         $earl->save();
 
-        $setting = new Setting([]);
-        $earl->settings()->save($setting);
         $caregiver = new Caregiver([
             'certn_applicant_id' => null
         ]);
