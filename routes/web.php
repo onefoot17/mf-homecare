@@ -39,6 +39,10 @@ Route::get('/', function () {
     }
 })->name('index');
 
+Route::get('test', function(){
+    return view('mail.caregivers.registration_phase_1');
+});
+
 Route::get('/forgot-password', [LoginController::class, 'forgotPassword'])->name('password.request');
 
 Route::group(['prefix' => 'certn'], function(){
@@ -56,6 +60,8 @@ Route::group(['prefix' => '{language}'], function(){
         Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
         Route::post('/registration-phase-1-ajax', [CaregiverController::class, 'storeRegistrationPhase1Ajax'])->name('caregiver_registration_phase_1_post_ajax');
         Route::post('/stripe-payment-phase-1', [CaregiverController::class, 'stripePaymentPhase1'])->name('stripe_payment_phase_1');
+
+        Route::get('/registration-phase-2', [CaregiverController::class, 'registrationPhase2'])->name('caregiver_registration_phase_2');
     });
 
     Route::get('/thank-you-phase-1', [MessagesController::class, 'thankYouPhase1'])->name('thank_you_phase_1');
