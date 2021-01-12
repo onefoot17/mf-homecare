@@ -74,6 +74,11 @@ $h2-font-size: 2.4rem !default;
 $h3-font-size: 3rem !default;
 $h4-font-size: 1.8rem !default;
 
+// Banners
+$banner-heading-font-size : 5rem !default;
+$banner-heading-color : $white !default;
+$banner-sub-heading-font-size : 3rem !default;
+
 /* // Buttons
 $button-color: $white !default;
 $button-color-dark: $button-color !default;
@@ -134,8 +139,8 @@ $nav-sticky-link-color: $black inherit !default;
 $nav-sticky-link-hover-color: inherit !default;
 
 // Forms
-$form-error-color: $red-light !default;
-$form-error-border-color: $form-error-color !default;
+$form-error-color: $red-light !important !default;
+$form-error-border-color: $form-error-color !important !default;
 
 // Slider
 $slider-button-bg-color: $black !default;

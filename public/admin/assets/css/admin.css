@@ -183,6 +183,9 @@ $button-bg-hover-color-dark: $black !default; */
   text-rendering: optimizeLegibility !important; */
 }
 
+body {
+  color: #000000;
+}
 body * {
   font-size: 1.6rem;
 }
@@ -343,6 +346,12 @@ a:hover {
       }
   } */
 }
+.mf__section--purple .form {
+  color: #ffffff;
+}
+.form .text-color-danger {
+  color: #f1556c !important;
+}
 .form-group {
   margin-bottom: 2rem;
 }
@@ -359,11 +368,11 @@ a:hover {
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
-  border-color: #f1556c;
+  border-color: #f1556c !important !important;
 }
 
 .invalid-feedback {
-  color: #f1556c;
+  color: #f1556c !important;
   font-size: 1.6rem;
 }
 

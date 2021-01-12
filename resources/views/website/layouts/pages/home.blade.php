@@ -1,6 +1,6 @@
 @section( 'title' ) {{ $title ?? __( 'Caregiver and Companionship Services for the Elderly - MF Homecare' ) }} @stop
 
-@extends( 'website.layouts.main' )
+@extends( 'website.layouts.main', [ 'logo_animation_delay' => 7000 ] )
 
 @section( 'content' )
     <div role="main" class="main">
@@ -124,7 +124,7 @@
                     <div class="col-md-10 mx-md-auto">
                         <h1 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.caregiver_and_companion_services')</h1>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_and_companion_services')</p>
+                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_and_companion_services')</p>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="mf__features__row__column mf__features__row__column--first">
                         <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.caregiver_services')</h2>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_services')</p>
+                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.caregiver_services')</p>
 
                         <div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>
@@ -184,7 +184,7 @@
                     <div class="mf__features__row__column mf__features__row__column--first">
                         <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.companion_services')</h2>
 
-                        <p class="mf__features__p appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.companion_services')</p>
+                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('texts.companion_services')</p>
 
                         <div class="mf__separator mf__separator--small appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
                     </div>

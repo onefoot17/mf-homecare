@@ -21,6 +21,14 @@ input:focus {
 }
 
 .form {
+    .mf__section--purple & {
+        color: $white;
+    }
+
+    .text-color-danger {
+        color: $form-error-color;
+    }
+
     /* &-row {
         margin-bottom: $margin*2;
 
