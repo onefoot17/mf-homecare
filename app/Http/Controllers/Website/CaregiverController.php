@@ -40,8 +40,6 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
     {
-        $auth_response = $certnService->Authenticate();
-
         $result = $userService->storeUser($request);
 
         if($result instanceof \Illuminate\Support\MessageBag){
@@ -89,5 +87,10 @@ class CaregiverController extends Controller
     public function stripePaymentPhase1(Request $request)
     {
         return json_encode($request->toArray());
+    }
+
+    public function registrationPhase2(Request $request)
+    {
+        
     }
 }
