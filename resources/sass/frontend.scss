@@ -12,11 +12,19 @@
 }
 
 html {
+    body:not(.mf__home) .main {
+        padding-top: 70px;
+    }
+
     &:not(.sticky-header-active) #header.header-transparent:not(.header-semi-transparent) .header-body {
         background: rgba( $black, 0.8 ) !important;
     }
 
     #header {
+        &.header-transparent {
+            height: auto !important;
+        }
+
         .header {
             &-body {
                 background: rgba( $black, 0.8 ) !important;
@@ -246,18 +254,48 @@ html.sticky-header-active .header-logo {
 }
 
 .#{$mf} {
-    // Slider
-    &#{$es}slider h3 {
-        color: $white;
+    // Banners
+    &#{$es}banner {
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &#{$es}overlay {
+            background-color: rgba( $black, .4 );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: $banner-heading-color;
+            font-size: $banner-heading-font-size;
+        }
+
+        &#{$es}sub_heading {
+            display: block;
+            font-size: $banner-sub-heading-font-size;
+        }
     }
+    // end Banners
 
     &#{$es}section {
         padding-top: $padding*4;
         padding-bottom: $padding*4;
+
+        &#{$ms}maroon {
+            background-color: $maroon;
+        }
+
+        &#{$ms}purple {
+            background-color: $purple;
+        }
     }
 
     &#{$es}separator {
-        background-color: var(--cream);
+        background-color: $cream;
         // display: inline-block;
         margin: 0 auto $margin;
         width: 30%;
@@ -266,6 +304,71 @@ html.sticky-header-active .header-logo {
         &#{$ms}small {
             width: 10%;
         }
+    }
+
+    &#{$es}content {
+        h1 {
+            color: $purple;
+            margin-bottom: $margin/2;
+        }
+
+        p + h2 {
+            margin-top: $margin*2;
+        }
+
+        h2 {
+            color: $purple;
+            margin-bottom: $margin/2;
+
+            .mf__section--purple & {
+                color: $white;
+            }
+        }
+
+        p + h3 {
+            margin-top: $margin*2;
+        }
+
+        h3 {
+            color: $purple;
+            font-size: 2rem;
+            margin-bottom: $margin/2;
+
+            .mf__section--purple & {
+                color: $white;
+            }
+        }
+
+        p {
+            margin-bottom: $margin;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        /* p + h4 {
+            margin-top: $margin*2;
+        }
+
+        h4 {
+            color: $purple;
+            margin-bottom: $margin/2;
+        } */
+
+        .mf__separator {
+            background-color: $maroon;
+
+            .mf__section--purple & {
+                background-color: $white;
+            }
+        }
+    }
+
+    // Home page
+    // Slider
+    &#{$es}slider h3 {
+        color: $white;
     }
 
     &#{$es}homepage-video {
@@ -488,6 +591,7 @@ html.sticky-header-active .header-logo {
             line-height: 1.5;
         }
     }
+    // end Home
 
     &#{$es}footer {
         &#footer {

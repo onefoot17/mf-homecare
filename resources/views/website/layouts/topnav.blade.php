@@ -25,9 +25,9 @@
                                         src="{{ asset( 'assets/images/MF-Homecare-Logo-white.png' ) }}"
                                         class="appear-animation animated fadeInUp appear-animation-visible"
                                         data-appear-animation="fadeInUp"
-                                        data-appear-animation-delay="7000"
+                                        data-appear-animation-delay="@if( isset( $logo_animation_delay ) ){{( $logo_animation_delay )}}@else{{0}}@endif"
                                         data-appear-animation-duration="2s"
-                                        style="animation-duration: 2s; animation-delay: 7000ms;"
+                                        style="animation-duration: 2s; animation-delay: @if( isset( $logo_animation_delay ) ){{( $logo_animation_delay )}}@else{{0}}@endif ms;"
                                     />
                                 </a>
                             </span>
