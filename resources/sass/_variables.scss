@@ -1,7 +1,9 @@
 // Colours
 $black: #000000 !default;
-$purple: #4d5877 !default;
-$maroon: #793B52 !default;
+$purple: #36487b !default;
+$purple-logo: #4d5877 !default;
+$maroon: #9e3a5f !default;
+$maroon-logo: #793B52 !default;
 $red: #c60202 !default;
 $red-light: #f1556c !default;
 $cream: #F7F2EF !default;
@@ -61,9 +63,10 @@ $border-radius: 8px;
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
 $font-family-freight: 'freight-text-pro' !default;
+$font-family-alegreya: 'Alegreya', serif !default;
 $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
-$font-family-headings: $font-family-freight !default;
+$font-family-headings: $font-family-alegreya !default;
 $font-size: 1.6rem !default;
 $body-font-size: 1.6rem !default;
 $h1-font-size: 3rem !default;
