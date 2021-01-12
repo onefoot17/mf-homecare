@@ -94,8 +94,9 @@ class UserService implements UserServiceInterface
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|min:3',
             'last_name' => 'required|min:3',
-            'email' => 'email:rfc,dns||unique:App\Models\User',
+            'email' => 'required|email:rfc,dns||unique:App\Models\User',
             'postal_code' => [
+                'required',
                 'min:6',
                 function($attribute, $value, $fail){
                     $postal_code = $value;

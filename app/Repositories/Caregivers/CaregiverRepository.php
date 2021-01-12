@@ -13,11 +13,11 @@ class CaregiverRepository implements CaregiverRepositoryInterface {
 
     public function store(\App\Models\User $user)
     {
-        $caregiver = new Caregiver();
-        $caregiver->user_id = $user->id;
-        $caregiver->save();
+        $caregiver = new Caregiver([]);
+        
+        $new_caregiver = $user->caregiver()->save($caregiver);
 
-        return $caregiver;
+        return $new_caregiver;
     }
 
     public function show($id)
