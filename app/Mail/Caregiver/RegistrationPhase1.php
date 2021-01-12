@@ -18,9 +18,10 @@ class RegistrationPhase1 extends Mailable
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, \Illuminate\Http\Client\Response $certn_response)
     {
         $this->user = $user;
+        $this->certn_reponse = $certn_response;
     }
 
     /**
@@ -33,7 +34,8 @@ class RegistrationPhase1 extends Mailable
         return $this->subject('MF Homecare - Registration')
         ->view('mail.caregivers.registration_phase_1')
         ->with([
-            'user' => $this->user
+            'user' => $this->user,
+            'certn_response' => $this->certn_reponse->json()
         ]);
     }
 }

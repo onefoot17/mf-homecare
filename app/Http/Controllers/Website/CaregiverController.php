@@ -54,7 +54,7 @@ class CaregiverController extends Controller
             $caregiver = $caregiverService->storeCaregiver($result);
             $update_user = $caregiverService->updateCertnApplicantId($caregiver->id, $certn_applicant->json()['applicant']['id']);
 
-            Mail::to($result->email)->send(new RegistrationPhase1($result));
+            Mail::to($result->email)->send(new RegistrationPhase1($result, $certn_applicant));
 
             return redirect()->route('thank_you_phase_1', [
                 'language' => request()->segment(1)

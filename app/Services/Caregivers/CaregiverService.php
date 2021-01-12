@@ -47,6 +47,8 @@ class CaregiverService implements CaregiverServiceInterface
 
     public function updateCertnApplicantId($id, $certn_applicant_id)
     {
-        $this->CaregiverRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
+        $result = $this->CaregiverRepositoryInterface->updateCertnApplicantId($id, $certn_applicant_id);
+
+        return $result;
     }
 }

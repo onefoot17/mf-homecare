@@ -75,7 +75,7 @@ bgcolor="#f6f6f6">
                             <td class="content-block"
                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                 valign="top">
-                                <a href={{route('caregiver_registration_phase_2', [Request::segment(1)])}} class="btn-primary"
+                                <a href={{route('caregiver_registration_phase_2', [Request::segment(1), 'uuid' => $certn_response['applicant']['id']])}} class="btn-primary"
                                    style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #02c0ce; margin: 0; border-color: #02c0ce; border-style: solid; border-width: 8px 16px;">Phase 2 Registration</a>
                             </td>
                         </tr>
@@ -90,7 +90,7 @@ bgcolor="#f6f6f6">
                             <td class="content-block"
                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 10px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                 valign="top">
-                                If you’re having trouble clicking the "Phase 2 Registration" button, copy and paste the URL below into your web browser: <a href="{{route('caregiver_registration_phase_2', [Request::segment(1)])}}">{{route('caregiver_registration_phase_2', [Request::segment(1)])}}</a>
+                                If you’re having trouble clicking the "Phase 2 Registration" button, copy and paste the URL below into your web browser: <a href="{{route('caregiver_registration_phase_2', [Request::segment(1), 'uuid' => $certn_response['applicant']['id']])}}">{{route('caregiver_registration_phase_2', [Request::segment(1), 'uuid' => $certn_response['applicant']['id']])}}</a>
                             </td>
                         </tr>
                     </table>
