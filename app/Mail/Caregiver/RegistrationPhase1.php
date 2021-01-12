@@ -30,7 +30,8 @@ class RegistrationPhase1 extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.caregivers.registration_phase_1')
+        return $this->subject('MF Homecare - Registration')
+        ->view('mail.caregivers.registration_phase_1')
         ->with([
             'user' => $this->user
         ]);
