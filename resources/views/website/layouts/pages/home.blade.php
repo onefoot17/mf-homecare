@@ -121,7 +121,7 @@
         <div class="mf__section mf__features mf__features--services">
             <div class="container-xl">
                 <div class="row text-center">
-                    <div class="col-md-10 mx-md-auto">
+                    <div class="col-lg-12 mx-md-auto">
                         <h1 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.caregiver_and_companion_services' )</h1>
 
                         <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.caregiver_and_companion_services' )</p>
