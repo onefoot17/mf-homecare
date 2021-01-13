@@ -18,10 +18,10 @@
         </section>
 
         <section class="mf__section">
-            <div class="container mf__content">
+            <div class="container-xl mf__content">
                 <div class="row text-center">
-                    <div class="col-md-10 mx-md-auto">
-                        <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang('titles.Become_Caregivers')</h1>
+                    <div class="col-lg-12">
+                        <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.Become_Caregivers' )</h1>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
@@ -69,65 +69,71 @@
         </section>
 
         <section class="mf__section mf__section--purple">
-            <div class="container mf__content">
+            <div class="container-xl mf__content">
                 <div class="row text-center">
-                    <div class="col-md-10 mx-md-auto">
+                    <div class="col-lg-12">
                         <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">To start your registration, please fill out the form below:</h2>
 
-                        <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                        <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
                         <div class="overflow-hidden mb-1">
-                            <h3>* is required field</h3>
+                            <h3><span class="text-color-danger font-size-2rem">*</span> is required field</h3>
                         </div>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>First Name <span class="text-color-danger">*</span></label>
+                                    <label>First Name <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" />
+                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
-                                        <div style='color: red'>
+                                        <div class="text-color-danger mt-3">
                                             {{$message}}
                                         </div>
                                     @enderror
                                 </div>
+
                                 <div class="form-group col-md-6">
-                                    <label>Last Name <span class="text-color-danger">*</span></label>
+                                    <label>Last Name <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control border-radius-0 h-auto @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
-                                    <div style='color: red'>
+                                    <div class="text-color-danger mt-3">
                                             {{$message}}
                                         </div>
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Your Email <span class="text-color-danger">*</span></label>
+                                    <label>Your Email <span class="text-color-danger font-size-2rem">*</span></label>
+
                                     <input type="text" class="form-control border-radius-0 h-auto @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
+
                                     @error('email', 'storeUser')
-                                        <div style='color: red'>
+                                        <div class="text-color-danger mt-3">
                                             {{$message}}
                                         </div>
                                     @enderror
                                 </div>
+
                                 <div class="form-group col-md-6">
-                                    <label>Postal Code <span class="text-color-danger">*</span></label>
+                                    <label>Postal Code <span class="text-color-danger font-size-2rem">*</span></label>
                                     <input type="text" class="form-control border-radius-0 h-auto @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
                                     @error('postal_code', 'storeUser')
-                                        <div style='color: red'>
+                                        <div class="text-color-danger mt-3">
                                             {{$message}}
                                         </div>
                                     @enderror
                                 </div>
                             </div>
+
                             @if(env('DOWN_PAYMENT') !== true)
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
-                                        <button type="submit" class="btn btn-success">@lang('Submit')</button>
+                                        <button type="submit" class="btn btn-success">@lang('Submit' )</button>
                                     </div>
                                 </div>
                             @endif
@@ -140,7 +146,7 @@
                                 <!-- Elements will create input elements here -->
                                 </div>
 
-                                <button id="submit" class="btn btn-success">@lang('Submit and Pay')</button>
+                                <button id="submit" class="btn btn-success">@lang('Submit and Pay' )</button>
 
                                 <!-- We'll put the error messages in this element -->
                                 <div id="card-errors" style="color: red" role="alert"></div>
