@@ -291,13 +291,28 @@ html.sticky-header-active .header-logo {
 
     &#{$es}separator {
         background-color: $cream;
-        margin: 0 auto;
-        margin-bottom: $margin;
-        width: 30%;
+        // margin: 0 auto;
+        margin-bottom: $margin/2;
         height: 1px;
 
         &#{$ms}small {
             width: 10%;
+        }
+
+        h1 ~ & {
+            width: 60%;
+        }
+
+        h2 ~ & {
+            width: 30%;
+        }
+
+        h3 ~ & {
+            width: 15%;
+        }
+
+        h4 ~ & {
+            width: 7.5%;
         }
     }
 
@@ -313,9 +328,10 @@ html.sticky-header-active .header-logo {
 
         h2 {
             color: $purple;
-            font-size: 3.5rem;
+            font-size: 3.4rem;
             margin-bottom: $margin/2;
 
+            .mf__section--maroon & ,
             .mf__section--purple & {
                 color: $cream;
             }
@@ -327,16 +343,13 @@ html.sticky-header-active .header-logo {
 
         h3 {
             color: $purple;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: $margin/2;
 
+            .mf__section--maroon & ,
             .mf__section--purple & {
                 color: $cream;
             }
-        }
-
-        h3 + .mf__separator {
-            width: 15%;
         }
 
         p + h4 {
@@ -345,8 +358,13 @@ html.sticky-header-active .header-logo {
 
         h4 {
             color: $purple;
-            font-size: 2rem;
-            margin-bottom: $margin/2;
+            font-size: 2.2rem;
+            margin-bottom: $margin/4;
+
+            .mf__section--maroon & ,
+            .mf__section--purple & {
+                color: $cream;
+            }
         }
 
         p {
@@ -358,14 +376,21 @@ html.sticky-header-active .header-logo {
                 margin-bottom: 0;
             }
 
+            .mf__section--maroon & ,
             .mf__section--purple & {
                 color: $cream;
             }
         }
 
+        ul {
+            list-style: revert;
+            padding-left: $padding*3;
+        }
+
         .mf__separator {
             background-color: $maroon;
 
+            .mf__section--maroon & ,
             .mf__section--purple & {
                 background-color: $cream;
             }
@@ -459,448 +484,218 @@ html.sticky-header-active .header-logo {
         }
     }
 
-
-
     // Home page
     // Slider
-    &#{$es}slider h3 {
-        color: $white;
-    }
-
-    &#{$es}homepage-video {
-        &:before {
-            opacity: .6 !important;
-        }
-    }
-
-    &#{$es}features {
-        h1 {
+    // &#{$es}home {
+        &#{$es}slider h3 {
             color: $cream;
-            margin-bottom: $margin*2;
-            text-align: center;
         }
 
-        h2 {
-            color: $cream;
-            margin-bottom: $margin;
-        }
-
-        p {
-            color: $cream;
-            margin-bottom: $margin*2;
-
-            &:last-child {
-                margin-bottom: 0;
+        &#{$es}homepage-video {
+            &:before {
+                opacity: .6 !important;
             }
         }
 
-        &#{$es}row {
-            align-items: flex-start;
-            justify-content: flex-start;
-            // margin-right: -$margin;
-            margin-bottom: $margin*4;
-            // margin-left: -$margin;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &#{$es}column {
-                align-self: stretch;
-                background-color: rgba( $black, 0.1 );
-                border-radius: $border-radius;
-                flex-basis: calc( ( 100% / 4 ) - ( #{ $margin }*2 ) );
-                margin: $margin;
-
-                @include for-tablet-landscape-down{
-                    flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
-                }
-
-                @include for-phone-only{
-                    flex-basis: 100%;
-                    margin-right: 0;
-                    margin-left: 0;
-                }
-
-                &--first {
-                    background: none;
-                    flex-basis: 100%;
-                    margin-bottom: $margin;
-                    text-align: center;
-                }
-            }
-        }
-
-        &#{$es}feature {
-            @include display-flex(
-                $align-items: center,
-                $justify-content: center
-            );
-
-            // height: 100%;
-            padding: $padding $padding;
-            text-align: center;
-
-            /* @include for-phone-only {
-                padding-left: 0;
-            } */
-
-            /* &:last-of-type {
-                padding-right: 0;
-            } */
-
-            > * {
-                flex-basis: 100%;
-            }
-
-            &#{$es}icon-con {
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                margin-bottom: $margin;
-                max-width: 48px;
-                max-height: 48px;
-                width: 48px;
-                height: 48px;
-            }
-
-            &#{$es}icon {
-                display: block;
-                width: 100%;
-            }
-
-            /* &#{$es}info {
-                height: 100%;
-            } */
-
-            h4 {
+        &#{$es}features {
+            h1 {
                 color: $cream;
-                font-size: 2.3rem;
-                line-height: 1.3;
+                margin-bottom: $margin*2;
+                text-align: center;
             }
 
-            h4 + p {
-                margin-top: $margin;
+            h2 {
+                color: $cream;
+                margin-bottom: $margin;
             }
 
             p {
-                font-family: $font-family-roboto;
-                font-size: 1.6rem;
-                line-height: 1.5;
+                color: $cream;
+                margin-bottom: $margin*2;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
-        }
 
-        &#{$ms}benefits {
-            background-color: var(--maroon);
-        }
+            .mf__separator {
+                margin-right: auto;
+                margin-left: auto;
+            }
 
-        &#{$ms}services {
-            background-color: var(--purple);
+            &#{$es}row {
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-bottom: $margin*4;
 
-            div.mf__features__row {
-                background-color: rgba( $black, 0.1 );
-                border-radius: $border-radius;
-                margin-right: 0;
-                margin-left: 0;
-                padding-right: $padding;
-                padding-bottom: $padding;
-                padding-left: $padding;
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
-                &:first-of-type {
+                &#{$es}column {
+                    align-self: stretch;
+                    background-color: rgba( $black, 0.1 );
+                    border-radius: $border-radius;
+                    flex-basis: calc( ( 100% / 4 ) - ( #{ $margin }*2 ) );
+                    margin: $margin;
+
+                    @include for-tablet-landscape-down{
+                        flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
+                    }
+
+                    @include for-phone-only{
+                        flex-basis: 100%;
+                        margin-right: 0;
+                        margin-left: 0;
+                    }
+
+                    &--first {
+                        background: none;
+                        flex-basis: 100%;
+                        margin-bottom: $margin;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &#{$es}feature {
+                @include display-flex(
+                    $align-items: center,
+                    $justify-content: center
+                );
+
+                padding: $padding $padding;
+                text-align: center;
+
+                > * {
+                    flex-basis: 100%;
+                }
+
+                &#{$es}icon-con {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-bottom: $margin;
+                    max-width: 48px;
+                    max-height: 48px;
+                    width: 48px;
+                    height: 48px;
+                }
+
+                &#{$es}icon {
+                    display: block;
+                    width: 100%;
+                }
+
+                h4 {
+                    color: $cream;
+                    font-size: 2.3rem;
+                    line-height: 1.3;
+                }
+
+                h4 + p {
                     margin-top: $margin;
                 }
-            }
-        }
-    }
 
-    &#{$es}video {
-        background-color: var(--cream);
-
-        &#{$es}video {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-
-            @include for-992-up {
-                max-width: 60%;
-            }
-        }
-    }
-
-    &#{$es}register__buttons {
-        background-color: var(--black);
-        color: var(--white);
-
-        &#{$es}col {
-            background-color: rgba( $white, 0.1 );
-            border-radius: $border-radius;
-            display: flex;
-            flex-direction: column;
-            flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
-            margin: $margin;
-            padding: $padding*2;
-
-            @include for-tablet-landscape-down {
-                flex-basis: 100%;
-                height: auto;
-            }
-        }
-
-        h3 {
-            color: var(--white);
-            font-size: 3rem;
-            line-height: 1;
-            margin-bottom: $margin*2;
-        }
-
-        &#{$es}info {
-            display: flex;
-            flex-wrap: wrap;
-            height: 100%;
-            justify-content: center;
-        }
-
-        &#{$es}p {
-            color: var(--white);
-            margin-bottom: $margin*2;
-        }
-
-        &#{$es}button {
-            align-self: flex-end;
-            background-color: $white !important;
-            display: inline-block;
-            font-family: $font-family-headings;
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.5;
-            padding-top: $padding/1.5;
-            padding-bottom: $padding/1.5;
-        }
-    }
-    // end Home
-
-
-
-    // Home page
-    // Slider
-    &#{$es}slider h3 {
-        color: $white;
-    }
-
-    &#{$es}homepage-video {
-        &:before {
-            opacity: .6 !important;
-        }
-    }
-
-    &#{$es}features {
-        h1 {
-            color: $cream;
-            margin-bottom: $margin*2;
-            text-align: center;
-        }
-
-        h2 {
-            color: $cream;
-            margin-bottom: $margin;
-        }
-
-        p {
-            color: $cream;
-            margin-bottom: $margin*2;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &#{$es}row {
-            align-items: flex-start;
-            justify-content: flex-start;
-            // margin-right: -$margin;
-            margin-bottom: $margin*4;
-            // margin-left: -$margin;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &#{$es}column {
-                align-self: stretch;
-                background-color: rgba( $black, 0.1 );
-                border-radius: $border-radius;
-                flex-basis: calc( ( 100% / 4 ) - ( #{ $margin }*2 ) );
-                margin: $margin;
-
-                @include for-tablet-landscape-down{
-                    flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
+                p {
+                    font-family: $font-family-roboto;
+                    font-size: 1.6rem;
+                    line-height: 1.5;
                 }
+            }
 
-                @include for-phone-only{
-                    flex-basis: 100%;
+            &#{$ms}benefits {
+                background-color: var(--maroon);
+            }
+
+            &#{$ms}services {
+                background-color: var(--purple);
+
+                div.mf__features__row {
+                    background-color: rgba( $black, 0.1 );
+                    border-radius: $border-radius;
                     margin-right: 0;
                     margin-left: 0;
-                }
+                    padding-right: $padding;
+                    padding-bottom: $padding;
+                    padding-left: $padding;
 
-                &--first {
-                    background: none;
-                    flex-basis: 100%;
-                    margin-bottom: $margin;
-                    text-align: center;
-                }
-            }
-        }
-
-        &#{$es}feature {
-            @include display-flex(
-                $align-items: center,
-                $justify-content: center
-            );
-
-            // height: 100%;
-            padding: $padding $padding;
-            text-align: center;
-
-            /* @include for-phone-only {
-                padding-left: 0;
-            } */
-
-            /* &:last-of-type {
-                padding-right: 0;
-            } */
-
-            > * {
-                flex-basis: 100%;
-            }
-
-            &#{$es}icon-con {
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                margin-bottom: $margin;
-                max-width: 48px;
-                max-height: 48px;
-                width: 48px;
-                height: 48px;
-            }
-
-            &#{$es}icon {
-                display: block;
-                width: 100%;
-            }
-
-            /* &#{$es}info {
-                height: 100%;
-            } */
-
-            h4 {
-                color: $cream;
-                font-size: 2.3rem;
-                line-height: 1.3;
-            }
-
-            h4 + p {
-                margin-top: $margin;
-            }
-
-            p {
-                font-family: $font-family-roboto;
-                font-size: 1.6rem;
-                line-height: 1.5;
-            }
-        }
-
-        &#{$ms}benefits {
-            background-color: var(--maroon);
-        }
-
-        &#{$ms}services {
-            background-color: var(--purple);
-
-            div.mf__features__row {
-                background-color: rgba( $black, 0.1 );
-                border-radius: $border-radius;
-                margin-right: 0;
-                margin-left: 0;
-                padding-right: $padding;
-                padding-bottom: $padding;
-                padding-left: $padding;
-
-                &:first-of-type {
-                    margin-top: $margin;
+                    &:first-of-type {
+                        margin-top: $margin;
+                    }
                 }
             }
         }
-    }
-
-    &#{$es}video {
-        background-color: var(--cream);
 
         &#{$es}video {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
+            background-color: var(--cream);
 
-            @include for-992-up {
-                max-width: 60%;
-            }
-        }
-    }
+            &#{$es}video {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
 
-    &#{$es}register__buttons {
-        background-color: var(--black);
-        color: var(--white);
-
-        &#{$es}col {
-            background-color: rgba( $white, 0.1 );
-            border-radius: $border-radius;
-            display: flex;
-            flex-direction: column;
-            flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
-            margin: $margin;
-            padding: $padding*2;
-
-            @include for-tablet-landscape-down {
-                flex-basis: 100%;
-                height: auto;
+                @include for-992-up {
+                    max-width: 60%;
+                }
             }
         }
 
-        h3 {
+        &#{$es}register__buttons {
+            background-color: var(--black);
             color: var(--white);
-            font-size: 3rem;
-            line-height: 1;
-            margin-bottom: $margin*2;
-        }
 
-        &#{$es}info {
-            display: flex;
-            flex-wrap: wrap;
-            height: 100%;
-            justify-content: center;
-        }
+            &#{$es}col {
+                background-color: rgba( $white, 0.1 );
+                border-radius: $border-radius;
+                display: flex;
+                flex-direction: column;
+                flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
+                margin: $margin;
+                padding: $padding*2;
 
-        &#{$es}p {
-            color: var(--white);
-            margin-bottom: $margin*2;
-        }
+                @include for-tablet-landscape-down {
+                    flex-basis: 100%;
+                    height: auto;
+                }
+            }
 
-        &#{$es}button {
-            align-self: flex-end;
-            background-color: $white !important;
-            display: inline-block;
-            font-family: $font-family-headings;
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.5;
-            padding-top: $padding/1.5;
-            padding-bottom: $padding/1.5;
+            h3 {
+                color: var(--white);
+                font-size: 3rem;
+                line-height: 1;
+                margin-bottom: $margin*2;
+            }
+
+            &#{$es}info {
+                display: flex;
+                flex-wrap: wrap;
+                height: 100%;
+                justify-content: center;
+            }
+
+            &#{$es}p {
+                color: var(--white);
+                margin-bottom: $margin*2;
+            }
+
+            &#{$es}button {
+                align-self: flex-end;
+                background-color: $white !important;
+                display: inline-block;
+                font-family: $font-family-headings;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 1.5;
+                padding-top: $padding/1.5;
+                padding-bottom: $padding/1.5;
+            }
         }
-    }
+    // }
     // end Home
 
     // Registration Phase 1
-    &#{$es}registration-phase-1__notes > * {
+    &#{$es}registration-phase-1__notes * {
         color: $maroon !important;
         font-weight: 600;
     }

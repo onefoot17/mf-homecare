@@ -317,6 +317,15 @@ a:hover {
   transition: all 200ms ease-in-out;
 }
 
+.highlight-color {
+  color: #9e3a5f;
+  font-weight: 600;
+}
+.mf__section--maroon .highlight-color, .mf__section--purple .highlight-color {
+  color: #F7F2EF;
+  font-weight: 600;
+}
+
 .ra__dark input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5) !important;
 }

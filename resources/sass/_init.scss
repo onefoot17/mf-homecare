@@ -73,3 +73,14 @@ a {
         @include transition;
     }
 }
+
+.highlight-color {
+    color: $highlight-color;
+    font-weight: 600;
+
+    .mf__section--maroon & ,
+    .mf__section--purple & {
+        color: $cream;
+        font-weight: 600;
+    }
+}
