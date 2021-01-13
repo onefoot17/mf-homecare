@@ -17,8 +17,8 @@ $vars: (
 
 // Spacing
 $section-width: 960px;
-$margin: 1rem !default;
-$padding: 1rem !default;
+$margin: 15px !default;
+$padding: 15px !default;
 
 // Class names
 $es: '__' !default; // Element separator
@@ -140,7 +140,9 @@ $nav-sticky-link-hover-color: inherit !default;
 
 // Forms
 $form-error-color: $red-light !important !default;
-$form-error-border-color: $form-error-color !important !default;
+$form-error-border-color: $form-error-color !default;
+$form-required-color: $form-error-color !default;
+$form-required-border-color: $form-error-color !default;
 
 // Slider
 $slider-button-bg-color: $black !default;
