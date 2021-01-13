@@ -44,8 +44,10 @@ return [
     //Registration Phase 1
     'registration_phase_1' => [
         'Heading' => 'Register as a Caregiver​',
-        'Sub_Heading' => '(Registration Fee waived for a limited time)'
+        'Sub_Heading' => '(Registration Fee waived for a limited time)',
+        'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions',
+        'Caregiver_Advantages' => 'MF Homecare Caregiver Advantages',
     ],
-    'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions'
+
 
 ];

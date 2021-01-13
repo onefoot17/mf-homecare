@@ -19,36 +19,41 @@
 
         <section class="mf__section">
             <div class="container-xl mf__content">
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.Become_Caregivers' )</h1>
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.Become_Caregivers' )</h1>
 
                         <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Welcome! Our registration process is now open for Caregivers and Companions in the Greater Toronto and Vancouver Areas. Please fill in the form below to start the registration process with our system.</p>
 
-                        <h3>NOTES:</h3>
+                        <aside class="mb-3 mf__registration-phase-1__notes">
+                            <h4>NOTES:</h4>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">– We are currently accepting registrations for the Greater Toronto and Vancouver Areas</p>
+                            <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">– We are currently accepting registrations for the Greater Toronto and Vancouver Areas</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">– As part of our initial launch, we are waiving the $25 Registration Fee for these areas</p>
+                            <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">– As part of our initial launch, we are waiving the $25 Registration Fee for these areas</p>
+                        </aside>
 
                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">As a dedicated MF Homecare Caregiver or Companion, you can help families restore balance, order, and peace to their lives, and help their senior loved ones remain at home. Our Caregivers provide a variety of non-medical services, including companionship and help around the house.</p>
 
-                        <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">MF Homecare Caregiver Advantages</h3>
+                        <h3 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.Caregiver_Advantages' )</h3>
 
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice</h3>
+                        <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+
+                        <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice</h4>
 
                         <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                             Get matched with the right client that needs your specific skillset. Pick your geographic radius and let the clients find you. Communicate with your client before the first visit to ensure that everything runs smoothly. It’s time to provide care, as easily and efficiently as you can.
                         </p>
 
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Control</h3>
+                        <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Control</h4>
+
                         <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                             We provide you with the tools and the technology to coordinate your jobs personally, directly, and conveniently, from client selection to payment. Create and work on your own schedule.
                         </p>
 
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice of Payment</h3>
+                        <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice of Payment</h4>
 
                         <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                             We believe a happy Caregiver gives clients the best possible care. That is why we let you set your preferred amount and method of pay. Remember that the amount you select could impact the amount of work you receive.
@@ -56,7 +61,7 @@
                             Get paid directly into your bank account by direct deposit every two weeks. MF Homecare charges you a small 5% fee to set up and managing your appointment payments and regular deposits to your bank account. We do not take any government deductions off your pay. you are responsible for your own tax deductions and return.
                         </p>
 
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Consistency</h3>
+                        <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Consistency</h4>
 
                         <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                             If your services were appreciated, you can expect consistent bookings from the same clients as well as others. This gives you the opportunity for constant work but also room for further growth.
@@ -71,14 +76,12 @@
         <section class="mf__section mf__section--purple">
             <div class="container-xl mf__content">
                 <div class="row text-center">
-                    <div class="col-lg-12">
-                        <h2 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">To start your registration, please fill out the form below:</h2>
+                    <div class="col-md-10 mx-auto">
+                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">To start your registration, please fill out the form below:</h3>
 
                         <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <div class="overflow-hidden mb-1">
-                            <h3><span class="text-color-danger font-size-2rem">*</span> is required field</h3>
-                        </div>
+                        <p class="text-center"><span class="text-color-danger mb-2 font-size-2rem">*</span> is required field</p>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
