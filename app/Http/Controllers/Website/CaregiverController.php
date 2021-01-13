@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Http;
 
 use App\Services\Users\Contracts\UserServiceInterface;
 use App\Services\Users\Contracts\CertnServiceInterface;
@@ -38,26 +39,44 @@ class CaregiverController extends Controller
         return view('website.layouts.pages.registration_phase_1', compact('intent'));
     }
 
-    public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
+    // public function storeRegistrationPhase1(Request $request, UserServiceInterface $userService, CertnServiceInterface $certnService, CaregiverServiceInterface $caregiverService)
+    // {
+    //     $result = $userService->storeUser($request);
+
+    //     if($result instanceof \Illuminate\Support\MessageBag){
+    //         return back()->withInput()->withErrors($result, 'storeUser');
+    //     } else {
+
+    //         $auth_response = $certnService->Authenticate();
+    //         $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
+
+    //         $caregiver = $caregiverService->storeCaregiver($result);
+    //         $update_user = $caregiverService->updateCertnApplicantId($caregiver->id, $certn_applicant->json()['applicant']['id']);
+
+    //         Mail::to($result->email)->send(new RegistrationPhase1($result, $certn_applicant));
+
+    //         return redirect()->route('thank_you_phase_1', [
+    //             'language' => request()->segment(1)
+    //         ]);
+    //     }
+    // }
+
+    public function storeRegistrationPhase1(Request $request)
     {
-        $result = $userService->storeUser($request);
+        $response = Http::post(route('api_caregiver_registration_phase_1_post'),[
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'postal_code' => $request->postal_code
+        ]);
 
-        if($result instanceof \Illuminate\Support\MessageBag){
-            return back()->withInput()->withErrors($result, 'storeUser');
-        } else {
-
-            $auth_response = $certnService->Authenticate();
-            $certn_applicant = $certnService->backgroundCheck($auth_response, $result);
-
-            $caregiver = $caregiverService->storeCaregiver($result);
-            $update_user = $caregiverService->updateCertnApplicantId($caregiver->id, $certn_applicant->json()['applicant']['id']);
-
-            Mail::to($result->email)->send(new RegistrationPhase1($result, $certn_applicant));
-
-            return redirect()->route('thank_you_phase_1', [
-                'language' => request()->segment(1)
-            ]);
+        if($response->status() >= 400){
+            return redirect()->back()->withInput()->withErrors($response->json(), 'storeUser');
         }
+
+        return redirect()->route('thank_you_phase_1', [
+            'language' => request()->segment(1)
+        ]);
     }
 
     public function storeRegistrationPhase1Ajax(Request $request, UserServiceInterface $userService)

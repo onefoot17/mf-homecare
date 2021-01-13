@@ -24,7 +24,7 @@ class CaregiverController extends Controller
         $result = $userService->storeUser($request);
 
         if($result instanceof \Illuminate\Support\MessageBag){
-            return $result->toJson();
+            return response()->json($result, 409);
         } else {
 
             $auth_response = $certnService->Authenticate();

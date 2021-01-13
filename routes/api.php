@@ -20,4 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('caregiver_registration_phase_1_post');
+Route::group(['prefix' => 'caregiver'], function(){
+    Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('api_caregiver_registration_phase_1_post');
+});
+
