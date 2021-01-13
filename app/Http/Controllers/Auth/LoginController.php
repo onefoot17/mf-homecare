@@ -37,6 +37,21 @@ class LoginController extends Controller
         }
     }
 
+    public function ApiTokenCreate(Request $request)
+    {
+        $credentials = ['email' => $request->email, 'password' => $request->password];
+
+        if(Auth::attempt($credentials, false)){
+
+            $request->user()->tokens()->delete();
+
+            $token = $request->user()->createToken($request->token_name);
+            return response()->json(['token' => $token->plainTextToken], 200);
+        } else {
+            return response()->json('These credentials do not match!', 401);
+        }
+    }
+
     public function forgotPassword()
     {
         $this->middleware('guest');
