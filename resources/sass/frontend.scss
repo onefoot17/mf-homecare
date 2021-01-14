@@ -1,9 +1,10 @@
 // Intialization
 @import '../views/website/assets/sass/_init';
 @import '_init';
-@import '_forms';
 @import '_buttons';
 @import '_alerts';
+@import '_forms';
+@import '_cards';
 @import '_nav';
 
 html {
@@ -695,8 +696,19 @@ html.sticky-header-active .header-logo {
     // end Home
 
     // Registration Phase 1
-    &#{$es}registration-phase-1__notes * {
-        color: $maroon !important;
-        font-weight: 600;
+    &#{$es}registration-phase-1 {
+        &#{$es}notes * {
+            color: $maroon !important;
+            font-weight: 600;
+        }
+
+        .card {
+            height: calc( 100% - #{$margin}*2 );
+        }
+
+        .card-body {
+            background-color: $card-bg-color;
+            border-radius: $border-radius;
+        }
     }
 }
