@@ -28,7 +28,7 @@
                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Welcome! Our registration process is now open for Caregivers and Companions in the Greater Toronto and Vancouver Areas. Please fill in the form below to start the registration process with our system.</p>
 
                         <aside class="mb-3 mf__registration-phase-1__notes">
-                            <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Notes:</h4>
+                            <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Notes:</h4>
 
                             <ul>
                                 <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">We are currently accepting registrations for the Greater Toronto and Vancouver Areas</p></li>
@@ -51,51 +51,67 @@
 
                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <section class="row mb-5">
-                            <section class="col-6">
-                                <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice</h4>
+                        <section class="row">
+                            <section class="col-lg-6">
+                                <section class="card">
+                                    <section class="card-body">
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice</h4>
 
-                                <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                    Get matched with the right client that needs your specific skillset. Pick your geographic radius and let the clients find you. Communicate with your client before the first visit to ensure that everything runs smoothly. It’s time to provide care, as easily and efficiently as you can.
-                                </p>
+                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                            Get matched with the right client that needs your specific skillset. Pick your geographic radius and let the clients find you. Communicate with your client before the first visit to ensure that everything runs smoothly. It’s time to provide care, as easily and efficiently as you can.
+                                        </p>
+                                    </section>
+                                </section>
                             </section>
 
-                            <section class="col-6">
-                                <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Control</h4>
+                            <section class="col-lg-6">
+                                <section class="card">
+                                    <section class="card-body">
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Control</h4>
 
-                                <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                    We provide you with the tools and the technology to coordinate your jobs personally, directly, and conveniently, from client selection to payment. Create and work on your own schedule.
-                                </p>
+                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                            We provide you with the tools and the technology to coordinate your jobs personally, directly, and conveniently, from client selection to payment. Create and work on your own schedule.
+                                        </p>
+                                    </section>
+                                </section>
                             </section>
                         </section>
 
                         <section class="row">
-                            <section class="col-6">
-                                <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice of Payment</h4>
+                            <section class="col-lg-6">
+                                <section class="card">
+                                    <section class="card-body">
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice of Payment</h4>
 
-                                <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                    We believe a happy Caregiver gives clients the best possible care. That is why we let you set your preferred amount and method of pay. Remember that the amount you select could impact the amount of work you receive.
+                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                            We believe a happy Caregiver gives clients the best possible care. That is why we let you set your preferred amount and method of pay. Remember that the amount you select could impact the amount of work you receive.
 
-                                    Get paid directly into your bank account by direct deposit every two weeks. MF Homecare charges you a small 5% fee to set up and managing your appointment payments and regular deposits to your bank account. We do not take any government deductions off your pay. you are responsible for your own tax deductions and return.
-                                </p>
+                                            Get paid directly into your bank account by direct deposit every two weeks. MF Homecare charges you a small 5% fee to set up and managing your appointment payments and regular deposits to your bank account. We do not take any government deductions off your pay. you are responsible for your own tax deductions and return.
+                                        </p>
+                                    </section>
+                                </section>
                             </section>
 
-                            <section class="col-6">
-                                <h4 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Consistency</h4>
+                            <section class="col-lg-6">
+                                <section class="card">
+                                    <section class="card-body">
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Consistency</h4>
 
-                                <div class="mf__separator appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                    If your services were appreciated, you can expect consistent bookings from the same clients as well as others. This gives you the opportunity for constant work but also room for further growth.
+                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                            If your services were appreciated, you can expect consistent bookings from the same clients as well as others. This gives you the opportunity for constant work but also room for further growth.
 
-                                    As part of our registration process, you will have to complete a background check, which costs <span class="highlight-color"><del>$25.00</del> (Registration Fee waived during our initial launch)</span>. Our trusted partner for this service is Certn. Once the process is initiated, they will communicate with you directly via email. As soon as the background check is completed, you will return to our website to finalize the registration process.
-                                </p>
+                                            As part of our registration process, you will have to complete a background check, which costs <span class="highlight-color"><del>$25.00</del> (Registration Fee waived during our initial launch)</span>. Our trusted partner for this service is Certn. Once the process is initiated, they will communicate with you directly via email. As soon as the background check is completed, you will return to our website to finalize the registration process.
+                                        </p>
+                                    </section>
+                                </section>
                             </section>
                         </section>
                     </div>

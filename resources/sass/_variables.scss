@@ -55,7 +55,7 @@ $footer: 'footer' !default;
     --padding: #{ $padding };
 }
 
-//General
+// General
 $bg-color: transparent !default;
 $color: transparent !default;
 $border-radius: 8px;
@@ -132,18 +132,21 @@ $button-bg-hover-color-success: $button-bg-hover-color !default;
 $button-bg-color-success-dark: $maroon !default;
 $button-bg-hover-color-success-dark: $button-bg-hover-color-dark !default;
 
+// Forms
+$form-error-color: $red-light !important !default;
+$form-error-border-color: $form-error-color !default;
+$form-required-color: $form-error-color !default;
+$form-required-border-color: $form-error-color !default;
+
+// Cards
+$card-bg-color: transparent !default;
+
 // Navigation
 $nav-link-color: inherit !default;
 $nav-link-hover-color: inherit !default;
 $nav-link-active-color: $nav-link-hover-color !default;
 $nav-sticky-link-color: $black inherit !default;
 $nav-sticky-link-hover-color: inherit !default;
-
-// Forms
-$form-error-color: $red-light !important !default;
-$form-error-border-color: $form-error-color !default;
-$form-required-color: $form-error-color !default;
-$form-required-border-color: $form-error-color !default;
 
 // Slider
 $slider-button-bg-color: $black !default;
