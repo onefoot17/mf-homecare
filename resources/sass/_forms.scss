@@ -46,11 +46,16 @@ input:focus {
     }
 
     &-control {
+        border-radius: $border-radius;
         font-size: inherit !important;
+        height: auto;
+        line-height: 1 !important;
+        padding: $padding/2;
 
-        .ra__dark & {
+
+        .mf__section--purple & {
             background-color: $cream;
-            color: $white;
+            color: $black;
         }
     }
 }
