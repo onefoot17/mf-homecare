@@ -188,6 +188,13 @@
                             @endif
                         </form>
 
+                        @error('403', 'storeUser')
+                            <div style="color: red" role="alert">
+                                {{env('APP_NAME')}} Api error: {{$message}}
+                            </div>
+
+                        @enderror
+
                         @if(env('DOWN_PAYMENT') === true)
                             <br>
                             <form id="payment-form">

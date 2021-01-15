@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Api\CaregiverController;
 
 // use App\models\User;
 
@@ -25,6 +26,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/tokens/create', [LoginController::class, 'ApiTokenCreate'])->name('api_tokens_create');
 
 Route::group(['prefix' => 'caregiver'], function(){
-    Route::post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('api_caregiver_registration_phase_1_post');
+    Route::middleware('auth:sanctum')->post('/registration-phase-1', [CaregiverController::class, 'storeRegistrationPhase1'])->name('api_caregiver_registration_phase_1_post');
 });
 
