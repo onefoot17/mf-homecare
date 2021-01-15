@@ -109,7 +109,7 @@ class CaregiverController extends Controller
 
     public function updateRegistrationPhase1StripeIdAjax(Request $request)
     {
-        
+
     }
 
     public function stripePaymentPhase1(Request $request)
@@ -117,8 +117,10 @@ class CaregiverController extends Controller
         return json_encode($request->toArray());
     }
 
-    public function registrationPhase2(Request $request)
+    public function registrationPhase2()
     {
-        
+        $intent = null;
+
+        return view('website.layouts.pages.registration_phase_2', compact('intent'));
     }
 }

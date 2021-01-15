@@ -592,6 +592,73 @@ a:hover {
   margin-bottom: 30px;
 }
 
+html #header .header-nav-links {
+  justify-content: center;
+}
+html #header .header-nav-links .header-nav-main {
+  width: 100%;
+}
+html #header .header-nav-links nav {
+  width: 100%;
+}
+html #header .header-nav-links nav > ul {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  html #header .header-nav-links nav > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-left: 0;
+  }
+  html #header .header-nav-links nav > ul > li:first-child {
+    justify-content: flex-start;
+  }
+  html #header .header-nav-links nav > ul > li:first-child a:not(.btn) {
+    padding-left: 0 !important;
+  }
+  html #header .header-nav-links nav > ul > li:last-child {
+    justify-content: flex-end;
+  }
+  html #header .header-nav-links nav > ul > li:last-child a:not(.btn) {
+    padding-right: 0 !important;
+  }
+}
+html #header .header-nav-links nav > ul > li a {
+  font-family: "Alegreya", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: initial;
+  width: auto;
+}
+html #header .header-nav-links nav > ul > li a:not(.btn) {
+  padding-right: 7.5px !important;
+  padding-left: 7.5px !important;
+}
+html #header .header-nav-links nav > ul > li a i {
+  margin-right: 7.5px !important;
+}
+html #header .header-nav-links nav > ul > li .dropdown-item {
+  color: #ffffff;
+}
+html #header .header-nav-links nav > ul > li .dropdown-item:hover {
+  background: none;
+  color: #f1556c;
+}
+html #header .header-nav-links nav > ul > li .dropdown-menu {
+  top: 70px !important;
+}
+html #header .header-nav-links nav > ul li:hover > a {
+  color: #f1556c !important;
+}
+html #header .header-nav-links nav > ul:not(:hover) > li > a.active {
+  color: #f1556c !important;
+}
+html #header .header-btn-collapse-nav {
+  background: #36487b;
+}
+
 @media (max-width: 991px) {
   #header .header-nav-main nav > ul li.dropdown .dropdown-menu,
 ul.navbar-nav > li.dropdown .dropdown-menu {
@@ -628,66 +695,6 @@ html #header .header-column-nav {
   html #header .header-column-nav {
     flex-grow: 0;
   }
-}
-html #header .header-nav-links {
-  justify-content: center;
-}
-html #header .header-nav-links .header-nav-main {
-  width: 100%;
-}
-html #header .header-nav-links nav {
-  width: 100%;
-}
-html #header .header-nav-links nav > ul {
-  width: 100%;
-}
-@media (min-width: 992px) {
-  html #header .header-nav-links nav > ul > li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    margin-left: 0;
-  }
-  html #header .header-nav-links nav > ul > li:first-child {
-    justify-content: flex-start;
-  }
-  html #header .header-nav-links nav > ul > li:last-child {
-    justify-content: flex-end;
-  }
-}
-html #header .header-nav-links nav > ul > li a {
-  font-family: "Alegreya", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: initial;
-  width: auto;
-}
-html #header .header-nav-links nav > ul > li a:not(.btn) {
-  padding-right: 7.5px !important;
-  padding-left: 7.5px !important;
-}
-html #header .header-nav-links nav > ul > li a i {
-  margin-right: 7.5px !important;
-}
-html #header .header-nav-links nav > ul > li .dropdown-item {
-  color: #ffffff;
-}
-html #header .header-nav-links nav > ul > li .dropdown-item:hover {
-  background: none;
-  color: #f1556c;
-}
-html #header .header-nav-links nav > ul > li .dropdown-menu {
-  top: 70px !important;
-}
-html #header .header-nav-links nav > ul li:hover > a {
-  color: #f1556c !important;
-}
-html #header .header-nav-links nav > ul:not(:hover) > li > a.active {
-  color: #f1556c !important;
-}
-html #header .header-btn-collapse-nav {
-  background: #36487b;
 }
 @media (max-width: 991px) {
   html #header .header-column-logo {
@@ -951,7 +958,7 @@ h4 ~ .mf__separator {
 }
 .mf__footer__col {
   display: flex;
-  flex-basis: 25%;
+  flex: 1;
   padding: 15px;
 }
 @media (max-width: 899px) {
@@ -997,14 +1004,17 @@ h4 ~ .mf__separator {
   color: #ffffff !important;
   text-decoration: underline !important;
 }
-.mf__footer__col__inner--socials li:not(:first-of-type) {
+.mf__footer__col--socials {
+  flex: 0 auto;
+}
+.mf__footer__col--socials .mf__footer__col__inner__link {
   display: inline-block;
   padding-right: 15px;
 }
-.mf__footer__col__inner--socials li:last-of-type {
+.mf__footer__col--socials .mf__footer__col__inner__link:last-of-type {
   padding-right: 0;
 }
-.mf__footer__col__inner--socials i {
+.mf__footer__col--socials i {
   color: #ffffff;
   font-size: 3rem;
 }
