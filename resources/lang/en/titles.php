@@ -49,5 +49,9 @@ return [
         'Caregiver_Advantages' => 'MF Homecare Caregiver Advantages',
     ],
 
-
+    //Registration Phase 2
+    'registration-phase-2' => [
+        'Heading' => 'Register as a Caregiver​',
+        'Sub_Heading' => 'Phase 2',
+    ],
 ];
