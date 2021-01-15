@@ -63,7 +63,14 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request)
     {
-        $response = Http::post(route('api_caregiver_registration_phase_1_post'),[
+        $response_auth = Http::post(route('api_tokens_create'), [
+            'email' => 'felipe@vcompinc.com',
+            'password' => '12345678',
+            'token_name' => 'Test123'
+        ]);
+
+        $response = Http::withToken($response_auth->json()['token'])
+            ->post(route('api_caregiver_registration_phase_1_post'),[
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
