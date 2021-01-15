@@ -11,6 +11,11 @@ use Illuminate\Support\MessageBag;
 
 class LoginController extends Controller
 {
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
     /**
      * Handle an authentication attempt.
      *
