@@ -65,11 +65,13 @@ class CaregiverController extends Controller
     {
         $response_auth = Http::post(route('api_tokens_create'), [
             'email' => 'felipe@vcompinc.com',
-            'password' => '12345678',
+            'password' => '123456788',
             'token_name' => 'Test123'
         ]);
 
-        $response = Http::withToken($response_auth->json()['token'])
+        $token = (isset($response_auth->json()['token']))?$response_auth->json()['token']:null;
+
+        $response = Http::withToken($token)
             ->post(route('api_caregiver_registration_phase_1_post'),[
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
