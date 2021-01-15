@@ -215,7 +215,7 @@
 
     @error('403', 'storeUser')
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        
+
         <script>
 
             swal("{{$message}}");
