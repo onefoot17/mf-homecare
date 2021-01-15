@@ -41,84 +41,6 @@ html {
                 }
             }
 
-            &-nav {
-                &-links {
-                    justify-content: center;
-
-                    .header-nav-main {
-                        width: 100%;
-                    }
-
-                    nav {
-                        width: 100%;
-
-                        > ul {
-                            width: 100%;
-
-                            > li {
-                                @include for-992-up {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    flex: 1;
-                                    margin-left: 0;
-
-                                    &:first-child {
-                                        justify-content: flex-start;
-                                    }
-
-                                    &:last-child {
-                                        justify-content: flex-end;
-                                    }
-                                }
-
-                                a {
-                                    font-family: $font-family-headings;
-                                    font-size: 2rem;
-                                    font-weight: 700;
-                                    text-transform: initial;
-                                    width: auto;
-
-                                    &:not(.btn) {
-                                        padding-right: $padding/2 !important;
-                                        padding-left: $padding/2 !important;
-                                    }
-
-                                    i {
-                                        margin-right: $margin/2 !important;
-                                    }
-                                }
-
-                                .dropdown-item {
-                                    color: $nav-link-color;
-
-                                    &:hover {
-                                        background: none;
-                                        color: $nav-link-hover-color;
-                                    }
-                                }
-
-                                .dropdown-menu {
-                                    top: 70px !important;
-                                }
-                            }
-
-                            li:hover > a {
-                                color: $nav-link-hover-color !important;
-                            }
-
-                            &:not( :hover ) > li > a.active {
-                                color: $nav-link-active-color !important;
-                            }
-                        }
-                    }
-                }
-            }
-
-            &-btn-collapse-nav {
-                background: $purple;
-            }
-
             &-column {
                 @include for-992-down {
                     &-logo {
@@ -410,7 +332,7 @@ html.sticky-header-active .header-logo {
 
         &#{$es}col {
             display: flex;
-            flex-basis: 25%;
+            flex: 1;
             padding: $padding;
 
             @include for-tablet-landscape-down{
@@ -463,23 +385,23 @@ html.sticky-header-active .header-logo {
                         text-decoration: underline !important;
                     }
                 }
+            }
 
-                &#{$ms}socials {
-                    li {
-                        &:not(:first-of-type) {
-                            display: inline-block;
-                            padding-right: $padding;
-                        }
+            &#{$ms}socials {
+                flex: 0 auto;
 
-                        &:last-of-type {
-                            padding-right: 0;
-                        }
+                .mf__footer__col__inner__link {
+                    display: inline-block;
+                    padding-right: $padding;
+
+                    &:last-of-type {
+                        padding-right: 0;
                     }
+                }
 
-                    i {
-                        color: $white;
-                        font-size: 3rem;
-                    }
+                i {
+                    color: $white;
+                    font-size: 3rem;
                 }
             }
         }

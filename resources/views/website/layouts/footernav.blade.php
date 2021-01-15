@@ -85,7 +85,7 @@
                 </ul>
             </div>
 
-            <div class="mf__footer__col">
+            <div class="mf__footer__col mf__footer__col--socials">
                 <ul class="mf__footer__col__inner mf__footer__col__inner--socials">
                     <li class="mf__footer__col__inner__li">
                         <h4 class="mf__footer__col__inner__heading">@lang( 'titles.socials' )</h4>
@@ -95,15 +95,11 @@
                         <a class="mf__footer__col__inner__link" href="#">
                             <i class="fab fa-facebook"></i>
                         </a>
-                    </li>
 
-                    <li class="mf__footer__col__inner__li">
                         <a class="mf__footer__col__inner__link" href="#">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
 
-                    <li class="mf__footer__col__inner__li">
                         <a class="mf__footer__col__inner__link" href="#">
                             <i class="fab fa-youtube"></i>
                         </a>
