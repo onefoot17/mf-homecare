@@ -135,7 +135,7 @@
                                 <div class="form-group col-md-6">
                                     <label>First Name <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
+                                    <input type="text" class="form-control @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
                                         <div class="text-color-danger mt-3">
                                             {{$message}}
@@ -146,7 +146,7 @@
                                 <div class="form-group col-md-6">
                                     <label>Last Name <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
+                                    <input type="text" class="form-control @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
                                     <div class="text-color-danger mt-3">
                                             {{$message}}
@@ -159,7 +159,7 @@
                                 <div class="form-group col-md-6">
                                     <label>Your Email <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
+                                    <input type="text" class="form-control @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
 
                                     @error('email', 'storeUser')
                                         <div class="text-color-danger mt-3">
@@ -170,7 +170,7 @@
 
                                 <div class="form-group col-md-6">
                                     <label>Postal Code <span class="text-color-danger font-size-2rem">*</span></label>
-                                    <input type="text" class="form-control border-radius-0 h-auto @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
+                                    <input type="text" class="form-control @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
                                     @error('postal_code', 'storeUser')
                                         <div class="text-color-danger mt-3">
                                             {{$message}}
