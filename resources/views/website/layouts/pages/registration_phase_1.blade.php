@@ -4,7 +4,10 @@
 
 @section( 'css' )
     @parent
-    <script src="https://js.stripe.com/v3/"></script>
+        @if(env('DOWN_PAYMENT') === true)
+            <script src="https://js.stripe.com/v3/"></script>
+        @endif
+    
 @stop
 
 @section( 'content' )
@@ -188,13 +191,6 @@
                             @endif
                         </form>
 
-                        @error('403', 'storeUser')
-                            <div style="color: red" role="alert">
-                                {{env('APP_NAME')}} Api error: {{$message}}
-                            </div>
-
-                        @enderror
-
                         @if(env('DOWN_PAYMENT') === true)
                             <br>
                             <form id="payment-form">
@@ -216,6 +212,16 @@
 @stop
 
 @section( 'footer-scripts' )
+
+    @error('403', 'storeUser')
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script>
+
+            swal("{{$message}}");
+        </script>
+
+    @enderror
 
     @if(env('DOWN_PAYMENT') === true)
         <script>
