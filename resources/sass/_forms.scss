@@ -38,10 +38,17 @@ input:focus {
     } */
 
     &-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         margin-bottom: $margin*2;
 
-        &:last-of-type {
+        /* &:last-of-type {
             margin-bottom: 0;
+        } */
+
+        :first-child:not( .btn ) {
+            flex-basis: 100%;
         }
     }
 
@@ -56,6 +63,26 @@ input:focus {
         .mf__section--purple & {
             background-color: $cream;
             color: $black;
+        }
+    }
+
+    &-check {
+        &-input {
+            position: absolute !important;
+            visibility: hidden;
+
+            &:checked + label {
+                background-color: $form-radio-checked-bg-color;
+                color: $form-radio-checked-color;
+            }
+        }
+
+        &-label {
+            background-color: $form-radio-bg-color;
+            border-radius: $border-radius;
+            color: $form-radio-color;
+            margin-bottom: $margin;
+            padding: $padding/2 $padding;
         }
     }
 }
