@@ -53,5 +53,6 @@ return [
     'registration-phase-2' => [
         'Heading' => 'Register as a Caregiver​',
         'Sub_Heading' => 'Phase 2',
+        'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions',
     ],
 ];

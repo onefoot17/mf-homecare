@@ -347,7 +347,7 @@ a:hover {
   color: #ffffff !important;
   font-size: 1.6rem;
   line-height: 1;
-  padding: 15px 15px;
+  padding: 15px;
   /* // .ra__settings {
       &-outline-success {
           border-color: $purple;
@@ -558,10 +558,16 @@ a:hover {
   color: #f1556c !important;
 }
 .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 30px;
+  /* &:last-of-type {
+      margin-bottom: 0;
+  } */
 }
-.form-group:last-of-type {
-  margin-bottom: 0;
+.form-group :first-child:not(.btn) {
+  flex-basis: 100%;
 }
 .form-control {
   border-radius: 8px;
@@ -573,6 +579,21 @@ a:hover {
 .mf__section--purple .form-control {
   background-color: #F7F2EF;
   color: #000000;
+}
+.form-check-input {
+  position: absolute !important;
+  visibility: hidden;
+}
+.form-check-input:checked + label {
+  background-color: #9e3a5f;
+  color: #F7F2EF;
+}
+.form-check-label {
+  background-color: #F7F2EF;
+  border-radius: 8px;
+  color: #000000;
+  margin-bottom: 15px;
+  padding: 7.5px 15px;
 }
 
 .form-control.is-invalid,
