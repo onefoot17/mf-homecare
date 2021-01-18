@@ -7,7 +7,7 @@
         @if(env('DOWN_PAYMENT') === true)
             <script src="https://js.stripe.com/v3/"></script>
         @endif
-    
+
 @stop
 
 @section( 'content' )
@@ -130,13 +130,13 @@
 
                         <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <p class="text-center"><span class="text-color-danger mb-2 font-size-2rem">*</span> is required field</p>
+                        <p class="mb-3 text-center"><strong><span class="text-color-danger font-size-2rem">*</span> is required field</strong></p>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>First Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">First Name <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
@@ -147,7 +147,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Last Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Last Name <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
@@ -160,7 +160,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Your Email <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Your Email <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
 
@@ -172,7 +172,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Postal Code <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Postal Code <span class="text-color-danger font-size-2rem">*</span></label>
                                     <input type="text" class="form-control @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
                                     @error('postal_code', 'storeUser')
                                         <div class="text-color-danger mt-3">
@@ -182,23 +182,22 @@
                                 </div>
                             </div>
 
-                            @if(env('DOWN_PAYMENT') !== true)
+                            @if( env( 'DOWN_PAYMENT' ) !== true )
                                 <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <button type="submit" class="btn btn-success">@lang('Submit' )</button>
+                                    <div class="form-group col-md-12 justify-content-center">
+                                        <button type="submit" class="btn btn-success">@lang( 'Submit' )</button>
                                     </div>
                                 </div>
                             @endif
                         </form>
 
-                        @if(env('DOWN_PAYMENT') === true)
-                            <br>
+                        @if( env( 'DOWN_PAYMENT' ) === true )
                             <form id="payment-form">
                                 <div id="card-element">
                                 <!-- Elements will create input elements here -->
                                 </div>
 
-                                <button id="submit" class="btn btn-success">@lang('Submit and Pay' )</button>
+                                <button id="submit" class="btn btn-success">@lang( 'Submit and Pay' )</button>
 
                                 <!-- We'll put the error messages in this element -->
                                 <div id="card-errors" style="color: red" role="alert"></div>
