@@ -59,6 +59,8 @@ $footer: 'footer' !default;
 $bg-color: transparent !default;
 $color: transparent !default;
 $border-radius: 8px;
+$link-color: inherit !default;
+$link-hover-color: $black !default;
 
 // Typography
 // $font-family: Arial, Helvetica, Verdana, sans-serif !default;
@@ -67,6 +69,7 @@ $font-family-alegreya: 'Alegreya', serif !default;
 $font-family-jomolhari: Jomolhari !default;
 $font-family-roboto: 'Roboto', sans-serif !default;
 $font-family-headings: $font-family-alegreya !default;
+$font-family-text: $font-family-roboto !default;
 $font-size: 1.6rem !default;
 $body-font-size: 1.6rem !default;
 $h1-font-size: 3rem !default;
@@ -137,10 +140,14 @@ $form-error-color: $red-light !important !default;
 $form-error-border-color: $form-error-color !default;
 $form-required-color: $form-error-color !default;
 $form-required-border-color: $form-error-color !default;
-$form-radio-bg-color: $cream !default;
 $form-radio-color: $black !default;
-$form-radio-checked-bg-color: $maroon !default;
+$form-radio-hover-color: $cream !default;
 $form-radio-checked-color: $cream !default;
+$form-radio-bg-color: $cream !default;
+$form-radio-bg-hover-color: $maroon !default;
+$form-radio-checked-bg-color: $maroon !default;
+$form-label-font-family: $font-family-headings !default;
+$form-label-font-size: $h2-font-size !default;
 
 // Cards
 $card-bg-color: transparent !default;

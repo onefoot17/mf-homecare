@@ -335,7 +335,7 @@ html.sticky-header-active .header-logo {
             flex: 1;
             padding: $padding;
 
-            @include for-tablet-landscape-down{
+            @include for-900-down{
                 flex-basis: 50%;
             }
 
@@ -379,9 +379,10 @@ html.sticky-header-active .header-logo {
 
                 &#{$es}link {
                     color: $white !important;
+                    text-decoration: none;
 
                     &:hover {
-                        color: $white !important;
+                        color: $red-light !important;
                         text-decoration: underline !important;
                     }
                 }
@@ -400,7 +401,6 @@ html.sticky-header-active .header-logo {
                 }
 
                 i {
-                    color: $white;
                     font-size: 3rem;
                 }
             }
@@ -462,7 +462,7 @@ html.sticky-header-active .header-logo {
                     flex-basis: calc( ( 100% / 4 ) - ( #{ $margin }*2 ) );
                     margin: $margin;
 
-                    @include for-tablet-landscape-down{
+                    @include for-900-down{
                         flex-basis: calc( ( 100% / 2 ) - ( #{ $margin }*2 ) );
                     }
 
@@ -577,7 +577,7 @@ html.sticky-header-active .header-logo {
                 margin: $margin;
                 padding: $padding*2;
 
-                @include for-tablet-landscape-down {
+                @include for-900-down {
                     flex-basis: 100%;
                     height: auto;
                 }
@@ -631,6 +631,21 @@ html.sticky-header-active .header-logo {
         .card-body {
             background-color: $card-bg-color;
             border-radius: $border-radius;
+        }
+    }
+
+    &#{$es}registration-phase-2 .form-row-profile-image {
+        .w-25 {
+            margin-right: $margin !important;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+
+            @include for-900-down {
+                flex-basis: calc( 50% - ( #{$margin}/2 ) );
+                width: calc( 50% - ( #{$margin}/2 ) ) !important;
+            }
         }
     }
 }
