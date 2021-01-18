@@ -67,6 +67,8 @@ input:focus {
     }
 
     &-check {
+        padding-left: 0;
+
         &-input {
             position: absolute !important;
             visibility: hidden;

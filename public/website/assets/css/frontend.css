@@ -580,6 +580,9 @@ a:hover {
   background-color: #F7F2EF;
   color: #000000;
 }
+.form-check {
+  padding-left: 0;
+}
 .form-check-input {
   position: absolute !important;
   visibility: hidden;
