@@ -37,7 +37,7 @@
 
         <section class="mf__section mf__section--purple">
             <div class="container-xl mf__content">
-                <div class="row text-center">
+                <div class="row">
                     <div class="col-md-10 mx-auto">
                         <p class="text-center"><span class="text-color-danger mb-2 font-size-2rem">*</span> is required field</p>
 
@@ -1118,10 +1118,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-
-
-
 
                             @if(env('DOWN_PAYMENT') !== true)
                                 <div class="form-row">
