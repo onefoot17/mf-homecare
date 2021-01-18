@@ -68,7 +68,7 @@ class CaregiverController extends Controller
 
         $response_auth = Http::post(route('api_tokens_create'), [
             'email' => 'felipe@vcompinc.com',
-            'password' => '123456788',
+            'password' => '12345678',
             'token_name' => 'Test123'
         ]);
 
