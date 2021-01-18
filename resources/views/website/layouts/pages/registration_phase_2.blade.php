@@ -37,15 +37,17 @@
 
         <section class="mf__section mf__section--purple">
             <div class="container-xl mf__content">
-                <div class="row text-center">
+                <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <p class="text-center"><span class="text-color-danger mb-2 font-size-2rem">*</span> is required field</p>
+                        <p class="text-center mb-3"><strong><span class="text-color-danger font-size-2rem">*</span> is required field</strong></p>
+
+                        <div class="mf__separator mx-auto appear-animation mb-2x" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>First Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">First Name <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
@@ -56,7 +58,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Last Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Last Name <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
@@ -69,7 +71,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Your Email <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Your Email <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error( 'email', 'storeUser' ) is-invalid @enderror" name="email" id='email' value="{{ old( 'email' ) }}" required />
 
@@ -81,7 +83,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Phone <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Phone <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="number" class="form-control @error( 'phone', 'storeUser' ) is-invalid @enderror" name="phone" id="phone" value="{{ old( 'phone' ) }}" required />
 
@@ -96,7 +98,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <div class="form-check">
-                                        <label>Select your Gender <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">Select your Gender <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -119,7 +121,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Birth Date <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Birth Date <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="date" class="form-control @error( 'birth_date', 'storeUser' ) is-invalid @enderror" name="birth_date" id="birth_date" value="{{ old( 'birth_date' ) }}" required />
 
@@ -131,27 +133,27 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="inputAddress">Address</label>
-
-                                <input type="text" class="form-control @error( 'address', 'storeUser' ) is-invalid @enderror" name="birth_date" id="birth_date" value="{{ old( 'birth_date' ) }}" id="address" placeholder="1234 Main St" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="inputAddress2">Address 2</label>
-
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                            </div>
-
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                  <label for="inputCity">City</label>
+                                    <label class="form-check-label" for="inputAddress">Address</label>
 
-                                  <input type="text" class="form-control" id="inputCity">
+                                    <input type="text" class="form-control @error( 'address', 'storeUser' ) is-invalid @enderror" name="birth_date" id="birth_date" value="{{ old( 'birth_date' ) }}" id="address" placeholder="1234 Main St" required />
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label" for="inputAddress2">Address 2</label>
+
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="form-check-label" for="inputCity">City</label>
+
+                                    <input type="text" class="form-control" id="inputCity">
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label for="province">Province</label>
+                                    <label class="form-check-label" for="province">Province</label>
 
                                     <select id="province" class="form-control">
                                         <option value="" selected="selected"></option>
@@ -172,11 +174,10 @@
                                 </div>
 
                                 <div class="form-group col-md-2">
-                                    <label for="postal_code">Postal Code</label>
+                                    <label class="form-check-label" for="postal_code">Postal Code</label>
 
                                     <input type="text" class="form-control" id="postal_code">
                                 </div>
-
 
                                 @error( 'address', 'storeUser' )
                                     <div class="text-color-danger mt-3">
@@ -187,7 +188,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="geographic_radius">Geographic radius you are willing to travel to</label>
+                                    <label class="form-check-label" for="geographic_radius">Geographic radius you are willing to travel to</label>
 
                                     <select name="geographic_radius" id="geographic_radius" class="form-control">
                                         <option value="5 km">5 km</option>
@@ -213,7 +214,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>How would you rate your level of spoken English? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">How would you rate your level of spoken English? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -257,7 +258,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>What other language do you speak? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">What other language do you speak? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -331,7 +332,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>How many years of experience do you have as a Caregiver? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">How many years of experience do you have as a Caregiver? <span class="text-color-danger font-size-2rem">*</span></label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">This will help both you and the client as the clients’ needs could be more severe and require a much higher level of care.</p>
 
@@ -393,7 +394,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>In the last 24 months, how many months were you a caregiver for? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">In the last 24 months, how many months were you a caregiver for? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -437,7 +438,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>What type of caregiving have you done? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">What type of caregiving have you done? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -511,7 +512,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>Do you have any relevant qualifications? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">Do you have any relevant qualifications? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -591,7 +592,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label for="qualifications_text">Qualifications</label>
+                                        <label class="form-check-label" for="qualifications_text">Qualifications</label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you would like to elaborate on your qualifications above, please do so in the field below.</p>
 
@@ -603,7 +604,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>What Animals are You Fine Being Around? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">What Animals are You Fine Being Around? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -635,7 +636,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label for="who">Describe Who You Are</label>
+                                        <label class="form-check-label" for="who">Describe Who You Are</label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Describe who you are and how you could help future clients in selecting you as a warm and compassionate person that will make a difference in their lives.</p>
 
@@ -647,7 +648,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label for="experience">Experience</label>
+                                        <label class="form-check-label" for="experience">Experience</label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Use separate lines for experiences</p>
 
@@ -659,7 +660,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label for="additional">Additional Comments</label>
+                                        <label class="form-check-label" for="additional">Additional Comments</label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Anything you feel would be valued by clients</p>
 
@@ -671,13 +672,13 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>How did you hear about us? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">How did you hear about us? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_1" id="hear_1" value="{{ old( 'hear_1' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_1">Existing MF Homecae Caregiver/Companion</label>
+                                        <label class="form-check-label" for="hear_1">Existing MF Homecare Caregiver/Companion</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -757,7 +758,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>What type of care work are you looking for? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">What type of care work are you looking for? <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -801,7 +802,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>Select the type of services you want to provide <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">Select the type of services you want to provide <span class="text-color-danger font-size-2rem">*</span></label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>Caregiver Services</strong></p>
 
@@ -907,7 +908,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label>Do you have a car that you are willing to use in order to take clients to appointments or run errands with? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">Do you have a car that you are willing to use in order to take clients to appointments or run errands with? <span class="text-color-danger font-size-2rem">*</span></label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you select yes, please know that any out-of-pocket expenses like parking fees should be the client’s responsibility.</p>
 
@@ -936,10 +937,10 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row form-row-profile-image">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label for="profile_image">Please Upload your Profile Picture <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label" for="profile_image">Please Upload your Profile Picture <span class="text-color-danger font-size-2rem">*</span></label>
 
                                         <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Your Profile Picture is mandatory and will help clients in their selection process.</p>
 
@@ -948,11 +949,15 @@
 
                                     <div class="form-check w-100">
                                         <input type="file" class="form-control-file" id="profile_image">
+
+                                        <label class="form-check-label" for="profile_image">Upload Picture</label>
                                     </div>
 
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check form-check-inline w-25">
                                         <img class="w-100" src="{{ asset( 'website/assets/images/profile-image-correct.jpg' ) }}" />
+                                    </div>
 
+                                    <div class="form-check form-check-inline w-25">
                                         <img class="w-100" src="{{ asset( 'website/assets/images/profile-image-wrong.jpg' ) }}" />
                                     </div>
 
@@ -966,7 +971,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label for="hourly_rate">Your expected hourly rate? <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label" for="hourly_rate">Your expected hourly rate? <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Please select a fair price that will guarantee a higher success rate of getting jobs.</p>
 
@@ -995,7 +1000,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label for="hourly_rate">Covid-19 Test Results if available <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label" for="hourly_rate">Covid-19 Test Results if available <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">After completing the registration, please login to your account and upload your covid-19 test results.</p>
                                 </div>
@@ -1003,7 +1008,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label for="hourly_rate">Banking Information For Direct Deposit</label>
+                                    <label class="form-check-label" for="hourly_rate">Banking Information For Direct Deposit</label>
 
                                     <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">This information is needed so that we can set up your direct deposit, which means that money will automatically be deposited into your account every week. It will be kept encrypted in our servers.
 
@@ -1017,27 +1022,27 @@
 
                                     <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Below are some of the bank websites where you can find this information:</p>
 
-                                    <ul>
-                                        <li><a href="https://bmo.intelliresponse.com/obs_eng/?requestType=NormalRequest&amp;source=3&amp;id=1868&amp;question=How+do+I+find+the+branch%2Ftransit+or+account+number" target="_blank">– BMO</a></li>
+                                    <ul class="w-100 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                        <li><a href="https://bmo.intelliresponse.com/obs_eng/?requestType=NormalRequest&amp;source=3&amp;id=1868&amp;question=How+do+I+find+the+branch%2Ftransit+or+account+number" target="_blank">BMO</a></li>
 
-                                        <li><a href="https://www.cibc.com/en/personal-banking/ways-to-bank/how-to/transit-account-institution-number.html" target="_blank">– CIBC</a></li>
+                                        <li><a href="https://www.cibc.com/en/personal-banking/ways-to-bank/how-to/transit-account-institution-number.html" target="_blank">CIBC</a></li>
 
-                                        <li><a href="https://www.hsbc.ca/online-banking/payroll-direct-deposit/" target="_blank">– HSBC</a></li>
+                                        <li><a href="https://www.hsbc.ca/online-banking/payroll-direct-deposit/" target="_blank">HSBC</a></li>
 
-                                        <li><a href="https://www.rbcroyalbank.com/onlinebanking/bankingusertips/account.html" target="_blank">– RBC</a></li>
+                                        <li><a href="https://www.rbcroyalbank.com/onlinebanking/bankingusertips/account.html" target="_blank">RBC</a></li>
 
-                                        <li><a href="https://help.scotiabank.com/article/whats-my-transit-number" target="_blank">– Scotiabank</a></li>
+                                        <li><a href="https://help.scotiabank.com/article/whats-my-transit-number" target="_blank">Scotiabank</a></li>
 
-                                        <li><a href="https://www.tangerine.ca/en/faq/answer?permaLink=what-are-the-tangerine-bank-transit-and-institution-numbers--generic-phone--en--0--1&amp;responseId=219--GoGaau8TXgvFqrkV93P2GwDNLH3eoKUW" target="_blank">– Tangerine</a></li>
+                                        <li><a href="https://www.tangerine.ca/en/faq/answer?permaLink=what-are-the-tangerine-bank-transit-and-institution-numbers--generic-phone--en--0--1&amp;responseId=219--GoGaau8TXgvFqrkV93P2GwDNLH3eoKUW" target="_blank">Tangerine</a></li>
 
-                                        <li><a href="https://www.td.com/ca/en/investing/search/?query=How%20do%20I%20find%20my%20transit%20number%2C%20institution%20number%20and%20account%20number%3F&amp;preExpand=true&amp;source=100#:~:text=If%20you%20don't%20have%20a%20cheque%2C%20the%20easiest%20way,and%207%2Ddigit%20Account%20number" target="_blank">– TD</a></li>
+                                        <li><a href="https://www.td.com/ca/en/investing/search/?query=How%20do%20I%20find%20my%20transit%20number%2C%20institution%20number%20and%20account%20number%3F&amp;preExpand=true&amp;source=100#:~:text=If%20you%20don't%20have%20a%20cheque%2C%20the%20easiest%20way,and%207%2Ddigit%20Account%20number" target="_blank">TD</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label>Bank Name</label>
+                                    <label class="form-check-label">Bank Name</label>
 
                                     <input type="text" class="form-control @error( 'bank_name', 'storeUser' ) is-invalid @enderror" name="bank_name" id='bank_name' value="{{ old( 'bank_name' ) }}" required />
 
@@ -1049,7 +1054,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label>Institution No.</label>
+                                    <label class="form-check-label">Institution No.</label>
 
                                     <input type="text" class="form-control @error( 'bank_institution', 'storeUser' ) is-invalid @enderror" name="bank_institution" id='bank_institution' value="{{ old( 'bank_institution' ) }}" required />
 
@@ -1061,7 +1066,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label>Transit No.</label>
+                                    <label class="form-check-label">Transit No.</label>
 
                                     <input type="text" class="form-control @error( 'transit_no', 'storeUser' ) is-invalid @enderror" name="transit_no" id='transit_no' value="{{ old( 'transit_no' ) }}" required />
 
@@ -1073,7 +1078,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label>Account No.</label>
+                                    <label class="form-check-label">Account No.</label>
 
                                     <input type="text" class="form-control @error( 'account_no', 'storeUser' ) is-invalid @enderror" name="account_no" id='account_no' value="{{ old( 'account_no' ) }}" required />
 
@@ -1087,15 +1092,15 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label>Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check w-100 text-center">
                                         <input type="checkbox" class="form-check-input @error( 'consent', 'storeUser' ) is-invalid @enderror" name="consent" id="consent" value="{{ old( 'consent' ) }}" required />
 
-                                        <label class="form-check-label form-check-label-consent" for="consent">
+                                        <label class="form-check-label form-check-label-checkbox w-100" for="consent">
                                             <span>I understand that as a Caregiver and/or Companion working through the MF Homecare Platform, I am not employed by MF Homecare. I will be a self-employed, independent contractor, meaning that I will be responsible for my own taxes and for preparing my own tax returns with the Canada Revenue Agency.</span>
 
-                                            <span class="d-block"><strong><u>Click here to accept</u></strong></span>
+                                            <span class="d-block font-weight-bold text-decoration-underline">Click here to accept</span>
                                         </label>
                                     </div>
                                 </div>
@@ -1103,12 +1108,12 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label>Stripe Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">Stripe Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check w-100 text-center">
                                         <input type="checkbox" class="form-check-input @error( 'stripe', 'storeUser' ) is-invalid @enderror" name="stripe" id="stripe" value="{{ old( 'stripe' ) }}" required />
 
-                                        <label class="form-check-label" for="stripe">By registering your account, you agree to Stripe Services Agreement and the Stripe Connected Account Agreement.</label>
+                                        <label class="form-check-label form-check-label-checkbox w-100" for="stripe">By registering your account, you agree to Stripe Services Agreement and the Stripe Connected Account Agreement.</label>
                                     </div>
 
                                     <ul>
@@ -1119,27 +1124,22 @@
                                 </div>
                             </div>
 
-
-
-
-
-                            @if(env('DOWN_PAYMENT') !== true)
+                            @if( env( 'DOWN_PAYMENT' ) !== true )
                                 <div class="form-row">
                                     <div class="form-group col-md-12 justify-content-center">
-                                        <button type="submit" class="btn btn-success">@lang('Submit' )</button>
+                                        <button type="submit" class="btn btn-success">@lang( 'Submit' )</button>
                                     </div>
                                 </div>
                             @endif
                         </form>
 
-                        @if(env('DOWN_PAYMENT') === true)
-                            <br>
+                        @if( env( 'DOWN_PAYMENT' ) === true )
                             <form id="payment-form">
                                 <div id="card-element">
                                 <!-- Elements will create input elements here -->
                                 </div>
 
-                                <button id="submit" class="btn btn-success">@lang('Submit and Pay' )</button>
+                                <button id="submit" class="btn btn-success">@lang( 'Submit and Pay' )</button>
 
                                 <!-- We'll put the error messages in this element -->
                                 <div id="card-errors" style="color: red" role="alert"></div>

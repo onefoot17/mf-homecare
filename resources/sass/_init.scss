@@ -64,13 +64,21 @@ p {
     color: $black;
 }
 
+span {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 a {
     @include line-height;
 
-    color: inherit;
+    color: $link-color;
+    text-decoration: underline;
 
     &:hover {
         @include transition;
+
+        color: $link-hover-color;
     }
 }
 
@@ -83,4 +91,16 @@ a {
         color: $cream;
         font-weight: 600;
     }
+}
+
+.mb-05x {
+    margin-bottom: $margin/2 !important;
+}
+
+.mb-1x {
+    margin-bottom: $margin !important;
+}
+
+.mb-2x {
+    margin-bottom: $margin*2 !important;
 }

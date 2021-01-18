@@ -26,10 +26,10 @@
 @mixin for-640-up {
     @media (min-width: 640px) { @content; }
 }
-@mixin for-tablet-landscape-down {
+@mixin for-900-down {
     @media (max-width: 899px) { @content; }
 }
-@mixin for-tablet-landscape-up {
+@mixin for-900-up {
     @media (min-width: 900px) { @content; }
 }
 @mixin for-992-down {
