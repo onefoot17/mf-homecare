@@ -63,8 +63,7 @@ class CaregiverController extends Controller
 
     public function storeRegistrationPhase1(Request $request)
     {
-
-        \URL::forceRootUrl(env('APP_PRIVATE_URL'));
+        \URL::forceRootUrl(config('app.private_url'));
 
         $response_auth = Http::post(route('api_tokens_create'), [
             'email' => 'felipe@vcompinc.com',
@@ -85,6 +84,8 @@ class CaregiverController extends Controller
         if($response->status() >= 400){
             return redirect()->back()->withInput()->withErrors($response->json(), 'storeUser');
         }
+
+        \URL::forceRootUrl(config('app.url'));
 
         return redirect()->route('thank_you_phase_1', [
             'language' => request()->segment(1)
