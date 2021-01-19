@@ -1,4 +1,8 @@
-@section( 'title' ) {{ $title ?? __( 'Caregiver and Companionship Services for the Elderly - MF Homecare' ) }} @stop
+@section( 'title' )
+    @php $title = __( 'Register as a Caregiver' ) @endphp
+
+    {{ 'Phase 1 | ' . $title }}
+@stop
 
 @extends( 'website.layouts.main' )
 
@@ -7,14 +11,21 @@
         @if(env('DOWN_PAYMENT') === true)
             <script src="https://js.stripe.com/v3/"></script>
         @endif
-
 @stop
+
+@if ( !empty( Request::segment( 3 ) ) )
+    @php $segment = Request::segment( 3 ) @endphp
+@elseif ( !empty( Request::segment( 2 ) ) )
+    @php $segment = Request::segment( 2 ) @endphp
+@endif
 
 @section( 'content' )
     <div role="main" class="main">
-        <section class="mf__banner" style="background-image: url( '{{ asset( 'website/assets/images/banners/' . 'banner-mf__' . Request::segment( 3 ) . '.jpg' ) }}' );">
+        <section class="mf__banner" style="background-image: url( '{{ asset( 'website/assets/images/banners/' . 'banner-mf__' . $segment . '.jpg' ) }}' );">
             <section class="mf__banner__overlay">
-                <h1>@lang( 'titles.registration_phase_1.Heading' )
+                <h1>
+                    @lang( $title )
+
                     <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_1.Sub_Heading' )</span>
                 </h1>
             </section>

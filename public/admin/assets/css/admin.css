@@ -344,6 +344,10 @@ a:hover {
   margin-bottom: 30px !important;
 }
 
+.background-position-y-center {
+  background-position-y: center !important;
+}
+
 .ra__dark input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5) !important;
 }

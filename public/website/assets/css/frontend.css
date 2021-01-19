@@ -360,6 +360,10 @@ a:hover {
   margin-bottom: 30px !important;
 }
 
+.background-position-y-center {
+  background-position-y: center !important;
+}
+
 .btn, .swal2-popup .swal2-styled.swal2-confirm {
   background-color: #000000 !important;
   border-radius: 50px;
@@ -943,6 +947,7 @@ html.sticky-header-active .header-logo img {
 }
 
 .mf__banner {
+  background-attachment: fixed;
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -952,7 +957,7 @@ html.sticky-header-active .header-logo img {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 350px;
+  min-height: 385px;
   text-align: center;
 }
 .mf__banner h1 {
@@ -1108,8 +1113,10 @@ h4 ~ .mf__separator {
   color: #f1556c !important;
   text-decoration: underline !important;
 }
-.mf__footer__col--socials {
-  flex: 0 auto;
+@media (min-width: 900px) {
+  .mf__footer__col--socials {
+    flex: 0 auto;
+  }
 }
 .mf__footer__col--socials .mf__footer__col__inner__link {
   display: inline-block;

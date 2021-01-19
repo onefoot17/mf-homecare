@@ -1,4 +1,10 @@
-@section( 'title' ) {{ $title ?? __( 'Caregiver and Companionship Services for the Elderly - MF Homecare' ) }} @stop
+@section( 'title' )
+    @php
+        $title =  __( 'Caregiver and Companionship Services for the Elderly - MF Homecare' )
+    @endphp
+
+    {{ '' . $title }}
+@stop
 
 @extends( 'website.layouts.main', [ 'logo_animation_delay' => 7000 ] )
 
