@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Users\SettingsController;
 use App\Http\Controllers\Admin\Users\UsersController;
 
 use App\Http\Controllers\Website\IndexController;
+use App\Http\Controllers\Website\PagesController;
 use App\Http\Controllers\Website\CaregiverController;
 use App\Http\Controllers\Website\MessagesController;
 use App\Http\Controllers\Website\CallbacksController;
@@ -90,6 +91,8 @@ Route::group(['prefix' => '{language}'], function(){
             Route::delete('/destroy/{id}', [UsersController::class, 'destroy'])->name('admin_users_destroy');
         });
     });
+
+    Route::get('/how-we-work', [PagesController::class, 'howWeWork'])->name('how_we_work');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

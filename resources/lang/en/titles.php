@@ -27,32 +27,39 @@ return [
     'trip_to_appointments_or_other_outings_by_car' => 'Trip to appointments or other outings by car',
     'Someone_to_spend_time' => 'Someone to spend time with and Emotional Support',
     'watch_our_video' => 'Watch our Video',
-    'register_as_a_caregiver' => 'Register As A Caregiver',
-    'register_as_a_client' => 'Register As A Client',
-    'how_we_work' => 'How We Work',
-    'register_as_a_caregiver' => 'Register as a Caregiver',
-    'register_as_a_client' => 'Register as a Client',
-    'contact_us' => 'Contact Us',
-    'information' => 'Information',
-    'identity_background_check' => 'Identity & Background Check',
-    'cancellation_policy' => 'Cancellation Policy',
-    'terms_conditions' => 'Terms & Conditions',
-    'privacy_policy' => 'Privacy Policy',
-    'coming_soon' => 'Coming Soon',
-    'socials' => 'Socials',
 
-    //Registration Phase 1
+    // Footer
+    'footer' => [
+        'register_as_a_caregiver' => 'Register As A Caregiver',
+        'register_as_a_client' => 'Register As A Client',
+        'how_we_work' => 'How We Work',
+        'register_as_a_caregiver' => 'Register as a Caregiver',
+        'register_as_a_client' => 'Register as a Client',
+        'contact_us' => 'Contact Us',
+        'information' => 'Information',
+        'identity_background_check' => 'Identity & Background Check',
+        'cancellation_policy' => 'Cancellation Policy',
+        'terms_conditions' => 'Terms & Conditions',
+        'privacy_policy' => 'Privacy Policy',
+        'coming_soon' => 'Coming Soon',
+        'socials' => 'Socials',
+    ],
+
+    // Registration Phase 1
     'registration_phase_1' => [
-        'Heading' => 'Register as a Caregiver​',
         'Sub_Heading' => '(Registration Fee waived for a limited time)',
         'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions',
         'Caregiver_Advantages' => 'MF Homecare Caregiver Advantages',
     ],
 
-    //Registration Phase 2
-    'registration-phase-2' => [
-        'Heading' => 'Register as a Caregiver​',
+    // Registration Phase 2
+    'registration_phase_2' => [
         'Sub_Heading' => 'Phase 2',
         'Become_Caregivers' => 'Become One of Our Trusted Caregivers or Companions',
+    ],
+
+    // How We Work
+    'how_we_work' => [
+        'Section_2_Heading' => 'Registration',
     ],
 ];

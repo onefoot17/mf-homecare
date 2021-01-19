@@ -1,4 +1,8 @@
-@section( 'title' ) {{ $title ?? __( 'Caregiver and Companionship Services for the Elderly - MF Homecare' ) }} @stop
+@section( 'title' )
+    @php $title = __( 'Register as a Caregiver' ) @endphp
+
+    {{ 'Phase 2 | ' . $title }}
+@stop
 
 @extends( 'website.layouts.main' )
 
@@ -7,12 +11,20 @@
     <script src="https://js.stripe.com/v3/"></script>
 @stop
 
+@if ( !empty( Request::segment( 3 ) ) )
+    @php $segment = Request::segment( 3 ) @endphp
+@elseif ( !empty( Request::segment( 2 ) ) )
+    @php $segment = Request::segment( 2 ) @endphp
+@endif
+
 @section( 'content' )
     <div role="main" class="main">
-        <section class="mf__banner" style="background-image: url( '{{ asset( 'website/assets/images/banners/' . 'banner-mf__' . Request::segment( 3 ) . '.jpg' ) }}' );">
+        <section class="mf__banner" style="background-image: url( '{{ asset( 'website/assets/images/banners/' . 'banner-mf__' . $segment . '.jpg' ) }}' );">
             <section class="mf__banner__overlay">
-                <h1>@lang( 'titles.registration-phase-2.Heading' )
-                    <span class="mf__banner__sub_heading">@lang( 'titles.registration-phase-2.Sub_Heading' )</span>
+                <h1>
+                    @lang( $title )
+
+                    <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_2.Sub_Heading' )</span>
                 </h1>
             </section>
         </section>
@@ -21,7 +33,7 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration-phase-2.Become_Caregivers' )</h1>
+                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.Become_Caregivers' )</h1>
 
                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
