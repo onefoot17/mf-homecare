@@ -9,13 +9,13 @@
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.how_we_work' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'how_we_work', Request::segment( 1 ) ) }}">@lang( 'titles.footer.how_we_work' )</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.register_as_a_caregiver' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'caregiver_registration_phase_1', Request::segment( 1 ) ) }}">@lang( 'titles.footer.register_as_a_caregiver' )</a>
                         </p>
                     </li>
 
@@ -27,7 +27,7 @@
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.contact_us' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'contact_us', Request::segment( 1 ) ) }}">@lang( 'titles.footer.contact_us' )</a>
                         </p>
                     </li>
                 </ul>

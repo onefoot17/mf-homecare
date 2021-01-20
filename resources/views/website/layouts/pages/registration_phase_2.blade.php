@@ -24,7 +24,7 @@
                 <h1>
                     @lang( $title )
 
-                    <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_2.Sub_Heading' )</span>
+                    <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_2.sub_heading' )</span>
                 </h1>
             </section>
         </section>
@@ -33,15 +33,15 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.Become_Caregivers' )</h1>
+                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.become_caregivers' )</h1>
 
                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Congratulations! Your Background Check was successful and we can now proceed with the Phase 2 of your registration process. Please fill in the form below and Submit the information when ready. Selections are to be made by clicking on the corresponding box.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.congratulations_your' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Multiple selections are available in some cases by clicking on more than one box.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.multiple_selections' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>Please note that once registered, you will have to log in to your account and set up your available days and hours to work with MF Homecare</strong></p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.please_note' )</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <p class="text-center mb-3"><strong><span class="text-color-danger font-size-2rem">*</span> is required field</strong></p>
+                        <p class="text-center mb-3"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_2.form.required' )</strong></p>
 
                         <div class="mf__separator mx-auto appear-animation mb-2x" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
@@ -59,7 +59,7 @@
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">First Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.first_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
@@ -70,7 +70,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Last Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.last_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
@@ -83,7 +83,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Your Email <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.email' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error( 'email', 'storeUser' ) is-invalid @enderror" name="email" id='email' value="{{ old( 'email' ) }}" required />
 
@@ -95,7 +95,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Phone <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.phone' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="number" class="form-control @error( 'phone', 'storeUser' ) is-invalid @enderror" name="phone" id="phone" value="{{ old( 'phone' ) }}" required />
 
@@ -110,19 +110,19 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <div class="form-check">
-                                        <label class="form-check-label">Select your Gender <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.gender.gender_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'gender', 'storeUser' ) is-invalid @enderror" name="gender" id="gender_1" value="{{ old( 'gender_1' ) }}" required />
 
-                                        <label class="form-check-label" for="gender_1">Male</label>
+                                        <label class="form-check-label" for="gender_1">@lang( 'titles.registration_phase_2.form.gender.gender_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'gender', 'storeUser' ) is-invalid @enderror" name="gender" id="gender_2" value="{{ old( 'gender_2' ) }}" required />
 
-                                        <label class="form-check-label" for="gender_2">Female</label>
+                                        <label class="form-check-label" for="gender_2">@lang( 'titles.registration_phase_2.form.gender.gender_2' )</label>
                                     </div>
 
                                     @error('gender', 'storeUser')
@@ -133,7 +133,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Birth Date <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.birth_date' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="date" class="form-control @error( 'birth_date', 'storeUser' ) is-invalid @enderror" name="birth_date" id="birth_date" value="{{ old( 'birth_date' ) }}" required />
 
@@ -147,46 +147,46 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label" for="inputAddress">Address</label>
+                                    <label class="form-check-label" for="address_1">@lang( 'titles.registration_phase_2.form.address_1.address_1_title' )</label>
 
-                                    <input type="text" class="form-control @error( 'address', 'storeUser' ) is-invalid @enderror" name="birth_date" id="birth_date" value="{{ old( 'birth_date' ) }}" id="address" placeholder="1234 Main St" required />
+                                    <input type="text" class="form-control @error( 'address_1', 'storeUser' ) is-invalid @enderror" name="address_1" value="{{ old( 'address_1' ) }}" id="address_1" placeholder="@lang( 'titles.registration_phase_2.form.address_1.address_1_placeholder' )" required />
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label" for="inputAddress2">Address 2</label>
+                                    <label class="form-check-label" for="address_2">@lang( 'titles.registration_phase_2.form.address_2.address_2_title' )</label>
 
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    <input type="text" class="form-control" id="address_2" placeholder="@lang( 'titles.registration_phase_2.form.address_2.address_2_placeholder' )">
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label" for="inputCity">City</label>
+                                    <label class="form-check-label" for="city">@lang( 'titles.registration_phase_2.form.city' )</label>
 
-                                    <input type="text" class="form-control" id="inputCity">
+                                    <input type="text" class="form-control" id="city">
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label class="form-check-label" for="province">Province</label>
+                                    <label class="form-check-label" for="province">@lang( 'titles.registration_phase_2.form.province.province_title' )</label>
 
                                     <select id="province" class="form-control">
                                         <option value="" selected="selected"></option>
-                                        <option value="Alberta">Alberta</option>
-                                        <option value="British Columbia">British Columbia</option>
-                                        <option value="Manitoba">Manitoba</option>
-                                        <option value="New Brunswick">New Brunswick</option>
-                                        <option value="Newfoundland &amp; Labrador">Newfoundland &amp; Labrador</option>
-                                        <option value="Northwest Territories">Northwest Territories</option>
-                                        <option value="Nova Scotia">Nova Scotia</option>
-                                        <option value="Nunavut">Nunavut</option>
-                                        <option value="Ontario">Ontario</option>
-                                        <option value="Prince Edward Island">Prince Edward Island</option>
-                                        <option value="Quebec">Quebec</option>
-                                        <option value="Saskatchewan">Saskatchewan</option>
-                                        <option value="Yukon">Yukon</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_1' )">@lang( 'titles.registration_phase_2.form.province.province_1' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_2' )">@lang( 'titles.registration_phase_2.form.province.province_2' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_3' )">@lang( 'titles.registration_phase_2.form.province.province_3' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_4' )">@lang( 'titles.registration_phase_2.form.province.province_4' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_5' )">@lang( 'titles.registration_phase_2.form.province.province_5' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_6' )">@lang( 'titles.registration_phase_2.form.province.province_6' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_7' )">@lang( 'titles.registration_phase_2.form.province.province_7' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_8' )">@lang( 'titles.registration_phase_2.form.province.province_8' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_9' )">@lang( 'titles.registration_phase_2.form.province.province_9' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_10' )">@lang( 'titles.registration_phase_2.form.province.province_10' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_11' )">@lang( 'titles.registration_phase_2.form.province.province_11' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_12' )">@lang( 'titles.registration_phase_2.form.province.province_12' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.province.province_13' )">@lang( 'titles.registration_phase_2.form.province.province_13' )</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-2">
-                                    <label class="form-check-label" for="postal_code">Postal Code</label>
+                                    <label class="form-check-label" for="postal_code">@lang( 'titles.registration_phase_2.form.postal_code' )</label>
 
                                     <input type="text" class="form-control" id="postal_code">
                                 </div>
@@ -200,19 +200,19 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label" for="geographic_radius">Geographic radius you are willing to travel to</label>
+                                    <label class="form-check-label" for="geographic_radius">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_title' )</label>
 
                                     <select name="geographic_radius" id="geographic_radius" class="form-control">
-                                        <option value="5 km">5 km</option>
-                                        <option value="10 km">10 km</option>
-                                        <option value="15 km">15 km</option>
-                                        <option value="20 km">20 km</option>
-                                        <option value="25 km">25 km</option>
-                                        <option value="30 km">30 km</option>
-                                        <option value="35 km">35 km</option>
-                                        <option value="40 km">40 km</option>
-                                        <option value="45 km">45 km</option>
-                                        <option value="50 km">50 km</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_1' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_1' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_2' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_2' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_3' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_3' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_4' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_4' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_5' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_5' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_6' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_6' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_7' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_7' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_8' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_8' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_9' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_9' )</option>
+                                        <option value="@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_10' )">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_10' )</option>
                                     </select>
 
                                     @error( 'geographic_radius', 'storeUser' )
@@ -226,37 +226,37 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">How would you rate your level of spoken English? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.english.english_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'english', 'storeUser' ) is-invalid @enderror" name="english" id="english_1" value="{{ old( 'english_1' ) }}" required />
 
-                                        <label class="form-check-label" for="english_1">Mother Tongue</label>
+                                        <label class="form-check-label" for="english_1">@lang( 'titles.registration_phase_2.form.english.english_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'english', 'storeUser' ) is-invalid @enderror" name="english" id="english_2" value="{{ old( 'english_2' ) }}" required />
 
-                                        <label class="form-check-label" for="english_2">Fluent</label>
+                                        <label class="form-check-label" for="english_2">@lang( 'titles.registration_phase_2.form.english.english_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'english', 'storeUser' ) is-invalid @enderror" name="english" id="english_3" value="{{ old( 'english_3' ) }}" required />
 
-                                        <label class="form-check-label" for="english_3">Proficient</label>
+                                        <label class="form-check-label" for="english_3">@lang( 'titles.registration_phase_2.form.english.english_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'english', 'storeUser' ) is-invalid @enderror" name="english" id="english_4" value="{{ old( 'english_4' ) }}" required />
 
-                                        <label class="form-check-label" for="english_4">Conversational</label>
+                                        <label class="form-check-label" for="english_4">@lang( 'titles.registration_phase_2.form.english.english_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'english', 'storeUser' ) is-invalid @enderror" name="english" id="english_5" value="{{ old( 'english_5' ) }}" required />
 
-                                        <label class="form-check-label" for="english_5">Basic</label>
+                                        <label class="form-check-label" for="english_5">@lang( 'titles.registration_phase_2.form.english.english_5' )</label>
                                     </div>
 
                                     @error( 'english', 'storeUser' )
@@ -270,67 +270,67 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">What other language do you speak? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.language.language_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_1" id="language_1" value="{{ old( 'language_1' ) }}" required />
 
-                                        <label class="form-check-label" for="language_1">Chinese</label>
+                                        <label class="form-check-label" for="language_1">@lang( 'titles.registration_phase_2.form.language.language_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_2" id="language_2" value="{{ old( 'language_2' ) }}" required />
 
-                                        <label class="form-check-label" for="language_2">Filipino</label>
+                                        <label class="form-check-label" for="language_2">@lang( 'titles.registration_phase_2.form.language.language_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_3" id="language_3" value="{{ old( 'language_3' ) }}" required />
 
-                                        <label class="form-check-label" for="language_3">French</label>
+                                        <label class="form-check-label" for="language_3">@lang( 'titles.registration_phase_2.form.language.language_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_4" id="language_4" value="{{ old( 'language_4' ) }}" required />
 
-                                        <label class="form-check-label" for="language_4">German</label>
+                                        <label class="form-check-label" for="language_4">@lang( 'titles.registration_phase_2.form.language.language_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_5" id="language_5" value="{{ old( 'language_5' ) }}" required />
 
-                                        <label class="form-check-label" for="language_5">Greek</label>
+                                        <label class="form-check-label" for="language_5">@lang( 'titles.registration_phase_2.form.language.language_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_6" id="language_6" value="{{ old( 'language_6' ) }}" required />
 
-                                        <label class="form-check-label" for="language_6">Hindi</label>
+                                        <label class="form-check-label" for="language_6">@lang( 'titles.registration_phase_2.form.language.language_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_7" id="language_7" value="{{ old( 'language_7' ) }}" required />
 
-                                        <label class="form-check-label" for="language_7">Italian</label>
+                                        <label class="form-check-label" for="language_7">@lang( 'titles.registration_phase_2.form.language.language_7' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_8" id="language_8" value="{{ old( 'language_8' ) }}" required />
 
-                                        <label class="form-check-label" for="language_8">Mandarin</label>
+                                        <label class="form-check-label" for="language_8">@lang( 'titles.registration_phase_2.form.language.language_8' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_9" id="language_9" value="{{ old( 'language_9' ) }}" required />
 
-                                        <label class="form-check-label" for="language_9">Russian</label>
+                                        <label class="form-check-label" for="language_9">@lang( 'titles.registration_phase_2.form.language.language_9' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'language', 'storeUser' ) is-invalid @enderror" name="language_10" id="language_10" value="{{ old( 'language_10' ) }}" required />
 
-                                        <label class="form-check-label" for="language_10">Spanish</label>
+                                        <label class="form-check-label" for="language_10">@lang( 'titles.registration_phase_2.form.language.language_10' )</label>
                                     </div>
 
                                     @error( 'language', 'storeUser' )
@@ -344,55 +344,55 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">How many years of experience do you have as a Caregiver? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">This will help both you and the client as the clients’ needs could be more severe and require a much higher level of care.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">A highly experienced Caregiver may be required to handle much more difficult and stressful situations like Dementia, Alzheimers, fresh out of the hospital, etc.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Please select honestly and carefully as you don’t want to put yourself in a situation that you are uncomfortable handling.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_1" value="{{ old( 'caregiver_years_1' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_1">None</label>
+                                        <label class="form-check-label" for="caregiver_years_1">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_2" value="{{ old( 'caregiver_years_2' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_2">0-6 months</label>
+                                        <label class="form-check-label" for="caregiver_years_2">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_3" value="{{ old( 'caregiver_years_3' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_3">6 months - 1 year</label>
+                                        <label class="form-check-label" for="caregiver_years_3">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_4" value="{{ old( 'caregiver_years_4' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_4">1-3 years</label>
+                                        <label class="form-check-label" for="caregiver_years_4">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_5" value="{{ old( 'caregiver_years_5' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_5">3-5 years</label>
+                                        <label class="form-check-label" for="caregiver_years_5">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_6" value="{{ old( 'caregiver_years_6' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_6">5-10 years</label>
+                                        <label class="form-check-label" for="caregiver_years_6">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_years', 'storeUser' ) is-invalid @enderror" name="caregiver_years" id="caregiver_years_7" value="{{ old( 'caregiver_years_7' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_years_7">Over 10 years</label>
+                                        <label class="form-check-label" for="caregiver_years_7">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_7' )</label>
                                     </div>
 
                                     @error( 'caregiver_years', 'storeUser' )
@@ -406,37 +406,37 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">In the last 24 months, how many months were you a caregiver for? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_months', 'storeUser' ) is-invalid @enderror" name="caregiver_months" id="caregiver_months_1" value="{{ old( 'caregiver_months_1' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_months_1">None</label>
+                                        <label class="form-check-label" for="caregiver_months_1">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_months', 'storeUser' ) is-invalid @enderror" name="caregiver_months" id="caregiver_months_2" value="{{ old( 'caregiver_months_2' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_months_2">0-3 months</label>
+                                        <label class="form-check-label" for="caregiver_months_2">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_months', 'storeUser' ) is-invalid @enderror" name="caregiver_months" id="caregiver_months_3" value="{{ old( 'caregiver_months_3' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_months_3">0-9 months</label>
+                                        <label class="form-check-label" for="caregiver_months_3">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_months', 'storeUser' ) is-invalid @enderror" name="caregiver_months" id="caregiver_months_4" value="{{ old( 'caregiver_months_4' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_months_4">9-12 months</label>
+                                        <label class="form-check-label" for="caregiver_months_4">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'caregiver_months', 'storeUser' ) is-invalid @enderror" name="caregiver_months" id="caregiver_months_5" value="{{ old( 'caregiver_months_5' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiver_months_5">Over 12 months</label>
+                                        <label class="form-check-label" for="caregiver_months_5">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_5' )</label>
                                     </div>
 
                                     @error( 'caregiver_months', 'storeUser' )
@@ -450,67 +450,67 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">What type of caregiving have you done? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_1" id="caregiving_type_1" value="{{ old( 'caregiving_type_1' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_1">None</label>
+                                        <label class="form-check-label" for="caregiving_type_1">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_2" id="caregiving_type_2" value="{{ old( 'caregiving_type_2' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_2">Residential care home</label>
+                                        <label class="form-check-label" for="caregiving_type_2">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_3" id="caregiving_type_3" value="{{ old( 'caregiving_type_3' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_3">Nursing home</label>
+                                        <label class="form-check-label" for="caregiving_type_3">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_4" id="caregiving_type_4" value="{{ old( 'caregiving_type_4' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_4">Home care agency</label>
+                                        <label class="form-check-label" for="caregiving_type_4">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_5" id="caregiving_type_5" value="{{ old( 'caregiving_type_5' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_5">Private caregiver</label>
+                                        <label class="form-check-label" for="caregiving_type_5">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_6" id="caregiving_type_6" value="{{ old( 'caregiving_type_6' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_6">Live-in caregiver</label>
+                                        <label class="form-check-label" for="caregiving_type_6">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_7" id="caregiving_type_7" value="{{ old( 'caregiving_type_7' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_7">Unpaid caregiver (careing for a loved one)</label>
+                                        <label class="form-check-label" for="caregiving_type_7">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_7' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_8" id="caregiving_type_8" value="{{ old( 'caregiving_type_8' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_8">Hospital support worker</label>
+                                        <label class="form-check-label" for="caregiving_type_8">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_8' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_9" id="caregiving_type_9" value="{{ old( 'caregiving_type_9' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_9">Assisted living</label>
+                                        <label class="form-check-label" for="caregiving_type_9">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_9' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'caregiving_type', 'storeUser' ) is-invalid @enderror" name="caregiving_type_10" id="caregiving_type_10" value="{{ old( 'caregiving_type_10' ) }}" required />
 
-                                        <label class="form-check-label" for="caregiving_type_10">Other</label>
+                                        <label class="form-check-label" for="caregiving_type_10">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_10' )</label>
                                     </div>
 
                                     @error( 'caregiving_type', 'storeUser' )
@@ -524,73 +524,73 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">Do you have any relevant qualifications? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_1" id="qualifications_1" value="{{ old( 'qualifications_1' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_1">None</label>
+                                        <label class="form-check-label" for="qualifications_1">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_2" id="qualifications_2" value="{{ old( 'qualifications_2' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_2">Occupational therapy certification</label>
+                                        <label class="form-check-label" for="qualifications_2">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_3" id="qualifications_3" value="{{ old( 'qualifications_3' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_3">Personal support worker</label>
+                                        <label class="form-check-label" for="qualifications_3">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_4" id="qualifications_4" value="{{ old( 'qualifications_4' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_4">Agency induction training</label>
+                                        <label class="form-check-label" for="qualifications_4">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_5" id="qualifications_5" value="{{ old( 'qualifications_5' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_5">Social Worker</label>
+                                        <label class="form-check-label" for="qualifications_5">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_6" id="qualifications_6" value="{{ old( 'qualifications_6' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_6">Registered nurse</label>
+                                        <label class="form-check-label" for="qualifications_6">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_7" id="qualifications_7" value="{{ old( 'qualifications_7' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_7">Nursing</label>
+                                        <label class="form-check-label" for="qualifications_7">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_7' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_8" id="qualifications_8" value="{{ old( 'qualifications_8' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_8">University degree (Health & Social care)</label>
+                                        <label class="form-check-label" for="qualifications_8">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_8' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_9" id="qualifications_9" value="{{ old( 'qualifications_9' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_9">University degree (non-care discipline)</label>
+                                        <label class="form-check-label" for="qualifications_9">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_9' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_10" id="qualifications_10" value="{{ old( 'qualifications_10' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_10">Physiotherapy certification</label>
+                                        <label class="form-check-label" for="qualifications_10">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_10' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'qualifications', 'storeUser' ) is-invalid @enderror" name="qualifications_11" id="qualifications_11" value="{{ old( 'qualifications_11' ) }}" required />
 
-                                        <label class="form-check-label" for="qualifications_11">Other</label>
+                                        <label class="form-check-label" for="qualifications_11">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_11' )</label>
                                     </div>
 
                                     @error( 'qualifications', 'storeUser' )
@@ -604,11 +604,11 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label" for="qualifications_text">Qualifications</label>
+                                        <label class="form-check-label" for="qualifications_text">@lang( 'titles.registration_phase_2.form.qualifications_text.qualifications_text_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you would like to elaborate on your qualifications above, please do so in the field below.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.qualifications_text.qualifications_text_title_2' )</p>
 
-                                        <textarea class="form-control" id="qualifications_text" rows="3"></textarea>
+                                        <textarea class="form-control" id="qualifications_text" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -616,25 +616,25 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">What Animals are You Fine Being Around? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.animals.animals_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'animals', 'storeUser' ) is-invalid @enderror" name="animals_1" id="animals_1" value="{{ old( 'animals_1' ) }}" required />
 
-                                        <label class="form-check-label" for="animals_1">Dogs</label>
+                                        <label class="form-check-label" for="animals_1">@lang( 'titles.registration_phase_2.form.animals.animals_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'animals', 'storeUser' ) is-invalid @enderror" name="animals_2" id="animals_2" value="{{ old( 'animals_2' ) }}" required />
 
-                                        <label class="form-check-label" for="animals_2">Cats</label>
+                                        <label class="form-check-label" for="animals_2">@lang( 'titles.registration_phase_2.form.animals.animals_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'animals', 'storeUser' ) is-invalid @enderror" name="animals_3" id="animals_3" value="{{ old( 'animals_3' ) }}" required />
 
-                                        <label class="form-check-label" for="animals_3">Birds</label>
+                                        <label class="form-check-label" for="animals_3">@lang( 'titles.registration_phase_2.form.animals.animals_3' )</label>
                                     </div>
 
                                     @error( 'animals', 'storeUser' )
@@ -648,11 +648,11 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label" for="who">Describe Who You Are</label>
+                                        <label class="form-check-label" for="who">@lang( 'titles.registration_phase_2.form.who.who_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Describe who you are and how you could help future clients in selecting you as a warm and compassionate person that will make a difference in their lives.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.who.who_title_2' )</p>
 
-                                        <textarea class="form-control" id="who" rows="3"></textarea>
+                                        <textarea class="form-control" id="who" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -660,11 +660,11 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label" for="experience">Experience</label>
+                                        <label class="form-check-label" for="experience">@lang( 'titles.registration_phase_2.form.experience.experience_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Use separate lines for experiences</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.experience.experience_title_2' )</p>
 
-                                        <textarea class="form-control" id="experience" rows="3"></textarea>
+                                        <textarea class="form-control" id="experience" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -672,11 +672,11 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label" for="additional">Additional Comments</label>
+                                        <label class="form-check-label" for="additional">@lang( 'titles.registration_phase_2.form.additional.additional_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Anything you feel would be valued by clients</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.additional.additional_title_2' )</p>
 
-                                        <textarea class="form-control" id="additional" rows="3"></textarea>
+                                        <textarea class="form-control" id="additional" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -684,79 +684,79 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">How did you hear about us? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.hear.hear_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_1" id="hear_1" value="{{ old( 'hear_1' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_1">Existing MF Homecare Caregiver/Companion</label>
+                                        <label class="form-check-label" for="hear_1">@lang( 'titles.registration_phase_2.form.hear.hear_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_2" id="hear_2" value="{{ old( 'hear_2' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_2">Relative/Friend</label>
+                                        <label class="form-check-label" for="hear_2">@lang( 'titles.registration_phase_2.form.hear.hear_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_3" id="hear_3" value="{{ old( 'hear_3' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_3">Live-In-Care Jobs</label>
+                                        <label class="form-check-label" for="hear_3">@lang( 'titles.registration_phase_2.form.hear.hear_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_4" id="hear_4" value="{{ old( 'hear_4' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_4">Indeed</label>
+                                        <label class="form-check-label" for="hear_4">@lang( 'titles.registration_phase_2.form.hear.hear_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_5" id="hear_5" value="{{ old( 'hear_5' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_5">Job Center</label>
+                                        <label class="form-check-label" for="hear_5">@lang( 'titles.registration_phase_2.form.hear.hear_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_6" id="hear_6" value="{{ old( 'hear_6' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_6">Facebook</label>
+                                        <label class="form-check-label" for="hear_6">@lang( 'titles.registration_phase_2.form.hear.hear_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_7" id="hear_7" value="{{ old( 'hear_7' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_7">Twitter</label>
+                                        <label class="form-check-label" for="hear_7">@lang( 'titles.registration_phase_2.form.hear.hear_7' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_8" id="hear_8" value="{{ old( 'hear_8' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_8">Internet Search</label>
+                                        <label class="form-check-label" for="hear_8">@lang( 'titles.registration_phase_2.form.hear.hear_8' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_9" id="hear_9" value="{{ old( 'hear_9' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_9">Newspaper Article</label>
+                                        <label class="form-check-label" for="hear_9">@lang( 'titles.registration_phase_2.form.hear.hear_9' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_10" id="hear_10" value="{{ old( 'hear_10' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_10">Article</label>
+                                        <label class="form-check-label" for="hear_10">@lang( 'titles.registration_phase_2.form.hear.hear_10' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_10" id="hear_10" value="{{ old( 'hear_10' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_10">Flyer</label>
+                                        <label class="form-check-label" for="hear_10">@lang( 'titles.registration_phase_2.form.hear.hear_11' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_11" id="hear_11" value="{{ old( 'hear_11' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_11">Other</label>
+                                        <label class="form-check-label" for="hear_11">@lang( 'titles.registration_phase_2.form.hear.hear_12' )</label>
                                     </div>
 
                                     @error( 'hear', 'storeUser' )
@@ -770,37 +770,37 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">What type of care work are you looking for? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.type.type_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type', 'storeUser' ) is-invalid @enderror" name="type_1" id="type_1" value="{{ old( 'type_1' ) }}" required />
 
-                                        <label class="form-check-label" for="type_1">Day Shifts</label>
+                                        <label class="form-check-label" for="type_1">@lang( 'titles.registration_phase_2.form.type.type_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type', 'storeUser' ) is-invalid @enderror" name="type_2" id="type_2" value="{{ old( 'type_2' ) }}" required />
 
-                                        <label class="form-check-label" for="type_2">Night Shifts</label>
+                                        <label class="form-check-label" for="type_2">@lang( 'titles.registration_phase_2.form.type.type_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type', 'storeUser' ) is-invalid @enderror" name="type_3" id="type_3" value="{{ old( 'type_3' ) }}" required />
 
-                                        <label class="form-check-label" for="type_3">Live-in care (any time)</label>
+                                        <label class="form-check-label" for="type_3">@lang( 'titles.registration_phase_2.form.type.type_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type', 'storeUser' ) is-invalid @enderror" name="type_4" id="type_4" value="{{ old( 'type_4' ) }}" required />
 
-                                        <label class="form-check-label" for="type_4">Live-in care (weekends only)</label>
+                                        <label class="form-check-label" for="type_4">@lang( 'titles.registration_phase_2.form.type.type_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type', 'storeUser' ) is-invalid @enderror" name="type_5" id="type_5" value="{{ old( 'type_5' ) }}" required />
 
-                                        <label class="form-check-label" for="type_5">Live-in care (occasional only)</label>
+                                        <label class="form-check-label" for="type_5">@lang( 'titles.registration_phase_2.form.type.type_5' )</label>
                                     </div>
 
                                     @error( 'type', 'storeUser' )
@@ -814,37 +814,37 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">Select the type of services you want to provide <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>Caregiver Services</strong></p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_2' )</strong></p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">These are services that are provided by Caregivers ONLY. If you are a Caregiver, you may select any of the services below that you wish to provide to your clients.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">You may ALSO add extra Companion Services to your job tasks to display your full skill set (see below & select all that apply).</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_caregiver', 'storeUser' ) is-invalid @enderror" name="type_services_caregiver_1" id="type_services_caregiver_1" value="{{ old( 'type_services_caregiver_1' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_caregiver_1">Bathing and Personal Grooming</label>
+                                        <label class="form-check-label" for="type_services_caregiver_1">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_caregiver', 'storeUser' ) is-invalid @enderror" name="type_services_caregiver_2" id="type_services_caregiver_2" value="{{ old( 'type_services_caregiver_2' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_caregiver_2">Bathroom and Continence Care</label>
+                                        <label class="form-check-label" for="type_services_caregiver_2">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_caregiver', 'storeUser' ) is-invalid @enderror" name="type_services_caregiver_3" id="type_services_caregiver_3" value="{{ old( 'type_services_caregiver_3' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_caregiver_3">Exercise and Mobility</label>
+                                        <label class="form-check-label" for="type_services_caregiver_3">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_caregiver', 'storeUser' ) is-invalid @enderror" name="type_services_caregiver_4" id="type_services_caregiver_4" value="{{ old( 'type_services_caregiver_4' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_caregiver_4">Medication Reminder</label>
+                                        <label class="form-check-label" for="type_services_caregiver_4">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_4' )</label>
                                     </div>
 
                                     @error( 'type_services_caregiver', 'storeUser' )
@@ -858,55 +858,55 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>Companion Services</strong></p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_2' )</strong></p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">A Companion provides services that are NON MEDICAL. They provide support, company & friendship for those that are in need of these special kinds of services.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you are a Companion, please know that you CANNOT select Caregiver services above and ONLY the ones below.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_4' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Please select the tasks that you feel comfortable doing and will benefit and help your companion (select all that apply).</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_5' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_1" id="type_services_companion_1" value="{{ old( 'type_services_companion_1' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_1">Feeding</label>
+                                        <label class="form-check-label" for="type_services_companion_1">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_2" id="type_services_companion_2" value="{{ old( 'type_services_companion_2' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_2">Help and Meal Preparation</label>
+                                        <label class="form-check-label" for="type_services_companion_2">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_2' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_3" id="type_services_companion_3" value="{{ old( 'type_services_companion_3' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_3">Light Housework</label>
+                                        <label class="form-check-label" for="type_services_companion_3">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_3' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_4" id="type_services_companion_4" value="{{ old( 'type_services_companion_4' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_4">Going out on walks</label>
+                                        <label class="form-check-label" for="type_services_companion_4">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_4' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_5" id="type_services_companion_5" value="{{ old( 'type_services_companion_5' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_5">Running errands</label>
+                                        <label class="form-check-label" for="type_services_companion_5">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_5' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_6" id="type_services_companion_6" value="{{ old( 'type_services_companion_6' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_6">Trips to appointments or other outings by car</label>
+                                        <label class="form-check-label" for="type_services_companion_6">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_6' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="checkbox" class="form-check-input @error( 'type_services_companion', 'storeUser' ) is-invalid @enderror" name="type_services_companion_7" id="type_services_companion_7" value="{{ old( 'type_services_companion_7' ) }}" required />
 
-                                        <label class="form-check-label" for="type_services_companion_7">Someone to spend time with and Emotional Support</label>
+                                        <label class="form-check-label" for="type_services_companion_7">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_7' )</label>
                                     </div>
 
                                     @error( 'type_services_companion', 'storeUser' )
@@ -920,25 +920,25 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label">Do you have a car that you are willing to use in order to take clients to appointments or run errands with? <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label">@lang( 'titles.registration_phase_2.form.car.car_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">If you select yes, please know that any out-of-pocket expenses like parking fees should be the client’s responsibility.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">It is up to you to negotiate and collect what you feel is appropriate relating to your out-of-pocket expenses.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">You will collect it and be responsible in doing so directly with your client.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'car', 'storeUser' ) is-invalid @enderror" name="car" id="car_1" value="{{ old( 'car_1' ) }}" required />
 
-                                        <label class="form-check-label" for="car_1">Yes</label>
+                                        <label class="form-check-label" for="car_1">@lang( 'titles.registration_phase_2.form.car.car_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input type="radio" class="form-check-input @error( 'car', 'storeUser' ) is-invalid @enderror" name="car" id="car_2" value="{{ old( 'car_2' ) }}" required />
 
-                                        <label class="form-check-label" for="car_2">No</label>
+                                        <label class="form-check-label" for="car_2">@lang( 'titles.registration_phase_2.form.car.car_2' )</label>
                                     </div>
 
                                     @error('car', 'storeUser')
@@ -952,17 +952,17 @@
                             <div class="form-row form-row-profile-image">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <label class="form-check-label" for="profile_image">Please Upload your Profile Picture <span class="text-color-danger font-size-2rem">*</span></label>
+                                        <label class="form-check-label" for="profile_image">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Your Profile Picture is mandatory and will help clients in their selection process.</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">The pictures must be of your face and taken against a clear background without any objects behind you. Please see the examples below and don’t forget to smile! (Images must be square)</p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_3' )</p>
                                     </div>
 
                                     <div class="form-check w-100">
                                         <input type="file" class="form-control-file" id="profile_image">
 
-                                        <label class="form-check-label" for="profile_image">Upload Picture</label>
+                                        <label class="form-check-label" for="profile_image">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_1' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline w-25">
@@ -973,7 +973,7 @@
                                         <img class="w-100" src="{{ asset( 'website/assets/images/profile-image-wrong.jpg' ) }}" />
                                     </div>
 
-                                    @error('gender', 'storeUser')
+                                    @error('profile_image', 'storeUser')
                                         <div class="text-color-danger mt-3">
                                             {{ $message }}
                                         </div>
@@ -983,28 +983,28 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label class="form-check-label" for="hourly_rate">Your expected hourly rate? <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label" for="hourly_rate">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Please select a fair price that will guarantee a higher success rate of getting jobs.</p>
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_title_2' )</p>
 
                                     <div class="form-check w-100">
                                         <select name="hourly_rate" id="hourly_rate" class="form_control">
-                                            <option value="15">$15</option>
-                                            <option value="16">$16</option>
-                                            <option value="17">$17</option>
-                                            <option value="18">$18</option>
-                                            <option value="19">$19</option>
-                                            <option value="20">$20</option>
-                                            <option value="21">$21</option>
-                                            <option value="22">$22</option>
-                                            <option value="23">$23</option>
-                                            <option value="24">$24</option>
-                                            <option value="25">$25</option>
-                                            <option value="26">$26</option>
-                                            <option value="27">$27</option>
-                                            <option value="28">$28</option>
-                                            <option value="29">$29</option>
-                                            <option value="30">$30</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_1' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_1' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_2' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_2' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_3' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_3' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_4' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_4' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_5' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_5' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_6' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_6' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_7' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_7' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_8' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_8' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_9' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_9' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_10' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_10' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_11' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_11' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_12' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_12' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_13' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_13' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_14' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_14' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_15' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_15' )</option>
+                                            <option value="@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_16' )">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_16' )</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1012,49 +1012,49 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label class="form-check-label" for="hourly_rate">Covid-19 Test Results if available <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label" for="covid_results">@lang( 'titles.registration_phase_2.form.covid_results.covid_results_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">After completing the registration, please login to your account and upload your covid-19 test results.</p>
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.covid_results.covid_results_title_2' )</p>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label class="form-check-label" for="hourly_rate">Banking Information For Direct Deposit</label>
+                                    <label class="form-check-label" for="banking">@lang( 'titles.registration_phase_2.form.banking.banking_title_1' )</label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">This information is needed so that we can set up your direct deposit, which means that money will automatically be deposited into your account every week. It will be kept encrypted in our servers.
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_2' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">You will be getting a summary of all your hours and money that you have earned (which will be all net based on the hourly rate that you selected above). Each pay is minimum 3 hours of work.
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_3' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Once you confirm your automatic invoice, at that point, our processing begins and money goes directly to the bank account that you have provided.
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_4' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">All information is secure, encrypted and protected.
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_5' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Caregiver can complete registration without providing banking information but they will not get automatic deposits. The money will stay with MF Homecare until the banking information is submitted.
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_6' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Below are some of the bank websites where you can find this information:</p>
+                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_7' )</p>
 
                                     <ul class="w-100 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                        <li><a href="https://bmo.intelliresponse.com/obs_eng/?requestType=NormalRequest&amp;source=3&amp;id=1868&amp;question=How+do+I+find+the+branch%2Ftransit+or+account+number" target="_blank">BMO</a></li>
+                                        <li><a href="https://bmo.intelliresponse.com/obs_eng/?requestType=NormalRequest&amp;source=3&amp;id=1868&amp;question=How+do+I+find+the+branch%2Ftransit+or+account+number" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_1' )</a></li>
 
-                                        <li><a href="https://www.cibc.com/en/personal-banking/ways-to-bank/how-to/transit-account-institution-number.html" target="_blank">CIBC</a></li>
+                                        <li><a href="https://www.cibc.com/en/personal-banking/ways-to-bank/how-to/transit-account-institution-number.html" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_2' )</a></li>
 
-                                        <li><a href="https://www.hsbc.ca/online-banking/payroll-direct-deposit/" target="_blank">HSBC</a></li>
+                                        <li><a href="https://www.hsbc.ca/online-banking/payroll-direct-deposit/" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_3' )</a></li>
 
-                                        <li><a href="https://www.rbcroyalbank.com/onlinebanking/bankingusertips/account.html" target="_blank">RBC</a></li>
+                                        <li><a href="https://www.rbcroyalbank.com/onlinebanking/bankingusertips/account.html" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_4' )</a></li>
 
-                                        <li><a href="https://help.scotiabank.com/article/whats-my-transit-number" target="_blank">Scotiabank</a></li>
+                                        <li><a href="https://help.scotiabank.com/article/whats-my-transit-number" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_5' )</a></li>
 
-                                        <li><a href="https://www.tangerine.ca/en/faq/answer?permaLink=what-are-the-tangerine-bank-transit-and-institution-numbers--generic-phone--en--0--1&amp;responseId=219--GoGaau8TXgvFqrkV93P2GwDNLH3eoKUW" target="_blank">Tangerine</a></li>
+                                        <li><a href="https://www.tangerine.ca/en/faq/answer?permaLink=what-are-the-tangerine-bank-transit-and-institution-numbers--generic-phone--en--0--1&amp;responseId=219--GoGaau8TXgvFqrkV93P2GwDNLH3eoKUW" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_6' )</a></li>
 
-                                        <li><a href="https://www.td.com/ca/en/investing/search/?query=How%20do%20I%20find%20my%20transit%20number%2C%20institution%20number%20and%20account%20number%3F&amp;preExpand=true&amp;source=100#:~:text=If%20you%20don't%20have%20a%20cheque%2C%20the%20easiest%20way,and%207%2Ddigit%20Account%20number" target="_blank">TD</a></li>
+                                        <li><a href="https://www.td.com/ca/en/investing/search/?query=How%20do%20I%20find%20my%20transit%20number%2C%20institution%20number%20and%20account%20number%3F&amp;preExpand=true&amp;source=100#:~:text=If%20you%20don't%20have%20a%20cheque%2C%20the%20easiest%20way,and%207%2Ddigit%20Account%20number" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_7' )</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label class="form-check-label">Bank Name</label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.banking.bank_name_1' )</label>
 
                                     <input type="text" class="form-control @error( 'bank_name', 'storeUser' ) is-invalid @enderror" name="bank_name" id='bank_name' value="{{ old( 'bank_name' ) }}" required />
 
@@ -1066,7 +1066,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label class="form-check-label">Institution No.</label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.banking.bank_name_2' )</label>
 
                                     <input type="text" class="form-control @error( 'bank_institution', 'storeUser' ) is-invalid @enderror" name="bank_institution" id='bank_institution' value="{{ old( 'bank_institution' ) }}" required />
 
@@ -1078,7 +1078,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label class="form-check-label">Transit No.</label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.banking.bank_name_3' )</label>
 
                                     <input type="text" class="form-control @error( 'transit_no', 'storeUser' ) is-invalid @enderror" name="transit_no" id='transit_no' value="{{ old( 'transit_no' ) }}" required />
 
@@ -1090,7 +1090,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                    <label class="form-check-label">Account No.</label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.banking.bank_name_4' )</label>
 
                                     <input type="text" class="form-control @error( 'account_no', 'storeUser' ) is-invalid @enderror" name="account_no" id='account_no' value="{{ old( 'account_no' ) }}" required />
 
@@ -1104,15 +1104,15 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label class="form-check-label">Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.consent.consent_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <div class="form-check w-100 text-center">
                                         <input type="checkbox" class="form-check-input @error( 'consent', 'storeUser' ) is-invalid @enderror" name="consent" id="consent" value="{{ old( 'consent' ) }}" required />
 
                                         <label class="form-check-label form-check-label-checkbox w-100" for="consent">
-                                            <span>I understand that as a Caregiver and/or Companion working through the MF Homecare Platform, I am not employed by MF Homecare. I will be a self-employed, independent contractor, meaning that I will be responsible for my own taxes and for preparing my own tax returns with the Canada Revenue Agency.</span>
+                                            <span>@lang( 'titles.registration_phase_2.form.consent.consent_title_2' )</span>
 
-                                            <span class="d-block font-weight-bold text-decoration-underline">Click here to accept</span>
+                                            <span class="d-block font-weight-bold text-decoration-underline">@lang( 'titles.registration_phase_2.form.consent.consent_title_3' )</span>
                                         </label>
                                     </div>
                                 </div>
@@ -1120,18 +1120,18 @@
 
                             <div class="form-row">
                                 <div class="form-group col-lg-12">
-                                    <label class="form-check-label">Stripe Consent (Click on the large box below to accept) <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_2.form.stripe.stripe_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <div class="form-check w-100 text-center">
                                         <input type="checkbox" class="form-check-input @error( 'stripe', 'storeUser' ) is-invalid @enderror" name="stripe" id="stripe" value="{{ old( 'stripe' ) }}" required />
 
-                                        <label class="form-check-label form-check-label-checkbox w-100" for="stripe">By registering your account, you agree to Stripe Services Agreement and the Stripe Connected Account Agreement.</label>
+                                        <label class="form-check-label form-check-label-checkbox w-100" for="stripe">@lang( 'titles.registration_phase_2.form.stripe.stripe_title_2' )</label>
                                     </div>
 
                                     <ul>
-                                        <li><a target="_blank" href="https://stripe.com/legal">Stripe Services Agreement</a></li>
+                                        <li><a target="_blank" href="https://stripe.com/legal">@lang( 'titles.registration_phase_2.form.stripe.stripe_title_3' )</a></li>
 
-                                        <li><a target="_blank" href="https://stripe.com/connect-account/legal">Stripe Connected Account Agreement</a></li>
+                                        <li><a target="_blank" href="https://stripe.com/connect-account/legal">@lang( 'titles.registration_phase_2.form.stripe.stripe_title_4' )</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1139,7 +1139,7 @@
                             @if( env( 'DOWN_PAYMENT' ) !== true )
                                 <div class="form-row">
                                     <div class="form-group col-md-12 justify-content-center">
-                                        <button type="submit" class="btn btn-success">@lang( 'Submit' )</button>
+                                        <button type="submit" class="btn btn-success">@lang( 'titles.registration_phase_2.form.submit' )</button>
                                     </div>
                                 </div>
                             @endif

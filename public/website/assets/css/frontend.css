@@ -371,6 +371,7 @@ a:hover {
   font-size: 1.6rem;
   line-height: 1;
   padding: 15px;
+  text-decoration: none;
   /* // .ra__settings {
       &-outline-success {
           border-color: $purple;

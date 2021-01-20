@@ -26,13 +26,13 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Thank you for completing Phase 1 of the Caregiver Registration process with MF Homecare.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.thank_you' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">You will receive an email momentarily from our partner <strong> Certn</strong>, who will process your Background Check. Please follow the instructions in that email in order to proceed with and complete your background check.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.you_will' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">After your Background Check is complete, and if itś successful, please refer back to the email received from MF Homecare and click on the button to continue your registration with Phase 2.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.after_your' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>MF Homecare Team</strong></p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.mf_homecare' )</p>
                     </div>
                 </div>
             </div>

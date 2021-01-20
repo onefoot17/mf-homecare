@@ -26,7 +26,7 @@
                 <h1>
                     @lang( $title )
 
-                    <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_1.Sub_Heading' )</span>
+                    <span class="mf__banner__sub_heading">@lang( 'titles.registration_phase_1.sub_heading' )</span>
                 </h1>
             </section>
         </section>
@@ -35,23 +35,23 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.Become_Caregivers' )</h1>
+                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.become_caregivers' )</h1>
 
                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Welcome! Our registration process is now open for Caregivers and Companions in the Greater Toronto and Vancouver Areas. Please fill in the form below to start the registration process with our system.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.welcome_our' )</p>
 
                         <aside class="mb-3 mf__registration-phase-1__notes">
-                            <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Notes:</h4>
+                            <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.notes' )</h4>
 
                             <ul>
-                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">We are currently accepting registrations for the Greater Toronto and Vancouver Areas</p></li>
+                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_are' )</p></li>
 
-                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">As part of our initial launch, we are waiving the $25 Registration Fee for these areas</p></li>
+                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_part' )</p></li>
                             </ul>
                         </aside>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">As a dedicated MF Homecare Caregiver or Companion, you can help families restore balance, order, and peace to their lives, and help their senior loved ones remain at home. Our Caregivers provide a variety of non-medical services, including companionship and help around the house.</p>
+                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_a' )</p>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.Caregiver_Advantages' )</h3>
+                        <h3 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.caregiver_advantages' )</h3>
 
                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
@@ -69,13 +69,11 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice</h4>
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.choice' )</h4>
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                            Get matched with the right client that needs your specific skillset. Pick your geographic radius and let the clients find you. Communicate with your client before the first visit to ensure that everything runs smoothly. It’s time to provide care, as easily and efficiently as you can.
-                                        </p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.get_matched' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -83,13 +81,11 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Control</h4>
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.control' )</h4>
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                            We provide you with the tools and the technology to coordinate your jobs personally, directly, and conveniently, from client selection to payment. Create and work on your own schedule.
-                                        </p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_provide' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -99,15 +95,13 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Choice of Payment</h4>
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.choice_of_payment' )</h4>
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                            We believe a happy Caregiver gives clients the best possible care. That is why we let you set your preferred amount and method of pay. Remember that the amount you select could impact the amount of work you receive.
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_believe' )</p>
 
-                                            Get paid directly into your bank account by direct deposit every two weeks. MF Homecare charges you a small 5% fee to set up and managing your appointment payments and regular deposits to your bank account. We do not take any government deductions off your pay. you are responsible for your own tax deductions and return.
-                                        </p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.get_paid' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -115,15 +109,13 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Consistency</h4>
+                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.consistency' )</h4>
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class=" appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                            If your services were appreciated, you can expect consistent bookings from the same clients as well as others. This gives you the opportunity for constant work but also room for further growth.
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.if_your' )</p>
 
-                                            As part of our registration process, you will have to complete a background check, which costs <span class="highlight-color"><del>$25.00</del> (Registration Fee waived during our initial launch)</span>. Our trusted partner for this service is Certn. Once the process is initiated, they will communicate with you directly via email. As soon as the background check is completed, you will return to our website to finalize the registration process.
-                                        </p>
+                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_part_of_our_registration' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -137,17 +129,17 @@
             <div class="container-xl mf__content">
                 <div class="row text-center">
                     <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">To start your registration, please fill out the form below:</h3>
+                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.form.form_title' )</h3>
 
                         <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <p class="mb-3 text-center"><strong><span class="text-color-danger font-size-2rem">*</span> is required field</strong></p>
+                        <p class="mb-3 text-center"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_1.form.required' )</strong></p>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">First Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_1.form.first_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('first_name', 'storeUser') is-invalid @enderror" name="first_name" id='first_name' value="{{old('first_name')}}" required />
                                     @error('first_name', 'storeUser')
@@ -158,7 +150,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Last Name <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_1.form.last_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('last_name', 'storeUser') is-invalid @enderror" name="last_name" id='last_name' value="{{old('last_name')}}" required />
                                     @error('last_name', 'storeUser  ')
@@ -171,7 +163,7 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Your Email <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_1.form.email' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
                                     <input type="text" class="form-control @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
 
@@ -183,7 +175,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label class="form-check-label">Postal Code <span class="text-color-danger font-size-2rem">*</span></label>
+                                    <label class="form-check-label">@lang( 'titles.registration_phase_1.form.postal_code' ) <span class="text-color-danger font-size-2rem">*</span></label>
                                     <input type="text" class="form-control @error('postal_code', 'storeUser') is-invalid @enderror" name="postal_code" id="postal_code" value="{{old('postal_code')}}" required />
                                     @error('postal_code', 'storeUser')
                                         <div class="text-color-danger mt-3">
@@ -196,7 +188,7 @@
                             @if( env( 'DOWN_PAYMENT' ) !== true )
                                 <div class="form-row">
                                     <div class="form-group col-md-12 justify-content-center">
-                                        <button type="submit" class="btn btn-success">@lang( 'Submit' )</button>
+                                        <button type="submit" class="btn btn-success">@lang( 'titles.registration_phase_1.form.submit' )</button>
                                     </div>
                                 </div>
                             @endif
