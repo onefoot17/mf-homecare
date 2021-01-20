@@ -11,4 +11,9 @@ class PagesController extends Controller
     {
         return view('website.layouts.pages.how_we_work');
     }
+
+    public function contactUs()
+    {
+        return view('website.layouts.pages.contact_us');
+    }
 }

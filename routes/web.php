@@ -54,7 +54,13 @@ Route::group(['prefix' => '{language}'], function(){
 
     App::setLocale(Request::segment(1));
 
-    Route::get('/', [IndexController::class, 'index'])->name('home');
+    Route::group(['prefix' => '/'], function(){
+        Route::get('/', [IndexController::class, 'index'])->name('home');
+
+        Route::get('/how-we-work', [PagesController::class, 'howWeWork'])->name('how_we_work');
+
+        Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact_us');
+    });
 
     Route::group(['prefix' => 'caregiver'], function(){
         Route::get('/registration-phase-1', [CaregiverController::class, 'registrationPhase1'])->name('caregiver_registration_phase_1');
@@ -91,8 +97,6 @@ Route::group(['prefix' => '{language}'], function(){
             Route::delete('/destroy/{id}', [UsersController::class, 'destroy'])->name('admin_users_destroy');
         });
     });
-
-    Route::get('/how-we-work', [PagesController::class, 'howWeWork'])->name('how_we_work');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

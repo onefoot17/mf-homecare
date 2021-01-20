@@ -43,6 +43,6 @@ return [
 
     //Registration Phase 1
 
-    'Become_Caregivers' => ''
+    'become_caregivers' => ''
 
 ];
