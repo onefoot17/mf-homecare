@@ -388,16 +388,16 @@ a:hover {
   color: #f1556c !important;
 }
 .form-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  /*     display: flex;
+      flex-wrap: wrap;
+      align-items: center; */
   margin-bottom: 45px;
   /* &:last-of-type {
       margin-bottom: 0;
   } */
-}
-.form-group :first-child:not(.btn) {
-  flex-basis: 100%;
+  /* :first-child:not( .btn ) {
+      flex-basis: 100%;
+  } */
 }
 .form-control {
   border-radius: 8px;

@@ -29,19 +29,19 @@
             </section>
         </section>
 
-        <section class="mf__section">
+        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.become_caregivers' )</h1>
+                        <h2 class="word-rotator slide text-center">@lang( 'titles.registration_phase_2.become_caregivers' )</h1>
 
-                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                        <div class="mf__separator mx-auto"></div>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.congratulations_your' )</p>
+                        <p>@lang( 'texts.registration_phase_2.congratulations_your' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.multiple_selections' )</p>
+                        <p>@lang( 'texts.registration_phase_2.multiple_selections' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_2.please_note' )</p>
+                        <p>@lang( 'texts.registration_phase_2.please_note' )</p>
                     </div>
                 </div>
             </div>
@@ -51,13 +51,13 @@
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <p class="text-center mb-3"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_2.form.required' )</strong></p>
+                        <p class="text-center mb-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_2.form.required' )</strong></p>
 
                         <div class="mf__separator mx-auto appear-animation mb-2x" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_2.form.first_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_2.form.email' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.gender.gender_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label" for="address_1">@lang( 'titles.registration_phase_2.form.address_1.address_1_title' )</label>
 
@@ -198,7 +198,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label" for="geographic_radius">@lang( 'titles.registration_phase_2.form.geographic_radius.geographic_radius_title' )</label>
 
@@ -223,7 +223,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.english.english_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -267,7 +267,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.language.language_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -341,16 +341,16 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_3' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_4' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.caregiver_years.caregiver_years_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -403,7 +403,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiver_months.caregiver_months_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -447,7 +447,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.caregiving_type.caregiving_type_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -521,7 +521,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.qualifications.qualifications_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -601,19 +601,19 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="qualifications_text">@lang( 'titles.registration_phase_2.form.qualifications_text.qualifications_text_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.qualifications_text.qualifications_text_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.qualifications_text.qualifications_text_title_2' )</p>
 
                                         <textarea class="form-control" id="qualifications_text" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.animals.animals_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -645,43 +645,43 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="who">@lang( 'titles.registration_phase_2.form.who.who_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.who.who_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.who.who_title_2' )</p>
 
                                         <textarea class="form-control" id="who" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="experience">@lang( 'titles.registration_phase_2.form.experience.experience_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.experience.experience_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.experience.experience_title_2' )</p>
 
                                         <textarea class="form-control" id="experience" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="additional">@lang( 'titles.registration_phase_2.form.additional.additional_title_1' )</label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.additional.additional_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.additional.additional_title_2' )</p>
 
                                         <textarea class="form-control" id="additional" rows="8"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.hear.hear_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -748,15 +748,15 @@
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                        <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_10" id="hear_10" value="{{ old( 'hear_10' ) }}" required />
+                                        <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_11" id="hear_11" value="{{ old( 'hear_11' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_10">@lang( 'titles.registration_phase_2.form.hear.hear_11' )</label>
+                                        <label class="form-check-label" for="hear_11">@lang( 'titles.registration_phase_2.form.hear.hear_11' )</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                        <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_11" id="hear_11" value="{{ old( 'hear_11' ) }}" required />
+                                        <input type="checkbox" class="form-check-input @error( 'hear', 'storeUser' ) is-invalid @enderror" name="hear_12" id="hear_12" value="{{ old( 'hear_12' ) }}" required />
 
-                                        <label class="form-check-label" for="hear_11">@lang( 'titles.registration_phase_2.form.hear.hear_12' )</label>
+                                        <label class="form-check-label" for="hear_12">@lang( 'titles.registration_phase_2.form.hear.hear_12' )</label>
                                     </div>
 
                                     @error( 'hear', 'storeUser' )
@@ -767,7 +767,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.type.type_title' ) <span class="text-color-danger font-size-2rem">*</span></label>
@@ -811,16 +811,16 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_2' )</strong></p>
+                                        <p><strong>@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_2' )</strong></p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_3' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_4' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.type_services_caregiver.type_services_caregiver_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -855,16 +855,16 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_2' )</strong></p>
+                                        <p><strong>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_2' )</strong></p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_3' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_4' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_4' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_5' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.type_services_companion.type_services_companion_title_5' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -917,16 +917,16 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label">@lang( 'titles.registration_phase_2.form.car.car_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.car.car_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_3' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.car.car_title_3' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.car.car_title_4' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.car.car_title_4' )</p>
                                     </div>
 
                                     <div class="form-check form-check-inline">
@@ -949,14 +949,14 @@
                                 </div>
                             </div>
 
-                            <div class="form-row form-row-profile-image">
+                            <div class="form-row form-row-profile-image appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="profile_image">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_2' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_2' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_3' )</p>
+                                        <p>@lang( 'titles.registration_phase_2.form.profile_image.profile_image_title_3' )</p>
                                     </div>
 
                                     <div class="form-check w-100">
@@ -981,11 +981,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <label class="form-check-label" for="hourly_rate">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_title_2' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.hourly_rate.hourly_rate_title_2' )</p>
 
                                     <div class="form-check w-100">
                                         <select name="hourly_rate" id="hourly_rate" class="form_control">
@@ -1010,29 +1010,29 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <label class="form-check-label" for="covid_results">@lang( 'titles.registration_phase_2.form.covid_results.covid_results_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.covid_results.covid_results_title_2' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.covid_results.covid_results_title_2' )</p>
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <label class="form-check-label" for="banking">@lang( 'titles.registration_phase_2.form.banking.banking_title_1' )</label>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_2' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_2' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_3' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_3' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_4' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_4' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_5' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_5' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_6' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_6' )</p>
 
-                                    <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_2.form.banking.banking_title_7' )</p>
+                                    <p>@lang( 'titles.registration_phase_2.form.banking.banking_title_7' )</p>
 
                                     <ul class="w-100 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                         <li><a href="https://bmo.intelliresponse.com/obs_eng/?requestType=NormalRequest&amp;source=3&amp;id=1868&amp;question=How+do+I+find+the+branch%2Ftransit+or+account+number" target="_blank">@lang( 'titles.registration_phase_2.form.banking.banking_1' )</a></li>
@@ -1052,7 +1052,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-3">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_2.form.banking.bank_name_1' )</label>
 
@@ -1102,7 +1102,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_2.form.consent.consent_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -1118,7 +1118,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_2.form.stripe.stripe_title_1' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -1137,7 +1137,7 @@
                             </div>
 
                             @if( env( 'DOWN_PAYMENT' ) !== true )
-                                <div class="form-row">
+                                <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                     <div class="form-group col-md-12 justify-content-center">
                                         <button type="submit" class="btn btn-success">@lang( 'titles.registration_phase_2.form.submit' )</button>
                                     </div>

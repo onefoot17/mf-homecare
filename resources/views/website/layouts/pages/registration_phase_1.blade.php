@@ -31,39 +31,39 @@
             </section>
         </section>
 
-        <section class="mf__section">
+        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h2 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.become_caregivers' )</h1>
+                        <h2 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.become_caregivers' )</h1>
 
-                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                        <div class="mf__separator mx-auto"></div>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.welcome_our' )</p>
+                        <p>@lang( 'texts.registration_phase_1.welcome_our' )</p>
 
                         <aside class="mb-3 mf__registration-phase-1__notes">
                             <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.notes' )</h4>
 
                             <ul>
-                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_are' )</p></li>
+                                <li><p>@lang( 'texts.registration_phase_1.we_are' )</p></li>
 
-                                <li><p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_part' )</p></li>
+                                <li><p>@lang( 'texts.registration_phase_1.as_part' )</p></li>
                             </ul>
                         </aside>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_a' )</p>
+                        <p>@lang( 'texts.registration_phase_1.as_a' )</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mf__section mf__section--maroon">
+        <section class="mf__section mf__section--maroon appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.caregiver_advantages' )</h3>
+                        <h3 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.caregiver_advantages' )</h3>
 
-                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                        <div class="mf__separator mx-auto"></div>
 
                         <section class="row">
                             <section class="col-lg-6">
@@ -73,7 +73,7 @@
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.get_matched' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.get_matched' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -85,7 +85,7 @@
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_provide' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.we_provide' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -99,9 +99,9 @@
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.we_believe' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.we_believe' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.get_paid' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.get_paid' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -113,9 +113,9 @@
 
                                         <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.if_your' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.if_your' )</p>
 
-                                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.registration_phase_1.as_part_of_our_registration' )</p>
+                                        <p>@lang( 'texts.registration_phase_1.as_part_of_our_registration' )</p>
                                     </section>
                                 </section>
                             </section>
@@ -165,11 +165,11 @@
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_1.form.email' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
-                                    <input type="text" class="form-control @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{old('email')}}" required />
+                                    <input type="text" class="form-control @error('email', 'storeUser') is-invalid @enderror" name="email" id='email' value="{{ old( 'email' ) }}" required />
 
-                                    @error('email', 'storeUser')
+                                    @error( 'email', 'storeUser' )
                                         <div class="text-color-danger mt-3">
-                                            {{$message}}
+                                            {{ $message }}
                                         </div>
                                     @enderror
                                 </div>

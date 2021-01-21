@@ -76,6 +76,7 @@ return [
     // Registration Phase 2
     'registration_phase_2' => [
         'sub_heading' => 'Phase 2',
+        'become_caregivers' => 'Become One of Our Trusted Caregivers or Companions',
 
         'form' => [
             'required' => 'is required field',
@@ -231,7 +232,8 @@ return [
                 'hear_8' => 'Internet Search',
                 'hear_9' => 'Newspaper Article',
                 'hear_10' => 'Article',
-                'hear_11' => 'Other',
+                'hear_11' => 'Flyer',
+                'hear_12' => 'Other',
             ],
             'type' => [
                 'type_title' => 'What type of care work are you looking for?',
