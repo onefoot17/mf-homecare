@@ -22,17 +22,17 @@
             </section>
         </section>
 
-        <section class="mf__section">
+        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="container-xl mf__content">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.thank_you' )</p>
+                        <p>@lang( 'texts.thank_you_phase_1.thank_you' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.you_will' )</p>
+                        <p>@lang( 'texts.thank_you_phase_1.you_will' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.after_your' )</p>
+                        <p>@lang( 'texts.thank_you_phase_1.after_your' )</p>
 
-                        <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'texts.thank_you_phase_1.mf_homecare' )</p>
+                        <p>@lang( 'texts.thank_you_phase_1.mf_homecare' )</p>
                     </div>
                 </div>
             </div>

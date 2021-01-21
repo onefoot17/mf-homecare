@@ -29,13 +29,13 @@
             </section>
         </section>
 
-        <section class="mf__section mf__section--purple">
+        <section class="mf__section mf__section--purple appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
             <div class="container-xl mf__content">
                 <div class="row text-center">
                     <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.contact_us.section_1_heading' )</h3>
+                        <h3 class="word-rotator slide">@lang( 'titles.contact_us.section_1_heading' )</h3>
 
-                        <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                        <div class="mf__separator mx-auto"></div>
 
                         <p class="mb-3 text-center"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.contact_us.form.required' )</strong></p>
 

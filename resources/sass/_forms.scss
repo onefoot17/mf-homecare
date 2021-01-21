@@ -38,18 +38,18 @@ input:focus {
     } */
 
     &-group {
-        display: flex;
+    /*     display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: center; */
         margin-bottom: $margin*3;
 
         /* &:last-of-type {
             margin-bottom: 0;
         } */
 
-        :first-child:not( .btn ) {
+        /* :first-child:not( .btn ) {
             flex-basis: 100%;
-        }
+        } */
     }
 
     &-control {
