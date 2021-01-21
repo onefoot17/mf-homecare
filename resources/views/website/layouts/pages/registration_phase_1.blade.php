@@ -42,7 +42,7 @@
                         <p>@lang( 'texts.registration_phase_1.welcome_our' )</p>
 
                         <aside class="mb-3 mf__registration-phase-1__notes">
-                            <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.notes' )</h4>
+                            <h4 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.notes' )</h4>
 
                             <ul>
                                 <li><p>@lang( 'texts.registration_phase_1.we_are' )</p></li>
@@ -69,9 +69,9 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.choice' )</h4>
+                                        <h4 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.choice' )</h4>
 
-                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator mx-auto"></div>
 
                                         <p>@lang( 'texts.registration_phase_1.get_matched' )</p>
                                     </section>
@@ -81,9 +81,9 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.control' )</h4>
+                                        <h4 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.control' )</h4>
 
-                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator mx-auto"></div>
 
                                         <p>@lang( 'texts.registration_phase_1.we_provide' )</p>
                                     </section>
@@ -95,9 +95,9 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.choice_of_payment' )</h4>
+                                        <h4 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.choice_of_payment' )</h4>
 
-                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator mx-auto"></div>
 
                                         <p>@lang( 'texts.registration_phase_1.we_believe' )</p>
 
@@ -109,9 +109,9 @@
                             <section class="col-lg-6">
                                 <section class="card">
                                     <section class="card-body">
-                                        <h4 class="word-rotator slide appear-animation text-center" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.consistency' )</h4>
+                                        <h4 class="word-rotator slide text-center">@lang( 'titles.registration_phase_1.consistency' )</h4>
 
-                                        <div class="mf__separator appear-animation mx-auto" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
+                                        <div class="mf__separator mx-auto"></div>
 
                                         <p>@lang( 'texts.registration_phase_1.if_your' )</p>
 
@@ -129,15 +129,15 @@
             <div class="container-xl mf__content">
                 <div class="row text-center">
                     <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.form.form_title' )</h3>
+                        <h3 class="word-rotator slide" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">@lang( 'titles.registration_phase_1.form.form_title' )</h3>
 
                         <div class="mf__separator mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"></div>
 
-                        <p class="mb-3 text-center"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_1.form.required' )</strong></p>
+                        <p class="mb-3 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><strong><span class="text-color-danger font-size-2rem">*</span> @lang( 'titles.registration_phase_1.form.required' )</strong></p>
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_1.form.first_name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.registration_phase_1.form.email' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -186,7 +186,7 @@
                             </div>
 
                             @if( env( 'DOWN_PAYMENT' ) !== true )
-                                <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                     <div class="form-group col-md-12 justify-content-center">
                                         <button type="submit" class="btn btn-success">@lang( 'titles.registration_phase_1.form.submit' )</button>
                                     </div>
