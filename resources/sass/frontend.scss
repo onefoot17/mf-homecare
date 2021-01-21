@@ -175,6 +175,7 @@ html.sticky-header-active .header-logo {
     // Banners
     &#{$es}banner {
         background-attachment: fixed;
+        background-position-x: center;
         background-position-y: top;
         background-repeat: no-repeat;
         background-size: cover;

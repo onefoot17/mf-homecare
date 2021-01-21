@@ -41,7 +41,7 @@
 
                         <form class="form" action="{{route('caregiver_registration_phase_1_post', [Request::segment(1)])}}" method="POST">
                             @csrf
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-md-6">
                                     <label class="form-check-label">@lang( 'titles.contact_us.form.name' ) <span class="text-color-danger font-size-2rem">*</span></label>
 
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                 <div class="form-group col-lg-12">
                                     <div class="form-check">
                                         <label class="form-check-label" for="message">@lang( 'titles.contact_us.form.message' )</label>
@@ -89,7 +89,7 @@
                             </div>
 
                             @if( env( 'DOWN_PAYMENT' ) !== true )
-                                <div class="form-row">
+                            <div class="form-row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                     <div class="form-group col-md-12 justify-content-center">
                                         <button type="submit" class="btn btn-success">@lang( 'titles.contact_us.form.submit' )</button>
                                     </div>
