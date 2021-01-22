@@ -60,6 +60,12 @@ Route::group(['prefix' => '{language}'], function(){
         Route::get('/how-we-work', [PagesController::class, 'howWeWork'])->name('how_we_work');
 
         Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact_us');
+
+        Route::get('/cancellation-policy', [PagesController::class, 'cancellationPolicy'])->name('cancellation_policy');
+
+        Route::get('/terms-conditions', [PagesController::class, 'termsConditions'])->name('terms_conditions');
+
+        Route::get('/privacy-policy', [PagesController::class, 'privacyPolicy'])->name('privacy_policy');
     });
 
     Route::group(['prefix' => 'caregiver'], function(){
