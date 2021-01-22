@@ -310,6 +310,15 @@ html.sticky-header-active .header-logo {
         ul {
             list-style: revert;
             padding-left: $padding*3;
+
+            .mf__section--maroon & ,
+            .mf__section--purple & {
+                color: $cream;
+            }
+
+            + p {
+                margin-top: $margin;
+            }
         }
 
         .mf__separator {
