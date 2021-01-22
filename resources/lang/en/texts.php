@@ -154,6 +154,134 @@ return [
 
     // Privacy Policy
     'privacy_policy' => [
-        '' => '',
+        'we_are_committed' => '<p>We are committed to protecting the privacy of our Users.</p>
+        <p>Please read this Privacy Policy carefully as it contains important information about our practices – how we will collect, use and share your personal information, information that we collect from you, and that we receive from third parties.</p>
+        <p>By visiting our Website (mfhomecare.com) or accessing our Apps (iOS or Android), you are accepting and consenting to the practices explained in this policy. It applies to Clients, Caregivers and Companions, and, with regard to transparency provisions according to General Data Protection Regulation (GDPR), to other individuals whose data we may process except for our employees.</p>
+        <p>All your Personal Information shall be used in accordance with the General Data Protection Regulation (GDPR). For the purposes of the GDPR, MF Homecare is the data controller, where you are visiting or using our services through our Website (mfhomecare.com) or accessing our Apps (iOS and Android).</p>',
+
+        'mf_homecare_processes' => '<p>MF Homecare processes your data for the performance of the contract that you have entered into for the use of the MF Homecare service and that is governed by our Terms and Conditions, and/or in order to take steps at your request to enter into this contract.</p>
+        <p>In addition, some data is processed based on MF Homecare’s legitimate interest, notably web and app analytics for the purposes of enhancing web and app performance, website logs etc. to prevent fraudulent or other malicious activities, website visitor logs for cybersecurity and/or error tracking purposes.</p>
+        <p>We may ask for your consent in other cases where we process your data. Such consent can be revoked at any time by contacting us at <a href="mailto:info@mfhomecare.com"><strong>info@mfhomecare.com</strong></a></p>',
+
+        'from_time' => '<p>From time to time this Privacy Policy may be updated and a new version will be posted on our Website/Platform. As such you should check this page to review the changes and ensure that you continue to agree to the Policy. The date the Policy was last updated will be displayed at the bottom of the page.</p>',
+
+        'personal_information' => '<p>Personal Information is information that could potentially identify you individually. We may collect, store and/or use the following types of personal information:</p>
+        <ul>
+        <li>Information that you give to us. This might be that which you provide via forms on; the Website, the Platform, or provide by e-mail, over the phone or other such means.</li>
+        <li>This includes information provided for the purpose of registering for or using our service, in searching our Website or Platform, in subscribing for our services (email notifications and/or newsletters) or for any other reason. This includes but is not limited to;
+        <ul>
+        <li>Contact information: your name, email address and phone number</li>
+        <li>Information about the Care needed: the type of Care, the address where the Care is required and the name of the Care Recipient.</li>
+        </ul>
+        </li>
+        <li>Information relating to any transactions made through the platform, including but not limited to booking or providing the Care and corresponding financial and credit card and billing information.
+        <ul>
+        <li>We do not store Credit or Debit card information submitted through the Platform to pay Caregivers and other fees. This payment information is transmitted directly to a third-party payment card processor, Stripe. Please find their Privacy Policy at <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer"><b>stripe.com/privacy</b>.</a></li>
+        <li>Stripe notifies us whether your transaction Payment has been successful or not, and might communicate some details on issues, for example if a payment fails due to insufficient funds or other reasons.</li>
+        </ul>
+        </li>
+        <li>Information provided on health and/or medical conditions, experience requirements, and personal preferences.
+        <ul>
+        <li>In addition Caregivers may record information about Care provided, Care Seekers and Care Recipients in the course of their service delivery, which is connected to your account and other personal information provided. This information may be stored and made available to other Caregivers booked for the purposes of best serving you.</li>
+        <li>Special categories of personal data like health data, which merit higher protection, will be processed for health-related purposes only where necessary to achieve those purposes for the benefit of care recipients, in particular in the context of the management of health pursuant to contract with a health professional and subject to suitable safeguards. Caregivers health information will be processed in terms of ensuring Care Seekers and Care Givers own security when providing the services.</li>
+        </ul>
+        </li>
+        <li>Ratings and reviews provided – about services provided through the platform, including about the Clients and Caregivers.</li>
+        <li>We may also receive and store information about you from third parties, involved in or connected to the Care, such as Social Services.</li>
+        <li>We may receive and store information about you where you interact with us through social media. This will include personal information that is available on your profile such as; name, location and work details.</li>
+        </ul>',
+
+        'before_disclosing' => '<p>Before disclosing to us any personal information relating to another person you must obtain their consent to the disclosure and processing of that information in accordance with the terms of this Privacy Policy. We reserve the right to take reasonable security steps to ensure that the care recipient is aware of the data processing, which may result in asking for further information/documentation.</p>
+        <p>This might be where the Care Seeker and the person receiving the Care (the “Care Recipient”), is not the same person, and as such you might disclose personal information about them.</p>',
+        'before_disclosing' => '<p>Before disclosing to us any personal information relating to another person you must obtain their consent to the disclosure and processing of that information in accordance with the terms of this Privacy Policy. We reserve the right to take reasonable security steps to ensure that the care recipient is aware of the data processing, which may result in asking for further information/documentation.</p>
+        <p>This might be where the Care Seeker and the person receiving the Care (the “Care Recipient”), is not the same person, and as such you might disclose personal information about them.</p>',
+
+        'if_you_are_using' => '<p>If you are using the Website/Platform to apply or join as one of our registered Caregivers, we will collect and store further personal information, including but not limited to:</p>
+        <ul>
+        <li>Information you supply to us during the application process and thereafter. Personal data such as:
+        <ul>
+        <li>qualifications, professional skills and other experiences (CV), personal preferences (activities of daily living you enjoy or animal preferences), nationality, languages, results of background checks (see below) and any other personal data which you disclose to use for use in your profile.</li>
+        <li>A photograph of your face, which we will display on your profile to Care Seekers. A photograph of your face is required in order that the Care Seeker can know who the person they are booking is and identify them when letting them into their home. This is important for the safety and security of Users.</li>
+        </ul>
+        </li>
+        </ul>
+        <p>Supplemental information about you from third parties, for example results of background checks done by third party, including and not limited to; Enhanced DBS (criminal records check including spent convictions), identity and right to work checks. The results of these checks will be shared with us by the third party.</p>
+        <p>Information might be provided; directly from you; from a third party hiring platform or job board, which you uploaded a CV or other personal information to; or, where you have been referred to us to work through the platform; or engaged with us via social media channels. We will not use data from the open internet in this regard; we will only gather information about you where you have previously intended to let us know. Personal information collected from social media channels may include that which is detailed on your profile such as; name, location, work details.</p>',
+        'we_may_collect' => '<ul>
+        <li>We may collect and store certain information automatically through technology each time you visit the Website or Platform. This is typically designed to help us learn and improve the way we serve you. Examples of this information include the following:
+        <ul>
+        <li>information about how you interact with the Website/Platform – the computer or device used for access, the internet protocol (IP) address used to connect your computer or device to the internet, other connection information such as: browser type, version, location and language preferences, and your operating system</li>
+        <li>information about your visit including: referral source, page visits, duration and navigation information, searches made, the full Uniform Resource Locators (URL)</li>
+        <li>We also may receive information about you from other third parties we work with – such as any websites or social media platforms (for example, Google, Facebook), other advertising and analytics networks, and other channels who link Your Personal Data to our Website/Platform.</li>
+        </ul>
+        </li>
+        </ul>',
+
+        'we_and_our' => '<p>We and our representatives may use your personal information for the following purposes:</p>
+        <ul>
+        <li>carrying out our obligations under Our Terms &amp; Conditions;</li>
+        <li>authorising payments and/or a bill or receipt to or from you;</li>
+        <li>administering and maintaining the account you hold with us;</li>
+        <li>ensuring that Our Service is presented in the most effective manner for you and your computer or mobile device;</li>
+        <li>providing you with information, products and/or services that you request from us, and other commercial communications;</li>
+        <li>where you have consented and opted in to specific communications such as those for direct marketing purposes, information about other services or products which we feel may interest you;</li>
+        <li>notifying you about a change to Our Service;</li>
+        <li>record-keeping and tracking your use of Our Service including through the use of cookies;</li>
+        <li>requesting feedback on Services and to address and investigate service complaints that might arise or violation of any of our Terms, Policies or Standards; and</li>
+        <li>to conduct troubleshooting, data analysis and internal reporting</li>
+        </ul>
+        <p>We will not provide your information to any third parties for direct marketing purposes without your express consent.</p>',
+
+        'we_and_our_2' => '<p>We and our representatives may use your personal information for the following purposes:</p>
+        <ul>
+        <li>ensuring Care Givers can fulfill a booking;</li>
+        <li>providing Care Givers with relevant details of the Care previously booked and the records of other Care Givers providing Care to the Care Recipient</li>
+        <li>providing Caregivers with information stored on your account about: health and medical needs, experience requirements and other personal preferences including activities of daily living</li>
+        </ul>
+        <p>Once you have completed your care request, we will share the following information with the suitable cargivers in order to find the best match for you: first name, first three digits of the postcode where care is required and the description of needs.</p>',
+
+        'where_you_have' => '<p>Where you have applied to join or have been accepted as a registered Caregiver on the Website/Platform, you submit personal information to us and for publication on our Website/Platform and as such we may use your information in accordance with our Terms &amp; Conditions.</p>
+        <p>We may use this personal information in the following ways:</p>
+        <ul>
+        <li>inviting you to apply or to complete your application;</li>
+        <li>to provide you with information regarding appointment opportunities with Care Seekers that may be of interest to you based on the information we have collected;</li>
+        <li>to provide your profile to Care Seekers to facilitate a booking.</li>
+        </ul>
+        <p>When you propose yourself for an appointment, your personal profile is made available to the Client, which includes: full first name, surname, picture, summary key info, driving or car status, languages, pet preference, public liability status, condition experience, services provided, qualifications and a map with a broad indication of where you live. Once the Client receives the list of caregivers, they will request appointment confirmation and may communicate with you directly through our platform.</p>',
+
+        'the_platform' => '<p>The Platform allows Users who are Care Seekers to connect with Users who are Caregivers and provides tools to help facilitate this process. As such it is vital, we retain personal data on Users and from closed accounts for as long as necessary to fulfill the purposes the data was collected for, including for the purposes of satisfying any legal, accounting, or reporting requirements and to comply with other obligations such as safeguarding Users, to the extent that it is permitted by Law.</p>
+        <p>We may delete accounts or specific information before account deactivation where we believe it may no longer be relevant or where an account has been inactive for more than a year.</p>
+        <p>If you have sent us an email or other correspondence, we will retain your information until we are satisfied it is outdated or no longer relevant, subject to your exercise of the right to erasure.</p>',
+
+        'subject_to' => '<p>Subject to the need to perform the contract with you based on our Terms and Conditions and our legitimate interests, we have the right to share your personal information in some cases:</p>
+        <ul>
+        <li>in the event that we sell or buy any business or assets, in which case we may disclose your personal data to the prospective seller or buyer of such business or assets;</li>
+        <li>if we are under a duty to disclose or share your personal information in order to comply with any legal obligation, or in order to enforce or apply such other terms as apply to our relationship, or to protect the rights, property, or safety of our customers, ourselves or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection, credit risk reduction and relating to safeguarding issues.</li>
+        </ul>',
+
+        'certain_parts' => '<p>Certain parts of Our Website/Platform use “cookies” to keep track of your visit and to help you navigate between sections. A cookie is a small data file that certain websites store on your computer’s hard-drive when you visit such websites. Cookies can contain information such as your user ID and the pages you have visited.</p>
+        <p>We use cookies on Our Website/Platform to enable us to deliver content that is specific to your interests and gives us an idea of which parts of Our Service you are visiting and to recognize you when you return to Our Service. Our cookies do not read data from your computer’s hard-drive or read cookies created by other websites that you have visited.</p>
+        <p>You may refuse to accept cookies by activating the setting on your browser which allows you to refuse the setting of cookies. Unless you have adjusted your browser settings so that it will refuse cookies, our system will issue cookies when you access Our Service. Please note Third Party, providers of content and services may also use cookies over which we have no control.</p>',
+
+        'our_service' => '<p>Our Service has numerous security measures in place to protect the loss, misuse and alteration of information under our control, such as passwords and firewalls. We cannot, however, guarantee that these measures are, or will remain, adequate, but we have put in place suitable data security procedures; we do, take data security seriously and will use our reasonable endeavors to protect the integrity of your personal information.</p>
+        <ul>
+        <li>If you register to use Our Service, in particular if you have an account with us, you will be asked to create a password. You must keep this password confidential and must not disclose it or share it with anyone. You will be responsible for all activities that occur under your password. If you know or suspect that someone else knows your password you should notify us immediately at the address provided at the end of this Policy. If we have reason to believe that there is likely to be a breach of security or misuse of Our Service, we may require you to change your password or we may suspend your account until your identity has been verified and the account has been satisfactorily secured.</li>
+        <li>Our Service may, from time to time, contain links to and from other websites. If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for these policies. Please check these policies before you submit any personal data to these websites.</li>
+        </ul>
+        <p>Additionally, personal information and content requested may be transmitted electronically to addresses provided by you (email for example) and this is done so at your own risk and you understand these risks.</p>',
+
+        'your_personal' => '<p>Your personal data may be collected, processed and/or otherwise transferred to a destination outside your local area and in particular, the United States.</p>
+        <p>Data we collect from you is primarily stored on servers located in the USA, however in particular third party technologies and services we use may store data in other countries.</p>
+        <p>We will take all reasonable steps necessary to ensure that your data is treated securely and appropriately in accordance with this policy.</p>',
+
+        'access_you' => '<p>Access – You are entitled by law to download or print a copy of your personal Information at any time free of charge.</p>
+        <p>You can request erasure of your data, which you can exercise by means of the deactivation of your account. We are not required to delete the information important for the establishment, exercise or defense of legal claims, or that we need to retain in order to comply with the law.</p>',
+
+        'our_website_platform' => '<p>Our Website/Platform contains links to other Websites and Services. These Websites and Services will have their own Privacy Policy and we accept no liability or responsibility for these Policies or how these might collect, store and use Your Personal Information.</p>',
+
+        'if_you_have_2' => '<p>If you have any questions about Our Privacy Policy or how we treat your personal information please do not hesitate to contact us by email at:&nbsp;<a style="font-size: 16px; letter-spacing: 0px; text-align: inherit;" href="mailto:info@mfhomecare.com" target="_blank" rel="noopener noreferrer">info@mfhomecare.com</a>.</p>
+        <p><strong>Data Protection Officer contact details:</strong></p>
+        <p><a style="font-size: 16px; letter-spacing: 0px; text-align: inherit;" href="mailto:info@mfhomecare.com" target="_blank" rel="noopener noreferrer">info@mfhomecare.com</a>.</p>
+        <p>Last updated: October 2020</p>',
     ],
 ];

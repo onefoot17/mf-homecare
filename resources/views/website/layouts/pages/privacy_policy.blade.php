@@ -30,13 +30,13 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.last_updated' )</h4>
+                        @lang( 'texts.privacy_policy.we_are_committed' )
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.the_basis' )</h4>
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.these_terms' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.if_you' )</p>
+                        @lang( 'texts.privacy_policy.mf_homecare_processes' )
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.mf_homecare' )</p>
+                        <p>@lang( 'texts.privacy_policy.from_time' )</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,29 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_grants' )</p>
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.2_1' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.personal_information' )</p>
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.2_2' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.before_disclosing' )</p>
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.2_3' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.if_you_are_using' )</p>
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.2_4' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.we_may_collect' )</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +100,23 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.to_be' )</p>
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.3_1' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.we_and_our' )</p>
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.3_2' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.we_and_our_2' )</p>
+
+                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.3_3' )</h4>
+
+                        <div class="mf__separator mx-auto"></div>
+
+                        <p>@lang( 'texts.privacy_policy.where_you_have' )</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +130,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.to_access' )</p>
+                        <p>@lang( 'texts.privacy_policy.the_platform' )</p>
                     </div>
                 </div>
             </div>
@@ -106,19 +144,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.caregivers_and' )</h4>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_charges' )</p>
-
-                        <h4 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.clients' )</h4>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_adds' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.users_agree' )</p>
+                        <p>@lang( 'texts.privacy_policy.subject_to' )</p>
                     </div>
                 </div>
             </div>
@@ -132,7 +158,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.these_terms' )</p>
+                        <p>@lang( 'texts.privacy_policy.certain_parts' )</p>
                     </div>
                 </div>
             </div>
@@ -146,15 +172,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.as_a' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.you_have' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.you_will' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.you_will_not' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.your_use' )</p>
+                        <p>@lang( 'texts.privacy_policy.our_service' )</p>
                     </div>
                 </div>
             </div>
@@ -168,9 +186,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_hereby' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.these_terms_of' )</p>
+                        <p>@lang( 'texts.privacy_policy.your_personal' )</p>
                     </div>
                 </div>
             </div>
@@ -184,7 +200,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.we_provide' )</p>
+                        <p>@lang( 'texts.privacy_policy.access_you' )</p>
                     </div>
                 </div>
             </div>
@@ -198,9 +214,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.the_platform' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_reserves' )</p>
+                        <p>@lang( 'texts.privacy_policy.our_website_platform' )</p>
                     </div>
                 </div>
             </div>
@@ -214,151 +228,7 @@
 
                         <div class="mf__separator mx-auto"></div>
 
-                        <p>@lang( 'texts.privacy_policy.all_brands' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_13_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.in_addition' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.the_website' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--maroon appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_14_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_reserves_the' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--purple appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_15_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.you_acknowledge' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_16_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.you_agree_to_indemnify' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--maroon appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_17_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.it_is_the_express' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--purple appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_18_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.these_terms_of_use' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_19_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.mf_homecare_may_revise' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--maroon appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_20_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.the_links' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section mf__section--purple appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_21_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.you_understand' )</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mf__section appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-            <div class="container-xl mf__content">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h3 class="word-rotator slide text-center">@lang( 'titles.privacy_policy.section_22_heading' )</h3>
-
-                        <div class="mf__separator mx-auto"></div>
-
-                        <p>@lang( 'texts.privacy_policy.if_you_have' )</p>
-
-                        <p>@lang( 'texts.privacy_policy.copyright' )</p>
+                        <p>@lang( 'texts.privacy_policy.if_you_have_2' )</p>
                     </div>
                 </div>
             </div>

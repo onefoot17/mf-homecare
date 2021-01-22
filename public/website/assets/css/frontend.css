@@ -1052,6 +1052,12 @@ h4 ~ .mf__separator {
   list-style: revert;
   padding-left: 45px;
 }
+.mf__section--maroon .mf__content ul, .mf__section--purple .mf__content ul {
+  color: #F7F2EF;
+}
+.mf__content ul + p {
+  margin-top: 15px;
+}
 .mf__content .mf__separator {
   background-color: #9e3a5f;
 }
