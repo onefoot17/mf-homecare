@@ -16,4 +16,19 @@ class PagesController extends Controller
     {
         return view('website.layouts.pages.contact_us');
     }
+
+    public function cancellationPolicy()
+    {
+        return view('website.layouts.pages.cancellation_policy');
+    }
+
+    public function termsConditions()
+    {
+        return view('website.layouts.pages.terms_conditions');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('website.layouts.pages.privacy_policy');
+    }
 }

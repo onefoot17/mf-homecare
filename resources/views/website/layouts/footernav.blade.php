@@ -41,25 +41,25 @@
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.identity_background_check' )</a>
+                            <a class="mf__footer__col__inner__link" href="https://certn.co/home-us/" target="_blank">@lang( 'titles.footer.identity_background_check' )</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.cancellation_policy' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'cancellation_policy', Request::segment( 1 ) ) }}">@lang( 'titles.footer.cancellation_policy' )</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.terms_conditions' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'terms_conditions', Request::segment( 1 ) ) }}">@lang( 'titles.footer.terms_conditions' )</a>
                         </p>
                     </li>
 
                     <li class="mf__footer__col__inner__li">
                         <p class="mf__footer__col__inner__p">
-                            <a class="mf__footer__col__inner__link" href="#">@lang( 'titles.footer.privacy_policy' )</a>
+                            <a class="mf__footer__col__inner__link" href="{{ route( 'privacy_policy', Request::segment( 1 ) ) }}">@lang( 'titles.footer.privacy_policy' )</a>
                         </p>
                     </li>
                 </ul>
@@ -92,15 +92,15 @@
                     </li>
 
                     <li class="mf__footer__col__inner__li">
-                        <a class="mf__footer__col__inner__link" href="#">
+                        <a class="mf__footer__col__inner__link" href="https://www.facebook.com/MF-Homecare-605935703398156/" target="_blank">
                             <i class="fab fa-facebook"></i>
                         </a>
 
-                        <a class="mf__footer__col__inner__link" href="#">
+                        <a class="mf__footer__col__inner__link" href="https://www.instagram.com/mfhomecare/" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
 
-                        <a class="mf__footer__col__inner__link" href="#">
+                        <a class="mf__footer__col__inner__link" href="https://www.youtube.com/channel/UCx1ez53NkkysN5lPVF2af7A" target="_blank">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </li>
