@@ -127,4 +127,9 @@ class CaregiverController extends Controller
 
         return view('website.layouts.pages.registration_phase_2', compact('intent'));
     }
+
+    public function caregiverMyAccount()
+    {
+        return view( 'website.layouts.pages.caregiver.my-account' );
+    }
 }

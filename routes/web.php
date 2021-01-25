@@ -77,6 +77,8 @@ Route::group(['prefix' => '{language}'], function(){
         Route::get('/registration-phase-2', [CaregiverController::class, 'registrationPhase2'])->name('caregiver_registration_phase_2');
 
         Route::get('/thank-you-phase-1', [MessagesController::class, 'thankYouPhase1'])->name('thank_you_phase_1');
+
+        Route::get( '/my-account', [ CaregiverController::class, 'caregiverMyAccount' ] )->name( 'caregiver_my_account' );
     });
 
     Route::group(['prefix' => 'admin'], function(){
